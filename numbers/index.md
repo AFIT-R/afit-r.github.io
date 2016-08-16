@@ -4,7 +4,7 @@ title: Dealing with Numbers
 date: 2016-06-10
 author: Brad Boehmke
 layout: page
-permalink: /section3_numbers/
+permalink: /numbers/
 ---
 
 In this section you will learn the basics of working with numbers in R.  This includes understanding
