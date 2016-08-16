@@ -9,9 +9,9 @@ paginate_path: "page:num"
 permalink:           pretty
 
 # Setup
-title:               R Programming @ UC
+title:               R Programming @ AFIT
 tagline:             ''
-description:         '<img src="https://raw.githubusercontent.com/uc-r/uc-r.github.io/master/public/uc_logo.png" height=60 </img>  Follow us on twitter <a href="https://twitter.com/UC_Rstats">@UC_Rstats</a>'
-url:                 http://uc-r.github.io
+description:         '<img src="https://raw.githubusercontent.com/uc-r/uc-r.github.io/master/public/uc_logo.png" height=60 </img>'
+url:                 http://afit-r.github.io
 baseurl:             ''
 
