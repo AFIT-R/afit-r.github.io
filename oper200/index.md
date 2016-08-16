@@ -1,10 +1,10 @@
 ---
 id: 1834
-title: Course&#58; Intro to R Bootcamp
-date: 2016-06-10
+title: OPER 200&#58; Intro to R Programming
+date: 2016-08-16
 author: Brad Boehmke
 layout: page
-permalink: /r_bootcamp
+permalink: /oper200
 ---
 
 ### Instructor
@@ -14,10 +14,10 @@ permalink: /r_bootcamp
 
 ### Class Information
 
-* Time: August 6 & 7, 1:15-4:15
-* Location: Lindner 608
-* Webpage: [http://uc-r.github.io/r_bootcamp](http://uc-r.github.io/r_bootcamp)
-* Additional Resources: [http://uc-r.github.io/](http://uc-r.github.io/)
+* Time: Sep 8-16 (RF; M-F) 1600-1700
+* Location: Bldg 640 Rm 232
+* Webpage: [http://afit-r.github.io/oper200](http://afit-r.github.io/oper200)
+* Additional Resources: [http://afit-r.github.io/](http://afit-r.github.io/)
 
 ### Course Description 
 
