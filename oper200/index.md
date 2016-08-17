@@ -1,10 +1,7 @@
 ---
-id: 1834
 title: OPER 200&#58; Intro to R Programming
-date: 2016-08-16
-author: Brad Boehmke
 layout: page
-permalink: /oper200
+permalink: /oper200/
 ---
 
 ### Instructor
