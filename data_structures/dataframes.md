@@ -194,7 +194,7 @@ str(df3)
 ##  $ col3: logi  TRUE FALSE TRUE FALSE
 ##  $ col4: num  2.5 4.2 3.14 1.1
 ```
-There are better ways to join data frames together than to use `cbind()` and `rbind()`.  These are covered later on in the transforming your data with [`dplyr` tutorial](http://uc-r.github.io/dplyr).
+There are better ways to join data frames together than to use `cbind()` and `rbind()`.  These are covered later on in the transforming your data with [`dplyr` tutorial](http://afit-r.github.io/dplyr).
 
 
 <br>
