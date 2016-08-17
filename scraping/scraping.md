@@ -61,7 +61,7 @@ rents[1:6, 1:10]
 ## 6 101199999 101199999  599  481  505  791 1061     11     1  99999
 ```
 
-Note that many of the arguments covered in the [Importing Data chapter](http://uc-r.github.io/import#import_excel_files) (i.e. specifying sheets to read from, skipping lines) also apply to `read.xls()`. In addition, `gdata` provides some useful functions (`sheetCount()` and `sheetNames()`) for identifying if multiple sheets exist prior to downloading.
+Note that many of the arguments covered in the [Importing Data chapter](http://afit-r.github.io/import#import_excel_files) (i.e. specifying sheets to read from, skipping lines) also apply to `read.xls()`. In addition, `gdata` provides some useful functions (`sheetCount()` and `sheetNames()`) for identifying if multiple sheets exist prior to downloading.
 
 Another common form of file storage is using zip files.  For instance, the [Bureau of Labor Statistics](http://www.bls.gov/home.htm) (BLS) stores their [public-use microdata](http://www.bls.gov/cex/pumdhome.htm) for the [Consumer Expenditure Survey](http://www.bls.gov/cex/home.htm) in .zip files.  We can use `download.file()` to download the file to your working directory and then work with this data as desired.
 
@@ -168,7 +168,7 @@ filenames
 ## [4] "http://download.bls.gov/pub/time.series/ap/ap.data.3.Food"
 ```
 
-We can now proceed to develop a simple [`for` loop](http://uc-r.github.io/control_statements#for_loop) function to download each data set. We store the results in a list which contains 4 items, one item for each data set.  Each list item contains the url in which the data was extracted from and the dataframe containing the downloaded data.  We're now ready to analyze these data sets as necessary. 
+We can now proceed to develop a simple [`for` loop](http://afit-r.github.io/control_statements#for_loop) function to download each data set. We store the results in a list which contains 4 items, one item for each data set.  Each list item contains the url in which the data was extracted from and the dataframe containing the downloaded data.  We're now ready to analyze these data sets as necessary. 
 
 
 ```r
@@ -462,7 +462,7 @@ scraping_wiki %>%
 ```
 
 ### Cleaning up
-With any webscraping activity, especially involving text, there is likely to be some clean up involved. For example, in the previous example we saw that we can specifically pull the list of [**Notable Tools**](https://en.wikipedia.org/wiki/Web_scraping#Notable_tools); however, you can see that in between each list item rather than a space there contains one or more `\n` which is used in HTML to specify a new line. We can clean this up quickly with a little [character string manipulation](http://uc-r.github.io/characters).
+With any webscraping activity, especially involving text, there is likely to be some clean up involved. For example, in the previous example we saw that we can specifically pull the list of [**Notable Tools**](https://en.wikipedia.org/wiki/Web_scraping#Notable_tools); however, you can see that in between each list item rather than a space there contains one or more `\n` which is used in HTML to specify a new line. We can clean this up quickly with a little [character string manipulation](http://afit-r.github.io/characters).
 
 
 ```r
@@ -496,7 +496,7 @@ scraping_wiki %>%
 ```
 
 
-Similarly, as we saw in our example above with scraping the main body content (`body_text`), there are extra characters (i.e. `\n`, `\`, `^`) in the text that we may not want.  Using a [little regex](http://uc-r.github.io/regex) we can clean this up so that our character string consists of only text that we see on the screen and no additional HTML code embedded throughout the text.
+Similarly, as we saw in our example above with scraping the main body content (`body_text`), there are extra characters (i.e. `\n`, `\`, `^`) in the text that we may not want.  Using a [little regex](http://afit-r.github.io/regex) we can clean this up so that our character string consists of only text that we see on the screen and no additional HTML code embedded throughout the text.
 
 
 ```r
@@ -677,7 +677,7 @@ length(tbls_xml)
 ## [1] 15
 ```
 
-You can see that `tbls_xml` captures the same 15 `<table>` nodes that `html_nodes` captured. To capture the same tables of interest we previously discussed (*Table 2. Nonfarm employment...* and *Table 3. Net birth/death...*) we can use a couple approaches. First, we can assess `str(tbls_xml)` to identify the tables of interest and perform normal [list subsetting](http://uc-r.github.io/lists#lists_subsetting). In our example list items 3 and 4 correspond with our tables of interest.
+You can see that `tbls_xml` captures the same 15 `<table>` nodes that `html_nodes` captured. To capture the same tables of interest we previously discussed (*Table 2. Nonfarm employment...* and *Table 3. Net birth/death...*) we can use a couple approaches. First, we can assess `str(tbls_xml)` to identify the tables of interest and perform normal [list subsetting](http://afit-r.github.io/lists#lists_subsetting). In our example list items 3 and 4 correspond with our tables of interest.
 
 
 ```r
@@ -901,7 +901,7 @@ List of 4
   .. .. .. .. ..$ value     : chr "1383"
 ```
 
-One of the inconveniences of an API is we do not get to specify how the data we receive is formatted. This is a minor price to pay considering all the other benefits APIs provide. Once we understand the received data format we can typically re-format using a little [list subsetting](http://uc-r.github.io/lists#lists_subsetting) and [`for` looping](http://uc-r.github.io/control_statements#for_loop).
+One of the inconveniences of an API is we do not get to specify how the data we receive is formatted. This is a minor price to pay considering all the other benefits APIs provide. Once we understand the received data format we can typically re-format using a little [list subsetting](http://afit-r.github.io/lists#lists_subsetting) and [`for` looping](http://afit-r.github.io/control_statements#for_loop).
 
 
 
