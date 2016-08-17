@@ -14,7 +14,7 @@ Although getting data into R is essential, getting data out of R can be just as 
 <br>
 
 ## Exporting to text files {#export_text_files}
-As mentioned in the [importing data section](http://uc-r.github.io/import), text files are a popular way to hold and exchange tabular data as almost any data application supports exporting data to the CSV (or other text file) formats.  Consequently, exporting data to a text file is a pretty standard operation. Plus, since you've already learned how to import text files you pretty much have the basics required to write to text files...we just use a slightly different naming convention. 
+As mentioned in the [importing data section](http://afit-r.github.io/import), text files are a popular way to hold and exchange tabular data as almost any data application supports exporting data to the CSV (or other text file) formats.  Consequently, exporting data to a text file is a pretty standard operation. Plus, since you've already learned how to import text files you pretty much have the basics required to write to text files...we just use a slightly different naming convention. 
 
 Similar to the examples provided in the importing text files section, the two main groups of functions that I will demonstrate to write to text files include [base R functions](#base) and [`readr` package functions](#readr).
 
