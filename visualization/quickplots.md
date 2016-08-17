@@ -44,7 +44,7 @@ faithful
 library(ggplot2)
 ```
 
-&#9755; *See [Working with packages](http://uc-r.github.io/packages/) for more information on installing, loading, and getting help with packages.*
+&#9755; *See [Working with packages](http://afit-r.github.io/packages/) for more information on installing, loading, and getting help with packages.*
 
 
 <br>
@@ -231,7 +231,7 @@ qplot(factor(mtcars$cyl), geom = "bar")
 
 <img src="/public/images/visual/quickplots/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
 
-&#9755; *See the [Factors](http://uc-r.github.io/factors/) tutorial for more information on categorical variables (aka factors) in R.*
+&#9755; *See the [Factors](http://afit-r.github.io/factors/) tutorial for more information on categorical variables (aka factors) in R.*
 
 <a href="#top">Go to top</a>
 
