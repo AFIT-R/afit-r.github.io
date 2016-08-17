@@ -140,7 +140,7 @@ mtcars %>%
 <img src="/public/images/dataWrangling/unnamed-chunk-5-1.png" alt="Pipe into a plot" align="middle" vspace="25">
 
 
-You will also find that the `%>%` operator is now being built into packages to make programming much easier.  For instance, in the tutorials where I illustrate how to [reshape](tidyr) and [transform](dplyr) your data with the `dplyr` and `tidyr` packages, you will see that the `%>%` operator is already built into these packages. It is also built into the `ggvis` and `dygraphs` packages (visualization packages), the `httr` package (which I covered in the [data scraping tutorials](http://uc-r.github.io/scraping)), and a growing number of newer packages.
+You will also find that the `%>%` operator is now being built into packages to make programming much easier.  For instance, in the tutorials where I illustrate how to [reshape](tidyr) and [transform](dplyr) your data with the `dplyr` and `tidyr` packages, you will see that the `%>%` operator is already built into these packages. It is also built into the `ggvis` and `dygraphs` packages (visualization packages), the `httr` package (which I covered in the [data scraping tutorials](http://afit-r.github.io/scraping)), and a growing number of newer packages.
 
 <br>
 
