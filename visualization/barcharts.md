@@ -304,7 +304,7 @@ ggplot(avg_mpg, aes(factor(cyl), mpg, fill = factor(am))) +
 <img src="/public/images/visual/barcharts/unnamed-chunk-14-1.png" style="display: block; margin-top:20px; margin-bottom: 20px;" />
 </center>
 
-Unfortunately, the way ggplot color codes the bars is opposite to how the colors are displayed in the legend. We can resolve this two different ways; either reverse the legend with the arguments displayed in the `guides()` function in Fig A. or [specify the direction of the levels](http://uc-r.github.io/factor_levels/) when transforming the transmission (`am`) variable into a factor as displayed in the first line of code in Fig B. Both will align the legend color coding layout to the color coding of the stacked bars but each option also helps determine which color is top versus on the bottom.
+Unfortunately, the way ggplot color codes the bars is opposite to how the colors are displayed in the legend. We can resolve this two different ways; either reverse the legend with the arguments displayed in the `guides()` function in Fig A. or [specify the direction of the levels](http://afit-r.github.io/factor_levels/) when transforming the transmission (`am`) variable into a factor as displayed in the first line of code in Fig B. Both will align the legend color coding layout to the color coding of the stacked bars but each option also helps determine which color is top versus on the bottom.
 
 
 ```r
