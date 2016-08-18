@@ -143,7 +143,7 @@ ggplot(compare, aes(x = Income, fill = Year)) +
 
 <img src="/public/images/visual/histograms/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
-&#9755; *See the tutorial on [tidying and transforming](http://bradleyboehmke.github.io/tutorials/data_wrangling) your data for more information on the functions used to turn the data to long form.*
+&#9755; *See the tutorial on [tidying](https://afit-r.github.io/tidyr) and [transforming](https://afit-r.github.io/dplyr) your data for more information on the functions used to turn the data to long form.*
 
 We can also interweave the histograms:
 
@@ -178,10 +178,10 @@ ggplot(compare, aes(x = Income)) +
 
 <img src="/public/images/visual/histograms/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
 
-The `facet_grid()` utility becomes very useful when assessing multiple groupings.  In essence, it produces a series of similar graphs based on similar scales and axes, which allows them to be easily compared.  This series of small graphs is also known as *small multiples* and was popularized by [Edward Tufte]().
+The `facet_grid()` utility becomes very useful when assessing multiple groupings.  In essence, it produces a series of similar graphs based on similar scales and axes, which allows them to be easily compared.  This series of small graphs is also known as *small multiples* and was popularized by [Edward Tufte](https://www.edwardtufte.com/tufte/).
 
 We can illustrate their usefulness by producing small multiples for each income tier (lower, middle, and upper) for both 1999 and 2014. To do so, first we need to manipulate the data to get it in the proper form. You can read more about what these manipulation functions are doing 
-[here](http://bradleyboehmke.github.io/tutorials/data_wrangling). Then we feed the categorical variables that we want to act as the columns (`Class`) and rows (`Year`) to `facet_grid()` and apply the `scales = free_x` argument to allow the x-axis to be independent for each column.  The result allows you to quickly compare the distributions and most-likely values for each income tier from 1999 to 2014.
+[here](https://afit-r.github.io/dplyr). Then we feed the categorical variables that we want to act as the columns (`Class`) and rows (`Year`) to `facet_grid()` and apply the `scales = free_x` argument to allow the x-axis to be independent for each column.  The result allows you to quickly compare the distributions and most-likely values for each income tier from 1999 to 2014.
 
 
 ```r
