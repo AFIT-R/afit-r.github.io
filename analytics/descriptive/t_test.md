@@ -112,7 +112,7 @@ p2 <- ggplot(midwest, aes(percollege)) +
 grid.arrange(p1, p2, ncol = 2)
 ```
 
-<img src="t_tests_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/descriptives/t_test/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 To test if the midwest average is less than the national average I'll perform three tests. First I test with a normal `t.test` without any distribution transformations.  The results below show a *p*-value < .001 supporting the alternative hypothesis that "the true mean is less than 32%."
 
@@ -189,7 +189,7 @@ ggplot(df, aes(state, percollege)) +
         geom_boxplot()
 ```
 
-<img src="t_tests_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/descriptives/t_test/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
 
 We also see similar skewness within the sample distributions.
@@ -208,7 +208,7 @@ p2 <- ggplot(df, aes(percollege)) +
 grid.arrange(p1, p2, nrow = 2)
 ```
 
-<img src="t_tests_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/descriptives/t_test/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
 
 Similar to the previous [section](#onesample), test if the Ohio and Michigan averages differ I'll perform three tests. Also, note that I am searching for any differences between the means rather than if one is specifically less than or greater than the other.  First I test with a normal `t.test` without any distribution transformations.  The results below show a *p*-value < .01 supporting the alternative hypothesis that "true difference in means is not equal to 0"; essentially it states there is a statistical difference between the two means.
 
@@ -290,7 +290,7 @@ ggplot(sleep, aes(group, extra)) +
         geom_boxplot()
 ```
 
-<img src="t_tests_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/descriptives/t_test/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 
 
