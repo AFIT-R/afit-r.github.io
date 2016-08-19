@@ -72,13 +72,13 @@ The `mu` argument provides a number indicating the true value of the mean (or di
  t.test(x, alternative = "less", mu = 25)
 ```
 
-...performs a one-sample t-test on the data contained in `x` where the null hypothesis is that $\mu = 25$ and the alternative is that $\mu < 25$.
+...performs a one-sample t-test on the data contained in `x` where the null hypothesis is that $$\mu = 25$$ and the alternative is that $$\mu < 25$$.
 
 The `paired` argument will indicate whether or not you want a paired t-test. The default is set to `FALSE` but can be set to `TRUE` if you desire to perform a paired t-test.
 
 The `var.equal` argument indicates whether or not to assume equal variances when performing a two-sample t-test. The default assumes unequal variance and applies the Welsh approximation to the degrees of freedom; however, you can set this to `TRUE` to pool the variance.
 
-Finally, the `conf.level` argument determines the confidence level of the reported confidence interval for $\mu$ in the one-sample case and $\mu_1 - \mu_2$ in the two-sample case.
+Finally, the `conf.level` argument determines the confidence level of the reported confidence interval for $$\mu$$ in the one-sample case and $$\mu_1 - \mu_2$$ in the two-sample case.
 
 The `wilcox.test()` function provides the same basic functionality and arguments; however, `wilcox.test()` is used when we do not want to assume the data to follow a normal distribution.
 
