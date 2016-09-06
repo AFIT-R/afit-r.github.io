@@ -34,25 +34,25 @@ Upon successfully completing this course, students will:
 
 ### Structure of Class Time 
 
-The two in-class sessions will consist of both lectures, live coding by the instructor and hands on programming by the students. The hands on practice will be sequential in which students will practice applying code as it is learned. 
+The seven in-class sessions will consist of live coding by the instructor and hands on programming by the students. The hands on practice will be sequential in which students will practice applying code as it is learned. 
 
 
 ### Material
-You can download the required classroom material here: &nbsp; <a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>.  In this file you will find the slides, data, and initial code scripts that we will go through in class. The folder is large (35MB) so be patient. If you don't want to download all the material at once you can also download each session's information below.
+All material will be located on the ~L drive.  In-class instructions will be provided on location and extraction of this material.
 
 
-### Schedule
+### Tentative Schedule
 
 
-| Session  | Description  |  Resources  | 
-|:---:|---|:---:|
-| 1 | Introduction & Getting started with R  |  |
-| 2 | Understanding the primary data structures that R uses to hold your data  |  |
-| 3 | Packages, importing, exporting and tidying data | |
-| 4 | Transforming & manipulating data made easy | |
-| 5 | Visualizing your data with R | |
-| 6 | Working in a reproducible environment | |
-| 7 | Putting it all together | |
+| Session  | Description  | 
+|:---:|---|
+| 1 | Introduction & Getting started with R  | 
+| 2 | Understanding the primary data structures that R uses to hold your data  |
+| 3 | Packages, importing, exporting and tidying data |
+| 4 | Transforming & manipulating data made easy |
+| 5 | Visualizing your data with R |
+| 6 | Working in a reproducible environment | 
+| 7 | Putting it all together | 
 
 
 
