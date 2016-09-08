@@ -38,7 +38,7 @@ The seven in-class sessions will consist of live coding by the instructor and ha
 
 
 ### Material
-All material will be located on the ~L drive.  In-class instructions will be provided on location and extraction of this material.
+You can download the required classroom material here: &nbsp; <a href="https://github.com/bradleyboehmke/OPER-200" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>.  If you are unfamiliar with GitHub you can simply download these files to your PC by clicking **Clone or download** &#187; **Download Zip**. In this file you will find the slides, data, and initial code scripts that we will go through in class.
 
 
 ### Tentative Schedule
