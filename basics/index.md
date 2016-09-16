@@ -65,7 +65,7 @@ You are now ready to start programming!
 The RStudio console is where all the action happens. There are four fundamental windows in the console, each with their own purpose. I discuss each briefly below but I highly suggest [this tutorial](http://dss.princeton.edu/training/RStudio101.pdf) for a thorough understanding of the console. 
 
 <center>
-<img src="https://raw.githubusercontent.com/uc-r/uc-r.github.io/master/public/images/RStudio%20Cheatsheet.png">
+<img src="/public/images/RStudio_console.png">
 </center>
 
 ### Script Editor
@@ -156,7 +156,7 @@ options(digits=3)
 For a thorough tutorial regarding the RStudio console and how to customize different components check out [this tutorial](http://dss.princeton.edu/training/RStudio101.pdf). You can also find the RStudio console cheatsheet shown below [here](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf) or by going to Help menu &#187; Cheatsheets.  As with most computer programs, there are numerous keyboard shortcuts for working with the console. To access a menu displaying all the shortcuts in RStudio you can use option + shift + k.  Within RStudio you can also access them in the Help menu &#187; Keyboard Shortcuts.
 
 <center>
-<img src="/public/images/RStudio Cheatsheet.png">
+<img src="https://raw.githubusercontent.com/uc-r/uc-r.github.io/master/public/images/RStudio%20Cheatsheet.png">
 </center>
 
 <br>
