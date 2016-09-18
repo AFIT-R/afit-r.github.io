@@ -46,11 +46,11 @@ You can download the required classroom material here: &nbsp; <a href="https://g
 
 | Session  | Description  | Teacher Scripts |
 |:---:|---|:---:|
-| 1 | Introduction & Getting started with R  | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
-| 2 | Understanding the primary data structures that R uses to hold your data  | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
-| 3 | Packages, importing, exporting and tidying data | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
-| 4 | Transforming & manipulating data made easy | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
-| 5 | Visualizing your data with R | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
+| 1 | Introduction & Getting started with R  | <a href="01-intro-student.R" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
+| 2 | Understanding the primary data structures that R uses to hold your data  | <a href="02-data-structure-teacher.R" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
+| 3 | Packages, importing, exporting and tidying data | <a href="03-get-data-teacher.R" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
+| 4 | Transforming & manipulating data made easy | <a href="04-dplyr-teacher.R" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
+| 5 | Visualizing your data with R | <a href="05-ggplot-teacher.R" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
 | 6 | Working in a reproducible environment | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> | 
 | 7 | Putting it all together | NA |
 
