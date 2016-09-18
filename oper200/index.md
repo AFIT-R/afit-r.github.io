@@ -52,7 +52,7 @@ You can download the required classroom material here: &nbsp; <a href="https://g
 | 4 | Transforming & manipulating data made easy | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
 | 5 | Visualizing your data with R | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
 | 6 | Working in a reproducible environment | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> | 
-| 7 | Putting it all together | <a href="" style="color:black;"><i class="fa fa-file-code-o" aria-hidden="true"></i></a> |
+| 7 | Putting it all together | NA |
 
 
 
