@@ -1,10 +1,10 @@
 ---
-id: 1836
-title: R Basics
-date: 2016-06-10
-author: Brad Boehmke
+title: "R Basics"
+author: "Brad Boehmke"
+date: '2016-06-10'
 layout: page
 permalink: /basics
+id: 1836
 ---
 
 > *"Programming is like kicking yourself in the face, sooner or later your nose will bleed."* - Kyle Woodbury
@@ -14,6 +14,7 @@ A computer language is described by its *syntax* and *semantics*; where syntax i
 
 Throughout this website you'll learn much of the fundamental syntax and semantics of the R programming language; and hopefully with minimal face kicking involved. However, this section serves to introduce you to many of the basics of R to get you comfortable.  This includes
 
+<div style="position:fixed; left:5%; top:40%;">
 * [Installing R & RStudio](#installation)
 * [Understanding the Console](#workspace)
 * [Getting help](#getting_help)
@@ -22,7 +23,7 @@ Throughout this website you'll learn much of the fundamental syntax and semantic
 * [R as a calculator](#calculator)
 * [Vectorization](#vectorization)
 * [Styling guide](#style)
-
+</div>
 <br>
 
 ## Installing R & RStudio {#installation}
@@ -65,7 +66,7 @@ You are now ready to start programming!
 The RStudio console is where all the action happens. There are four fundamental windows in the console, each with their own purpose. I discuss each briefly below but I highly suggest [this tutorial](http://dss.princeton.edu/training/RStudio101.pdf) for a thorough understanding of the console. 
 
 <center>
-<img src="/public/images/RStudio_console.png">
+<img src='../public/images/RStudio_console.png'>
 </center>
 
 ### Script Editor
