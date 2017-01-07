@@ -14,3 +14,7 @@ Descriptive methodologies focus on analyzing historic data for the purpose of id
 - [Assumption of homogeneity](assumptions_homogeneity)
 - [Assessing correlations](correlations)
 - [t-test&#58; Comparing Group Means](t_test)
+
+## Text Mining
+
+- [Tidying Text & Word Frequency](tidy_text)
