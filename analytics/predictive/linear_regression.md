@@ -374,6 +374,8 @@ train %>%
 
 In the next tutorial we will look at how we can extend a simple linear regression model into a multiple regression.
 
+<a href="#top">Go to top</a>
+
 ## Multiple Regression {#multi}
 
 Simple linear regression is a useful approach for predicting a response on the basis of a single predictor variable. However, in practice we often have more than one predictor. For example, in the Advertising data, we have examined the relationship between sales and TV advertising. We also have data for the amount of money spent advertising on the radio and in newspapers, and we may want to know whether either of these two media is associated with sales. How can we extend our analysis of the advertising data in order to accommodate these two additional predictors?
@@ -533,6 +535,7 @@ test %>%
 ## 2 model2  3.75494
 ```
 
+<a href="#top">Go to top</a>
 
 ## Incorporating Interactions {#interactions}
 
@@ -690,6 +693,7 @@ test %>%
 ## 3 model3  1.153139
 ```
 
+<a href="#top">Go to top</a>
 
 ## Additional Considerations {#extra}
 
@@ -864,6 +868,6 @@ car::vif(model8)
 ## 160.4933 160.4933
 ```
 
-
+<a href="#top">Go to top</a>
 
 [^islr]: This tutorial was built as a supplement to Chapter 3 of [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
