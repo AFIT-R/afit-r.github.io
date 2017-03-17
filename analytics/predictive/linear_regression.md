@@ -92,7 +92,7 @@ model1 <- lm(Sales ~ TV, data = train)
 
 In the background the `lm`, which stands for "linear model", is producing the best-fit linear relationship by minimizing the *least squares* criterion (alternative approaches will be considered in later tutorials).  This fit can be visualized in the following illustration where the "best-fit" line is found by minimizing the sum of squared errors (the errors are represented by the vertical black line segments).
 
-<img src="02-linear_regression_files/figure-html/sq.errors-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/sq.errors-1.png" style="display: block; margin: auto;" />
 
 For initial assessment of our model we can use `summary`.  This provides us with a host of information about our model, which we'll walk through.  Alternatively, you can also use `glance(model1)` to get a "tidy" result output.
 
@@ -227,7 +227,7 @@ ggplot(train, aes(TV, Sales)) +
   geom_smooth(se = FALSE, color = "red")
 ```
 
-<img src="02-linear_regression_files/figure-html/plot1-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot1-1.png" style="display: block; margin: auto;" />
 
 An important part of assessing regression models is visualizing residuals. If you use `plot(model1)` four residual plots will be produced that provide some insights. Here I'll walk through creating each of these plots within ggplot and explain their insights.
 
@@ -248,7 +248,7 @@ ggplot(model1_results, aes(.fitted, .resid)) +
   ggtitle("Residuals vs Fitted")
 ```
 
-<img src="02-linear_regression_files/figure-html/plot2-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot2-1.png" style="display: block; margin: auto;" />
 
 We can get this same kind of information with a couple other plots which you will see when using `plot(model1)`.  The first is comparing standardized residuals versus fitted values.  This is the same plot as above but with the residuals standardized to show where residuals deviate by 1, 2, 3+ standard deviations.  This helps us to identify outliers that exceed 3 standard deviations.  The second is the scale-location plot. This plot shows if residuals are spread equally along the ranges of predictors. This is how you can check the assumption of equal variance (homoscedasticity). It’s good if you see a horizontal line with equally (randomly) spread points.
 
@@ -269,7 +269,7 @@ p2 <- ggplot(model1_results, aes(.fitted, sqrt(.std.resid))) +
 gridExtra::grid.arrange(p1, p2, nrow = 1)
 ```
 
-<img src="02-linear_regression_files/figure-html/plot3-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot3-1.png" style="display: block; margin: auto;" />
 
 
 
@@ -281,7 +281,7 @@ qq_plot <- qqnorm(model1_results$.resid)
 qq_plot <- qqline(model1_results$.resid)
 ```
 
-<img src="02-linear_regression_files/figure-html/plot4-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot4-1.png" style="display: block; margin: auto;" />
 
 
 Last are the Cook's Distance and residuals versus leverage plot.  These plot helps us to find influential cases (i.e., subjects) if any. Not all outliers are influential in linear regression analysis. Even though data have extreme values, they might not be influential to determine a regression line. That means, the results wouldn’t be much different if we either include or exclude them from analysis. They follow the trend in the majority of cases and they don’t really matter; they are not influential. On the other hand, some cases could be very influential even if they look to be within a reasonable range of the values. They could be extreme cases against a regression line and can alter the results if we exclude them from analysis. Another way to put it is that they don’t get along with the trend in the majority of the cases.
@@ -296,7 +296,7 @@ plot(model1, which = 4, id.n = 5)
 plot(model1, which = 5, id.n = 5)
 ```
 
-<img src="02-linear_regression_files/figure-html/plot5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot5-1.png" style="display: block; margin: auto;" />
 
 If you want to look at these top 5 observations with the highest Cook's distance in case you want to assess them further you can use the following.
 
@@ -502,7 +502,7 @@ ggplot(model2_results, aes(.fitted, .resid)) +
   ggtitle("Residuals vs Fitted")
 ```
 
-<img src="02-linear_regression_files/figure-html/plot6-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot6-1.png" style="display: block; margin: auto;" />
 
 This concern with normality is supported when we compare the Q-Q plots.  So although our model is performing better numerically, we now have a greater concern with normality then we did before!  This is why we must always assess models numerically *and* visually!
 
@@ -517,7 +517,7 @@ qqnorm(model1_results$.resid); qqline(model1_results$.resid)
 qqnorm(model2_results$.resid); qqline(model2_results$.resid)
 ```
 
-<img src="02-linear_regression_files/figure-html/plot7-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot7-1.png" style="display: block; margin: auto;" />
 
 
 ### Making Predictions
@@ -621,7 +621,7 @@ ggplot(model3_results, aes(.fitted, .resid)) +
   ggtitle("Residuals vs Fitted")
 ```
 
-<img src="02-linear_regression_files/figure-html/plot8-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot8-1.png" style="display: block; margin: auto;" />
 
 As an alternative to the Q-Q plot we can also look at residual histograms for each model.  Here we see that model 3 has a couple large left tail residuals.  These are related to the left tail dip we saw in the above plots.
 
@@ -633,7 +633,7 @@ ggplot(model3_results, aes(.resid)) +
   ggtitle("Residual Histogram")
 ```
 
-<img src="02-linear_regression_files/figure-html/plot9-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot9-1.png" style="display: block; margin: auto;" />
 
 These residuals can be tied back to when our model is trying to predict low levels of sales (< 10,000).  If we remove these sales our residuals are more normally distributed.  What does this mean?  Basically our linear model does a good job predicting sales over 10,000 units based on TV and Radio advertising budgets; however, the performance deteriates when trying to predict sales less than 10,000 because our linear assumption does not hold for this segment of our data.
 
@@ -647,7 +647,7 @@ model3_results %>%
   ggtitle("Residual Histogram")
 ```
 
-<img src="02-linear_regression_files/figure-html/plot10-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot10-1.png" style="display: block; margin: auto;" />
 
 This can be corroborated by looking at the Cook's Distance and Leverage plots.  Both of them highlight observations 3, 5, 47, 65, and 94 as the top 5 influential observations. 
 
@@ -659,7 +659,7 @@ plot(model3, which = 4, id.n = 5)
 plot(model3, which = 5, id.n = 5)
 ```
 
-<img src="02-linear_regression_files/figure-html/plot11-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot11-1.png" style="display: block; margin: auto;" />
 
 If we look at these observations we see that they all have low Sales levels.
 
@@ -772,7 +772,7 @@ ggplot(auto, aes(horsepower, mpg)) +
   geom_smooth(method = "lm")
 ```
 
-<img src="02-linear_regression_files/figure-html/plot12-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot12-1.png" style="display: block; margin: auto;" />
 
 We can try to address the non-linear relationship with a quadratic relationship, which takes the form of:
 
@@ -800,7 +800,7 @@ ggplot(auto, aes(horsepower, mpg)) +
   geom_smooth(method = "lm", formula = y ~ x + I(x^2))
 ```
 
-<img src="02-linear_regression_files/figure-html/plot13-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot13-1.png" style="display: block; margin: auto;" />
 
 
 ### Correlation of Error Terms
@@ -822,7 +822,7 @@ df %>%
   geom_line()
 ```
 
-<img src="02-linear_regression_files/figure-html/plot14-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/regression/plot14-1.png" style="display: block; margin: auto;" />
 
 ### Collinearity
 
