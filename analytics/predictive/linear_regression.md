@@ -71,11 +71,11 @@ $$ Y = \beta_0 + \beta_1X + \epsilon \tag{1}$$
 
 where: 
 
-- $Y$ represents $sales$
-- $X$ represents *TV advertising budget*
-- $\beta_0$ is the intercept
-- $\beta_1$ is the coefficient (slope term) representing the linear relationship
-- $\epsilon$ is a mean-zero random error term
+- $$Y$$ represents *sales*
+- $$X$$ represents *TV advertising budget*
+- $$\beta_0$$ is the intercept
+- $$\beta_1$$ is the coefficient (slope term) representing the linear relationship
+- $$\epsilon$$ is a mean-zero random error term
 
 ### Model Building
 
