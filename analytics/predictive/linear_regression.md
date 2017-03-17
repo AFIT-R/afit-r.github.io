@@ -13,8 +13,8 @@ This tutorial[^islr] serves as an introduction to linear regression.
 
 1. [Replication requirements](#req): What you'll need to reproduce the analysis in this tutorial
 2. [Preparing our data](#prep): Prepare our data for modeling
-3. [Simple linear regression](#simple): Predicting a quantitative response $Y$ with a single predictor variable $X$
-4. [Multiple linear regression](#multi): Predicting a quantitative response $Y$ with multiple predictor variables $X_1, X_2, \dots, X_p$
+3. [Simple linear regression](#simple): Predicting a quantitative response $$Y$$ with a single predictor variable $$X$$
+4. [Multiple linear regression](#multi): Predicting a quantitative response $$Y$$ with multiple predictor variables $$X_1, X_2, \dots, X_p$$
 5. [Incorporating interactions](#interactions): Removing the additive assumption
 6. [Additional considerations](#extra): A few other considerations to know about
 
