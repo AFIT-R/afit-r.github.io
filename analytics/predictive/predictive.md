@@ -8,4 +8,4 @@ Predictive methodologies use knowledge, usually extracted from historical data, 
 
 <br>
 
-
+- [Linear regression](linear_regression)
