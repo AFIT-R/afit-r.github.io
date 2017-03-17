@@ -160,7 +160,7 @@ which measures the number of standard deviations that $$\beta_1$$ is away from 0
 Next, we want to understand the extent to which the model fits the data. This is typically referred to as the *goodness-of-fit*.  We can measure this quantitatively by assessing three things:
 
 1. Residual standard error
-2. $R^2$
+2. $$R^2$$
 3. F-statistic
 
 The RSE is an estimate of the standard deviation of $$\epsilon$$. Roughly speaking, it is the average amount that the response will deviate from the true regression line. It is computed by:
@@ -858,7 +858,7 @@ Instead of inspecting the correlation matrix, a better way to assess multi- coll
 $$VIF(\hat{\beta}_j) = \frac{1}{1-R^2_{X_j|X_{-j}}} \tag{14}$$
 
 
-where $$R^2_{X_j|X_{-j}}$$ is the $$R^2$$ from a regression of $$X_j$$ onto all of the other predictors. We can use the `vif` function from the `car` package to compute the VIF.  As we see below model 7 is near the smallest possible VIF value where model 8 has obvious concerns.
+where $$R^2_{X_j | X_{-j}}$$ is the $$R^2$$ from a regression of $$X_j$$ onto all of the other predictors. We can use the `vif` function from the `car` package to compute the VIF.  As we see below model 7 is near the smallest possible VIF value where model 8 has obvious concerns.
 
 
 ```r
