@@ -65,7 +65,7 @@ test <- advertising[!sample, ]
 
 ## Simple Linear Regression {#simple}
 
-*Simple linear regression* lives up to its name: it is a very straightforward approach for predicting a quantitative response $Y$ on the basis of a single predictor variable $X$. It assumes that there is approximately a linear relationship between $X$ and $Y$. Using our advertising data, suppose we wish to model the linear relationship between the TV budget and sales.  We can write this as:
+*Simple linear regression* lives up to its name: it is a very straightforward approach for predicting a quantitative response $$Y$$ on the basis of a single predictor variable $$X$$. It assumes that there is approximately a linear relationship between $$X$$ and $$Y$$. Using our advertising data, suppose we wish to model the linear relationship between the TV budget and sales.  We can write this as:
 
 $$ Y = \beta_0 + \beta_1X + \epsilon \tag{1}$$
 
@@ -79,7 +79,7 @@ where:
 
 ### Model Building
 
-To build this model in R we use the formula notation of $Y \sim X$.
+To build this model in R we use the formula notation of $$Y \sim X$$.
 
 
 ```r
@@ -117,7 +117,7 @@ summary(model1)
 
 ### Assessing Coefficients
 
-Our original formula in Eq. (1) includes $\beta_0$ for our intercept coefficent and $\beta_1$ for our slope coefficient. If we look at our model results (here we use `tidy` to just print out a tidy version of our coefficent results) we see that our model takes the form of
+Our original formula in Eq. (1) includes $$\beta_0$$ for our intercept coefficent and $$\beta_1$$ for our slope coefficient. If we look at our model results (here we use `tidy` to just print out a tidy version of our coefficent results) we see that our model takes the form of
 
 $$ Y = 6.76 + 0.05X + \epsilon \tag{2}$$
 
@@ -131,10 +131,11 @@ tidy(model1)
 
 In other words, our intercept estimate is 6.76 so when the TV advertising budget is zero we can expect sales to be 6,760 (remember we're operating in units of 1,000).  And for every $1,000 increase in the TV advertising budget we expect the average increase in sales to be 50 units.
 
-It's also important to understand if the these coefficients are statistically significant. In other words, can we state these coefficients are statistically different then 0?  To do that we can start by assessing the standard error (SE). The SE for $\beta_0$ and $\beta_1$ are computed with:
+It's also important to understand if the these coefficients are statistically significant. In other words, can we state these coefficients are statistically different then 0?  To do that we can start by assessing the standard error (SE). The SE for $$\beta_0$$ and $$\beta_1$$ are computed with:
 
 $$SE(\beta_0)^2 = \sigma^2\bigg[\frac{1}{n}+\frac{\bar{x}^2}{\sum^n_{i=1}(x_i - \bar{x})^2} \bigg], \quad SE(\beta_1)^2 = \frac{\sigma^2}{\sum^n_{i=1}(x_i - \bar{x})^2}   \tag{3} $$
-where $\sigma^2 = Var(\epsilon)$.  We see that our model results provide the SE (noted as *std.error*).  We can use the SE to compute the 95% confidence interval for the coefficients:
+
+where $$\sigma^2 = Var(\epsilon)$$.  We see that our model results provide the SE (noted as *std.error*).  We can use the SE to compute the 95% confidence interval for the coefficients:
 
 $$ \beta_1 \pm 2 \cdot SE(\beta_1)  \tag{4}$$
 
@@ -148,11 +149,11 @@ confint(model1)
 ## TV          0.04342678 0.05714057
 ```
 
-Our results show us that our 95% confidence interval for $\beta_1$ (TV) is [.043, .057].  Thus, since zero is not in this interval we can conclude that as the TV advertising budget increases by $1,000 we can expect the sales to increase by 43-57 units. This is also supported by the *t-statistic* provided by our results, which are computed by
+Our results show us that our 95% confidence interval for $$\beta_1$$ (TV) is [.043, .057].  Thus, since zero is not in this interval we can conclude that as the TV advertising budget increases by $1,000 we can expect the sales to increase by 43-57 units. This is also supported by the *t-statistic* provided by our results, which are computed by
 
 $$t=\frac{\beta_1 - 0}{SE(\beta_1)}  \tag{5}$$
 
-which measures the number of standard deviations that $\beta_1$ is away from 0.  Thus a large *t-statistic* such as ours will produe a small *p-value* (a small p-value indicates that it is unlikely to observe such a substantial association between the predictor variable and the response due to chance).  Thus, we can conclude that a relationship between TV advertising budget and sales exists.
+which measures the number of standard deviations that $$\beta_1$$ is away from 0.  Thus a large *t-statistic* such as ours will produe a small *p-value* (a small p-value indicates that it is unlikely to observe such a substantial association between the predictor variable and the response due to chance).  Thus, we can conclude that a relationship between TV advertising budget and sales exists.
 
 ### Assessing Model Accuracy
 
@@ -162,7 +163,7 @@ Next, we want to understand the extent to which the model fits the data. This is
 2. $R^2$
 3. F-statistic
 
-The RSE is an estimate of the standard deviation of $\epsilon$. Roughly speaking, it is the average amount that the response will deviate from the true regression line. It is computed by:
+The RSE is an estimate of the standard deviation of $$\epsilon$$. Roughly speaking, it is the average amount that the response will deviate from the true regression line. It is computed by:
 
 $$ RSE = \sqrt{\frac{1}{n-2}\sum^n_{i=1}(y_i - \hat{y}_i)^2} \tag{6}$$
 
@@ -183,11 +184,11 @@ sigma(model1)/mean(train$Sales)
 ```
 
 
-The RSE provides an absolute measure of lack of fit of our model to the data. But since it is measured in the units of $Y$, it is not always clear what constitutes a good RSE. The $R^2$ statistic provides an alternative measure of fit. It represents the proportion of variance explained and so it always takes on a value between 0 and 1, and is independent of the scale of $Y$. $R^2$ is simply a function of *residual sum of squares* (RSS) and *total sum of squares* (TSS):
+The RSE provides an absolute measure of lack of fit of our model to the data. But since it is measured in the units of $$Y$$, it is not always clear what constitutes a good RSE. The $$R^2$$ statistic provides an alternative measure of fit. It represents the proportion of variance explained and so it always takes on a value between 0 and 1, and is independent of the scale of $$Y$$. $$R^2$$ is simply a function of *residual sum of squares* (RSS) and *total sum of squares* (TSS):
 
 $$ R^2 = 1 - \frac{RSS}{TSS}= 1 - \frac{\sum^n_{i=1}(y_i-\hat{y}_i)^2}{\sum^n_{i=1}(y_i-\bar{y}_i)^2} \tag{7}$$
 
-Similar to RSE the $R^2$ can be found at the bottom of `summary(model1)` but we can also get it directly with `rsquare`.  The result suggests that TV advertising budget can explain 64% of the variability in our sales data.
+Similar to RSE the $$R^2$$ can be found at the bottom of `summary(model1)` but we can also get it directly with `rsquare`.  The result suggests that TV advertising budget can explain 64% of the variability in our sales data.
 
 
 ```r
@@ -195,7 +196,7 @@ rsquare(model1, data = train)
 ## [1] 0.6372581
 ```
 
-As a side note, in a simple linear regression model the $R^2$ value will equal the squared correlation between $X$ and $Y$:
+As a side note, in a simple linear regression model the $$R^2$$ value will equal the squared correlation between $$X$$ and $$Y$$:
 
 
 ```r
@@ -207,9 +208,9 @@ Lastly, the *F-statistic* tests to see if at least one predictor variable has a 
 
 $$F = \frac{(TSS-RSS)/p}{RSS/(n-p-1)} \tag{8} $$
 
-Hence, a larger F-statistic will produce a statistically significant p-value ($p < 0.05$).  In our case we see at the bottom of our summary statement that the F-statistic is 210.8 producing a p-value of $p<2.2e-16$.
+Hence, a larger F-statistic will produce a statistically significant p-value ($$p < 0.05$$).  In our case we see at the bottom of our summary statement that the F-statistic is 210.8 producing a p-value of $$p < 2.2e-16$$.
 
-Combined, our RSE, $R^2$, and F-statistic results suggest that our model has an ok fit, but we could likely do better.
+Combined, our RSE, $$R^2$$, and F-statistic results suggest that our model has an ok fit, but we could likely do better.
 
 ### Assessing Our Model Visually
 
@@ -230,7 +231,7 @@ An important part of assessing regression models is visualizing residuals. If yo
 First is a plot of residuals versus fitted values.  This will signal two important concerns:
 
 1. Non-linearity: if a discernible pattern (blue line) exists then this suggests either non-linearity or that other attributes have not been adequately captured. Our plot indicates that the assumption of linearity is fair.
-2. Heteroskedasticity: an important assumption of linear regression is that the error terms have a constant variance, $Var(\epsilon_i)=\sigma^2$. If there is a funnel shape with our residuals, as in our plot, then we've violated this assumption.  Sometimes this can be resolved with a log or square root transformation of $Y$ in our model.
+2. Heteroskedasticity: an important assumption of linear regression is that the error terms have a constant variance, $$Var(\epsilon_i)=\sigma^2$$. If there is a funnel shape with our residuals, as in our plot, then we've violated this assumption.  Sometimes this can be resolved with a log or square root transformation of $$Y$$ in our model.
 
 
 ```r
@@ -384,7 +385,7 @@ We can extend the simple linear regression model so that it can directly accommo
 
 $$ Y = \beta_0 + \beta_1X_1 + \beta_1X_2 + \cdots + \beta_pX_p + \epsilon \tag{10}$$
 
-where $X_j$ represents the *j*th predictor and $\beta_j$ quantifies the association between that variable and the response. We interpret $\beta_j$ as the average effect on $Y$ of a one unit increase in $X_j$, holding all other predictors fixed.
+where $$X_j$$ represents the *j*th predictor and $$\beta_j$$ quantifies the association between that variable and the response. We interpret $$\beta_j$$ as the average effect on $$Y$$ of a one unit increase in $$X_j$$, holding all other predictors fixed.
 
 ### Model Building
 
@@ -424,7 +425,7 @@ summary(model2)
 
 ### Assessing Coefficients
 
-The interpretation of our coefficients is the same as in a simple linear regression model.  First, we see that our coefficients for TV and Radio advertising budget are statistically significant (p-value < 0.05) while the coefficient for Newspaper is not.  Thus, changes in Newspaper budget do not appear to have a relationship with changes in sales.  However, for TV our coefficent suggests that for every \$1,000 increase in TV advertising budget, *holding all other predictors constant*, we can expect an increase of 47 sales units, on average (this is similar to what we found in the simple linear regression).  The Radio coefficient suggests that for every \$1,000 increase in Radio advertising budget, *holding all other predictors constant*, we can expect an increase of 196 sales units, on average.
+The interpretation of our coefficients is the same as in a simple linear regression model.  First, we see that our coefficients for TV and Radio advertising budget are statistically significant (p-value < 0.05) while the coefficient for Newspaper is not.  Thus, changes in Newspaper budget do not appear to have a relationship with changes in sales.  However, for TV our coefficent suggests that for every $1,000 increase in TV advertising budget, *holding all other predictors constant*, we can expect an increase of 47 sales units, on average (this is similar to what we found in the simple linear regression).  The Radio coefficient suggests that for every $1,000 increase in Radio advertising budget, *holding all other predictors constant*, we can expect an increase of 196 sales units, on average.
 
 
 ```r
@@ -450,7 +451,7 @@ confint(model2)
 
 ### Assessing Model Accuracy
 
-Assessing model accuracy is very similar as when assessing simple linear regression models.  Rather than repeat the discussion, here I will highlight a few key considerations. First, multiple regression is when the F-statistic becomes more important as this statistic is testing to see if *at least one of the coefficients is non-zero*. When there is no relationship between the response and predictors, we expect the F-statistic to take on a value close to 1. On the other hand, if at least predictor has a relationship then we expect $F > 1$. In our summary print out above for model 2 we saw that $F = 445.9$ with $p < 0.05$ suggesting that at least one of the advertising media must be related to sales. 
+Assessing model accuracy is very similar as when assessing simple linear regression models.  Rather than repeat the discussion, here I will highlight a few key considerations. First, multiple regression is when the F-statistic becomes more important as this statistic is testing to see if *at least one of the coefficients is non-zero*. When there is no relationship between the response and predictors, we expect the F-statistic to take on a value close to 1. On the other hand, if at least predictor has a relationship then we expect $$F > 1$$. In our summary print out above for model 2 we saw that $$F = 445.9$$ with $$p < 0.05$$ suggesting that at least one of the advertising media must be related to sales. 
 
 In addition, if we compare the results from our simple linear regression model (`model1`) and our multiple regression model (`model2`) we can make some important comparisons:
 
@@ -470,8 +471,8 @@ list(model1 = broom::glance(model1), model2 = broom::glance(model2))
 ## 1 455.5116 469.5317 275.3046         118
 ```
 
-1. **$R^2$**: Model 2's $R^2=.92$ is substantially higher than model 1 suggesting that model 2 does a better job explaining the variance in sales. It's also important to consider the *adjusted* $R^2$.  The *adjusted* $R^2$ is a modified version of $R^2$ that has been adjusted for the number of predictors in the model. The *adjusted* $R^2$ increases only if the new term improves the model more than would be expected by chance. Thus, since model 2's *adjusted* $R^2$ is also substantially higher than model 1 we confirm that the additional predictors are improving the model's performance.
-2. **RSE**: Model 2's RSE (`sigma`) is lower than model 1.  This shows that model 2 reduces the variance of our $\epsilon$ parameter which corroborates our conclusion that model 2 does a better job modeling sales.
+1. **$$R^2$$**: Model 2's $$R^2=.92$$ is substantially higher than model 1 suggesting that model 2 does a better job explaining the variance in sales. It's also important to consider the *adjusted* $$R^2$$.  The *adjusted* $$R^2$$ is a modified version of $$R^2$$ that has been adjusted for the number of predictors in the model. The *adjusted* $$R^2$$ increases only if the new term improves the model more than would be expected by chance. Thus, since model 2's *adjusted* $$R^2$$ is also substantially higher than model 1 we confirm that the additional predictors are improving the model's performance.
+2. **RSE**: Model 2's RSE (`sigma`) is lower than model 1.  This shows that model 2 reduces the variance of our $$\epsilon$$ parameter which corroborates our conclusion that model 2 does a better job modeling sales.
 3. **F-statistic**: the F-statistic (`statistic`) in model 2 is larger than model 1.  Here larger is better and suggests that model 2 provides a better "goodness-of-fit".
 4. **Other**: We can also use other various statistics to compare the quality of our models. These include Akaike information criterion (AIC) and Bayesian information criterion (BIC), which we see in our results, among others.  We'll go into more details regarding these statistics in the *Linear Model Selection* tutorial but for now just know that models with lower AIC and BIC values are considered of better quality than models with higher values.
 
@@ -539,13 +540,13 @@ test %>%
 
 ## Incorporating Interactions {#interactions}
 
-In our previous analysis of the Advertising data, we concluded that both TV and radio seem to be associated with sales. The linear models that formed the basis for this conclusion assumed that the effect on sales of increasing one advertising medium is independent of the amount spent on the other media. For example, the linear model (Eq. 10) states that the average effect on sales of a one-unit increase in TV is always $\beta_1$, regardless of the amount spent on radio.
+In our previous analysis of the Advertising data, we concluded that both TV and radio seem to be associated with sales. The linear models that formed the basis for this conclusion assumed that the effect on sales of increasing one advertising medium is independent of the amount spent on the other media. For example, the linear model (Eq. 10) states that the average effect on sales of a one-unit increase in TV is always $$\beta_1$$, regardless of the amount spent on radio.
 
-However, this simple model may be incorrect. Suppose that spending money on radio advertising actually increases the effectiveness of TV advertising, so that the slope term for TV should increase as radio increases. In this situation, given a fixed budget of $100,000, spending half on radio and half on TV may increase sales more than allocating the entire amount to either TV or to radio. In marketing, this is known as a *synergy* effect, and in statistics it is referred to as an *interaction* effect.  One way of extending our model 2 to allow for interaction effects is to include a third predictor, called an *interaction term*, which is constructed by computing the product of $X_1$ and $X_2$ (here we'll drop the Newspaper variable). This results in the model
+However, this simple model may be incorrect. Suppose that spending money on radio advertising actually increases the effectiveness of TV advertising, so that the slope term for TV should increase as radio increases. In this situation, given a fixed budget of $100,000, spending half on radio and half on TV may increase sales more than allocating the entire amount to either TV or to radio. In marketing, this is known as a *synergy* effect, and in statistics it is referred to as an *interaction* effect.  One way of extending our model 2 to allow for interaction effects is to include a third predictor, called an *interaction term*, which is constructed by computing the product of $$X_1$$ and $$X_2$$ (here we'll drop the Newspaper variable). This results in the model
 
 $$ Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_1X_2 + \epsilon \tag{11}$$
 
-Now the effect of $X_1$ on $Y$ is no longer constant as adjusting $X_2$ will change the impact of $X_1$ on $Y$.  We can interpret $\beta_3$ as the increase in the effectiveness of TV advertising for a one unit increase in radio advertising (or vice-versa).  To perform this in R we can use either of the following.  Note that option B is a shorthand version as when you create the interaction effect with `*`, R will automatically retain the *main effects*.
+Now the effect of $$X_1$$ on $$Y$$ is no longer constant as adjusting $$X_2$$ will change the impact of $$X_1$$ on $$Y$$.  We can interpret $$\beta_3$$ as the increase in the effectiveness of TV advertising for a one unit increase in radio advertising (or vice-versa).  To perform this in R we can use either of the following.  Note that option B is a shorthand version as when you create the interaction effect with `*`, R will automatically retain the *main effects*.
 
 
 ```r
@@ -558,7 +559,7 @@ model3 <- lm(Sales ~ TV * Radio, data = train)
 
 ### Assessing Coefficients
 
-We see that all our coefficients are statistically significant.  Now we can interpret this as an increase in TV advertising of \$1,000 is associated with increased sales of $(\beta_1+\beta_3\times \text{Radio}) \times 1000 = 21 + 1 \times \text{Radio}$.  And an increase in Radio advertising of \$1,000 will be associated with an increase in sales of $(\beta_2+\beta_3\times \text{TV}) \times 1000 = 21 + 1 \times \text{TV}$.
+We see that all our coefficients are statistically significant.  Now we can interpret this as an increase in TV advertising of \$1,000 is associated with increased sales of $$(\beta_1+\beta_3\times \text{Radio}) \times 1000 = 21 + 1 \times \text{Radio}$$.  And an increase in Radio advertising of \$1,000 will be associated with an increase in sales of $$(\beta_2+\beta_3\times \text{TV}) \times 1000 = 21 + 1 \times \text{TV}$$.
 
 
 ```r
@@ -573,7 +574,7 @@ tidy(model3)
 
 ### Assessing Model Accuracy
 
-We can compare our model results across all three models. We see that our *adjusted* $R^2$ and F-statistic are highest with model 3 and our RSE, AIC, and BIC are the lowest with model 3; all suggesting the model 3 out performs the other models.
+We can compare our model results across all three models. We see that our *adjusted* $$R^2$$ and F-statistic are highest with model 3 and our RSE, AIC, and BIC are the lowest with model 3; all suggesting the model 3 out performs the other models.
 
 
 ```r
@@ -711,7 +712,7 @@ and use this variable as a predictor in the regression equation. This results in
 
 $$y_i = \beta_0 + \beta_1x_i + \epsilon_i = \Bigg\{ \genfrac{}{}{0pt}{}{\beta_0 + \beta_1 + \epsilon_i \hspace{.5cm}\text{ if }i\text{th person is male}\hspace{.3cm}}{\beta_0 + \epsilon_i \hspace{1.5cm}\text{ if }i\text{th person is female}}  \tag{13}$$
 
-Now $\beta_0$ can be interpreted as the average credit card balance among males, $\beta_0 + \beta_1$ as the average credit card balance among females, and $\beta_1$ as the average difference in credit card balance between females and males.  We can produce this model in R using the same syntax as we saw earlier:
+Now $$\beta_0$$ can be interpreted as the average credit card balance among males, $$\beta_0 + \beta_1$$ as the average credit card balance among females, and $$\beta_1$$ as the average difference in credit card balance between females and males.  We can produce this model in R using the same syntax as we saw earlier:
 
 
 ```r
@@ -719,7 +720,7 @@ credit <- read_csv("http://www-bcf.usc.edu/~gareth/ISL/Credit.csv")
 model4 <- lm(Balance ~ Gender, data = credit)
 ```
 
-The results below suggest that females are estimated to carry $529.54 in credit card debt where males carry \$529.54 - \$19.73 = \$509.81.
+The results below suggest that females are estimated to carry $529.54 in credit card debt where males carry $529.54 - $19.73 = $509.81.
 
 
 
@@ -805,7 +806,7 @@ ggplot(auto, aes(horsepower, mpg)) +
 
 ### Correlation of Error Terms
 
-An important assumption of the linear regression model is that the error terms, $\epsilon_1, \epsilon_2,\dots,\epsilon_n$, are uncorrelated. Correlated residuals frequently occur in the context of time series data, which consists of observations for which measurements are obtained at discrete points in time. In many cases, observations that are obtained at adjacent time points will have positively correlated errors.  This will result in biased standard errors and incorrect inference of model results.
+An important assumption of the linear regression model is that the error terms, $$\epsilon_1, \epsilon_2,\dots,\epsilon_n$$, are uncorrelated. Correlated residuals frequently occur in the context of time series data, which consists of observations for which measurements are obtained at discrete points in time. In many cases, observations that are obtained at adjacent time points will have positively correlated errors.  This will result in biased standard errors and incorrect inference of model results.
 
 To illustrate, we'll create a model that uses the number of unemployed to predict personal consumption expenditures (using the `economics` data frame provided by `ggplot2`).  The assumption is that as more people become unemployed personal consumption is likely to reduce.  However, if we look at our model's residuals we see that adjacent residuals tend to take on similar values. In fact, these residuals have a .998 autocorrelation.  This is a clear violation of our assumption. We'll learn how to deal with correlated residuals in future tutorials.
 
@@ -852,11 +853,12 @@ list(`Model 1` = tidy(model7),
 
 A simple way to detect collinearity is to look at the correlation matrix of the predictors. An element of this matrix that is large in absolute value indicates a pair of highly correlated variables, and therefore a collinearity problem in the data. Unfortunately, not all collinearity problems can be detected by inspection of the correlation matrix: it is possible for collinear- ity to exist between three or more variables even if no pair of variables has a particularly high correlation. We call this situation *multicollinearity*.
 
-Instead of inspecting the correlation matrix, a better way to assess multi- collinearity is to compute the *variance inflation factor* (VIF). The VIF is the ratio of the variance of $\hat{\beta}_j$ when fitting the full model divided by the variance of $\hat{\beta}_j$ if fit on its own. The smallest possible value for VIF is 1, which indicates the complete absence of collinearity. Typically in practice there is a small amount of collinearity among the predictors. As a rule of thumb, a VIF value that exceeds 5 or 10 indicates a problematic amount of collinearity. The VIF for each variable can be computed using the formula
+Instead of inspecting the correlation matrix, a better way to assess multi- collinearity is to compute the *variance inflation factor* (VIF). The VIF is the ratio of the variance of $$\hat{\beta}_j$$ when fitting the full model divided by the variance of $$\hat{\beta}_j$$ if fit on its own. The smallest possible value for VIF is 1, which indicates the complete absence of collinearity. Typically in practice there is a small amount of collinearity among the predictors. As a rule of thumb, a VIF value that exceeds 5 or 10 indicates a problematic amount of collinearity. The VIF for each variable can be computed using the formula
 
 $$VIF(\hat{\beta}_j) = \frac{1}{1-R^2_{X_j|X_{-j}}} \tag{14}$$
 
-where $R^2_{X_j|X_{-j}}$ is the $R^2$ from a regression of $X_j$ onto all of the other predictors. We can use the `vif` function from the `car` package to compute the VIF.  As we see below model 7 is near the smallest possible VIF value where model 8 has obvious concerns.
+
+where $$R^2_{X_j|X_{-j}}$$ is the $$R^2$$ from a regression of $$X_j$$ onto all of the other predictors. We can use the `vif` function from the `car` package to compute the VIF.  As we see below model 7 is near the smallest possible VIF value where model 8 has obvious concerns.
 
 
 ```r
