@@ -572,22 +572,16 @@ list(model1 = broom::glance(model1),
      model2 = broom::glance(model2),
      model3 = broom::glance(model3))
 ## $model1
-##   r.squared adj.r.squared    sigma statistic      p.value df    logLik
-## 1 0.6372581     0.6342353 3.204129  210.8137 3.413075e-28  2 -314.1639
-##        AIC      BIC deviance df.residual
-## 1 634.3279 642.7399 1231.973         120
+##   r.squared adj.r.squared    sigma statistic      p.value df    logLik      AIC      BIC deviance df.residual
+## 1 0.6372581     0.6342353 3.204129  210.8137 3.413075e-28  2 -314.1639 634.3279 642.7399 1231.973         120
 ## 
 ## $model2
-##   r.squared adj.r.squared    sigma statistic      p.value df    logLik
-## 1 0.9189394     0.9168785 1.527446  445.9001 3.486405e-64  4 -222.7558
-##        AIC      BIC deviance df.residual
-## 1 455.5116 469.5317 275.3046         118
+##   r.squared adj.r.squared    sigma statistic      p.value df    logLik      AIC      BIC deviance df.residual
+## 1 0.9189394     0.9168785 1.527446  445.9001 3.486405e-64  4 -222.7558 455.5116 469.5317 275.3046         118
 ## 
 ## $model3
-##   r.squared adj.r.squared     sigma statistic      p.value df    logLik
-## 1 0.9745811     0.9739349 0.8553403  1508.073 6.908026e-94  4 -152.0138
-##        AIC      BIC deviance df.residual
-## 1 314.0275 328.0476 86.32963         118
+##   r.squared adj.r.squared     sigma statistic      p.value df    logLik      AIC      BIC deviance df.residual
+## 1 0.9745811     0.9739349 0.8553403  1508.073 6.908026e-94  4 -152.0138 314.0275 328.0476 86.32963         118
 ```
 
 
@@ -848,7 +842,7 @@ Instead of inspecting the correlation matrix, a better way to assess multi- coll
 $$VIF(\hat{\beta}_j) = \frac{1}{1-R^2_{X_j|X_{-j}}} \tag{14}$$
 
 
-where $$R^2_{X_j \text{|} X_{-j}}$$ is the $$R^2$$ from a regression of $$X_j$$ onto all of the other predictors. We can use the `vif` function from the `car` package to compute the VIF.  As we see below model 7 is near the smallest possible VIF value where model 8 has obvious concerns.
+where $$R^2_{X_j \mid X_{-j}}$$ is the $$R^2$$ from a regression of $$X_j$$ onto all of the other predictors. We can use the `vif` function from the `car` package to compute the VIF.  As we see below model 7 is near the smallest possible VIF value where model 8 has obvious concerns.
 
 
 ```r
