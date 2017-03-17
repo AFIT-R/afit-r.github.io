@@ -848,7 +848,7 @@ Instead of inspecting the correlation matrix, a better way to assess multi- coll
 $$VIF(\hat{\beta}_j) = \frac{1}{1-R^2_{X_j|X_{-j}}} \tag{14}$$
 
 
-where $$R^2_{X_j | X_{-j}}$$ is the $$R^2$$ from a regression of $$X_j$$ onto all of the other predictors. We can use the `vif` function from the `car` package to compute the VIF.  As we see below model 7 is near the smallest possible VIF value where model 8 has obvious concerns.
+where $$R^2_{X_j \text{|} X_{-j}}$$ is the $$R^2$$ from a regression of $$X_j$$ onto all of the other predictors. We can use the `vif` function from the `car` package to compute the VIF.  As we see below model 7 is near the smallest possible VIF value where model 8 has obvious concerns.
 
 
 ```r
