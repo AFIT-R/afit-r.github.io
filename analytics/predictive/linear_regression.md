@@ -301,18 +301,12 @@ If you want to look at these top 5 observations with the highest Cook's distance
 ```r
 model1_results %>%
   top_n(5, wt = .cooksd)
-##      TV Radio Newspaper Sales  .fitted   .se.fit    .resid       .hat
-## 1 290.7   4.1       8.5  12.8 21.38156 0.5547697 -8.581562 0.02997819
-## 2 280.2  10.1      21.4  14.8 20.85358 0.5241186 -6.053584 0.02675710
-## 3 243.2  49.0      44.3  25.4 18.99309 0.4233792  6.406912 0.01745979
-## 4 284.3  10.6       6.4  15.0 21.05975 0.5360021 -6.059747 0.02798421
-## 5 287.6  43.0      71.8  26.2 21.22568 0.5456473  4.974317 0.02900041
-##     .sigma    .cooksd .std.resid
-## 1 3.116848 0.11426815  -2.719353
-## 2 3.168012 0.05041639  -1.915102
-## 3 3.162537 0.03615646   2.017268
-## 4 3.167847 0.05296944  -1.918262
-## 5 3.184113 0.03706661   1.575484
+##      TV Radio Newspaper Sales  .fitted   .se.fit    .resid       .hat   .sigma    .cooksd .std.resid
+## 1 290.7   4.1       8.5  12.8 21.38156 0.5547697 -8.581562 0.02997819 3.116848 0.11426815  -2.719353
+## 2 280.2  10.1      21.4  14.8 20.85358 0.5241186 -6.053584 0.02675710 3.168012 0.05041639  -1.915102
+## 3 243.2  49.0      44.3  25.4 18.99309 0.4233792  6.406912 0.01745979 3.162537 0.03615646   2.017268
+## 4 284.3  10.6       6.4  15.0 21.05975 0.5360021 -6.059747 0.02798421 3.167847 0.05296944  -1.918262
+## 5 287.6  43.0      71.8  26.2 21.22568 0.5456473  4.974317 0.02900041 3.184113 0.03706661   1.575484
 ```
 
 
@@ -459,16 +453,12 @@ In addition, if we compare the results from our simple linear regression model (
 ```r
 list(model1 = broom::glance(model1), model2 = broom::glance(model2))
 ## $model1
-##   r.squared adj.r.squared    sigma statistic      p.value df    logLik
-## 1 0.6372581     0.6342353 3.204129  210.8137 3.413075e-28  2 -314.1639
-##        AIC      BIC deviance df.residual
-## 1 634.3279 642.7399 1231.973         120
+##   r.squared adj.r.squared    sigma statistic      p.value df    logLik      AIC      BIC deviance df.residual
+## 1 0.6372581     0.6342353 3.204129  210.8137 3.413075e-28  2 -314.1639 634.3279 642.7399 1231.973         120
 ## 
 ## $model2
-##   r.squared adj.r.squared    sigma statistic      p.value df    logLik
-## 1 0.9189394     0.9168785 1.527446  445.9001 3.486405e-64  4 -222.7558
-##        AIC      BIC deviance df.residual
-## 1 455.5116 469.5317 275.3046         118
+##   r.squared adj.r.squared    sigma statistic      p.value df    logLik      AIC      BIC deviance df.residual
+## 1 0.9189394     0.9168785 1.527446  445.9001 3.486405e-64  4 -222.7558 455.5116 469.5317 275.3046         118
 ```
 
 1. **$$R^2$$**: Model 2's $$R^2=.92$$ is substantially higher than model 1 suggesting that model 2 does a better job explaining the variance in sales. It's also important to consider the *adjusted* $$R^2$$.  The *adjusted* $$R^2$$ is a modified version of $$R^2$$ that has been adjusted for the number of predictors in the model. The *adjusted* $$R^2$$ increases only if the new term improves the model more than would be expected by chance. Thus, since model 2's *adjusted* $$R^2$$ is also substantially higher than model 1 we confirm that the additional predictors are improving the model's performance.
