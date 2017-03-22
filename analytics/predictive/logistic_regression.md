@@ -309,7 +309,7 @@ anova(model1, model3, test = "Chisq")
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
-#### Pseudo $R^2$
+#### Pseudo $$R^2$$
 
 Unlike linear regression with ordinary least squares estimation, there is no $$R^2$$ statistic which explains the proportion of variance in the dependent variable that is explained by the predictors. However, there are a number of pseudo $$R^2$$ metrics that could be of value. Most notable is [McFadden’s $$R^2$$](http://stats.stackexchange.com/questions/82105/mcfaddens-pseudo-r2-interpretation), which is defined as 
 
