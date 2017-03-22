@@ -14,8 +14,8 @@ This tutorial serves as an introduction to logistic regression and covers[^islr]
 1. [Replication requirements](#req): What you'll need to reproduce the analysis in this tutorial
 2. [Why logistic regression](#why):
 3. [Preparing our data](#prep): Prepare our data for modeling
-4. [Simple Logistic regression](#simple): Predicting the probability of response $Y$ with a single predictor variable $X$
-5. [Multiple Logistic regression](#multi): Predicting the probability of response $Y$ with multiple predictor variables $X_1, X_2, \dots, X_p$
+4. [Simple Logistic regression](#simple): Predicting the probability of response *Y* with a single predictor variable *X*
+5. [Multiple Logistic regression](#multi): Predicting the probability of response *Y* with multiple predictor variables $$X_1, X_2, \dots, X_p$$
 6. [Model evaluation & diagnostics](#eval): How well does the model fit the data? Which predictors are most important? Are the predictions accurate?
 
 
@@ -61,7 +61,7 @@ Y = \begin{cases}
     \end{cases}  
 $$
 
-Using this coding, least squares could be used to fit a linear regression model to predict *Y* on the basis of a set of predictors $X_1 ,\dots , X_p$ . Unfortunately, this coding implies an ordering on the outcomes, putting drug overdose in between stroke and epileptic seizure, and insisting that the difference between stroke and drug overdose is the same as the difference between drug overdose and epileptic seizure. In practice there is no particular reason that this needs to be the case. For instance, one could choose an equally reasonable coding,
+Using this coding, least squares could be used to fit a linear regression model to predict *Y* on the basis of a set of predictors $$X_1 ,\dots , X_p$$ . Unfortunately, this coding implies an ordering on the outcomes, putting drug overdose in between stroke and epileptic seizure, and insisting that the difference between stroke and drug overdose is the same as the difference between drug overdose and epileptic seizure. In practice there is no particular reason that this needs to be the case. For instance, one could choose an equally reasonable coding,
 
 $$ 
 Y = \begin{cases}
@@ -76,7 +76,7 @@ which would imply a totally different relationship among the three conditions. E
 More relevant to our data, if we are trying to classify a customer as a high- vs. low-risk defaulter based on their balance we *could* use linear regression; however, the left figure below illustrates how linear regression would predict the probability of defaulting.  Unfortunately, for balances close to zero we predict a negative probability of defaulting; if we were to predict for very large balances, we would get values bigger than 1. These predictions are not sensible, since of course the true probability of defaulting, regardless of credit card balance, must fall between 0 and 1.
 
 
-<img src="03-logistic_regression_files/figure-html/plot1-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/logistic_regression/plot1-1.png" style="display: block; margin: auto;" />
 
 To avoid this problem, we must model *p(X)* using a function that gives outputs between 0 and 1 for all values of *X*. Many functions meet this description. In logistic regression, we use the logistic function, which is defined in Eq. 1 and illustrated in the right figure above.  
 
@@ -103,11 +103,11 @@ We will fit a logistic regression model in order to predict the probability of a
 model1 <- glm(default ~ balance, family = "binomial", data = train)
 ```
 
-In the background the `glm`, uses *maximum likelihood* to fit the model. The basic intuition behind using maximum likelihood to fit a logistic regression model is as follows: we seek estimates for $\beta_0$ and $\beta_1$ such that the predicted probability $\hat{p}(x_i)$ of default for each individual, using Eq. 1, corresponds as closely as possible to the individual’s observed default status. In other words, we try to find $\hat\beta_0$ and $\hat\beta_1$ such that plugging these estimates into the model for *p(X)*, given in Eq. 1, yields a number close to one for all individuals who defaulted, and a number close to zero for all individuals who did not. This intuition can be formalized using a mathematical equation called a *likelihood function*:
+In the background the `glm`, uses *maximum likelihood* to fit the model. The basic intuition behind using maximum likelihood to fit a logistic regression model is as follows: we seek estimates for $$\beta_0$$ and $$\beta_1$$ such that the predicted probability $$\hat{p}(x_i)$$ of default for each individual, using Eq. 1, corresponds as closely as possible to the individual’s observed default status. In other words, we try to find $$\hat\beta_0$$ and $$\hat\beta_1$$ such that plugging these estimates into the model for *p(X)*, given in Eq. 1, yields a number close to one for all individuals who defaulted, and a number close to zero for all individuals who did not. This intuition can be formalized using a mathematical equation called a *likelihood function*:
 
 $$ \ell(\beta_0, \beta_1) = \prod_{i:y_i=1}p(x_i) \prod_{i':y_i'=0}(1-p(x_i'))  \tag{2} $$
 
-The estimates $\beta_0$ and $\beta_1$ are chosen to *maximize* this likelihood function. Maximum likelihood is a very general approach that is used to fit many of the non-linear models that we will examine in future tutorials. What results is a an S-shaped probability curve illustrated below (note that to plot the logistic regression fit line we need to convert our response variable to a [0,1] binary coded variable).
+The estimates $$\beta_0$$ and $$\beta_1$$ are chosen to *maximize* this likelihood function. Maximum likelihood is a very general approach that is used to fit many of the non-linear models that we will examine in future tutorials. What results is a an S-shaped probability curve illustrated below (note that to plot the logistic regression fit line we need to convert our response variable to a [0,1] binary coded variable).
 
 
 ```r
@@ -121,7 +121,7 @@ default %>%
   ylab("Probability of Default")
 ```
 
-<img src="03-logistic_regression_files/figure-html/plot2-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/logistic_regression/plot2-1.png" style="display: block; margin: auto;" />
 
 
 Similar to linear regression we can assess the model using `summary` or `glance`.  Note that the coefficient output format is similar to what we saw in linear regression; however, the goodness-of-fit details at the bottom of `summary` differ.  We'll get into this more later but just note that you see the word *deviance*.  Deviance is analogous to the sum of squares calculations in linear regression and is a measure of the lack of fit to the data in a logistic regression model.  The null deviance represents the difference between a model with only the intercept (which means "no predictors") and a saturated model (a model with a theoretically perfect fit). The goal is for the model deviance (noted as *Residual deviance*) to be lower; smaller values indicate better fit. In this respect, the null model provides a baseline upon which to compare predictor models.  
@@ -155,7 +155,7 @@ summary(model1)
 
 ### Assessing Coefficients
 
-The below table shows the coefficient estimates and related information that result from fitting a logistic regression model in order to predict the probability of *default = Yes* using *balance*. Bear in mind that the coefficient estimates from logistic regression characterize the relationship between the predictor and response variable on a <u>log-odds scale</u> (see Ch. 3 of ISLR[^islr] for more details).  Thus, we see that $\hat\beta_1 = 0.0057$; this indicates that an increase in balance is associated with an increase in the probability of default. To be precise, a one-unit increase in balance is associated with an increase in the log odds of default by 0.0057 units.
+The below table shows the coefficient estimates and related information that result from fitting a logistic regression model in order to predict the probability of *default = Yes* using *balance*. Bear in mind that the coefficient estimates from logistic regression characterize the relationship between the predictor and response variable on a <u>log-odds scale</u> (see Ch. 3 of ISLR[^islr] for more details).  Thus, we see that $$\hat\beta_1 = 0.0057$$; this indicates that an increase in balance is associated with an increase in the probability of default. To be precise, a one-unit increase in balance is associated with an increase in the log odds of default by 0.0057 units.
 
 
 
@@ -176,7 +176,7 @@ exp(coef(model1))
 ## 1.659718e-05 1.005685e+00
 ```
 
-Many aspects of the coefficient output are similar to those discussed in the linear regression output. For example, we can measure the confidence intervals and accuracy of the coefficient estimates by computing their standard errors.  For instance, $\hat\beta_1$ has a *p-value < 2e-16* suggesting a statistically significant relationship between balance carried and the probability of defaulting.  We can also use the standard errors to get confidence intervals as we did in the linear regression tutorial:
+Many aspects of the coefficient output are similar to those discussed in the linear regression output. For example, we can measure the confidence intervals and accuracy of the coefficient estimates by computing their standard errors.  For instance, $$\hat\beta_1$$ has a *p-value < 2e-16* suggesting a statistically significant relationship between balance carried and the probability of defaulting.  We can also use the standard errors to get confidence intervals as we did in the linear regression tutorial:
 
 
 ```r
@@ -229,7 +229,7 @@ predict(model2, data.frame(student = factor(c("Yes", "No"))), type = "response")
 
 ## Multiple Logistic Regression {#multi}
 
-We can also extend our model as seen in Eq. 1 so that we can predict a binary response using multiple predictors where $X = (X_1,\dots, X_p)$ are *p* predictors:
+We can also extend our model as seen in Eq. 1 so that we can predict a binary response using multiple predictors where $$X = (X_1,\dots, X_p)$$ are *p* predictors:
 
 $$ p(X) = \frac{e^{\beta_0 + \beta_1X + \cdots + \beta_pX_p }}{1 + e^{\beta_0 + \beta_1X + \cdots + \beta_pX_p}} \tag{4} $$
 
@@ -248,7 +248,7 @@ tidy(model3)
 
 The right-hand panel of the figure below provides an explanation for this discrepancy. The variables *student* and *balance* are correlated. Students tend to hold higher levels of debt, which is in turn associated with higher probability of default. In other words, students are more likely to have large credit card balances, which, as we know from the left-hand panel of the below figure, tend to be associated with high default rates. Thus, even though an individual student with a given credit card balance will tend to have a lower probability of default than a non-student with the same credit card balance, the fact that students on the whole tend to have higher credit card balances means that overall, students tend to default at a higher rate than non-students. This is an important distinction for a credit card company that is trying to determine to whom they should offer credit. A student is riskier than a non-student if no information about the student’s credit card balance is available. However, that student is less risky than a non-student *with the same credit card balance*!
 
-<img src="03-logistic_regression_files/figure-html/plot3-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/logistic_regression/plot3-1.png" style="display: block; margin: auto;" />
 
 
 This simple example illustrates the dangers and subtleties associated with performing regressions involving only a single predictor when other predictors may also be relevant. The results obtained using one predictor may be quite different from those obtained using multiple predictors, especially when there is correlation among the predictors. This phenomenon is known as *confounding*.
@@ -289,7 +289,7 @@ So far three logistic regression models have been built and the coefficients hav
 
 ### Goodness-of-Fit
 
-In the linear regression tutorial we saw how the F-statistic, $R^2$ and *adjusted* $R^2$, and residual diagnostics inform us of how good the model fits the data. Here, we'll look at a few ways to assess the goodness-of-fit for our logit models.
+In the linear regression tutorial we saw how the F-statistic, $$R^2$$ and *adjusted* $$R^2$$, and residual diagnostics inform us of how good the model fits the data. Here, we'll look at a few ways to assess the goodness-of-fit for our logit models.
 
 #### Likelihood Ratio Test
 
@@ -311,11 +311,11 @@ anova(model1, model3, test = "Chisq")
 
 #### Pseudo $R^2$
 
-Unlike linear regression with ordinary least squares estimation, there is no $R^2$ statistic which explains the proportion of variance in the dependent variable that is explained by the predictors. However, there are a number of pseudo $R^2$ metrics that could be of value. Most notable is [McFadden’s $R^2$](http://stats.stackexchange.com/questions/82105/mcfaddens-pseudo-r2-interpretation), which is defined as 
+Unlike linear regression with ordinary least squares estimation, there is no $$R^2$$ statistic which explains the proportion of variance in the dependent variable that is explained by the predictors. However, there are a number of pseudo $$R^2$$ metrics that could be of value. Most notable is [McFadden’s $$R^2$$](http://stats.stackexchange.com/questions/82105/mcfaddens-pseudo-r2-interpretation), which is defined as 
 
 $$1−\frac{ln(LM_1)}{ln(LM_0)}$$ 
 
-where $ln(LM_1)$ is the log likelihood value for the fitted model and $ln(LM_0)$ is the log likelihood for the null model with only an intercept as a predictor. The measure ranges from 0 to just under 1, with values closer to zero indicating that the model has no predictive power. However, unlike $R^2$ in linear regression, models rarely achieve a high McFadden $R^2$. In fact, in McFadden's own words models with a McFadden pseudo $R^2 \approx 0.40$ represents a very good fit.  We can assess McFadden's pseudo $R^2$ values for our models with:
+where $ln(LM_1)$ is the log likelihood value for the fitted model and $ln(LM_0)$ is the log likelihood for the null model with only an intercept as a predictor. The measure ranges from 0 to just under 1, with values closer to zero indicating that the model has no predictive power. However, unlike $$R^2$$ in linear regression, models rarely achieve a high McFadden $$R^2$$. In fact, in McFadden's own words models with a McFadden pseudo $$R^2 \approx 0.40$$ represents a very good fit.  We can assess McFadden's pseudo $$R^2$$ values for our models with:
 
 
 ```r
@@ -351,7 +351,7 @@ ggplot(model1_data, aes(index, .std.resid, color = default)) +
   geom_ref_line(h = 3)
 ```
 
-<img src="03-logistic_regression_files/figure-html/plot4-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/logistic_regression/plot4-1.png" style="display: block; margin: auto;" />
 
 Those standardized residuals that exceed 3 represent possible outliers and may deserve closer attention.  We can filter for these residuals to get a closer look.  We see that all these observations represent customers who defaulted with budgets that are much lower than the normal defaulters.
 
@@ -359,24 +359,15 @@ Those standardized residuals that exceed 3 represent possible outliers and may d
 ```r
 model1_data %>% 
   filter(abs(.std.resid) > 3)
-##   default   balance   .fitted   .se.fit   .resid         .hat    .sigma
-## 1     Yes 1118.7010 -4.664566 0.1752745 3.057432 0.0002841609 0.3857438
-## 2     Yes 1119.0972 -4.662320 0.1751742 3.056704 0.0002844621 0.3857448
-## 3     Yes 1135.0473 -4.571902 0.1711544 3.027272 0.0002967274 0.3857832
-## 4     Yes 1066.8841 -4.958307 0.1885550 3.151288 0.0002463229 0.3856189
-## 5     Yes  961.4889 -5.555773 0.2163846 3.334556 0.0001796165 0.3853639
-## 6     Yes 1143.6805 -4.522962 0.1689933 3.011233 0.0003034789 0.3858039
-## 7     Yes 1013.2169 -5.262537 0.2026075 3.245830 0.0002105772 0.3854892
-## 8     Yes  961.7327 -5.554391 0.2163192 3.334143 0.0001797543 0.3853645
-##      .cooksd .std.resid index
-## 1 0.01508609   3.057867   271
-## 2 0.01506820   3.057139   272
-## 3 0.01435943   3.027721  1253
-## 4 0.01754100   3.151676  1542
-## 5 0.02324417   3.334855  3488
-## 6 0.01398491   3.011690  4142
-## 7 0.02032614   3.246172  5058
-## 8 0.02322988   3.334443  5709
+##   default   balance   .fitted   .se.fit   .resid         .hat    .sigma    .cooksd .std.resid index
+## 1     Yes 1118.7010 -4.664566 0.1752745 3.057432 0.0002841609 0.3857438 0.01508609   3.057867   271
+## 2     Yes 1119.0972 -4.662320 0.1751742 3.056704 0.0002844621 0.3857448 0.01506820   3.057139   272
+## 3     Yes 1135.0473 -4.571902 0.1711544 3.027272 0.0002967274 0.3857832 0.01435943   3.027721  1253
+## 4     Yes 1066.8841 -4.958307 0.1885550 3.151288 0.0002463229 0.3856189 0.01754100   3.151676  1542
+## 5     Yes  961.4889 -5.555773 0.2163846 3.334556 0.0001796165 0.3853639 0.02324417   3.334855  3488
+## 6     Yes 1143.6805 -4.522962 0.1689933 3.011233 0.0003034789 0.3858039 0.01398491   3.011690  4142
+## 7     Yes 1013.2169 -5.262537 0.2026075 3.245830 0.0002105772 0.3854892 0.02032614   3.246172  5058
+## 8     Yes  961.7327 -5.554391 0.2163192 3.334143 0.0001797543 0.3853645 0.02322988   3.334443  5709
 ```
 
 Similar to linear regression we can also identify influential observations with Cook's distance values.  Here we identify the top 5 largest values.
@@ -386,7 +377,7 @@ Similar to linear regression we can also identify influential observations with 
 plot(model1, which = 4, id.n = 5)
 ```
 
-<img src="03-logistic_regression_files/figure-html/plot5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/logistic_regression/plot5-1.png" style="display: block; margin: auto;" />
 
 And we can investigate these further as well. Here we see that the top five influential points include:
 
@@ -399,18 +390,12 @@ This means if we were to remove these observations (not recommended), the shape,
 ```r
 model1_data %>% 
   top_n(5, .cooksd)
-##   default   balance   .fitted   .se.fit    .resid         .hat    .sigma
-## 1      No 2388.1740  2.531843 0.2413764 -2.284011 0.0039757771 0.3866249
-## 2     Yes  961.4889 -5.555773 0.2163846  3.334556 0.0001796165 0.3853639
-## 3     Yes 1013.2169 -5.262537 0.2026075  3.245830 0.0002105772 0.3854892
-## 4     Yes  961.7327 -5.554391 0.2163192  3.334143 0.0001797543 0.3853645
-## 5      No 2391.0077  2.547907 0.2421522 -2.290521 0.0039468742 0.3866185
-##      .cooksd .std.resid index
-## 1 0.02520100  -2.288565  2382
-## 2 0.02324417   3.334855  3488
-## 3 0.02032614   3.246172  5058
-## 4 0.02322988   3.334443  5709
-## 5 0.02542145  -2.295054  5976
+##   default   balance   .fitted   .se.fit    .resid         .hat    .sigma    .cooksd .std.resid index
+## 1      No 2388.1740  2.531843 0.2413764 -2.284011 0.0039757771 0.3866249 0.02520100  -2.288565  2382
+## 2     Yes  961.4889 -5.555773 0.2163846  3.334556 0.0001796165 0.3853639 0.02324417   3.334855  3488
+## 3     Yes 1013.2169 -5.262537 0.2026075  3.245830 0.0002105772 0.3854892 0.02032614   3.246172  5058
+## 4     Yes  961.7327 -5.554391 0.2163192  3.334143 0.0001797543 0.3853645 0.02322988   3.334443  5709
+## 5      No 2391.0077  2.547907 0.2421522 -2.290521 0.0039468742 0.3866185 0.02542145  -2.295054  5976
 ```
 
 
@@ -496,7 +481,7 @@ prediction(test.predicted.m2, test$default) %>%
   plot()
 ```
 
-<img src="03-logistic_regression_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/logistic_regression/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
 
 And to compute the AUC numerically we can use the following.  Remember, AUC will range from .50 - 1.00.  Thus, model 2 is a very poor classifying model while model 1 is a very good classying model.  
 
