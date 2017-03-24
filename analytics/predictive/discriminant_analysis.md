@@ -15,8 +15,8 @@ This tutorial serves as an introduction to LDA & QDA and covers[^islr]:
 1. [Replication requirements](#req): What you'll need to reproduce the analysis in this tutorial
 2. [Why use discriminant analysis](#why): Understand why and when to use discriminant analysis and the basics behind how it works
 3. [Preparing our data](#prep): Prepare our data for modeling
-4. [Linear discriminant analysis](#linear): Modeling and classifying the categorical response $Y$ with a *linear* combination of predictor variables $X$
-5. [Quadratic discriminant analysis](#nonlinear): Modeling and classifying the categorical response $Y$ with a *non-linear* combination of predictor variables $X$
+4. [Linear discriminant analysis](#linear): Modeling and classifying the categorical response $$Y$$ with a *linear* combination of predictor variables $$X$$
+5. [Quadratic discriminant analysis](#nonlinear): Modeling and classifying the categorical response $$Y$$ with a *non-linear* combination of predictor variables $$X$$
 6. [Prediction Performance](#eval): How well does the model fit the data? Which predictors are most important? Are the predictions accurate?
 7. [A comparison](#compare): An example comparing logistic regression & Discriminant Analysis
 8. [Additional resources](#additional): Additional resources to help you learn more
@@ -65,7 +65,7 @@ However, its important to note that LDA & QDA have assumptions that are often mo
 
 - Both LDA and QDA assume the the predictor variables *X* are drawn from a multivariate Gaussian (aka *normal*) distribution. 
 - LDA assumes equality of covariances among the predictor variables *X* across each all levels of *Y*.  This assumption is relaxed with the QDA model.
-- LDA and QDA require the number of predictor variables (*p*) to be less then the sample size (*n*).  Furthermore, its important to keep in mind that performance will severely decline as *p* approaches *n*.  A simple rule of thumb is to use LDA & QDA on data sets where $n \geq 5 \times p$.  
+- LDA and QDA require the number of predictor variables (*p*) to be less then the sample size (*n*).  Furthermore, its important to keep in mind that performance will severely decline as *p* approaches *n*.  A simple rule of thumb is to use LDA & QDA on data sets where $$n \geq 5 \times p$$.  
 
 
 Also, when considering between LDA & QDA its important to know that LDA is a much less flexible classifier than QDA, and so has substantially lower variance. This can potentially lead to improved prediction performance. But there is a trade-off: if LDA’s assumption that the the predictor variable share a common variance across each *Y* response class is badly off, then LDA can suffer from high bias. Roughly speaking, LDA tends to be a better bet than QDA if there are relatively few training observations and so reducing variance is crucial. In contrast, QDA is recommended if the training set is very large, so that the variance of the classifier is not a major concern, or if the assumption of a common covariance matrix is clearly untenable.
