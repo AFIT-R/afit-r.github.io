@@ -4,7 +4,7 @@ title: Linear & Quadratic Discriminant Analysis
 permalink: /discriminant_analysis
 ---
 
-<img src="/public/images/analytics/logistic_regression/plot2-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
+<img src="/public/images/analytics/discriminant_analysis/LDA.jpg"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
 
 In the previous tutorial you learned that logistic regression is a classification algorithm traditionally limited to only two-class classification problems (i.e. *default = Yes or No*). However, if you have more than two classes then Linear (and its cousin Quadratic) Discriminant Analysis (LDA & QDA) is an often-preferred classification technique. Discriminant analysis models the distribution of the predictors *X* separately in each of the response classes (i.e. *default = "Yes", default = "No"* ), and then uses [Bayes’ theorem](https://en.wikipedia.org/wiki/Bayes'_theorem) to flip these around into estimates for the probability of the response category given the value of *X*.
 
@@ -100,7 +100,7 @@ where:
 This classifier assigns an observation to the *k*th class of $Y_k$ for which discriminant score ($\hat\delta_k(x)$) is largest.  For example, lets assume there are two classes (*A* and *B*) for the response variable *Y*.  Based on the predictor variable(s), LDA is going to compute the probability distribution of being classified as class *A* or *B*.  The linear decision boundary between the probability distributions is represented by the dashed line.  Discriminant scores to the left of the dashed line will be classified as *A* and scores to the right will be classified as *B*.
 
 <center>
-![](http://flylib.com/books/3/195/1/html/2/images/fig130_01.jpg)
+<img src="/public/images/analytics/discriminant_analysis/LDA.jpg" style="display: block; margin: auto;" />
 </center>
 
 When dealing with more than one predictor variable, the LDA classifier assumes that the observations in the *k*th class are drawn from a multivariate Gaussian distribution $N(\mu_k, \mathbf{Σ})$, where $\mu_k$ is a class-specific mean vector, and $\mathbf{Σ}$ is a covariance matrix that is common to all *K* classes.  Incorporating this into the LDA classifier results in 
@@ -143,7 +143,7 @@ The *coefficients of linear discriminants* output provides the linear combinatio
 plot(lda.m1)
 ```
 
-<img src="04-discriminant_analysis_files/figure-html/lda.m1.plot-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/discriminant_analysis/lda.m1.plot-1.png" style="display: block; margin: auto;" />
 
 
 ### Make Predictions
@@ -218,9 +218,9 @@ $$ \hat\delta_k(x) = -\frac{1}{2}x^T\mathbf{Σ}^{-1}_kx+x^T\mathbf{Σ}^{-1}_k\ha
 
 is largest.  Why is this important? Consider the image below.  In trying to classify the observations into the three (color-coded) classes, LDA (left plot) provides linear decision boundaries that are based on the assumption that the observations vary consistently across all classes.  However, when looking at the data it becomes apparent that the variability of the observations within each class differ.  Consequently, QDA (right plot) is able to capture the differing covariances and provide more accurate non-linear classification decision boundaries.
 
-<center>
-![](images/QDA.png)
-</center>
+
+<img src="/public/images/analytics/discriminant_analysis/QDA.png" style="display: block; margin: auto;" />
+
 
 ### Estimate & Understand Model
 
@@ -377,7 +377,7 @@ prediction(test.predicted.qda$posterior[,2], test$default) %>%
   plot()
 ```
 
-<img src="04-discriminant_analysis_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/discriminant_analysis/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
 
 
 
@@ -674,7 +674,7 @@ plot(p2, add = TRUE, col = "blue")
 plot(p3, add = TRUE, col = "green")
 ```
 
-<img src="04-discriminant_analysis_files/figure-html/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/discriminant_analysis/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
 
 
 The difference is subtle.  You can see where we experience increases in the true positive predictions (where the green line go above the red and blue lines).  And although our precision increases, overall AUC is not that much higher. 
