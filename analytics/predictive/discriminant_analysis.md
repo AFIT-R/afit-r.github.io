@@ -86,7 +86,7 @@ test <- default[!sample, ]
 
 ## Linear Discriminant Analysis {#linear}
 
-LDA computes "discriminant scores" for each observation to classify what response variable class it is in (i.e. default or not default). These scores are obtained by finding linear combinations of the independent variables. For a single predictor variable $X=x$ the LDA classifier is estimated as
+LDA computes "discriminant scores" for each observation to classify what response variable class it is in (i.e. default or not default). These scores are obtained by finding linear combinations of the independent variables. For a single predictor variable $$X=x$$ the LDA classifier is estimated as
 
 $$ \hat\delta_k(x) = x \cdot  \frac{\hat\mu_k}{\hat\sigma^2} - \frac{\hat\mu_k^2}{2\hat\sigma^2} + log(\hat\pi_k) \tag{1}$$
 
