@@ -92,22 +92,22 @@ $$ \hat\delta_k(x) = x \cdot  \frac{\hat\mu_k}{\hat\sigma^2} - \frac{\hat\mu_k^2
 
 where:
 
-- $\hat\delta_k(x)$ is the estimated discriminant score that the observation will fall in the *k*th class within the response variable (i.e. *default* or *not default*) based on the value of the predictor variable *x*
-- $\hat\mu_k$ is the average of all the training observations from the *k*th class
-- $\hat\sigma^2$ is the weighted average of the sample variances for each of the *K* classes
-- $\hat\pi_k$ is the prior probability that an observation belongs to the *k*th class (not to be confused with the mathematical constant $\pi \approx 3.14159$)
+- $$\hat\delta_k(x)$$ is the estimated discriminant score that the observation will fall in the *k*th class within the response variable (i.e. *default* or *not default*) based on the value of the predictor variable *x*
+- $$\hat\mu_k$$ is the average of all the training observations from the *k*th class
+- $$\hat\sigma^2$$ is the weighted average of the sample variances for each of the *K* classes
+- $$\hat\pi_k$$ is the prior probability that an observation belongs to the *k*th class (not to be confused with the mathematical constant $$\pi \approx 3.14159$$)
 
-This classifier assigns an observation to the *k*th class of $Y_k$ for which discriminant score ($\hat\delta_k(x)$) is largest.  For example, lets assume there are two classes (*A* and *B*) for the response variable *Y*.  Based on the predictor variable(s), LDA is going to compute the probability distribution of being classified as class *A* or *B*.  The linear decision boundary between the probability distributions is represented by the dashed line.  Discriminant scores to the left of the dashed line will be classified as *A* and scores to the right will be classified as *B*.
+This classifier assigns an observation to the *k*th class of $$Y_k$$ for which discriminant score ($$\hat\delta_k(x)$$) is largest.  For example, lets assume there are two classes (*A* and *B*) for the response variable *Y*.  Based on the predictor variable(s), LDA is going to compute the probability distribution of being classified as class *A* or *B*.  The linear decision boundary between the probability distributions is represented by the dashed line.  Discriminant scores to the left of the dashed line will be classified as *A* and scores to the right will be classified as *B*.
 
 <center>
 <img src="/public/images/analytics/discriminant_analysis/LDA.jpg" style="display: block; margin: auto;" />
 </center>
 
-When dealing with more than one predictor variable, the LDA classifier assumes that the observations in the *k*th class are drawn from a multivariate Gaussian distribution $N(\mu_k, \mathbf{Σ})$, where $\mu_k$ is a class-specific mean vector, and $\mathbf{Σ}$ is a covariance matrix that is common to all *K* classes.  Incorporating this into the LDA classifier results in 
+When dealing with more than one predictor variable, the LDA classifier assumes that the observations in the *k*th class are drawn from a multivariate Gaussian distribution $$N(\mu_k, \mathbf{Σ})$$, where $$\mu_k$$ is a class-specific mean vector, and $$\mathbf{Σ}$$ is a covariance matrix that is common to all *K* classes.  Incorporating this into the LDA classifier results in 
 
 $$ \hat\delta_k(x) = x^T\mathbf{Σ}^{-1}\hat\mu_k  - \frac{1}{2}\hat\mu_k^T\mathbf{Σ}^{-1} - \hat\mu_k + log(\hat\pi_k) \tag{2}$$
 
-where an observation will be assigned to class *k* where the discriminant score $\hat\delta_k(x)$ is largest.
+where an observation will be assigned to class *k* where the discriminant score $$\hat\delta_k(x)$$ is largest.
 
 ### Estimate & Understand Model
 
@@ -134,9 +134,9 @@ In R, we fit a LDA model using the `lda` function, which is part of the `MASS` l
 ## studentYes -0.227922283
 ```
 
-The LDA output indicates that our prior probabilities are $\hat\pi_1 = 0.968$ and $\hat\pi_2 = 0.032$; in other words, 96.8% of the training observations are customers who did not default and 3% represent those that defaulted.  It also provides the group means; these are the average of each predictor within each class, and are used by LDA as estimates of $\mu_k$. These suggest that customers that tend to default have, on average, a credit card balance of $1,777 and are more likely to be students then non-defaulters (29% of non-defaulters are students whereas 39% of defaulters are).  However, as we learned from the last tutorial this is largely because students tend to have higher balances then non-students.  
+The LDA output indicates that our prior probabilities are $$\hat\pi_1 = 0.968$ and $\hat\pi_2 = 0.032$$; in other words, 96.8% of the training observations are customers who did not default and 3% represent those that defaulted.  It also provides the group means; these are the average of each predictor within each class, and are used by LDA as estimates of $$\mu_k$$. These suggest that customers that tend to default have, on average, a credit card balance of $1,777 and are more likely to be students then non-defaulters (29% of non-defaulters are students whereas 39% of defaulters are).  However, as we learned from the last tutorial this is largely because students tend to have higher balances then non-students.  
 
-The *coefficients of linear discriminants* output provides the linear combination of *balance* and *student=Yes* that are used to form the LDA decision rule. In other words, these are the multipliers of the elements of *X = x* in Eq 1 & 2.  If 0.0022 × *balance* − 0.228 × *student* is large, then the LDA classifier will predict that the customer will default, and if it is small, then the LDA classifier will predict the customer will not default. We can use `plot` to produce plots of the linear discriminants, obtained by computing 0.0022 × *balance* − 0.228 × *student* for each of the training observations.  As you can see, when $0.0022 \times balance − 0.228 \times student < 0$ the probability increases that the customer *will not* default and when $0.0022 \times balance − 0.228 \times student>0$ the probability increases that the customer *will* default.
+The *coefficients of linear discriminants* output provides the linear combination of *balance* and *student=Yes* that are used to form the LDA decision rule. In other words, these are the multipliers of the elements of *X = x* in Eq 1 & 2.  If 0.0022 × *balance* − 0.228 × *student* is large, then the LDA classifier will predict that the customer will default, and if it is small, then the LDA classifier will predict the customer will not default. We can use `plot` to produce plots of the linear discriminants, obtained by computing 0.0022 × *balance* − 0.228 × *student* for each of the training observations.  As you can see, when $$0.0022 \times balance − 0.228 \times student < 0$$ the probability increases that the customer *will not* default and when $$0.0022 \times balance − 0.228 \times student>0$$ the probability increases that the customer *will* default.
 
 
 ```r
@@ -212,7 +212,7 @@ sum(df.pred$posterior[, 2] > .4)
 
 ## Non-linear Discriminant Analysis {#nonlinear}
 
-As previously mentioned, LDA assumes that the observations within each class are drawn from a multivariate Gaussian distribution and the covariance of the predictor variables are common across all *k* levels of the response variable *Y*. Quadratic discriminant analysis (QDA) provides an alternative approach. Like LDA, the QDA classifier assumes that the observations from each class of *Y* are drawn from a Gaussian distribution. However, unlike LDA, QDA assumes that each class has its own covariance matrix. In other words, the predictor variables are not assumed to have common variance across each of the *k* levels in *Y*.  Mathematically, it assumes that an observation from the *k*th class is of the form $X ∼ N(\mu_k, \mathbfΣ_k)$, where $\mathbfΣ_k$ is a covariance matrix for the *k*th class. Under this assumption, the classifier assigns an observation to the class for which
+As previously mentioned, LDA assumes that the observations within each class are drawn from a multivariate Gaussian distribution and the covariance of the predictor variables are common across all *k* levels of the response variable *Y*. Quadratic discriminant analysis (QDA) provides an alternative approach. Like LDA, the QDA classifier assumes that the observations from each class of *Y* are drawn from a Gaussian distribution. However, unlike LDA, QDA assumes that each class has its own covariance matrix. In other words, the predictor variables are not assumed to have common variance across each of the *k* levels in *Y*.  Mathematically, it assumes that an observation from the *k*th class is of the form $$X ∼ N(\mu_k, \mathbfΣ_k)$$, where $$\mathbfΣ_k$$ is a covariance matrix for the *k*th class. Under this assumption, the classifier assigns an observation to the class for which
 
 $$ \hat\delta_k(x) = -\frac{1}{2}x^T\mathbf{Σ}^{-1}_kx+x^T\mathbf{Σ}^{-1}_k\hat\mu_k  - \frac{1}{2}\hat\mu_k^T\mathbf{Σ}^{-1}_k\hat\mu_k - \frac{1}{2}log\big|\mathbf{Σ}_k\big|+log(\hat\pi_k) \tag{3}$$
 
@@ -312,8 +312,8 @@ test %>%
 
 However, as we discussed in the last tutorial, the overall error may be less important then understanding the *precision* of our model.  If we look at the raw numbers of our confusion matrix we can compute the precision:
 
-- LDA model: $29 / (109 + 29) = 21\%$
-- QDA model: $35 / (103 + 35) = 25\%$
+- LDA model: $$29 / (109 + 29) = 21\%$$
+- QDA model: $$35 / (103 + 35) = 25\%$$
 
 So our QDA model has a slightly higher precision than the LDA model; however, both of them are lower than the logistic regression model precision of 29%.  
 
@@ -335,7 +335,7 @@ list(LDA_model = lda.cm,
 ```
 
 
-If we are concerned with increasing the *precision* of our model we can tune our model by adjusting the posterior probability threshold. For instance, we might label any customer with a posterior probability of default above 20% as high-risk. Now the *precision* of our QDA model improves to $83 / (83 + 55) = 60\%$.  However, the overall error rate has increased to 4%. But a credit card company may consider this slight increase in the total error rate to be a small price to pay for more accurate identification of individuals who do indeed default.  It's important to keep in mind these kinds of trade-offs, which are common with classification models - tuning models can improve certain classification rates while worsening others.
+If we are concerned with increasing the *precision* of our model we can tune our model by adjusting the posterior probability threshold. For instance, we might label any customer with a posterior probability of default above 20% as high-risk. Now the *precision* of our QDA model improves to $$83 / (83 + 55) = 60\%$$.  However, the overall error rate has increased to 4%. But a credit card company may consider this slight increase in the total error rate to be a small price to pay for more accurate identification of individuals who do indeed default.  It's important to keep in mind these kinds of trade-offs, which are common with classification models - tuning models can improve certain classification rates while worsening others.
 
 
 ```r
