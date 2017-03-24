@@ -4,7 +4,7 @@ title: Linear & Quadratic Discriminant Analysis
 permalink: /discriminant_analysis
 ---
 
-<img src="/public/images/analytics/discriminant_analysis/LDA.jpg"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
+<img src="/public/images/analytics/discriminant_analysis/LDA.jpg"  style="float:right; margin: 2px 0px 0px 10px; width: 30%; height: 30%;" />
 
 In the previous tutorial you learned that logistic regression is a classification algorithm traditionally limited to only two-class classification problems (i.e. *default = Yes or No*). However, if you have more than two classes then Linear (and its cousin Quadratic) Discriminant Analysis (LDA & QDA) is an often-preferred classification technique. Discriminant analysis models the distribution of the predictors *X* separately in each of the response classes (i.e. *default = "Yes", default = "No"* ), and then uses [Bayes’ theorem](https://en.wikipedia.org/wiki/Bayes'_theorem) to flip these around into estimates for the probability of the response category given the value of *X*.
 
