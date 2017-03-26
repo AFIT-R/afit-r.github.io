@@ -335,7 +335,7 @@ list(model1 = pscl::pR2(model1)["McFadden"],
 ## 0.4805543
 ```
 
-We see that model 2 has a very low value corroborating its poor fit.  However, models 1 and 3 are much higher suggesting they explain a fair amount of variance in the default data.  Furthermore, we see that model 3 only improves the $R^2$ ever so slightly.
+We see that model 2 has a very low value corroborating its poor fit.  However, models 1 and 3 are much higher suggesting they explain a fair amount of variance in the default data.  Furthermore, we see that model 3 only improves the $$R^2$$ ever so slightly.
 
 #### Residual Assessment
 
