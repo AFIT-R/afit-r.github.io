@@ -315,7 +315,7 @@ Unlike linear regression with ordinary least squares estimation, there is no $$R
 
 $$1−\frac{ln(LM_1)}{ln(LM_0)}$$ 
 
-where $ln(LM_1)$ is the log likelihood value for the fitted model and $ln(LM_0)$ is the log likelihood for the null model with only an intercept as a predictor. The measure ranges from 0 to just under 1, with values closer to zero indicating that the model has no predictive power. However, unlike $$R^2$$ in linear regression, models rarely achieve a high McFadden $$R^2$$. In fact, in McFadden's own words models with a McFadden pseudo $$R^2 \approx 0.40$$ represents a very good fit.  We can assess McFadden's pseudo $$R^2$$ values for our models with:
+where $$ln(LM_1)$$ is the log likelihood value for the fitted model and $$ln(LM_0)$$ is the log likelihood for the null model with only an intercept as a predictor. The measure ranges from 0 to just under 1, with values closer to zero indicating that the model has no predictive power. However, unlike $$R^2$$ in linear regression, models rarely achieve a high McFadden $$R^2$$. In fact, in McFadden's own words models with a McFadden pseudo $$R^2 \approx 0.40$$ represents a very good fit.  We can assess McFadden's pseudo $$R^2$$ values for our models with:
 
 
 ```r
