@@ -4,7 +4,7 @@ title: Resampling Methods
 permalink: /resampling_methods
 ---
 
-<img src="/public/images/analytics/regression/sq.errors-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
+<img src="/public/images/analytics/resampling/bootstrap.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
 
 Resampling methods are an indispensable tool in modern statistics. They involve repeatedly drawing samples from a training set and refitting a model of interest on each sample in order to obtain additional information about the fitted model. For example, in order to estimate the variability of a linear regression fit, we can repeatedly draw different samples from the training data, fit a linear regression to each new sample, and then examine the extent to which the resulting fits differ. Such an approach may allow us to obtain information that would not be available from fitting the model only once using the original training sample.
 
@@ -66,7 +66,7 @@ ggplot(auto, aes(horsepower, mpg)) +
   geom_smooth(method = "lm", formula = y ~ poly(x, 4), se = FALSE, linetype = 4)
 ```
 
-<img src="05-resampling-methods_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/resampling/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
 Let's go ahead and do the traditional validation set approach to split our data into a training and testing set.  Then we'll fit 10 different models ranging from a linear model to a 10th degree polynomial model. The results show us there is a steep decline in our test error (MSE) rate when we go from a linear model to a quadratic model; however, the MSE flatlines beyond that point suggesting that adding more polynomial degrees likely does not improve the model performance. 
 
@@ -91,7 +91,7 @@ ggplot(mse.df, aes(degree, mse)) +
   ylim(c(10, 30))
 ```
 
-<img src="05-resampling-methods_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/resampling/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 However, our MSE is dependent on our training and test samples. If we repeat the process of randomly splitting the sample set into two parts, we will get a somewhat different estimate for the test MSE each time. I illustrate below, which displays ten different validation set MSE curves from the auto data set, produced using ten different random splits of the observations into training and validation sets. All ten curves indicate that the model with a quadratic term has a dramatically smaller validation set MSE than the model with only a linear term. Furthermore, all ten curves indicate that there is not much benefit in including cubic or higher-order polynomial terms in the model. But it is worth noting that each of the ten curves results in a __*different test MSE estimate*__ for each of the ten regression models considered. And there is no consensus among the curves as to which model results in the smallest validation set MSE.
 
@@ -130,7 +130,7 @@ ggplot(mse.df.2, aes(degree, mse, color = factor(sample))) +
   ylim(c(10, 30))
 ```
 
-<img src="05-resampling-methods_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/resampling/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 
 A second concern with the validation approach, only a subset of the observations, those that are included in the training set rather than in the validation set, are used to fit the model. Since statistical methods tend to perform worse when trained on fewer observations, this suggests that the validation set error rate may tend to overestimate the test error rate for the model fit on the entire data set.
@@ -139,9 +139,9 @@ We can address these concerns using *cross-validation* methods.
 
 ## Leave-One-Out Cross-Validation {#LOOCV}
 
-*Leave-one-out cross-validation* (LOOCV) is closely related to the validation set approach as it involves splitting the set of observations into two parts. However, instead of creating two subsets of comparable size (i.e. 60% training, 40% validation), a single observation ($x_1, y_1$) is used for the validation set, and the remaining $n-1$ observations {$(x_2, y_2), \dots, (x_n, y_n)$} make up the training set. The statistical learning method is fit on the $n − 1$ training observations, and a prediction $\hat y_1$ is made for the excluded observation. Since the validation observation ($x_1, y_1$) was not used in the fitting process, the estimate error $MSE_1 = (y_1 − \hat y_1)^2$ provides an approximately unbiased estimate for the test error. But even though $MSE_1$ is unbiased for the test error, it is a poor estimate because it is highly variable, since it is based upon a single observation ($x_1, y_1$).
+*Leave-one-out cross-validation* (LOOCV) is closely related to the validation set approach as it involves splitting the set of observations into two parts. However, instead of creating two subsets of comparable size (i.e. 60% training, 40% validation), a single observation ($$x_1, y_1$$) is used for the validation set, and the remaining $$n-1$$ observations {$$(x_2, y_2), \dots, (x_n, y_n)$$} make up the training set. The statistical learning method is fit on the $n − 1$ training observations, and a prediction $\hat y_1$ is made for the excluded observation. Since the validation observation ($$x_1, y_1$$) was not used in the fitting process, the estimate error $$MSE_1 = (y_1 − \hat y_1)^2$$ provides an approximately unbiased estimate for the test error. But even though $$MSE_1$$ is unbiased for the test error, it is a poor estimate because it is highly variable, since it is based upon a single observation ($$x_1, y_1$$).
 
-However, we can repeat the procedure by selecting a different row ($x_2, y_2$) for the validation data, training the statistical learning procedure on the other $n-1$ observations and computing $MSE_2 =(y_2− \hat y_2)^2$. We can repeate this approach *n* times, where each time we holdout a different, single observation to validate on.  This produces a total of *n* squared errors, $MSE_1,\dots, MSE_n$. The LOOCV estimate for the test MSE is the average of these *n* test error estimates:
+However, we can repeat the procedure by selecting a different row ($$x_2, y_2$$) for the validation data, training the statistical learning procedure on the other $$n-1$$ observations and computing $$MSE_2 =(y_2− \hat y_2)^2$$. We can repeate this approach *n* times, where each time we holdout a different, single observation to validate on.  This produces a total of *n* squared errors, $$MSE_1,\dots, MSE_n$$. The LOOCV estimate for the test MSE is the average of these *n* test error estimates:
 
 $$ CV_{(n)} = \frac{1}{n}\sum^n_{i=1}MSE_i  \tag{1}$$
 
@@ -236,7 +236,7 @@ system.time({
 
 ## *k*-Fold Cross Validation {#kfold}
 
-An alternative to LOOCV is the *k*-fold cross validation approach. This resampling method involves randomly dividing the data into *k* groups (aka *folds*) of approximately equal size. The first fold is treated as a validation set, and the statistical method is fit on the remaining data. The mean squared error, $MSE_1$, is then computed on the observations in the held-out fold. This procedure is repeated *k* times; each time, a different group of observations is treated as the validation set. This process results in *k* estimates of the test error, $MSE_1, MSE_2, \dots , MSE_k$. Thus, the *k*-fold CV estimate is computed by averaging these values,
+An alternative to LOOCV is the *k*-fold cross validation approach. This resampling method involves randomly dividing the data into *k* groups (aka *folds*) of approximately equal size. The first fold is treated as a validation set, and the statistical method is fit on the remaining data. The mean squared error, $$MSE_1$$, is then computed on the observations in the held-out fold. This procedure is repeated *k* times; each time, a different group of observations is treated as the validation set. This process results in *k* estimates of the test error, $$MSE_1, MSE_2, \dots , MSE_k$$. Thus, the *k*-fold CV estimate is computed by averaging these values,
 
 $$ CV_{(k)} = \frac{1}{k}\sum^k_{i=1}MSE_i  \tag{2} $$
 
@@ -322,14 +322,14 @@ Thus, the results are similar to what we saw in the previous tutorial, none of t
 In essence bootstrapping repeatedly draws independent samples from our data set to create bootstrap data sets.  This sample is performed with *replacement*, which means that the same observation can be sampled more than once. The figure below from the ISLR[^islr] book depicts the bootsrap approach on a small data set (*n = 3*).
 
 <center>
-![](images/bootstrap.png)
+<img src="/public/images/analytics/resampling/bootstrap.png"  style="width: 60%; height: 60%;" />
 </center>
 
-Each bootstrap data set ($Z^{*1}, Z^{*2}, \dots, Z^{*B}$) contains *n* observations, sampled with replacement from the original data set.  Each bootstrap is used to compute the estimated statistic we are interested in ($\hat\alpha^*$). We can then use all the bootstrapped data sets to compute the standard error of $\hat\alpha^{*1}, \hat\alpha^{*2}, \dots, \hat\alpha^{*B}$ desired statistic as
+Each bootstrap data set ($$Z^{*1}, Z^{*2}, \dots, Z^{*B}$$) contains *n* observations, sampled with replacement from the original data set.  Each bootstrap is used to compute the estimated statistic we are interested in ($$\hat\alpha^*$$). We can then use all the bootstrapped data sets to compute the standard error of $$\hat\alpha^{*1}, \hat\alpha^{*2}, \dots, \hat\alpha^{*B}$$ desired statistic as
 
 $$ SE_B(\hat\alpha) = \sqrt{\frac{1}{B-1}\sum^B_{r=1}\bigg(\hat\alpha^{*r}-\frac{1}{B}\sum^B_{r'=1}\hat\alpha^{*r'}\bigg)^2}  \tag{4} $$
 
-Thus, $SE_B(\hat\alpha)$ serves as an estimate of the standard error of $\hat\alpha$ estimated from the original data set.  Let's look at how we can implement this in R on a couple of simpler examples:
+Thus, $$SE_B(\hat\alpha)$$ serves as an estimate of the standard error of $\hat\alpha$ estimated from the original data set.  Let's look at how we can implement this in R on a couple of simpler examples:
 
 ### Example 1: Estimating the accuracy of a single statistic
 
@@ -391,7 +391,7 @@ boot(portfolio, statistic, R = 1000)
 ## t1* 0.5758321 0.002396754  0.08752118
 ```
 
-The final output shows that using the original data, $\hat\alpha = 0.5758$, and it also provides the bootstrap estimate of our standard error $SE(\hat\alpha) = 0.0875$.
+The final output shows that using the original data, $$\hat\alpha = 0.5758$$, and it also provides the bootstrap estimate of our standard error $$SE(\hat\alpha) = 0.0875$$.
 
 Once we generate the bootstrap estimates we can also view the confidence intervals with `boot.ci` and plot our results:
 
@@ -414,11 +414,11 @@ boot.ci(result, type = "basic")
 plot(result)
 ```
 
-<img src="05-resampling-methods_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/resampling/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
 
 ### Example 2: Estimating the accuracy of a linear regression model
 
-We can use this same concept to assess the variability of the coefficient estimates and predictions from a statistical learning method such as linear regression.  For instance, here we'll assess the variability of the estimates for $\beta_0$ and $\beta_1$, the intercept and slope terms for the linear regression model that uses `horsepower` to predict `mpg` in our `auto` data set.  
+We can use this same concept to assess the variability of the coefficient estimates and predictions from a statistical learning method such as linear regression.  For instance, here we'll assess the variability of the estimates for $$\beta_0$$ and $$\beta_1$$, the intercept and slope terms for the linear regression model that uses `horsepower` to predict `mpg` in our `auto` data set.  
 
 First, we create the function to compute the statistic of interest. We can apply this to our entire data set to get the baseline coefficients.
 
@@ -454,7 +454,7 @@ boot(auto, statistic, 1000)
 ## t2* -0.1578447 -0.0002940364 0.007598619
 ```
 
-This indicates that the bootstrap estimate for $SE(\beta_0)$ is 0.86, and that the bootstrap estimate for $SE(\beta_1)$ is 0.0076. If we compare these to the standard errors provided by the `summary` function we see a difference.  
+This indicates that the bootstrap estimate for $$SE(\beta_0)$$ is 0.86, and that the bootstrap estimate for $$SE(\beta_1)$$ is 0.0076. If we compare these to the standard errors provided by the `summary` function we see a difference.  
 
 
 ```r
