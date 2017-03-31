@@ -13,7 +13,7 @@ Resampling methods are an indispensable tool in modern statistics. They involve 
 This tutorial serves as an introduction to sampling methods and covers[^islr]:
 
 1. [Replication requirements](#req): What you'll need to reproduce the analysis in this tutorial.
-2. [Why resampline](#why): Understand why resampling is important.
+2. [Why resampling](#why): Understand why resampling is important.
 3. [Leave-one-out cross-validation](#LOOCV): Provide greater reliability of an estimate test error.
 4. [*k*-fold cross validation](#kfold): A faster alternative to leave-one-out cross validation.
 5. [Bootstrapping](#boot): Quantify uncertainty around a particular statistic.
@@ -50,7 +50,7 @@ library(boot)       # resampling and bootstrapping
 
 ## Why Resampling {#why}
 
-Thus far, in our tutorials we have been using the *validation* or *hold-out* approach to estimate the error with fitting a particular statistical learning method on a set of observations. This involves randomly dividing the available set of observations into two parts, a *training set* and a *testing set* (aka *validation set*). Our statistical model is fit on the training set, and the fitted model is used to predict the responses for the observations in the validation set. The resulting validation set error rate (typically assessed using MSE in the case of a quantitative response) provides an estimate of the test error rate.  
+Thus far, in our tutorials we have been using the *validation* or *hold-out* approach to estimate the prediction error of our predictive models. This involves randomly dividing the available set of observations into two parts, a *training set* and a *testing set* (aka *validation set*). Our statistical model is fit on the training set, and the fitted model is used to predict the responses for the observations in the validation set. The resulting validation set error rate (typically assessed using MSE in the case of a quantitative response) provides an estimate of the test error rate.  
 
 The validation set approach is conceptually simple and is easy to implement. But it has two potential drawbacks:
 
