@@ -54,7 +54,7 @@ Thus far, in our tutorials we have been using the *validation* or *hold-out* app
 
 The validation set approach is conceptually simple and is easy to implement. But it has two potential drawbacks:
 
-First, the validation estimate of the test error rate can be highly variable, depending on precisely which observations are included in the training set and which observations are included in the validation set.  I will illustrate on the `ISLR::Auto` data set.  Here we see that there is a relationship between *mpg* and *horsepower* and it doesn't seem linear but we're not sure which polynomial degree creates the best fit.
+First, the estimate of the test error rate can be highly variable, depending on precisely which observations are included in the training set and which observations are included in the validation set.  I will illustrate on our `auto` data set.  Here we see that there is a relationship between *mpg* and *horsepower* and it doesn't seem linear but we're not sure which polynomial degree creates the best fit.
 
 
 ```r
@@ -139,7 +139,7 @@ We can address these concerns using *cross-validation* methods.
 
 ## Leave-One-Out Cross-Validation {#LOOCV}
 
-*Leave-one-out cross-validation* (LOOCV) is closely related to the validation set approach as it involves splitting the set of observations into two parts. However, instead of creating two subsets of comparable size (i.e. 60% training, 40% validation), a single observation ($$x_1, y_1$$) is used for the validation set, and the remaining $$n-1$$ observations {$$(x_2, y_2), \dots, (x_n, y_n)$$} make up the training set. The statistical learning method is fit on the $n − 1$ training observations, and a prediction $\hat y_1$ is made for the excluded observation. Since the validation observation ($$x_1, y_1$$) was not used in the fitting process, the estimate error $$MSE_1 = (y_1 − \hat y_1)^2$$ provides an approximately unbiased estimate for the test error. But even though $$MSE_1$$ is unbiased for the test error, it is a poor estimate because it is highly variable, since it is based upon a single observation ($$x_1, y_1$$).
+*Leave-one-out cross-validation* (LOOCV) is closely related to the validation set approach as it involves splitting the set of observations into two parts. However, instead of creating two subsets of comparable size (i.e. 60% training, 40% validation), a single observation ($$x_1, y_1$$) is used for the validation set, and the remaining $$n-1$$ observations {$$(x_2, y_2), \dots, (x_n, y_n)$$} make up the training set. The statistical learning method is fit on the $$n − 1$$ training observations, and a prediction $$\hat y_1$$ is made for the excluded observation. Since the validation observation ($$x_1, y_1$$) was not used in the fitting process, the estimate error $$MSE_1 = (y_1 − \hat y_1)^2$$ provides an approximately unbiased estimate for the test error. But even though $$MSE_1$$ is unbiased for the test error, it is a poor estimate because it is highly variable, since it is based upon a single observation ($$x_1, y_1$$).
 
 However, we can repeat the procedure by selecting a different row ($$x_2, y_2$$) for the validation data, training the statistical learning procedure on the other $$n-1$$ observations and computing $$MSE_2 =(y_2− \hat y_2)^2$$. We can repeate this approach *n* times, where each time we holdout a different, single observation to validate on.  This produces a total of *n* squared errors, $$MSE_1,\dots, MSE_n$$. The LOOCV estimate for the test MSE is the average of these *n* test error estimates:
 
@@ -155,7 +155,7 @@ coef(glm.fit)
 ##  39.9358610  -0.1578447
 ```
 
-and
+is the same as
 
 
 ```r
@@ -189,7 +189,7 @@ str(loocv.err)
 `cv.glm` provides a list with 4 outputs:
 
 1. *call*: the original function call
-2. *K*: the number of *folds* used.  In our case it is 392 because the LOOCV looped through and pulled out each observation atleast once to use a test observation.
+2. *K*: the number of *folds* used.  In our case it is 392 because the LOOCV looped through and pulled out each observation at least once to use a test observation.
 3. *delta*: the cross-validation estimate of prediction error.  The first number, which is the primary number we care about, is the output from Eq. 1 listed above.
 4. *seed*: the values of the random seed used for the function call
 
@@ -277,9 +277,10 @@ system.time({
 We can apply this same approach to classification problems as well. For example, in the previous tutorial we compared the performance of a logistic regression, linear discriminant analysis (LDA), and quadratic discriminant analysis (QDA) on some stock market data using the traditional training vs. testing (60%/40%) data splitting approach.  We could've performed the same assessment using cross validation. In the classification setting, the LOOCV error rate takes the form
 
 $$ CV_{(n)} = \frac{1}{n}\sum^n_{i=1}Err_i  \tag{3} $$
-where $Err_i = I(y_i \ne \hat y_i)$.  The *k*-fold CV error rate and validation set error rates are defined analogously.
 
-Consequently, for the logistic regression we use `cv.glm` to perform a *k*-fold cross validation.  The end result is an estimated CV error rate of .25. *Note: since the response variable is binary we incorporate a new cost function to compute the estimated error rate in Eq. 3*
+where $$Err_i = I(y_i \ne \hat y_i)$$.  The *k*-fold CV error rate and validation set error rates are defined analogously.
+
+Consequently, for the logistic regression we use `cv.glm` to perform a *k*-fold cross validation.  The end result is an estimated CV error rate of .5. (*Note: since the response variable is binary we incorporate a new cost function to compute the estimated error rate in Eq. 3*)
 
 
 ```r
@@ -313,7 +314,7 @@ mean(qda.fit$class != stock$Direction)
 ## [1] 0.4872
 ```
 
-Thus, the results are similar to what we saw in the previous tutorial, none of these models do an exceptional job.  However, we see that the LOOCV estimated error for the QDA model (.487) is fairly higher than what we saw in the train-test validation approach (.40).  This suggests that our previous QDA model with the train-test validation approach may have been a bit optimistically biased!
+Thus, the results are similar to what we saw in the previous tutorial, none of these models do an exceptional (or even decent!) job.  However, we see that the LOOCV estimated error for the QDA model (.487) is fairly higher than what we saw in the train-test validation approach (.40).  This suggests that our previous QDA model with the train-test validation approach may have been a bit optimistically biased!
 
 ## Bootstrapping {#boot}
 
@@ -329,7 +330,7 @@ Each bootstrap data set ($$Z^{*1}, Z^{*2}, \dots, Z^{*B}$$) contains *n* observa
 
 $$ SE_B(\hat\alpha) = \sqrt{\frac{1}{B-1}\sum^B_{r=1}\bigg(\hat\alpha^{*r}-\frac{1}{B}\sum^B_{r'=1}\hat\alpha^{*r'}\bigg)^2}  \tag{4} $$
 
-Thus, $$SE_B(\hat\alpha)$$ serves as an estimate of the standard error of $\hat\alpha$ estimated from the original data set.  Let's look at how we can implement this in R on a couple of simpler examples:
+Thus, $$SE_B(\hat\alpha)$$ serves as an estimate of the standard error of $$\hat\alpha$$ estimated from the original data set.  Let's look at how we can implement this in R on a couple of simple examples:
 
 ### Example 1: Estimating the accuracy of a single statistic
 
@@ -353,7 +354,7 @@ statistic <- function(data, index) {
 }
 ```
 
-Now we can compute $\hat\alpha$ for a specified subset of our portfolio data:
+Now we can compute $$\hat\alpha$$ for a specified subset of our portfolio data:
 
 
 ```r
@@ -364,7 +365,7 @@ statistic(portfolio, 1:100)
 ## [1] 0.5758321
 ```
 
-Next, we can use `sample` to randomly select 100 observations from the range 1 to 100, with replacement. This is equivalent to constructing a new bootstrap data set and recomputing $\hat\alpha$ based on the new data set.  
+Next, we can use `sample` to randomly select 100 observations from the range 1 to 100, with replacement. This is equivalent to constructing a new bootstrap data set and recomputing $$\hat\alpha$$ based on the new data set.  
 
 
 ```r
@@ -508,7 +509,7 @@ boot(auto, quad.statistic, 1000)
 ## t3*   44.08953 0.047449584   4.3294215
 ```
 
-Now if we compare the standard errors between the bootstrap approach and the non-bootstrap approach we see the standard errors align more closely.  This better correspondence between the bootstrap estimates and the standard estimates suggest a better model fit.
+Now if we compare the standard errors between the bootstrap approach and the non-bootstrap approach we see the standard errors align more closely.  This better correspondence between the bootstrap estimates and the standard estimates suggest a better model fit.  Thus, bootstrapping provides an additional method for assessing the adequacy of our model's fit.
 
 
 ```r
