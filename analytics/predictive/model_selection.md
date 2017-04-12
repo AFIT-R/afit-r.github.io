@@ -4,7 +4,7 @@ title: Linear Model Selection
 permalink: /model_selection
 ---
 
-<img src="/public/images/analytics/model_selection/unnamed-chunk-6-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
+<img src="/public/images/analytics/model_selection/unnamed-chunk-6-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 50%; height: 50%;" />
 
 It is often the case that some or many of the variables used in a multiple regression model are in fact not associated with the response variable. Including such irrelevant variables leads to unnecessary complexity in the resulting model. Unfortunately, manually filtering through and comparing regression models can be tedious.  Luckily, several approaches exist for automatically performing feature selection or variable selection — that is, for identifying those variables that result in superior regression results.  This tutorial will cover a traditional approach known as *model selection*.
 
@@ -87,46 +87,26 @@ summary(best_subset)
 ...
 ## 1 subsets of each size up to 19
 ## Selection Algorithm: exhaustive
-##           AtBat Hits HmRun Runs RBI Walks Years CAtBat CHits CHmRun CRuns
-## 1  ( 1 )  " "   " "  " "   " "  " " " "   " "   " "    " "   " "    " "  
-## 2  ( 1 )  " "   "*"  " "   " "  " " " "   " "   " "    " "   " "    " "  
-## 3  ( 1 )  " "   "*"  " "   " "  " " " "   " "   " "    " "   " "    " "  
-## 4  ( 1 )  " "   "*"  " "   " "  " " " "   " "   " "    " "   " "    " "  
-## 5  ( 1 )  "*"   "*"  " "   " "  " " " "   " "   " "    " "   " "    " "  
-## 6  ( 1 )  "*"   "*"  " "   " "  " " "*"   " "   " "    " "   " "    " "  
-## 7  ( 1 )  " "   "*"  " "   " "  " " "*"   " "   "*"    "*"   "*"    " "  
-## 8  ( 1 )  "*"   "*"  " "   " "  " " "*"   " "   " "    " "   "*"    "*"  
-## 9  ( 1 )  "*"   "*"  " "   " "  " " "*"   " "   "*"    " "   " "    "*"  
-## 10  ( 1 ) "*"   "*"  " "   " "  " " "*"   " "   "*"    " "   " "    "*"  
-## 11  ( 1 ) "*"   "*"  " "   " "  " " "*"   " "   "*"    " "   " "    "*"  
-## 12  ( 1 ) "*"   "*"  " "   "*"  " " "*"   " "   "*"    " "   " "    "*"  
-## 13  ( 1 ) "*"   "*"  " "   "*"  " " "*"   " "   "*"    " "   " "    "*"  
-## 14  ( 1 ) "*"   "*"  "*"   "*"  " " "*"   " "   "*"    " "   " "    "*"  
-## 15  ( 1 ) "*"   "*"  "*"   "*"  " " "*"   " "   "*"    "*"   " "    "*"  
-## 16  ( 1 ) "*"   "*"  "*"   "*"  "*" "*"   " "   "*"    "*"   " "    "*"  
-## 17  ( 1 ) "*"   "*"  "*"   "*"  "*" "*"   " "   "*"    "*"   " "    "*"  
-## 18  ( 1 ) "*"   "*"  "*"   "*"  "*" "*"   "*"   "*"    "*"   " "    "*"  
-## 19  ( 1 ) "*"   "*"  "*"   "*"  "*" "*"   "*"   "*"    "*"   "*"    "*"  
-##           CRBI CWalks LeagueN DivisionW PutOuts Assists Errors NewLeagueN
-## 1  ( 1 )  "*"  " "    " "     " "       " "     " "     " "    " "       
-## 2  ( 1 )  "*"  " "    " "     " "       " "     " "     " "    " "       
-## 3  ( 1 )  "*"  " "    " "     " "       "*"     " "     " "    " "       
-## 4  ( 1 )  "*"  " "    " "     "*"       "*"     " "     " "    " "       
-## 5  ( 1 )  "*"  " "    " "     "*"       "*"     " "     " "    " "       
-## 6  ( 1 )  "*"  " "    " "     "*"       "*"     " "     " "    " "       
-## 7  ( 1 )  " "  " "    " "     "*"       "*"     " "     " "    " "       
-## 8  ( 1 )  " "  "*"    " "     "*"       "*"     " "     " "    " "       
-## 9  ( 1 )  "*"  "*"    " "     "*"       "*"     " "     " "    " "       
-## 10  ( 1 ) "*"  "*"    " "     "*"       "*"     "*"     " "    " "       
-## 11  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     " "    " "       
-## 12  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     " "    " "       
-## 13  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     "*"    " "       
-## 14  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     "*"    " "       
-## 15  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     "*"    " "       
-## 16  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     "*"    " "       
-## 17  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     "*"    "*"       
-## 18  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     "*"    "*"       
-## 19  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     "*"    "*"
+##           AtBat Hits HmRun Runs RBI Walks Years CAtBat CHits CHmRun CRuns CRBI CWalks LeagueN DivisionW PutOuts Assists Errors NewLeagueN
+## 1  ( 1 )  " "   " "  " "   " "  " " " "   " "   " "    " "   " "    " "   "*"  " "    " "     " "       " "     " "     " "    " "
+## 2  ( 1 )  " "   "*"  " "   " "  " " " "   " "   " "    " "   " "    " "   "*"  " "    " "     " "       " "     " "     " "    " " 
+## 3  ( 1 )  " "   "*"  " "   " "  " " " "   " "   " "    " "   " "    " "   "*"  " "    " "     " "       "*"     " "     " "    " " 
+## 4  ( 1 )  " "   "*"  " "   " "  " " " "   " "   " "    " "   " "    " "   "*"  " "    " "     "*"       "*"     " "     " "    " " 
+## 5  ( 1 )  "*"   "*"  " "   " "  " " " "   " "   " "    " "   " "    " "   "*"  " "    " "     "*"       "*"     " "     " "    " "
+## 6  ( 1 )  "*"   "*"  " "   " "  " " "*"   " "   " "    " "   " "    " "   "*"  " "    " "     "*"       "*"     " "     " "    " "
+## 7  ( 1 )  " "   "*"  " "   " "  " " "*"   " "   "*"    "*"   "*"    " "   " "  " "    " "     "*"       "*"     " "     " "    " "
+## 8  ( 1 )  "*"   "*"  " "   " "  " " "*"   " "   " "    " "   "*"    "*"   " "  "*"    " "     "*"       "*"     " "     " "    " "
+## 9  ( 1 )  "*"   "*"  " "   " "  " " "*"   " "   "*"    " "   " "    "*"   "*"  "*"    " "     "*"       "*"     " "     " "    " "
+## 10  ( 1 ) "*"   "*"  " "   " "  " " "*"   " "   "*"    " "   " "    "*"   "*"  "*"    " "     "*"       "*"     "*"     " "    " "
+## 11  ( 1 ) "*"   "*"  " "   " "  " " "*"   " "   "*"    " "   " "    "*"   "*"  "*"    "*"     "*"       "*"     "*"     " "    " "
+## 12  ( 1 ) "*"   "*"  " "   "*"  " " "*"   " "   "*"    " "   " "    "*"   "*"  "*"    "*"     "*"       "*"     "*"     " "    " "
+## 13  ( 1 ) "*"   "*"  " "   "*"  " " "*"   " "   "*"    " "   " "    "*"   "*"  "*"    "*"     "*"       "*"     "*"     "*"    " "
+## 14  ( 1 ) "*"   "*"  "*"   "*"  " " "*"   " "   "*"    " "   " "    "*"   "*"  "*"    "*"     "*"       "*"     "*"     "*"    " "
+## 15  ( 1 ) "*"   "*"  "*"   "*"  " " "*"   " "   "*"    "*"   " "    "*"   "*"  "*"    "*"     "*"       "*"     "*"     "*"    " "
+## 16  ( 1 ) "*"   "*"  "*"   "*"  "*" "*"   " "   "*"    "*"   " "    "*"   "*"  "*"    "*"     "*"       "*"     "*"     "*"    " "
+## 17  ( 1 ) "*"   "*"  "*"   "*"  "*" "*"   " "   "*"    "*"   " "    "*"   "*"  "*"    "*"     "*"       "*"     "*"     "*"    "*"
+## 18  ( 1 ) "*"   "*"  "*"   "*"  "*" "*"   "*"   "*"    "*"   " "    "*"   "*"  "*"    "*"     "*"       "*"     "*"     "*"    "*"
+## 19  ( 1 ) "*"   "*"  "*"   "*"  "*" "*"   "*"   "*"    "*"   "*"    "*"   "*"  "*"    "*"     "*"       "*"     "*"     "*"    "*"
 ```
 
 We can also get get the RSS, $$R^2$$, adjusted $$R^2$$, $$C_p$$, and BIC from the results which helps us to assess the *best* overall model; however, we'll illustrate this in the [comparing models](#compare) section.  First, let's look at how to perform stepwise selection.
