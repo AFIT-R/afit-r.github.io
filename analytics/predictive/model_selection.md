@@ -4,7 +4,7 @@ title: Linear Model Selection
 permalink: /model_selection
 ---
 
-<img src="/public/images/analytics/resampling/bootstrap.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
+<img src="/public/images/analytics/model_selection/unnamed-chunk-6-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
 
 It is often the case that some or many of the variables used in a multiple regression model are in fact not associated with the response variable. Including such irrelevant variables leads to unnecessary complexity in the resulting model. Unfortunately, manually filtering through and comparing regression models can be tedious.  Luckily, several approaches exist for automatically performing feature selection or variable selection — that is, for identifying those variables that result in superior regression results.  This tutorial will cover a traditional approach known as *model selection*.
 
@@ -54,18 +54,18 @@ library(leaps)      # resampling and bootstrapping
 
 ## Best Subset Selection {#best}
 
-To perform best subset selection, we fit a separate least squares regression for each possible combination of the *p* predictors. That is, we fit all *p* models that contain exactly one predictor, all  $\big(\substack{p\\2}\big) = p(p−1)/2$ models that contain exactly two predictors, and so forth. We then look at all of the resulting models, with the goal of identifying the one that is best.
+To perform best subset selection, we fit a separate least squares regression for each possible combination of the *p* predictors. That is, we fit all *p* models that contain exactly one predictor, all  $$\big(\substack{p\\2}\big) = p(p−1)/2$$ models that contain exactly two predictors, and so forth. We then look at all of the resulting models, with the goal of identifying the one that is best.
 
 The three-stage process of performing best subset selection includes:
 
-__Step 1:__ Let $M_0$ denote the null model, which contains no predictors. This model simply predicts the sample mean for each observation.
+__Step 1:__ Let $$M_0$$ denote the null model, which contains no predictors. This model simply predicts the sample mean for each observation.
 
-__Step 2:__ For $k=1,2,\dots p$:
+__Step 2:__ For $$k=1,2,\dots p$$:
 
-- Fit all $\big(\substack{p\\k}\big)$ models that contain exactly *k* predictors. 
-- Pick the best among these $\big(\substack{p\\k}\big)$ models, and call it $M_k$. Here best is defined as having the smallest RSS, or equivalently largest $R^2$.
+- Fit all $$\big(\substack{p\\k}\big)$$ models that contain exactly *k* predictors. 
+- Pick the best among these $$\big(\substack{p\\k}\big)$$ models, and call it $$M_k$$. Here best is defined as having the smallest RSS, or equivalently largest $$R^2$$.
 
-__Step 3:__ Select a single best model from among $M_0, \dots , M_p$ using cross-validated prediction error, $C_p$, AIC, BIC, or adjusted $R^2$.
+__Step 3:__ Select a single best model from among $$M_0, \dots , M_p$$ using cross-validated prediction error, $$C_p$$, AIC, BIC, or adjusted $$R^2$$.
 
 
 Let's illustrate with our data. We can perform a best subset search using `regsubsets` (part of the `leaps` library), which identifies the best model for a given number of *k* predictors, where *best* is quantified using RSS. The syntax is the same as the `lm` function. By default, `regsubsets` only reports results up to the best eight-variable model. But the `nvmax` option can be used in order to return as many variables as are desired. Here we fit up to a 19-variable model.
@@ -83,26 +83,8 @@ summary(best_subset)
 ## Subset selection object
 ## Call: regsubsets.formula(Salary ~ ., hitters, nvmax = 19)
 ## 19 Variables  (and intercept)
-##            Forced in Forced out
-## AtBat          FALSE      FALSE
-## Hits           FALSE      FALSE
-## HmRun          FALSE      FALSE
-## Runs           FALSE      FALSE
-## RBI            FALSE      FALSE
-## Walks          FALSE      FALSE
-## Years          FALSE      FALSE
-## CAtBat         FALSE      FALSE
-## CHits          FALSE      FALSE
-## CHmRun         FALSE      FALSE
-## CRuns          FALSE      FALSE
-## CRBI           FALSE      FALSE
-## CWalks         FALSE      FALSE
-## LeagueN        FALSE      FALSE
-## DivisionW      FALSE      FALSE
-## PutOuts        FALSE      FALSE
-## Assists        FALSE      FALSE
-## Errors         FALSE      FALSE
-## NewLeagueN     FALSE      FALSE
+...
+...
 ## 1 subsets of each size up to 19
 ## Selection Algorithm: exhaustive
 ##           AtBat Hits HmRun Runs RBI Walks Years CAtBat CHits CHmRun CRuns
@@ -147,7 +129,7 @@ summary(best_subset)
 ## 19  ( 1 ) "*"  "*"    "*"     "*"       "*"     "*"     "*"    "*"
 ```
 
-We can also get get the RSS, $R^2$, adjusted $R^2$, $C_p$, and BIC from the results which helps us to assess the *best* overall model; however, we'll illustrate this in the [comparing models](#compare) section.  First, let's look at how to perform stepwise selection.
+We can also get get the RSS, $$R^2$$, adjusted $$R^2$$, $$C_p$$, and BIC from the results which helps us to assess the *best* overall model; however, we'll illustrate this in the [comparing models](#compare) section.  First, let's look at how to perform stepwise selection.
 
 
 ## Stepwise Selection {#stepwise}
@@ -160,14 +142,14 @@ For computational reasons, best subset selection cannot be applied when the numb
 
 The three-stage process of performing forward stepwise selection includes:
 
-__Step 1:__ Let $M_0$ denote the null model, which contains no predictors. This model simply predicts the sample mean for each observation.
+__Step 1:__ Let $$M_0$$ denote the null model, which contains no predictors. This model simply predicts the sample mean for each observation.
 
-__Step 2:__ For $k=0, \dots, p-1$:
+__Step 2:__ For $$k=0, \dots, p-1$$:
 
 - Consider all *p − k* models that augment the predictors in $M_k$ with one additional predictor.
 - Choose the best among these *p − k* models, and call it $M_{k+1}$. Here best is defined as having smallest RSS or highest $R^2$.
 
-__Step 3:__ Select a single best model from among $M_0, \dots , M_p$ using cross-validated prediction error, $C_p$, AIC, BIC, or adjusted $R^2$.
+__Step 3:__ Select a single best model from among $$M_0, \dots , M_p$$ using cross-validated prediction error, $$C_p$$, AIC, BIC, or adjusted $$R^2$$.
 
 
 We can perform forward stepwise using `regsubsets` by setting `method = "forward"`:
@@ -185,14 +167,14 @@ forward <- regsubsets(Salary ~ ., hitters, nvmax = 19, method = "forward")
 
 The three-stage process of performing forward stepwise selection includes:
 
-__Step 1:__ Let $M_p$ denote the full model, which contains all *p* predictors.
+__Step 1:__ Let $$M_p$$ denote the full model, which contains all *p* predictors.
 
-__Step 2:__ For $k=p, p-1, \dots, 1$:
+__Step 2:__ For $$k=p, p-1, \dots, 1$$:
 
-- Consider all *k* models that contain all but one of the predictors in $M_k$, for a total of *k − 1* predictors.
-- Choose the best among the *k* models, and call it $M_{k-1}$. Here best is defined as having smallest RSS or highest $R^2$.
+- Consider all *k* models that contain all but one of the predictors in $$M_k$$, for a total of *k − 1* predictors.
+- Choose the best among the *k* models, and call it $$M_{k-1}$$. Here best is defined as having smallest RSS or highest $$R^2$$.
 
-__Step 3:__ Select a single best model from among $M_0, \dots , M_p$ using cross-validated prediction error, $C_p$, AIC, BIC, or adjusted $R^2$.
+__Step 3:__ Select a single best model from among $$M_0, \dots , M_p$$ using cross-validated prediction error, $$C_p$$, AIC, BIC, or adjusted $$R^2$$.
 
 We can perform backward stepwise using `regsubsets` by setting `method = "backward"`:
 
@@ -215,18 +197,18 @@ We consider both of these approaches below.
 
 ### Indirectly Estimating Test Error with $C_p$, AIC, BIC, and Adjusted $R^2$
 
-When performing the best subset or stepwise approaches, the $M_0, \dots , M_p$ models selected are selected based on the fact that they minimize the training set mean square error (MSE).[^rss] Because of this and the fact that using the training MSE and $R^2$ will bias our results we should not use these statistics to determine which of the $M_0, \dots , M_p$ models is *"the best"*. 
+When performing the best subset or stepwise approaches, the $$M_0, \dots , M_p$$ models selected are selected based on the fact that they minimize the training set mean square error (MSE).[^rss] Because of this and the fact that using the training MSE and $$R^2$$ will bias our results we should not use these statistics to determine which of the $$M_0, \dots , M_p$$ models is *"the best"*. 
 
 However, a number of techniques for adjusting the training error for the model size are available. These approaches can be used to select among a set of models with different numbers of variables.  These include:
 
 Statistic                  |   Objective   |   Equation
 ---------------------------|---------------|------------
-$C_p$  | Minimize |  $C_p = \frac{1}{n}(RSS + 2d\hat\sigma)$
-Akaike information criterion (AIC) | Minimize | $AIC = \frac{1}{n\hat{\sigma}^2}(RSS + 2d \hat{\sigma}^2 )$
-Bayesian information criterion (BIC) | Minimize | $BIC = \frac{1}{n}(RSS + log(n)d \hat{\sigma}^2 )$
-adjusted $R^2$ | Maximize | $\text{adj } R^2 = 1 - \frac{RSS/n-d-1}{TSS/(n-1)}$
+$$C_p$$  | Minimize |  $$C_p = \frac{1}{n}(RSS + 2d\hat\sigma)$$
+Akaike information criterion (AIC) | Minimize | $$AIC = \frac{1}{n\hat{\sigma}^2}(RSS + 2d \hat{\sigma}^2 )$$
+Bayesian information criterion (BIC) | Minimize | $$BIC = \frac{1}{n}(RSS + log(n)d \hat{\sigma}^2 )$$
+adjusted $$R^2$$ | Maximize | $$\text{adj } R^2 = 1 - \frac{RSS/n-d-1}{TSS/(n-1)}$$
 
-where *d* is the number of predictors and $\sigma^2$ is an estimate of the variance of the error ($\epsilon$) associated with each response measurement in a regression model. Each of these statistics adds a penalty to the training RSS in order to adjust for the fact that the training error tends to underestimate the test error. Clearly, the penalty increases as the number of predictors in the model increases.  
+where *d* is the number of predictors and $$\sigma^2$$ is an estimate of the variance of the error ($$\epsilon$$) associated with each response measurement in a regression model. Each of these statistics adds a penalty to the training RSS in order to adjust for the fact that the training error tends to underestimate the test error. Clearly, the penalty increases as the number of predictors in the model increases.  
 
 Therefore, these statistics provide an unbiased estimate of test MSE.  If we perform our model using a training vs. testing validation approach we can use these statistics to determine the preferred model.  These statistics are contained in the output provided by the `regsubsets` function.  Let's extract this information and plot them.  
 
@@ -254,9 +236,9 @@ tibble(predictors = 1:19,
   facet_wrap(~ statistic, scales = "free")
 ```
 
-<img src="06-model-selection_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/model_selection/unnamed-chunk-6-1.png"  style="display: block; margin: auto;" />
 
-Here we see that our results identify slightly different models that are considered the best.  The adjusted $R^2$ statistic suggests the 10 variable model is preferred, the BIC statistic suggests the 4 variable model, and the $C_p$ suggests the 8 variable model.[^diag]  
+Here we see that our results identify slightly different models that are considered the best.  The adjusted $$R^2$$ statistic suggests the 10 variable model is preferred, the BIC statistic suggests the 4 variable model, and the $$C_p$$ suggests the 8 variable model.[^diag]  
 
 
 ```r
@@ -292,7 +274,7 @@ coef(best_subset, 8)
 ##   1.1861142  -0.4714870   0.2748103
 ```
 
-We could perform the same process using forward and backward stepwise selection and obtain even more options for optimal models.  For example, if I assess the optimal $C_p$ for forward and backward stepwise we see that they suggest that an 8 variable model minimizes the $C_p$ statistic, similar to the best subset approach above.  
+We could perform the same process using forward and backward stepwise selection and obtain even more options for optimal models.  For example, if I assess the optimal $$C_p$$ for forward and backward stepwise we see that they suggest that an 8 variable model minimizes the $$C_p$$ statistic, similar to the best subset approach above.  
 
 
 ```r
@@ -330,7 +312,7 @@ coef(backward, 8)
 This highlights two important findings:
 
 1. Different subsetting procedures (best subset vs. forward stepwise vs. backward stepwise) will likely identify different "best" models.
-2. Different indirect error test estimate statistics ($C_p$, AIC, BIC, and Adjusted $R^2$) will likely identify different "best" models.
+2. Different indirect error test estimate statistics ($$C_p$$, AIC, BIC, and Adjusted $R^2$) will likely identify different "best" models.
 
 This is why it is important to always perform validation; that is, to always estimate the test error directly either by using a validation set or using cross-validation.
 
@@ -360,7 +342,7 @@ for(i in 1:19) {
 plot(validation_errors, type = "b")
 ```
 
-<img src="06-model-selection_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/model_selection/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
 Here, we actually see that the 1 variable model produced by the best subset approach produces the lowest test MSE!  If we repeat this using a different random value seed, we will get a slightly different model that is the "best". However, if you recall from the [Resampling Methods](resampling_methods) tutorial, this is to be expected when using a training vs. testing validation approach.
 
@@ -389,7 +371,7 @@ for(i in 1:19) {
 plot(validation_errors, type = "b")
 ```
 
-<img src="06-model-selection_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/model_selection/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 A more robust approach is to perform cross validation.  But before we do, let's turn our our approach above for computing test errors into a function.  Our function pretty much mimics what we did above. The only complex part is how we extracted the formula used in the call to `regsubsets`.  I suggest you work through this line-by-line to understand what each step is doing.
 
@@ -442,7 +424,7 @@ mean_cv_errors <- colMeans(cv_errors)
 plot(mean_cv_errors, type = "b")
 ```
 
-<img src="06-model-selection_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/model_selection/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
 
 We see that our more robust cross-validation approach selects an 11-variable model. We can now perform best subset selection on the full data set in order to obtain the 11-variable model.
 
