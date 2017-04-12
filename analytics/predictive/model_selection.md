@@ -126,8 +126,8 @@ __Step 1:__ Let $$M_0$$ denote the null model, which contains no predictors. Thi
 
 __Step 2:__ For $$k=0, \dots, p-1$$:
 
-- Consider all *p − k* models that augment the predictors in $M_k$ with one additional predictor.
-- Choose the best among these *p − k* models, and call it $M_{k+1}$. Here best is defined as having smallest RSS or highest $R^2$.
+- Consider all *p − k* models that augment the predictors in $$M_k$$ with one additional predictor.
+- Choose the best among these *p − k* models, and call it $$M_{k+1}$$. Here best is defined as having smallest RSS or highest $$R^2$$.
 
 __Step 3:__ Select a single best model from among $$M_0, \dots , M_p$$ using cross-validated prediction error, $$C_p$$, AIC, BIC, or adjusted $$R^2$$.
 
@@ -175,7 +175,7 @@ In order to select the best model with respect to test error, we need to estimat
 
 We consider both of these approaches below.
 
-### Indirectly Estimating Test Error with $C_p$, AIC, BIC, and Adjusted $R^2$
+### Indirectly Estimating Test Error with $$C_p$$, AIC, BIC, and Adjusted $$R^2$$
 
 When performing the best subset or stepwise approaches, the $$M_0, \dots , M_p$$ models selected are selected based on the fact that they minimize the training set mean square error (MSE).[^rss] Because of this and the fact that using the training MSE and $$R^2$$ will bias our results we should not use these statistics to determine which of the $$M_0, \dots , M_p$$ models is *"the best"*. 
 
@@ -292,7 +292,7 @@ coef(backward, 8)
 This highlights two important findings:
 
 1. Different subsetting procedures (best subset vs. forward stepwise vs. backward stepwise) will likely identify different "best" models.
-2. Different indirect error test estimate statistics ($$C_p$$, AIC, BIC, and Adjusted $R^2$) will likely identify different "best" models.
+2. Different indirect error test estimate statistics ($$C_p$$, AIC, BIC, and Adjusted $$R^2$$) will likely identify different "best" models.
 
 This is why it is important to always perform validation; that is, to always estimate the test error directly either by using a validation set or using cross-validation.
 
