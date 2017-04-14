@@ -10,15 +10,15 @@ Principal Component Analysis (PCA) involves the process by which principal compo
 
 This tutorial serves as an introduction to Principal Component Analysis (PCA).[^islr]
 
-1. [Replication Requirements](#replication-requirements): What you'll need to reproduce the analysis in this tutorial
-2. [Preparing Our Data](#preparing-our-data): Cleaning up the data set to make it easy to work with
-3. [What are Principal Components?](#what-are-principal-components): Understanding and computing Principal Components for $$X_1, X_2, ..., X_p$$
-4. [Selecting the Number of Principal Components](#selecting-the-number-of-principal-components): Using Proportion of Variance Explained (PVE) to decide how many principal components to use
-5. [Built-in PCA Functions](#built-in): Using built-in R functions to perform PCA
-6. [Other Uses for Principal Components](#other-uses-for-principal-components): Application of PCA to other statistical techniques such as regression, classification, and clustering
+1. [Replication Requirements](#replication): What you'll need to reproduce the analysis in this tutorial
+2. [Preparing Our Data](#preparing): Cleaning up the data set to make it easy to work with
+3. [What are Principal Components?](#what): Understanding and computing Principal Components for $$X_1, X_2, ..., X_p$$
+4. [Selecting the Number of Principal Components](#selecting): Using Proportion of Variance Explained (PVE) to decide how many principal components to use
+5. [Built-in PCA Functions](#built): Using built-in R functions to perform PCA
+6. [Other Uses for Principal Components](#other): Application of PCA to other statistical techniques such as regression, classification, and clustering
 
 
-## Replication Requirements {#replication-requirements}
+## Replication Requirements {#replication}
 
 This tutorial primarily leverages the `USArrests` data set that is built into R. This is a set that contains four variables that represent the number of arrests per 100,000 residents for *Assault*, *Murder*, and *Rape* in each of the fifty US states in 1973. The data set also contains the percentage of the population living in urban areas, *UrbanPop*. In addition to loading the set, we'll also use a few packages that provide added functionality in graphical displays and data manipulation. We use the `head` command to examine the first few rows of the data set to ensure proper upload.
 
@@ -42,7 +42,7 @@ head(USArrests, 10)
 ## Georgia       17.4     211       60 25.8
 ```
 
-## Preparing Our Data {#preparing-our-data}
+## Preparing Our Data {#preparing}
 
 It is usually beneficial for each variable to be centered at zero for PCA, due to the fact that it makes comparing each principal component to the mean straightforward.  This also eliminates potential problems with the scale of each variable. For example, the variance of *Assault* is 6945, while the variance of *Murder* is only 18.97. The *Assault* data isn't necessarily more variable, it's simply on a different scale relative to *Murder*. 
 
@@ -76,7 +76,7 @@ However, keep in mind that there may be instances where scaling is not desirable
 The important thing to remember is PCA is influenced by the magnitude of each variable; therefore, *the results obtained when we perform PCA will also depend on whether the variables have been individually scaled.*
 
 
-### What are Principal Components? {#what-are-principal-components}
+### What are Principal Components? {#what}
 
 The goal of PCA is to explain most of the variability in the data with a smaller number of variables than the original data set. For a large data set with $$p$$ variables, we could examine pairwise plots of each variable against every other variable, but even for moderate $$p$$, the number of these plots becomes excessive and not useful.  For example, when $$p = 10$$ there are $$p(p-1)/2 = 45$$ scatterplots that could be analyzed!  Clearly, a better method is required to visualize the *n* observations when *p* is large. In particular, we would like to find a low-dimensional representation of the data that captures as much of the information as possible. For instance, if we can obtain a two-dimensional representation of the data that captures most of the information, then we can plot the observations in this low-dimensional space.
 
@@ -179,7 +179,7 @@ ggplot(PC, aes(PC1, PC2)) +
 
 Because PCA is unsupervised, this analysis on its own is not making predictions about crime rates, but simply making connections between observations using fewer measurements.
 
-## Selecting the Number of Principal Components {#selecting-the-number-of-principal-components}
+## Selecting the Number of Principal Components {#selecting}
 
 Note that in the above analysis we only looked at two of the four principal components.  How did we know to use two principal components? And how well is the data explained by these two principal components compared to using the full data set?
 
@@ -239,7 +239,7 @@ The most common technique for determining how many principal components to keep 
 In our example, because we only have 4 variables to begin with, reduction to 2 variables while still explaining 87% of the variability is a good improvement.
 
 
-## Built-in PCA Functions {#built-in}
+## Built-in PCA Functions {#built}
 
 In the sections above we manually computed many of the attributes of PCA (i.e. eigenvalues, eigenvectors, principal components scores).  This was meant to help you learn about PCA by understanding what manipulations are occuring with the data; however, using this process to repeatedly perform PCA may be a bit tedious.  Fortunately R has several built-in functions (along with numerous add-on packages) that simplifies performing PCA.  
 
@@ -345,7 +345,7 @@ round(PVE, 2)
 As before, we see that that the first principal component explains 62% of the variance in the data, the next principal component explains 25% of the variance, and so forth.  And we could proceed to plot the PVE and cumulative PVE to provide us our scree plots as we did earlier.
 
 
-## Other Uses for Principal Components
+## Other Uses for Principal Components {#other}
 
 This tutorial gets you started with using PCA.  Many statistical techniques, including regression, classification, and clustering can be easily adapted to using principal components. These techniques will not be outlined in this tutorial but will be presented in future tutorials and much of the procedures remain similar to what you learned here.  In addition to our future tutorials on these other uses you can learn more about them by reading:
 
