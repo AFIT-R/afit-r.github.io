@@ -4,7 +4,7 @@ title: Principal Components Analysis
 permalink: /pca_basics
 ---
 
-Principal Component Analysis (PCA) involves the process by which principal components are computed, and their role in understanding the data. PCA is an unsupervised approach, which means that it is performed on a set of variables $X_1$, $X_2$, ..., $X_p$ with no associated response $Y$. PCA reduces the dimensionality of the data set, allowing most of the variability to be explained using fewer variables.  PCA is commonly used as one step in a series of analyses. You can use PCA to reduce the number of variables and avoid multicollinearity, or when you have too many predictors relative to the number of observations.
+Principal Component Analysis (PCA) involves the process by which principal components are computed, and their role in understanding the data. PCA is an unsupervised approach, which means that it is performed on a set of variables $$X_1$$, $$X_2$$, ..., $$X_p$$ with no associated response $$Y$$. PCA reduces the dimensionality of the data set, allowing most of the variability to be explained using fewer variables.  PCA is commonly used as one step in a series of analyses. You can use PCA to reduce the number of variables and avoid multicollinearity, or when you have too many predictors relative to the number of observations.
 
 ## tl;dr
 
@@ -12,7 +12,7 @@ This tutorial serves as an introduction to Principal Component Analysis (PCA).[^
 
 1. [Replication Requirements](#replication-requirements): What you'll need to reproduce the analysis in this tutorial
 2. [Preparing Our Data](#preparing-our-data): Cleaning up the data set to make it easy to work with
-3. [What are Principal Components?](#what-are-principal-components): Understanding and computing Principal Components for $X_1$, $X_2$, ..., $X_p$
+3. [What are Principal Components?](#what-are-principal-components): Understanding and computing Principal Components for $$X_1, X_2, ..., X_p$$
 4. [Selecting the Number of Principal Components](#selecting-the-number-of-principal-components): Using Proportion of Variance Explained (PVE) to decide how many principal components to use
 5. [Built-in PCA Functions](#built-in): Using built-in R functions to perform PCA
 6. [Other Uses for Principal Components](#other-uses-for-principal-components): Application of PCA to other statistical techniques such as regression, classification, and clustering
@@ -78,21 +78,21 @@ The important thing to remember is PCA is influenced by the magnitude of each va
 
 ### What are Principal Components? {#what-are-principal-components}
 
-The goal of PCA is to explain most of the variability in the data with a smaller number of variables than the original data set. For a large data set with $p$ variables, we could examine pairwise plots of each variable against every other variable, but even for moderate $p$, the number of these plots becomes excessive and not useful.  For example, when $p = 10$ there are $p(p-1)/2 = 45$ scatterplots that could be analyzed!  Clearly, a better method is required to visualize the *n* observations when *p* is large. In particular, we would like to find a low-dimensional representation of the data that captures as much of the information as possible. For instance, if we can obtain a two-dimensional representation of the data that captures most of the information, then we can plot the observations in this low-dimensional space.
+The goal of PCA is to explain most of the variability in the data with a smaller number of variables than the original data set. For a large data set with $$p$$ variables, we could examine pairwise plots of each variable against every other variable, but even for moderate $$p$$, the number of these plots becomes excessive and not useful.  For example, when $$p = 10$$ there are $$p(p-1)/2 = 45$$ scatterplots that could be analyzed!  Clearly, a better method is required to visualize the *n* observations when *p* is large. In particular, we would like to find a low-dimensional representation of the data that captures as much of the information as possible. For instance, if we can obtain a two-dimensional representation of the data that captures most of the information, then we can plot the observations in this low-dimensional space.
 
 PCA provides a tool to do just this. It finds a low-dimensional representation of a data set that contains as much of the variation as possible. The idea is that each of the *n* observations lives in *p*-dimensional space, but not all of these dimensions are equally interesting. PCA seeks a small number of dimensions that are as interesting as possible, where the concept of *interesting* is measured by the amount that the observations vary along each dimension. Each of the dimensions found by PCA is a linear combination of the *p* features and we can take these linear combinations of the measurements and reduce the number of plots necessary for visual analysis while retaining most of the information present in the data. 
 
 We now explain the manner in which these dimensions, or principal components, are found.
 
-The *first principal component* of a data set $X_1$, $X_2$, ..., $X_p$ is the linear combination of the features
+The *first principal component* of a data set $$X_1, X_2, ..., X_p$$ is the linear combination of the features
 
 $$Z_{1} = \phi_{11}X_{1} + \phi_{21}X_{2} + ... + \phi_{p1}X_{p} \tag{1}$$ 
 
-that has the largest variance and where $\phi_1$ is the first principal component loading vector, with elements $\phi_{12}, \phi_{22},\dots,\phi_{p2}$. The $\phi$ are *normalized*, which means that $\sum_{j=1}^{p}{\phi_{j1}^{2}} = 1$.  After the first principal component $Z_1$ of the features has been determined, we can find the second principal component $Z_2$. The second principal component is the linear combination of $X_1,\dots , X_p$ that has maximal variance out of all linear combinations that are __*uncorrelated*__ with $Z_1$. The second principal component scores $z_{12}, z_{22}, \dots, z_{n2}$ take the form
+that has the largest variance and where $$\phi_1$$ is the first principal component loading vector, with elements $$\phi_{12}, \phi_{22},\dots,\phi_{p2}$$. The $\phi$ are *normalized*, which means that $$\sum_{j=1}^{p}{\phi_{j1}^{2}} = 1$$.  After the first principal component $$Z_1$$ of the features has been determined, we can find the second principal component $$Z_2$$. The second principal component is the linear combination of $$X_1,\dots , X_p$$ that has maximal variance out of all linear combinations that are __*uncorrelated*__ with $$Z_1$$. The second principal component scores $$z_{12}, z_{22}, \dots, z_{n2}$$ take the form
 
 $$Z_{2} = \phi_{12}X_{1} + \phi_{22}X_{2} + ... + \phi_{p2}X_{p} \tag{2}$$
 
-This proceeds until all principal components are computed.  The elements $\phi_{11}, ..., \phi_{p1}$ in Eq. 1 are the *loadings* of the first principal component. To calculate these loadings, we must find the $\phi$ vector that maximizes the variance. It can be shown using techniques from linear algebra that the eigenvector corresponding to the largest eigenvalue of the covariance matrix is the set of loadings that explains the greatest proportion of the variability.
+This proceeds until all principal components are computed.  The elements $$\phi_{11}, ..., \phi_{p1}$$ in Eq. 1 are the *loadings* of the first principal component. To calculate these loadings, we must find the $$\phi$$ vector that maximizes the variance. It can be shown using techniques from linear algebra that the eigenvector corresponding to the largest eigenvalue of the covariance matrix is the set of loadings that explains the greatest proportion of the variability.
 
 Therefore, to calculate principal components, we start by using the `cov()` function to calculate the covariance matrix, followed by the `eigen` command to calculate the eigenvalues of the matrix. `eigen` produces an object that contains both the ordered eigenvalues (`$values`) and the corresponding eigenvector matrix (`$vectors`). 
 
@@ -140,7 +140,7 @@ Each principal component vector defines a direction in feature space. Because ei
 
 By examining the principal component vectors above, we can infer the the first principal component (PC1) roughly corresponds to an overall rate of serious crimes since *Murder, Assault,* and *Rape* have the largest values. The second component (PC2) is affected by  *UrbanPop* more than the other three variables, so it roughly corresponds to the level of urbanization of the state, with some opposite, smaller influence by murder rate.
 
-If we project the *n* data points $x_1$, ..., $x_n$ onto the first eigenvector, the projected values are called the principal component *scores* for each observation.
+If we project the *n* data points $$x_1, ..., x_n$$ onto the first eigenvector, the projected values are called the principal component *scores* for each observation.
 
 
 ```r
@@ -191,7 +191,7 @@ By performing some algebra, the proportion of variance explained (PVE) by the *m
 
 $$PVE = \frac{{\sum_{i=1}^{n}(\sum_{j=1}^{p}{\phi_{jm}x_{ij}})^{2}}}{\sum_{j=1}^{p}\sum_{i=1}^{n}{x_{ij}^{2}}} \tag{3}$$
 
-It can be shown that the PVE of the *m*th principal component can be more simply calculated by taking the *m*th eigenvalue and dividing it by the number of principal components, $p$. A vector of PVE for each principal component is calculated:
+It can be shown that the PVE of the *m*th principal component can be more simply calculated by taking the *m*th eigenvalue and dividing it by the number of principal components, *p*. A vector of PVE for each principal component is calculated:
 
 
 ```r
@@ -230,7 +230,7 @@ grid.arrange(PVEplot, cumPVE, ncol = 2)
 
 ### Deciding How many Principal Components to Use
 
-For a general $n$ x $p$ data matrix $X$, there are up to $min(n-1,p)$ principal components that can be calculated. However, because the point of PCA is to significantly reduce the number of variables, we want to use the smallest number of principal components possible to explain *most* of the variability.
+For a general *n* x *p* data matrix *X*, there are up to $$min(n-1,p)$$ principal components that can be calculated. However, because the point of PCA is to significantly reduce the number of variables, we want to use the smallest number of principal components possible to explain *most* of the variability.
 
 The frank answer is that there is no robust method for determining how many components to use. As the number of observations, the number of variables, and the application vary, a different level of accuracy and variable reduction are desirable.
 
@@ -280,7 +280,7 @@ pca_result$rotation
 ## Rape     -0.5434321 -0.1673186  0.8177779  0.08902432
 ```
 
-We see that there are four distinct principal components. This is to be expected because there are in general $min(n − 1, p)$ informative principal components in a data set with *n* observations and *p* variables.  Also, notice that *PCA1* and *PCA2* are opposite signs from what we computated earlier.  Recall that by default, eigenvectors in R point in the negative direction. We can adjust this with a simple change.
+We see that there are four distinct principal components. This is to be expected because there are in general $$min(n − 1, p)$$ informative principal components in a data set with *n* observations and *p* variables.  Also, notice that *PCA1* and *PCA2* are opposite signs from what we computated earlier.  Recall that by default, eigenvectors in R point in the negative direction. We can adjust this with a simple change.
 
 
 ```r
