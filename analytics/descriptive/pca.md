@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Principal Components Analysis
-permalink: /pca_basics
+permalink: /pca
 ---
 
 <img src="/public/images/analytics/pca/unnamed-chunk-8-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 50%; height: 50%;" />
