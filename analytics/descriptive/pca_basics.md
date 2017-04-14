@@ -174,7 +174,7 @@ ggplot(PC, aes(PC1, PC2)) +
   ggtitle("First Two Principal Components of USArrests Data")
 ```
 
-<img src="09_-_principal-components-analysis_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/pca/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 
 Because PCA is unsupervised, this analysis on its own is not making predictions about crime rates, but simply making connections between observations using fewer measurements.
@@ -225,7 +225,7 @@ cumPVE <- qplot(c(1:4), cumsum(PVE)) +
 grid.arrange(PVEplot, cumPVE, ncol = 2)
 ```
 
-<img src="09_-_principal-components-analysis_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/pca/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
 
 
 ### Deciding How many Principal Components to Use
@@ -315,7 +315,7 @@ Now we can plot the first two principal components using `biplot`.  Alternativel
 biplot(pca_result, scale = 0)
 ```
 
-<img src="09_-_principal-components-analysis_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/pca/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
 The `prcomp` function also outputs the standard deviation of each principal component.
 
