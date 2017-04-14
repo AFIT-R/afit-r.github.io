@@ -14,7 +14,7 @@ This tutorial serves as an introduction to Principal Component Analysis (PCA).[^
 
 1. [Replication Requirements](#replication): What you'll need to reproduce the analysis in this tutorial
 2. [Preparing Our Data](#preparing): Cleaning up the data set to make it easy to work with
-3. [What are Principal Components?](#what): Understanding and computing Principal Components for $$X_1, X_2, ..., X_p$$
+3. [What are Principal Components?](#what): Understanding and computing Principal Components for $$X_1, X_2, \dots, X_p$$
 4. [Selecting the Number of Principal Components](#selecting): Using Proportion of Variance Explained (PVE) to decide how many principal components to use
 5. [Built-in PCA Functions](#built): Using built-in R functions to perform PCA
 6. [Other Uses for Principal Components](#other): Application of PCA to other statistical techniques such as regression, classification, and clustering
