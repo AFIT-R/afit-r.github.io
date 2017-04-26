@@ -7,7 +7,7 @@ permalink: /kmeans_clustering
 
 <img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-18-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 50%; height: 50%;" />
 
-Clustering is a broad set of techniques for finding subgroups of observations within a data set. When we cluster observations, we want observations in the same group to be similar and observations in different groups to be dissimilar. Because there isn't a response variable, this is an unsupervised method, which implies that it seeks to find relationships between the $n$ observations without being trained by a response variable. Clustering allows us to identify which observations are alike, and potentially categorize them therein. K-means clustering is the simplest and the most commonly used clustering method for splitting a dataset into a set of k groups.
+Clustering is a broad set of techniques for finding subgroups of observations within a data set. When we cluster observations, we want observations in the same group to be similar and observations in different groups to be dissimilar. Because there isn't a response variable, this is an unsupervised method, which implies that it seeks to find relationships between the $$n$$ observations without being trained by a response variable. Clustering allows us to identify which observations are alike, and potentially categorize them therein. K-means clustering is the simplest and the most commonly used clustering method for splitting a dataset into a set of k groups.
 
 ## tl;dr
 
@@ -45,14 +45,14 @@ Here, we’ll use the built-in R data set `USArrests`, which contains statistics
 df <- USArrests
 ```
 
-\1. To remove any missing value that might be present in the data, type this:
+1. To remove any missing value that might be present in the data, type this:
 
 
 ```r
 df <- na.omit(df)
 ```
 
-\2. As we don’t want the clustering algorithm to depend to an arbitrary variable unit, we start by scaling/standardizing the data using the R function `scale`:
+2. As we don’t want the clustering algorithm to depend to an arbitrary variable unit, we start by scaling/standardizing the data using the R function `scale`:
 
 
 ```r
@@ -100,7 +100,7 @@ Where $x^\prime_i = rank(x_i)$ and $y^\prime_i = rank(y_i)$.
 __Kendall correlation distance:__
 
 Kendall correlation method measures the correspondence between the ranking of *x* and *y* variables. The total number of possible pairings of *x* with *y* observations is *n(n − 1)/2*, where *n* is the size of *x* and *y*. Begin by ordering the pairs by the *x* values. If *x* and *y* are correlated, then they would have the same relative rank orders. Now,
-for each $y_i$, count the number of $y_j > y_i$ (concordant pairs (c)) and the number of $y_j < y_i$ (discordant pairs (d)).
+for each $$y_i$$, count the number of $$y_j > y_i$$ (concordant pairs (c)) and the number of $$y_j < y_i$$ (discordant pairs (d)).
 
 Kendall correlation distance is defined as follow:
 
@@ -119,7 +119,7 @@ distance <- get_dist(df)
 fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07"))
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 
 ## K-Means Clustering {#kmeans}
@@ -135,10 +135,10 @@ $$W(C_k) = \sum_{x_i \in C_k}(x_i - \mu_k)^2 \tag{6}$$
 
 where:
 
-- $x_i$ is a data point belonging to the cluster $C_k$
-- $\mu_k$ is the mean value of the points assigned to the cluster $C_k$
+- $$x_i$$ is a data point belonging to the cluster $$C_k$$
+- $$\mu_k$$ is the mean value of the points assigned to the cluster $$C_k$$
 
-Each observation ($x_i$) is assigned to a given cluster such that the sum of squares (SS) distance of the observation to their assigned cluster centers ($\mu_k$) is minimized.
+Each observation ($$x_i$$) is assigned to a given cluster such that the sum of squares (SS) distance of the observation to their assigned cluster centers ($$\mu_k$$) is minimized.
 
 We define the total within-cluster variation as follows:
 
@@ -249,7 +249,7 @@ We can also view our results by using `fviz_cluster`.  This provides a nice illu
 fviz_cluster(k2, data = df)
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 Alternatively, you can plot the data 
 
@@ -263,7 +263,7 @@ df %>%
   geom_text()
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
 
 Because the number of clusters (k) must be set before we start the algorithm, it is often advantageous to use several different values of k and examine the differences in the results. We can execute the same process for 3, 4, and 5 clusters, and the results are shown in the figure:
@@ -284,7 +284,7 @@ library(gridExtra)
 grid.arrange(p1, p2, p3, p4, nrow = 2)
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
 
 Although this visual assessment tells us where true dilineations occur (or do not occur such as clusters 2 & 4 in the k = 5 graph) between clusters, it does not tell us what the optimal number of clusters is.
 
@@ -302,7 +302,7 @@ Recall that, the basic idea behind cluster partitioning methods, such as k-means
 
 $$ minimize\Bigg(\sum^k_{k=1}W(C_k)\Bigg) \tag{8}$$
 
-where $C_k$ is the $k^{th}$ cluster and $W(C_k)$ is the within-cluster variation. The total within-cluster sum of square (wss) measures the compactness of the clustering and we want it to be as small as possible.  Thus, we can use the following algorithm to define the optimal clusters:
+where $$C_k$$ is the $$k^{th}$$ cluster and $$W(C_k)$$ is the within-cluster variation. The total within-cluster sum of square (wss) measures the compactness of the clustering and we want it to be as small as possible.  Thus, we can use the following algorithm to define the optimal clusters:
 
 1. Compute clustering algorithm (e.g., k-means clustering) for different values of *k*. For instance, by varying *k* from 1 to 10 clusters
 2. For each *k*, calculate the total within-cluster sum of square (wss)
@@ -332,7 +332,7 @@ plot(k.values, wss_values,
        ylab="Total within-clusters sum of squares")
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
 
 Fortunately, this process to compute the "Elbow method" has been wrapped up in a single function (`fviz_nbclust`):
 
@@ -343,7 +343,7 @@ set.seed(123)
 fviz_nbclust(df, kmeans, method = "wss")
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
 #### Average Silhouette Method {#silo}
 
@@ -372,7 +372,7 @@ plot(k.values, avg_sil_values,
        ylab = "Average Silhouettes")
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 Similar to the elbow method, this process to compute the "average silhoutte method" has been wrapped up in a single function (`fviz_nbclust`):
 
@@ -381,25 +381,25 @@ Similar to the elbow method, this process to compute the "average silhoutte meth
 fviz_nbclust(df, kmeans, method = "silhouette")
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
 
 
 #### Gap Statistic Method {#gap}
 
-The gap statistic has been published by [R. Tibshirani, G. Walther, and T. Hastie (Standford University, 2001)](http://web.stanford.edu/~hastie/Papers/gap.pdf). The approach can be applied to any clustering method (i.e. K-means clustering, hierarchical clustering).  The gap statistic compares the total intracluster variation for different values of *k* with their expected values under null reference distribution of the data (i.e. a distribution with no obvious clustering).  The reference dataset is generated using Monte Carlo simulations of the sampling process. That is, for each variable ($x_i$) in the data set we compute its range $[min(x_i), max(x_j)]$ and generate values for the n points uniformly from the interval min to max.
+The gap statistic has been published by [R. Tibshirani, G. Walther, and T. Hastie (Standford University, 2001)](http://web.stanford.edu/~hastie/Papers/gap.pdf). The approach can be applied to any clustering method (i.e. K-means clustering, hierarchical clustering).  The gap statistic compares the total intracluster variation for different values of *k* with their expected values under null reference distribution of the data (i.e. a distribution with no obvious clustering).  The reference dataset is generated using Monte Carlo simulations of the sampling process. That is, for each variable ($$x_i$$) in the data set we compute its range $$[min(x_i), max(x_j)]$$ and generate values for the n points uniformly from the interval min to max.
 
 For the observed data and the the reference data, the total intracluster variation is computed using different values of *k*. The *gap statistic* for a given *k* is defined as follow:
 
 $$ Gap_n(k) = E^*_n{log(W_k)} - log(W_k) \tag{9}$$
 
-Where $E^*_n$ denotes the expectation under a sample size *n* from the reference distribution. $E^*_n$ is defined via bootstrapping (B) by generating B copies of the reference datasets and, by computing the average $log(W^*_k)$.  The gap statistic measures the deviation of the observed $W_k$ value from its expected value under the null hypothesis.  The estimate of the optimal clusters ($\hat k$) will be the value that maximizes $Gap_n(k)$. This means that the clustering structure is far away from the uniform distribution of points.
+Where $$E^*_n$$ denotes the expectation under a sample size *n* from the reference distribution. $$E^*_n$$ is defined via bootstrapping (B) by generating B copies of the reference datasets and, by computing the average $$log(W^*_k)$$.  The gap statistic measures the deviation of the observed $$W_k$$ value from its expected value under the null hypothesis.  The estimate of the optimal clusters ($$\hat k$$) will be the value that maximizes $$Gap_n(k)$$. This means that the clustering structure is far away from the uniform distribution of points.
 
 In short, the algorithm involves the following steps:
 
-1. Cluster the observed data, varying the number of clusters from $k=1, \dots, k_{max}$, and compute the corresponding $W_k$.
-2. Generate B reference data sets and cluster each of them with varying number of clusters $k=1, \dots, k_{max}$. Compute the estimated gap statistics presented in eq. 9.
-3. Let $\bar w = (1/B) \sum_b log(W^*_{kb})$, compute the standard deviation $sd(k) = \sqrt{(1/b)\sum_b(log(W^*_{kb})- \bar w)^2}$ and define $s_k = sd_k \times \sqrt{1 + 1/B}$.
-4. Choose the number of clusters as the smallest k such that $Gap(k) \geq Gap(k+1) - s_{k+1}$.
+1. Cluster the observed data, varying the number of clusters from $$k=1, \dots, k_{max}$$, and compute the corresponding $$W_k$$.
+2. Generate B reference data sets and cluster each of them with varying number of clusters $$k=1, \dots, k_{max}$$. Compute the estimated gap statistics presented in eq. 9.
+3. Let $$\bar w = (1/B) \sum_b log(W^*_{kb})$$, compute the standard deviation $$sd(k) = \sqrt{(1/b)\sum_b(log(W^*_{kb})- \bar w)^2}$$ and define $$s_k = sd_k \times \sqrt{1 + 1/B}$$.
+4. Choose the number of clusters as the smallest k such that $$Gap(k) \geq Gap(k+1) - s_{k+1}$$.
 
 To compute the gap statistic method we can use the `clusGap` function which provides the gap statistic and standard error for an output.
 
@@ -435,7 +435,7 @@ We can visualize the results with `fviz_gap_stat` which suggests four clusters a
 fviz_gap_stat(gap_stat)
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
 In addition to these commonly used approaches, the `NbClust` package, published by [Charrad et al., 2014](http://www.jstatsoft.org/v61/i06/paper), provides 30 indices for determining the relevant number of clusters and proposes to users the best clustering scheme from the different results obtained by varying all combinations of number of clusters, distance measures, and clustering methods.
 
@@ -498,7 +498,7 @@ We can visualize the results using `fviz_cluster`:
 fviz_cluster(final, data = df)
 ```
 
-<img src="Clustering_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
 
 And we can extract the clusters and add to our initial data to do some descriptive statistics at the cluster level:
 
