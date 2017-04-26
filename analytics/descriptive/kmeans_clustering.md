@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: K-means Clustering
+title: K-means Cluster Analysis
 permalink: /kmeans_clustering
 ---
 
