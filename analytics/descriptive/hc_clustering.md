@@ -5,7 +5,7 @@ permalink: /hc_clustering
 ---
 
 
-<img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-18-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 50%; height: 50%;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-13-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 50%; height: 50%;" />
 
 In the [k-means cluster analysis tutorial](kmeans_clustering) I provided a solid introduction to one of the most popular clustering methods.  Hierarchical clustering is an alternative approach to k-means clustering for identifying groups in the dataset. It does not require us to pre-specify the number of clusters to be generated as is required by the k-means approach. Furthermore, hierarchical clustering has an added advantage over K-means clustering in that it results in an attractive tree-based representation of the observations, called a dendrogram.
 
