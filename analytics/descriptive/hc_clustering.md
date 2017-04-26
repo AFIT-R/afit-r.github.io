@@ -58,7 +58,7 @@ However, a bigger question is: *How do we measure the dissimilarity between two 
 
 We can see the differences these approaches in the following dendrograms:
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
 
 ## Data Preparation {#prep}
@@ -121,7 +121,7 @@ hc1 <- hclust(d, method = "complete" )
 plot(hc1, cex = 0.6, hang = -1)
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 Alternatively, we can use the `agnes` function.  These functions behave very similarly; however, with the `agnes` function you can also get the agglomerative coefficient, which measures the amount of clustering structure found (values closer to 1 suggest strong clustering structure).
 
@@ -161,7 +161,7 @@ hc3 <- agnes(df, method = "ward")
 pltree(hc3, cex = 0.6, hang = -1, main = "Dendrogram of agnes") 
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
 ### Divisive Hierarchical Clustering
 
@@ -180,7 +180,7 @@ hc4$dc
 pltree(hc4, cex = 0.6, hang = -1, main = "Dendrogram of diana")
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
 
 ## Working with Dendrograms {#dendro}
 
@@ -229,7 +229,7 @@ plot(hc5, cex = 0.6)
 rect.hclust(hc5, k = 4, border = 2:5)
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 As we saw in the [k-means tutorial](#kmeans_clustering), we can also use the `fviz_cluster` function from the `factoextra` package to visualize the result in a scatter plot.
 
@@ -238,7 +238,7 @@ As we saw in the [k-means tutorial](#kmeans_clustering), we can also use the `fv
 fviz_cluster(list(data = df, cluster = sub_grp))
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
 
 To use `cutree` with `agnes` and `diana` you can perform the following:
 
@@ -271,7 +271,7 @@ dend2 <- as.dendrogram (hc2)
 tanglegram(dend1, dend2)
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
 The output displays “unique” nodes, with a combination of labels/items not present in the other tree, highlighted with dashed lines.  The quality of the alignment of the two trees can be measured using the function `entanglement`. Entanglement is a measure between 1 (full entanglement) and 0 (no entanglement). A lower entanglement coefficient corresponds to a good alignment.  The output of `tanglegram` can be customized using many other options as follow:
 
@@ -287,7 +287,7 @@ tanglegram(dend1, dend2,
   )
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
 
 ## Determining Optimal Clusters {#optimal}
 
@@ -302,7 +302,7 @@ To perform the [elbow method](kmeans_clustering#elbow) we just need to change th
 fviz_nbclust(df, FUN = hcut, method = "wss")
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
 
 
 ### Average Silhouette Method
@@ -314,7 +314,7 @@ To perform the [average silhouette method](kmeans_clustering#silo) we follow a s
 fviz_nbclust(df, FUN = hcut, method = "silhouette")
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
 
 ### Gap Statistic Method
 
@@ -326,7 +326,7 @@ gap_stat <- clusGap(df, FUN = hcut, nstart = 25, K.max = 10, B = 50)
 fviz_gap_stat(gap_stat)
 ```
 
-<img src="Clustering_02_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/clustering/hierarchical/unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
 
 
 ## Additional Comments
