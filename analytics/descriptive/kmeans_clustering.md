@@ -17,6 +17,7 @@ This tutorial serves as an introduction to the k-means clustering method.
 2. [Data Preparation](#prep): Preparing our data for cluster analysis
 3. [Clustering Distance Measures](#distance): Understanding how to measure differences in observations
 4. [K-Means Clustering](#kmeans): Calculations and methods for creating K subgroups of the data
+5. [Determining Optimal Clusters](#optimal): Identifying the right number of clusters to group your data
 
 
 ## Replication Requirements {#replication}
@@ -45,14 +46,14 @@ Here, we’ll use the built-in R data set `USArrests`, which contains statistics
 df <- USArrests
 ```
 
-1. To remove any missing value that might be present in the data, type this:
+To remove any missing value that might be present in the data, type this:
 
 
 ```r
 df <- na.omit(df)
 ```
 
-2. As we don’t want the clustering algorithm to depend to an arbitrary variable unit, we start by scaling/standardizing the data using the R function `scale`:
+As we don’t want the clustering algorithm to depend to an arbitrary variable unit, we start by scaling/standardizing the data using the R function `scale`:
 
 
 ```r
@@ -95,7 +96,7 @@ The spearman correlation method computes the correlation between the rank of *x*
 
 $$d_{spear}(x, y) = 1 - \frac{\sum^n_{i=1}(x^\prime_i-\bar x^\prime)(y^\prime_i - \bar y^\prime)}{\sqrt{\sum^n_{i=1}(x^\prime_i-\bar x^\prime)^2\sum^n_{i=1}(y^\prime_i - \bar y^\prime)^2}} \tag{4}$$
 
-Where $x^\prime_i = rank(x_i)$ and $y^\prime_i = rank(y_i)$.
+Where $$x^\prime_i = rank(x_i)$$ and $$y^\prime_i = rank(y_i)$$.
 
 __Kendall correlation distance:__
 
@@ -251,8 +252,7 @@ fviz_cluster(k2, data = df)
 
 <img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
-Alternatively, you can plot the data 
-
+Alternatively, you can use standard pairwise scatter plots to illustrate the clusters compared to the original variables.
 
 ```r
 df %>%
@@ -288,7 +288,7 @@ grid.arrange(p1, p2, p3, p4, nrow = 2)
 
 Although this visual assessment tells us where true dilineations occur (or do not occur such as clusters 2 & 4 in the k = 5 graph) between clusters, it does not tell us what the optimal number of clusters is.
 
-### Determining Optimal Clusters
+## Determining Optimal Clusters {#optimal}
 
 As you may recall the analyst specifies the number of clusters to use; preferably the analyst would like to use the optimal number of clusters.  To aid the analyst, the following explains the three most popular methods for determining the optimal clusters, which includes: 
 
@@ -296,7 +296,7 @@ As you may recall the analyst specifies the number of clusters to use; preferabl
 2. [Silhouette method](#silo)
 3. [Gap statistic](#gap)
 
-#### Elbow Method {#elbow}
+### Elbow Method {#elbow}
 
 Recall that, the basic idea behind cluster partitioning methods, such as k-means clustering, is to define clusters such that the total intra-cluster variation (known as total within-cluster variation or total within-cluster sum of square) is minimized:
 
@@ -345,7 +345,7 @@ fviz_nbclust(df, kmeans, method = "wss")
 
 <img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
-#### Average Silhouette Method {#silo}
+### Average Silhouette Method {#silo}
 
 In short, the average silhouette approach measures the quality of a clustering. That is, it determines how well each object lies within its cluster. A high average silhouette width indicates a good clustering. The average silhouette method computes the average silhouette of observations for different values of *k*. The optimal number of clusters *k* is the one that maximizes the average silhouette over a range of possible values for *k*.[^kauf]  
 
@@ -384,7 +384,7 @@ fviz_nbclust(df, kmeans, method = "silhouette")
 <img src="/public/images/analytics/clustering/kmeans/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
 
 
-#### Gap Statistic Method {#gap}
+### Gap Statistic Method {#gap}
 
 The gap statistic has been published by [R. Tibshirani, G. Walther, and T. Hastie (Standford University, 2001)](http://web.stanford.edu/~hastie/Papers/gap.pdf). The approach can be applied to any clustering method (i.e. K-means clustering, hierarchical clustering).  The gap statistic compares the total intracluster variation for different values of *k* with their expected values under null reference distribution of the data (i.e. a distribution with no obvious clustering).  The reference dataset is generated using Monte Carlo simulations of the sampling process. That is, for each variable ($$x_i$$) in the data set we compute its range $$[min(x_i), max(x_j)]$$ and generate values for the n points uniformly from the interval min to max.
 
