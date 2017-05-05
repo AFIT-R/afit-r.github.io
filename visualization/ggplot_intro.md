@@ -106,7 +106,7 @@ ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
   geom_point()
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 Note that using the `aes()` function will cause the visual channel to be based on the data specified in the argument. For example, using `aes(color = "blue")` won’t cause the geometry’s color to be “blue”, but will instead cause the visual channel to be mapped from the vector `c("blue")` — as if we only had a single type of engine that happened to be called “blue”. If you wish to apply an aesthetic property to an entire geometry, you can set that property as an argument to the `geom` method, outside of the `aes()` call:
 
@@ -116,7 +116,7 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(color = "blue")
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 ## Specifying Geometric Shapes {#geo}
 
@@ -153,7 +153,7 @@ ggplot(data = mpg, aes(x = hwy)) +
   geom_histogram() 
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 What makes this really powerful is that you can add __*multiple*__ geometries to a plot, thus allowing you to create complex graphics showing multiple aspects of your data.
 
@@ -165,7 +165,7 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth()
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 Of course the aesthetics for each `geom` can be different, so you could show multiple lines on the same plot (or with different colors, styles, etc). It’s also possible to give each `geom` a different data argument, so that you can show multiple data sets in the same plot.
 
@@ -178,7 +178,7 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth(color = "red")
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
 So as you can see if we specify an aesthetic within `ggplot` it will be passed on to each `geom` that follows.  Or we can specify certain aes within each `geom`, which allows us to only show certain characteristics for that specificy layer (i.e. `geom_point`).
 
@@ -195,7 +195,7 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_smooth(se = FALSE)
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
 
 ### Statistical Transformations
 
@@ -207,7 +207,7 @@ ggplot(mpg, aes(x = class)) +
   geom_bar()
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
 `ggplot2` supports many different statistical transformations. For example, the “identity” transformation will leave the data “as is”. You can specify which statistical transformation a `geom` uses by passing it as the `stat` argument.  For example, consider our data already had the count as a variable:
 
@@ -235,7 +235,7 @@ ggplot(class_count, aes(x = class, y = n)) +
   geom_bar(stat = "identity")
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
 
 We can also call `stat_` functions directly to add additional layers.  For example, here we create a scatter plot of highway miles for each displacement value and then use `stat_summary` to plot the mean highway miles at each displacement value.
 
@@ -246,7 +246,7 @@ ggplot(mpg, aes(displ, hwy)) +
   stat_summary(fun.y = "mean", geom = "line", size = 1, linetype = "dashed")
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-15-1.png" style="display: block; margin: auto;" />
 
 ### Position Adjustments
 
@@ -259,7 +259,7 @@ ggplot(mpg, aes(x = class, fill = drv)) +
   geom_bar()
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
 The `geom_bar` by default uses a position adjustment of `"stack"`, which makes each rectangle’s height proprotional to its value and stacks them on top of each other. We can use the `position` argument to specify what position adjustment rules to follow: 
 
@@ -274,7 +274,7 @@ ggplot(mpg, aes(x = class, fill = drv)) +
   geom_bar(position = "fill")
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
 
 Check the documentation for each particular geom to learn more about its positioning adjustments.
 
@@ -315,7 +315,7 @@ ggplot(mpg, aes(x = cty, y = hwy)) +
   scale_y_reverse()
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
 
 Similarly, you can use `scale_x_log10()` and `scale_x_sqrt()` to transform your scale. You can also use `scales` to format your axes:
 
@@ -326,7 +326,7 @@ ggplot(mpg, aes(x = class, fill = drv)) +
   scale_y_continuous(breaks = seq(0, 1, by = .2), labels = scales::percent)
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
 
 
 A common parameter to change is which set of colors to use in a plot. While you can use the default coloring, a more common option is to leverage the pre-defined palettes from [colorbrewer.org](http://colorbrewer2.org/). These color sets have been carefully designed to look good and to be viewable to people with certain forms of color blindness. We can leverage color brewer palletes by specifying the `scale_color_brewer()` function, passing the pallete as an argument.
@@ -344,7 +344,7 @@ ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
   scale_color_brewer(palette = "Set3")
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-24-1.png" style="display: block; margin: auto;" />
 
 Note that you can get the palette name from the [colorbrewer website](http://colorbrewer2.org/) by looking at the scheme query parameter in the URL. Or see the diagram [here](https://bl.ocks.org/mbostock/5577023) and hover the mouse over each palette for the name.
 
@@ -373,7 +373,7 @@ ggplot(mpg, aes(x = class)) +
   coord_flip()
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
 
 
 ## Facets {#facets}
@@ -387,7 +387,7 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   facet_grid(~ class)
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
 
 You can also `facet_grid` to facet your data by more than one categorical variable. Note that we use a tilde (`~`) in our `facet` functions.  With `facet_grid` the variable to the left of the tilde will be represented in the rows and the variable to the right will be represented across the columns. 
 
@@ -398,7 +398,7 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   facet_grid(year ~ cyl)
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
 
 ## Labels & Annotations {#labels}
 
@@ -417,7 +417,7 @@ ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
        color = "Car Type")
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-29-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-29-1.png" style="display: block; margin: auto;" />
 
 It is also possible to add labels into the plot itself (e.g., to label each point or line) by adding a new `geom_text` or `geom_label` to the plot; effectively, you’re plotting an extra set of data which happen to be the variable names:
 
@@ -435,7 +435,7 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_label(data = best_in_class, aes(label = model), alpha = 0.5)
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-30-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-30-1.png" style="display: block; margin: auto;" />
 
 However, note that two labels overlap one-another in the top left part of the plot.  We can use the `geom_text_repel` function from the  [`ggrepel`](https://github.com/slowkow/ggrepel) package to help position labels.
 
@@ -448,7 +448,7 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_text_repel(data = best_in_class, aes(label = model))
 ```
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-31-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/visual/intro/unnamed-chunk-31-1.png" style="display: block; margin: auto;" />
 
 ## Additional Resources on `ggplot2` {#add}
 
