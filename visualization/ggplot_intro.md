@@ -89,8 +89,8 @@ ggplot(mpg, aes(x = displ, y = hwy))
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point()
 ```
+<img src="/public/images/visual/intro/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
-<img src="ggplot2-intro_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 Note that when you added the `geom` layer you used the addition (`+`) operator.  As you add new layers you will always use `+` to add onto your visualization.
 
