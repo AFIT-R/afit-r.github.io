@@ -12,7 +12,7 @@ The below image illustrates how an analysis might switch between tidy and non-ti
 
 <figure>
 <img src="/public/images/analytics/descriptives/tidyflow.png" style="display: block; margin: auto;" />
-<figcaption>A flowchart of a typical text analysis that combines tidytext with other tools and data formats, particularly the tm or quanteda packages (<a href="http://tidytextmining.com/">Silge & Robinson, 2017</a>).</figcaption>
+<figcaption><font size="4">Fig1: A flowchart of a typical text analysis that combines tidytext with other tools and data formats, particularly the tm or quanteda packages (<a href="http://tidytextmining.com/">Silge & Robinson, 2017</a>).</font></figcaption>
 </figure>
 
 ## tl'dr
