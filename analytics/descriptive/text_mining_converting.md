@@ -10,8 +10,10 @@ However, most of the existing R tools for natural language processing, with the 
 
 The below image illustrates how an analysis might switch between tidy and non-tidy data structures and tools. 
 
+<figure>
 <img src="/public/images/analytics/descriptives/tidyflow.png" style="display: block; margin: auto;" />
-
+<figcaption>A flowchart of a typical text analysis that combines tidytext with other tools and data formats, particularly the tm or quanteda packages (<a href="http://tidytextmining.com/">Silge & Robinson, 2017</a>).</figcaption>
+</figure>
 
 ## tl'dr
 
