@@ -32,20 +32,20 @@ Data Science is the study of the generalizable extraction of knowledge from data
 Upon successfully completing this course, you will be able to:
 
 - Perform your data analysis in a literate programming environment
-- Manage different types of data
-- Manage different data structures
-- Import, scrape, and export data
-- Index, subset, reshape and transform your data
-- Compute descriptive statistics
-- Visualize data
+- Import and manage structured and unstructured data
+- Manipulate, transform, and summarize your data
+- Join disparate data sources
+- Methodically explore and visualize your data
 - Perform iterative functions
 - Write your own functions
+- Understand the implementation of a breadth of modeling techniques
+- Execute an analytic technique thoroughly
 
 ...all with R!
 
 ## Class Structure 
 
-Each week I plan to have you read through selected tutorials on specific data wrangling activities in R. I will assign problems/activities that you will need to perform prior to each Saturday session. Then in each Saturday class I'll spend about 30 minutes reviewing the data wrangling activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the last hour of class you and your small group will work together to complete another problem within this same data wrangling domain.
+Each week I plan to have you read through selected tutorials on specific analytic activities in R. I will assign problems/activities that you will need to perform prior to each Saturday session. Then in each class I'll spend about 30 minutes reviewing the analytic activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the last hour of class you and your small group will work together to complete another problem within this same data wrangling domain.
 
 The purpose for this course structure is multi-dimensional:
 
