@@ -1,12 +1,12 @@
 ---
 layout: tutorial
-title: Week 1 (June 26 - 30)
+title: Day 1
 permalink: /day-1
 ---
 
-Welcome to day 1! Since I treat this as a *flipped* class, I expect you to read through this material __*before*__ class so that you come to class prepared. I am assuming you have fully read the [syllabus](syllabus) by now but if not please do so that you understand how this class is structured and what is expected of you.  I will spend the first few minutes of class on Saturday re-iterating the details so that we are all on the same page but I do not want to spend 30-60 minutes doing so, so make sure you read (and re-read) it thoroughly.
+Welcome to day 1! The first day will focus on making sure everyone is on the same page regarding the syllabus, deliverables, small group assignment and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
 
-The focus of this week is to get yourself (re-)introduced to data wrangling, R, and the general workflow that makes for productive analyses.  Below outlines the tutorials that you need to review, additional resources available to you, and the assignment that is due at the beginning of Saturday's class. If you have any questions or concerns your first step should be going to our [slack channel](https://uc-data-wrangling.slack.com/) and posting your issue.  You and your classmates should be monitoring slack to help each other out. In addition, I will also be watching slack and will chime in when necessary but my hope is that this will be a social process where everyone contributes to knowledge advancement.
+
 
 ## Tutorials & Resources
 
@@ -14,9 +14,11 @@ Please read & work through the following prior to our first class.
 
 ### Syllabus
 
+If you have not already done so, be sure to read through the syllabus for your section [[OPER-682]](oper682) [[LOGM-682]](logm682) so that you understand the structure of my classes, the tentative schedule, grading policies, and other pertinent details.
 
 ### Communication
 
+[Slack](https://slack.com/) will replace e-mail and Blackboard for our course. You will receive an invitation to the [AFIT R slack team](). You may wish to install one of the [apps](https://slack.com/downloads/osx). Read this [introduction to Slack](https://vimeo.com/133692325) from one of Kris Shaffer’s courses (although this is a completely different course and slack team it provides a nice introduction that you might find useful).  If you have any questions or concerns your first step should be going to our [slack channel]() and posting your issue.  You and your classmates should be monitoring slack to help each other out. In addition, I will also be watching slack and will chime in when necessary but my hope is that this will be a social process where everyone contributes to knowledge advancement.
 
 ### Intro to Data Science
 
