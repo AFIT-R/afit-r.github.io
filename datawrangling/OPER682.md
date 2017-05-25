@@ -72,7 +72,7 @@ All required classroom material will be provided in class or online. Any recomme
 *tentative*
 
 | Week          | Description  |
-|:-------------:|--------------|
+|:--------------:|--------------|
 | **1**         | **Introduction & Reproducibility** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |  Jun 26       | Intro to data science, R, and course outline  |
 |  Jun 28       | Managing your workflow with RStudio Projects, R Markdown, and R Notebook |
