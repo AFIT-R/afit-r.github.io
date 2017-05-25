@@ -71,7 +71,7 @@ All required classroom material will be provided in class or online. Any recomme
 
 
 
-| Session       | Description  |
+| Week       | Description  |
 |:-------------:|--------------|
 | **1**         | **Introduction** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |               | Intro to data wrangling, R, and course outline  |
@@ -94,6 +94,18 @@ All required classroom material will be provided in class or online. Any recomme
 |               | Factors |
 |               | Dates and times |
 | **7**         | **Creating Efficient Code in R**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-7" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>   |
+|               | Writing functions  |
+|               | Iteration |
+| **8**         | **Heading**    |
+|               | Writing functions  |
+|               | Iteration |
+| **9**         | **Heading**    |
+|               | Writing functions  |
+|               | Iteration |
+| **10**         | **Heading**    |
+|               | Writing functions  |
+|               | Iteration |
+| **11**         | **Heading**   |
 |               | Writing functions  |
 |               | Iteration |
 
