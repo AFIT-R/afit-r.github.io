@@ -22,30 +22,25 @@ If you have not already done so, be sure to read through the syllabus for your s
 
 ### Intro to Data Science
 
-
+- Read about the [Role of Data Wrangling](http://uc-r.github.io/why_wrangle)
 
 ### Intro to R
 
-- Read about the [Role of Data Wrangling](http://uc-r.github.io/why_wrangle)
-- Work through the [R Basics tutorial](http://uc-r.github.io/section2_basics) to (re-)familiarize yourself with the basic functionality of R and RStudio
+- Work through the [Introduction to R](intro).
+- Work through the [R Basics tutorial](http://uc-r.github.io/section2_basics) to install R and RStudio and (re-)familiarize yourself with the basic functionality of the programming language.
 
 
 ## Deliverables
 
-1. Create an R Project that will be your central project directory for this class. Title this R Project "Data Wrangling with R (BANA 8090)".
-2. Create a .R script titled "week-1.R" and in this script perform the following exercises:
-   - compute $$100(1 + \frac{0.05}{12})^{24}$$
-   - what is the remainder when 3333 is divided by 222?
-   - investigate the behavior of $$(1 + \frac{1}{n})^n$$ for large, integer values in *n*.
-   - the Economic Order Quantity (EOQ) gives the optimal order quantity as $$Q = \sqrt{\frac{2DK}{h}}$$ where *D* is the annual demand, *K* is the fixed cost per order, and *h* is the annual holding cost per item. Create and set the variables $$D = 1000$$, $$K = 5$$, and $$h = 0.25$$ and compute the associated value of Q.
-   - for an initial principal amount *P* and a nominal annual interest rate *r* that is compounded *n* times per year over a span of *t* years, the final value of a certificate of deposit is $$F = P(1 + \frac{r}{n})^{nt}$$. Create and set the variables $$P = 100$$, $$r = 0.08$$, $$n = 12$$, and $$t = 3$$ and compute the associated value of *F*.
-3. Create an HTML R Markdown file titled "week-1.Rmd" that includes two sections:
-   - Section 1 will be an introduction of yourself that describes where you are from, your academic and professional background, your experience with R (or other coding languages), and what your plans are after you complete your UC masters degree. This section will serve as a way to introduce yourself to your small group peers.
-   - In section 2 you will use code chunks to complete the exercises you performed in the .R script in your R markdown file.
-   - "Knit" this .Rmd file so that you produce a "week-1.html" file. You will find an example [here](http://rpubs.com/bradleyboehmke/datawrangling_week1_homework) of the basic output I am looking for but feel free to be creative and test out the many syntax features for R Markdown.
-   
+Create a .R script titled "day-1.R" and in this script perform the following exercises:
 
-See you in class on Saturday!
+- compute $$100(1 + \frac{0.05}{12})^{24}$$
+- what is the remainder when 3333 is divided by 222?
+- investigate the behavior of $$(1 + \frac{1}{n})^n$$ for large, integer values in *n*.
+- the Economic Order Quantity (EOQ) gives the optimal order quantity as $$Q = \sqrt{\frac{2DK}{h}}$$ where *D* is the annual demand, *K* is the fixed cost per order, and *h* is the annual holding cost per item. Create and set the variables $$D = 1000$$, $$K = 5$$, and $$h = 0.25$$ and compute the associated value of Q.
+- for an initial principal amount *P* and a nominal annual interest rate *r* that is compounded *n* times per year over a span of *t* years, the final value of a certificate of deposit is $$F = P(1 + \frac{r}{n})^{nt}$$. Create and set the variables $$P = 100$$, $$r = 0.08$$, $$n = 12$$, and $$t = 3$$ and compute the associated value of *F*.
+
+See you in class!
 
 ## Class
 
