@@ -69,7 +69,7 @@ All required classroom material will be provided in class or online. Any recomme
 
 ## Schedule
 
-
+*tentative*
 
 | Week          | Description  |
 |:-------------:|--------------|
