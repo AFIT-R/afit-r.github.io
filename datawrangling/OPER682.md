@@ -74,37 +74,37 @@ All required classroom material will be provided in class or online. Any recomme
 | Week       | Description  |
 |:-------------:|--------------|
 | **1**         | **Introduction** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-|  Jun 26 - 30  | Intro to data wrangling, R, and course outline  |
-|               | Managing your workflow with RStudio Projects, R Markdown, and R Notebook |
+|  Jun 26       | Intro to data wrangling, R, and course outline  |
+|  Jun 28       | Managing your workflow with RStudio Projects, R Markdown, and R Notebook |
 | **2**         | **Getting Your Data** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
-|  Jul 3 - 7    | Importing and exporting data  |
-|               | Scraping text & tables |
+|  Jul 3        | __*No Class*__  |
+|  Jul 5        | Scraping text & tables |
 | **3**         | **First Date Guidelines for Data** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
-|  Jul 10 - 14  | Understanding the basics of your data
-|               | Initial visualizations |
+|  Jul 10       | Understanding the basics of your data
+|  Jul 12       | Initial visualizations |
 | **4**         | **Exploratory Data Analysis**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
-|  Jul 17 - 21  | Transforming your data |
-|               | Advancing your visualizations |
+|  Jul 17       | Transforming your data |
+|  Jul 19       | Advancing your visualizations |
 | **5**         | **Controlling Your Data**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-5" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>   |
-|  Jul 24 - 28  | Data frames vs. Tibbles  |
-|               | Tidy data |
+|  Jul 24       | Data frames vs. Tibbles  |
+|  Jul 26       | Tidy data |
 |               | Relational data |
 | **6**         | **Dealing with Different Types of Data**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-6" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
-| Jul 31 - Aug 4 | Strings  |
-|               | Factors |
+| Jul 31        | Strings  |
+| Aug 2         | Factors |
 |               | Dates and times |
 | **7**         | **Creating Efficient Code in R**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-7" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>   |
-| Aug 7 - 11    | Writing functions  |
-|               | Iteration |
-| **8**         | **Heading**    |
-| Aug 14 - 18   | Writing functions  |
-|               | Iteration |
-| **9**         | **Heading**    |
-|  Aug 21 - 25  | Writing functions  |
-|               | Iteration |
-| **10**        | **Heading**    |
-| Aug 28 - Sep 1 | Writing functions  |
-|               | Iteration |
+| Aug 7         | Writing functions  |
+| Aug 9         | Iteration |
+| **8**         | **Student-led**    |
+| Aug 14        | Analytic technique |
+| Aug 16        | Analytic technique |
+| **9**         | **Student-led**    |
+|  Aug 21       | Analytic technique |
+|  Aug 23       | Analytic technique |
+| **10**        | **Student-led**    |
+| Aug 28        | Analytic technique |
+| Aug 30        | Analytic technique |
 | **11**        | **Finals Week**   |
 | Sep 4 - 8     |   |
 
