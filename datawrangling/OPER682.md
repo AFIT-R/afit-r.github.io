@@ -71,10 +71,10 @@ All required classroom material will be provided in class or online. Any recomme
 
 
 
-| Week       | Description  |
+| Week          | Description  |
 |:-------------:|--------------|
-| **1**         | **Introduction** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-|  Jun 26       | Intro to data wrangling, R, and course outline  |
+| **1**         | **Introduction & Reproducibility** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+|  Jun 26       | Intro to data science, R, and course outline  |
 |  Jun 28       | Managing your workflow with RStudio Projects, R Markdown, and R Notebook |
 | **2**         | **Getting Your Data** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
 |  Jul 3        | __*No Class*__  |
@@ -105,8 +105,8 @@ All required classroom material will be provided in class or online. Any recomme
 | **10**        | **Student-led**    |
 | Aug 28        | Analytic technique |
 | Aug 30        | Analytic technique |
-| **11**        | **Finals Week**   |
-| Sep 4 - 8     |   |
+| **11**        | **Finals Week:**   |
+| Sep 6         | *No class* - final project due  |
 
 
 ## Grading Policies
