@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Week 1 (June 26 - 30)
-permalink: /week-1
+permalink: /day-1
 ---
 
 Welcome to week 1. Although we will not meet in class until the end of this week (Saturday, October 15<sup>th</sup>), I do not want to waste time in getting started. We only have 7 weeks together (&#x1f622;) so I want to pack each week as full as possible. I am assuming you have fully read the [syllabus](syllabus) by now but if not please do so that you understand how this class is structured and what is expected of you.  I will spend the first few minutes of class on Saturday re-iterating the details so that we are all on the same page but I do not want to spend 30-60 minutes doing so, so make sure you read (and re-read) it thoroughly.
