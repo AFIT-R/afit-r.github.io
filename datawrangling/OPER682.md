@@ -72,30 +72,28 @@ All required classroom material will be provided in class or online. Any recomme
 *tentative*
 
 | Week          | Description  |
-|:--------------:|--------------|
+|:-------------:|--------------|
 | **1**         | **Introduction & Reproducibility** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |  Jun 26       | Intro to data science, R, and course outline  |
-|  Jun 28       | Managing your workflow with RStudio Projects, R Markdown, and R Notebook |
-| **2**         | **Getting Your Data** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+|  Jun 28       | Managing workflow & reproducibility |
+| **2**         | **First Date Guidelines for Data** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
 |  Jul 3        | __*No Class*__  |
-|  Jul 5        | Scraping text & tables |
-| **3**         | **First Date Guidelines for Data** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
-|  Jul 10       | Understanding the basics of your data
-|  Jul 12       | Initial visualizations |
-| **4**         | **Exploratory Data Analysis**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
-|  Jul 17       | Transforming your data |
-|  Jul 19       | Advancing your visualizations |
-| **5**         | **Controlling Your Data**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-5" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>   |
-|  Jul 24       | Data frames vs. Tibbles  |
-|  Jul 26       | Tidy data |
-|               | Relational data |
-| **6**         | **Dealing with Different Types of Data**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-6" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
-| Jul 31        | Strings  |
-| Aug 2         | Factors |
-|               | Dates and times |
-| **7**         | **Creating Efficient Code in R**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-7" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>   |
-| Aug 7         | Writing functions  |
-| Aug 9         | Iteration |
+|  Jul 5        | Loading data, first date guidelines, initial visualizations |
+| **3**         | **Exploratory Data Analysis** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+|  Jul 10       | <code>dplyr</code> for data transformation |
+|  Jul 12       | Advancing and integrating your visualizations |
+| **4**         | **Controlling Your Data**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+|  Jul 17       | Data structures & tidyness |
+|  Jul 19       | Relational data |
+| **5**         | **Dealing with Different Types of Data**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-5" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>   |
+|  Jul 24       | Strings & regular expressions  |
+|  Jul 26       | Factors & dates |
+| **6**         | **Creating Efficient Code**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-6" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+| Jul 31        | Writing functions |
+| Aug 2         | Iteration |
+| **7**         | **Bonus Week**    |
+| Aug 7         | Analytic development |
+| Aug 9         | Analytic development |
 | **8**         | **Student-led**    |
 | Aug 14        | Analytic technique |
 | Aug 16        | Analytic technique |
