@@ -45,7 +45,11 @@ Upon successfully completing this course, you will be able to:
 
 ## Class Structure 
 
-Each week I plan to have you read through selected tutorials on specific analytic activities in R. I will assign problems/activities that you will need to perform prior to each Saturday session. Then in each class I'll spend about 15-30 minutes reviewing the analytic activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the last hour of class you and your small group will work together to complete another problem within this same data wrangling domain.
+This class emphasizes a *"flipped"* class style where you learn the material outside of class and then spend the majority of in-class time reviewing and executing code.
+
+### First Half of Quarter
+
+Each week I plan to have you read through selected tutorials on specific analytic activities in R. I will assign problems/activities that you will need to perform prior to each session. Then in each class I'll spend about 15-30 minutes reviewing the analytic activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the last hour of class you and your small group will work together to complete another task. 
 
 The purpose for this course structure is multi-dimensional:
 
@@ -53,6 +57,10 @@ The purpose for this course structure is multi-dimensional:
 2. The out-of-class assignments will force you to come to each class prepared and these assignments will also prepare you for your final project
 3. The in-class peer review will help you get feedback on your code and also teach you to review other people's code
 4. The in-class small group work will teach you to work on a coding task collaboratively and within a constrained time limit
+
+### Second Half of Quarter
+
+The second half of the quarter will be student driven.  Students will select an analytic technique that is relevant to their thesis.  Students will learn how to execute this technique along with interpreting and validating the results.  Students will generate a toy-problem tutorial and present/teach to the class.  Furthermore, students will apply this technique to their thesis data for their final project.  By the end of this class you should have initial results for one of your thesis objectives!
 
 
 ## Material
