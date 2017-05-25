@@ -73,8 +73,8 @@ All required classroom material will be provided in class or online. Any recomme
 
 | Week          | Description  |
 |:-------------:|--------------|
-| **1**         | **Introduction & Reproducibility** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-|  Jun 26       | Intro to data science, R, and course outline  |
+| **1**         | **Introduction & Reproducibility**  |
+|  Jun 26       | Intro to data science, R, and course outline &nbsp;&nbsp; <a href="https://afit-r.github.io/day-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |  Jun 28       | Managing workflow & reproducibility |
 | **2**         | **First Date Guidelines for Data** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
 |  Jul 3        | __*No Class*__  |
