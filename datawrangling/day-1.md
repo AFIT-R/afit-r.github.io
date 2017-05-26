@@ -22,6 +22,7 @@ If you have not already done so, be sure to read through the syllabus for your s
 
 ### Intro to Data Science
 
+- [Watch R's Role in Data Science](https://www.rstudio.com/resources/videos/rs-role-in-data-science/)
 - Read about the [Role of Data Wrangling](http://uc-r.github.io/why_wrangle)
 
 ### Intro to R
