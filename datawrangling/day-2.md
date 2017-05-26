@@ -26,7 +26,7 @@ Please read & work through the following prior to our first class.
 
 Complete the following before class:
 
-1. Follow along in the [Getting Started with R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/) webinar and bring a copy of the HTML and PDF report that this webinar explains how to produce.
+1. Follow along in the [Getting Started with R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/) webinar and bring a copy of the HTML and PDF report that this webinar explains how to produce (have the final results report on a stock of your choice).
 2. Bring electronic copies of the following to class:
    - Thesis problem statement.
    - Thesis research objectives.
