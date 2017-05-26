@@ -9,7 +9,7 @@ paginate_path: "page:num"
 permalink:           pretty
 
 # Setup
-title:               AFIT Data Science Lab R Programming Guide <img src="https://raw.githubusercontent.com/afit-r/afit-r.github.io/master/public/DSL_logo.png" height=50 style="float:right; align:right;"</img>
+title:               AFIT Data Science Lab R Programming Guide <img src="https://raw.githubusercontent.com/afit-r/afit-r.github.io/master/public/DSL_logo.png" height=55 style="float:right; align:right;"</img>
 tagline:             ''
 description:         '<img src="https://raw.githubusercontent.com/afit-r/afit-r.github.io/master/public/afit-icon3.png" height=100 </img>'
 url:                 https://afit-r.github.io
