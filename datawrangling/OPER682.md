@@ -75,20 +75,20 @@ All required classroom material will be provided in class or online. Any recomme
 |:-------------:|--------------|
 | **1**         | **Introduction & Reproducibility**  |
 |  Jun 26       | Intro to data science, R, and course outline &nbsp;&nbsp; <a href="https://afit-r.github.io/day-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-|  Jun 28       | Managing workflow & reproducibility |
-| **2**         | **First Date Guidelines for Data** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+|  Jun 28       | Managing workflow & reproducibility &nbsp;&nbsp; <a href="https://afit-r.github.io/day-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **2**         | **First Date Guidelines for Data**  |
 |  Jul 3        | __*No Class*__  |
 |  Jul 5        | Loading data, first date guidelines, initial visualizations |
-| **3**         | **Exploratory Data Analysis** &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+| **3**         | **Exploratory Data Analysis**   |
 |  Jul 10       | <code>dplyr</code> for data transformation |
 |  Jul 12       | Advancing and integrating your visualizations |
-| **4**         | **Controlling Your Data**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+| **4**         | **Controlling Your Data**  |
 |  Jul 17       | Data structures & tidyness |
 |  Jul 19       | Relational data |
-| **5**         | **Dealing with Different Types of Data**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-5" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>   |
+| **5**         | **Dealing with Different Types of Data**  |
 |  Jul 24       | Strings & regular expressions  |
 |  Jul 26       | Factors & dates |
-| **6**         | **Creating Efficient Code**  &nbsp;&nbsp; <a href="http://uc-r.github.io/data_wrangling/week-6" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+| **6**         | **Creating Efficient Code**  |
 | Jul 31        | Writing functions |
 | Aug 2         | Iteration |
 | **7**         | **Bonus Week**    |
