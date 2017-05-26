@@ -13,8 +13,8 @@ Please read & work through the following prior to our first class.
 
 ### Reproducibility & Analytic Workflow
 
-- Read ...
-- Watch ...
+- Read [Reproducible Research in Computational Science](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/?utm_content=buffer518fc&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer).
+- Read [A Statistical Definition for Reproducibility and Replicability](http://biorxiv.org/content/biorxiv/early/2016/07/29/066803.full.pdf) or the blog post [The Real Reason Reproducible Research is Important](https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/) that provides a shorter summary.
 
 ### Reproducibility & Analytic Workflow in R
 
