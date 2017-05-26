@@ -4,30 +4,22 @@ title: Day 2
 permalink: /day-2
 ---
 
-Welcome to day 2! The first day will focus on making sure everyone is on the same page regarding the syllabus, deliverables, small group assignment and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
-
-
+The workflow one uses for data analysis will determine the efficiency of reproducibility of that analysis. In todays...
 
 ## Tutorials & Resources
 
 Please read & work through the following prior to our first class. 
 
-### Syllabus
 
-If you have not already done so, be sure to read through the syllabus for your section [[OPER-682]](oper682) [[LOGM-682]](logm682) so that you understand the structure of my classes, the tentative schedule, grading policies, and other pertinent details.
+### Reproducibility & Analytic Workflow
 
-### Communication
+- Read ...
+- Watch ...
 
-[Slack](https://slack.com/) will replace e-mail and Blackboard for our course. You will receive an invitation to the [AFIT R slack team](). You may wish to install one of the [apps](https://slack.com/downloads/osx). Read this [introduction to Slack](https://vimeo.com/133692325) from one of Kris Shaffer’s courses (although this is a completely different course and slack team it provides a nice introduction that you might find useful).  If you have any questions or concerns your first step should be going to our [slack channel]() and posting your issue.  You and your classmates should be monitoring slack to help each other out. In addition, I will also be watching slack and will chime in when necessary but my hope is that this will be a social process where everyone contributes to knowledge advancement.
+### Reproducibility & Analytic Workflow in R
 
-### Intro to Data Science
-
-- Read about the [Role of Data Wrangling](http://uc-r.github.io/why_wrangle)
-
-### Intro to R
-
-- Read the [Introduction to R tutorial](intro).
-- Work through the [R Basics tutorial](http://uc-r.github.io/section2_basics) to install R and RStudio and (re-)familiarize yourself with the basic functionality of the programming language.
+- Read the tutorials on [R projects](r-projects), [R markdown](r_markdown), and [notebooks](r_notebook).
+- Watch [Getting Started with R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/)
 
 
 ## Deliverables
