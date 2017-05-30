@@ -47,6 +47,7 @@ Complete the following before class:
    - investigate the behavior of $$(1 + \frac{1}{n})^n$$ for large, integer values in *n*.
    - the Economic Order Quantity (EOQ) gives the optimal order quantity as $$Q = \sqrt{\frac{2DK}{h}}$$ where *D* is the annual demand, *K* is the fixed cost per order, and *h* is the annual holding cost per item. Create and set the variables $$D = 1000$$, $$K = 5$$, and $$h = 0.25$$ and compute the associated value of Q.
    - for an initial principal amount *P* and a nominal annual interest rate *r* that is compounded *n* times per year over a span of *t* years, the final value of a certificate of deposit is $$F = P(1 + \frac{r}{n})^{nt}$$. Create and set the variables $$P = 100$$, $$r = 0.08$$, $$n = 12$$, and $$t = 3$$ and compute the associated value of *F*.
+3. By the end of class submit this .R script to me via Slack.  Be sure to name this file lastname_d1.R.
 
 See you in class!
 
