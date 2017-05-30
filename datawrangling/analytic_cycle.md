@@ -12,7 +12,10 @@ Synonymous to Samuel Taylor Coleridge's quote in *Rime of the Ancient Mariner*, 
 So what exactly is this thing called *data wrangling*?  Its the ability to take a messy, unrefined source of data and wrangle it into something useful. It's the art of using computer programming to extract raw data and creating clear and actionable bits of information for your analysis. Data wrangling is the entire front end of the analytic process and requires numerous tasks that can be categorized within the *get*, *clean*, and *transform* components. 
 
 <center>
-<img src="/public/images/dataWrangling/data_wrangling.png" alt="Data wrangling process" align="middle" vspace="25">
+<figure>
+<img src="/public/images/data-science.png" alt="Analytic Cycle" align="middle" vspace="25">
+ <figcaption>The Analytic Cycle (<a href="http://r4ds.had.co.nz/index.html">Wickham & Grolemund, 2017</a>).</figcaption>
+</figure>
 </center>
 
 However, learning how to wrangle your data does not necessarily follow a linear progression as suggested by the above figure. In fact, you need to start from scratch to understand how to work with data in R.  Consequently, this course takes a meandering route through the data wrangling process to help build a solid data wrangling foundation. 
