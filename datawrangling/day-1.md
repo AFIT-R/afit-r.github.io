@@ -18,7 +18,10 @@ If you have not already done so, be sure to read through the syllabus for your s
 
 ### Communication
 
-[Slack](https://slack.com/) will replace e-mail and Blackboard for our course. You will receive an invitation to the [AFIT R slack team](). You may wish to install one of the [apps](https://slack.com/downloads/osx). Read this [introduction to Slack](https://vimeo.com/133692325) from one of Kris Shaffer’s courses (although this is a completely different course and slack team it provides a nice introduction that you might find useful).  If you have any questions or concerns your first step should be going to our [slack channel]() and posting your issue.  You and your classmates should be monitoring slack to help each other out. In addition, I will also be watching slack and will chime in when necessary but my hope is that this will be a social process where everyone contributes to knowledge advancement.
+[Slack](https://slack.com/) will replace e-mail and Blackboard for our course. You will receive an invitation to the [AFIT DSL slack team](https://afit-dsl.slack.com/). You may wish to install one of the [apps](https://slack.com/downloads/osx). If you have any questions or concerns your first step should be going to our [slack channel](https://afit-dsl.slack.com/) and posting your issue.  You and your classmates should be monitoring slack to help each other out. In addition, I will also be watching slack and will chime in when necessary but my hope is that this will be a social process where everyone contributes to knowledge advancement.
+
+- Watch and read the introductory material to get started with Slack [here](https://slack.com/is).
+- You can also read this [introduction to Slack](https://vimeo.com/133692325) from one of Kris Shaffer’s courses (although this is a completely different course and slack team it provides a nice introduction that you might find useful).  
 
 ### Intro to Data Science
 
