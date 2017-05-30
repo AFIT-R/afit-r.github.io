@@ -23,6 +23,8 @@ Data Science is the study of the generalizable extraction of knowledge from data
 * Day(s): Monday & Wednesday
 * Time: 3:00-4:30
 * Location: Bldg 640, Rm 232
+* Credits: 3
+* Prereqs: NA
 * Webpage: [https://afit-r.github.io/oper682](https://afit-r.github.io/oper682)
 * Additional Resources: [https://afit-r.github.io/](https://afit-r.github.io/)
 
@@ -140,24 +142,23 @@ We will use this software during the course. Plan on bringing a computer to each
 
 
 
-## Fine Print
+## Policies:
 
-<u>Academic Integrity</u>: As with all Lindner College of Business efforts, this course will uphold the highest ethical standards, which are critical to building character. LCB instructors are required to report ANY incident of academic misconduct (e.g., cheating, plagiarism) to the college review process, which could result in severe consequences, including potential dismissal from the college. For further information on Academic Misconduct or related university policies and procedures, please see the [UC Code of Conduct](http://www.uc.edu/conduct/Code_of_Conduct.html)
+1. Attendance: Attendance at all class sessions and exams is mandatory for military and civilians assigned to AFIT as full-time students except for extenuating circumstances. Scheduled classes and exams are defined by the instructor and they are documented in the course schedule. Part-time students are expected to attend scheduled classes, and absences should be explained to the instructor. The student should provide advance notice, if possible. (References: Student Handbook, Graduate School Catalog)
+2. Academic Integrity: All students must adhere to the highest standards of academic integrity. Students are prohibited from engaging in plagiarism, cheating, misrepresentation, or any other act constituting a lack of academic integrity. Failure on the part of any individual to practice academic integrity is not condoned and will not be tolerated. Individuals who violate this policy are subject to adverse administrative action including disenrollment from school and disciplinary action. Individuals subject to the Uniform Code of Military Justice may be prosecuted under it. Violations by government civilian employees may result in administrative disciplinary action without regard to otherwise applicable criminal or civil sanctions for violations of related laws. (References: Student Handbook, ENOI 36 – 107, *Academic Integrity*)
+3. Academic Grievance: AFIT and the Graduate School of Engineering and Management affirm the right of each student to resolve grievances with the Institution. Students are guaranteed the right of fair hearing and appeal in all matters of judgment of academic performance. Procedures are detailed in ENOI 36 – 138, *Student Academic Performance Appeals*.
+4. Testing Policy: This is a project-based course. Consequently there will be no midterm or final exam.
+5. Late Assignments and Make-Ups: Late submissions will not be accepted.
+6. The course syllabus is a general plan for the course; deviations announced to the class by the instructor may be necessary.
 
-All academic programs at the Lindner College of Business apply a “Two Strikes Policy” regarding Academic Integrity. Any student who has been found responsible for two cases of academic misconduct may be dismissed from the College. The “Two Strikes Policy” supplements the UC Student Code of Conduct.
 
-All cases of academic misconduct (e.g., cheating, plagiarism, falsification) will be formally reported by faculty. Students will be afforded due process for allegations, as outlined in the policy. If a student is found guilty of academic misconduct in two instances, the student may be dismissed from the Lindner College of Business.  The “Two Strikes Policy” is now in effect.
+## Acknowledgments:
 
-<u>Disability</u>: Students with disabilities who need academic accommodations or other specialized services while attending the University of Cincinnati will receive reasonable accommodations to meet their individual needs as well as advocacy assistance on disability-related issues. Students requiring special accommodation must register with the [Disability Services Office](http://www.uc.edu/aess/disability.html).
-
-<u>Attendance</u>: Your attendance is expected at every meeting. If you must be absent, I request that you notify me in advance of the class meeting.
-
-<u>Grade appeals</u>: If you think the grade of your work (homework, peer reviews, participation) is miscalculated, you have the right to appeal. The appeal must be done (through email) within 7 calendar days since the grade is released/posted. After that, your grade is final and will not be changed.
-
-<u>Acknowledgments</u>: I have drawn ideas or readings from the following syllabi:
+I have drawn ideas or readings from the following syllabi:
 
 * Garrett Grolemund & Hadley Wickham, [R for Data Science](http://r4ds.had.co.nz/index.html)
 * Jenny Bryan, [STAT 545: Data wrangling, exploration, and analysis with R](http://stat545.com/)
 * Lincoln Mullen, [HIST 688: Data and visualization in digital history](http://lincolnmullen.com/courses/data-dh.2016/)
 * Kieran Healy, [Soc 880: Data Visualization](http://socviz.github.io/soc880/)
+* Brad Boehmke, [Data Wrangling with R](http://uc-r.github.io/data_wrangling/syllabus)
 
