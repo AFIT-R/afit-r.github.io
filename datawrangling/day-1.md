@@ -6,6 +6,7 @@ permalink: /day-1
 
 Welcome to day 1! The first day will focus on making sure everyone is on the same page regarding the syllabus, deliverables, small group assignment and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
 
+<hr>
 
 
 ## Tutorials & Resources
@@ -33,6 +34,7 @@ If you have not already done so, be sure to read through the syllabus for your s
 - Read the [Introduction to R tutorial](intro).
 - Work through the [R Basics tutorial](http://uc-r.github.io/section2_basics) to install R and RStudio and (re-)familiarize yourself with the basic functionality of the programming language.
 
+<hr>
 
 ## Deliverables
 
