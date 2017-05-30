@@ -28,7 +28,15 @@ Please read & work through the following prior to our first class.
 ### Reproducibility & Analytic Workflow in R
 
 - Read the tutorials on [R projects](r-projects), [R markdown](r_markdown), and [notebooks](r_notebook).
+- Watch [Projects in RStudio](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-managing-change-part-1/).
 - Watch [Getting Started with R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/).
+- Watch [Introducting Notebooks with R Markdown](https://www.rstudio.com/resources/webinars/introducing-notebooks-with-r-markdown/).
+
+Note: If you are unable to produce the PDF report with R Markdown and your error says something along the lines of <code>"pandoc: pdflatex not found. pdflatex is needed for pdf output."</code> then you need to install a recommended TeX distribution for your platform:
+
+- Windows: MiKTeX (Complete) - http://miktex.org/2.9/setup (NOTE: Be sure to download the Complete rather than Basic installation).
+- Mac OS X: TexLive 2013 (Full) - http://tug.org/mactex/ (NOTE: Download with Safari rather than Chrome _strongly_ recommended).
+
 
 <hr>
 
@@ -36,7 +44,7 @@ Please read & work through the following prior to our first class.
 
 Complete the following before class:
 
-1. Follow along in the [Getting Started with R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/) webinar and bring a copy of the HTML and PDF report that this webinar explains how to produce (have the final results report on a stock of your choice).
+1. Follow along in the [Getting Started with R Markdown webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/) to create the final integrated .Rmd file that this webinar explains how to produce. If you are having any hiccups in getting the final HTML and PDF reports to populate you will have a chance to work with your group in class to resolve.
 2. Bring electronic copies of the following to class:
    - Thesis problem statement.
    - Thesis research objectives.
