@@ -41,7 +41,7 @@ If you have not already done so, be sure to read through the syllabus for your s
 Complete the following before class:
 
 1. Sign into the Slack channel and post a witty comment.
-2. Create a .R script titled "day-1.R" and in this script perform the following exercises:
+2. Create a .R script and perform the following exercises:
    - compute $$100(1 + \frac{0.05}{12})^{24}$$
    - what is the remainder when 3333 is divided by 222?
    - investigate the behavior of $$(1 + \frac{1}{n})^n$$ for large, integer values in *n*.
