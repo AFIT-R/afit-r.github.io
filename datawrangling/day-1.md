@@ -37,7 +37,7 @@ If you have not already done so, be sure to read through the syllabus for your s
 
 <hr>
 
-## Deliverables
+## Class Prep
 
 Complete the following before class:
 
