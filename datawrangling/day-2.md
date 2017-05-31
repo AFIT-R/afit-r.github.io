@@ -40,7 +40,7 @@ Note: If you are unable to produce the PDF report with R Markdown and your error
 
 <hr>
 
-## Deliverables
+## Class Prep
 
 Complete the following before class:
 
