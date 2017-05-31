@@ -17,7 +17,7 @@ I will evaluate your facilitating based on the following five performance measur
 
 1. __Knowledge__: You should become a subject matter expert in the topic you are facilitating. This will require substantial independent learning. However, I highly recommend you select an analytic technique that you plan to apply to your final project *and* aligns with your thesis problem.  This will allow you to refine your knowledge during this class, apply your knowledge to your thesis, and start extracting results.
 
-2. 
+2. __Tutorial__: Developing online tutorials are a fantastic way to learn topics in more depth, demonstrate your skills, and help build the analytic toolset of other analysts. Your tutorial will be written as a .Rmd file that can be knit to an HTML file and hosted on the *[AFIT Data Science Lab R Programming Guide](https://afit-r.github.io/)* website. Your tutorial should introduce the technique, provide the data and R packages to replicate the analysis, and then walk through the mathematical equations along with how to execute, validate, and interpret the analytic technique and results in R. 
 
 
 Students facilitating a lesson need to meet with me at least a week prior to your lesson to propose how you plan to conduct it so that I can help you refine and/or improve it.
