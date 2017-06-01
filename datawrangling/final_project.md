@@ -49,14 +49,20 @@ Each student will be responsible for ...
   <b>3.2</b> Source data is thoroughly explained (i.e. what was the original purpose of the data, when was it collected, how many variables did the original have, explain any peculiarities of the source data such as how missing values are recorded, or how data was imputed, etc.). <br> 
   <b>3.3</b> Data cleaning steps are explained in the text (tell me why you are doing the data cleaning activities that you perform) and follow a logical process. <br>
   <b>3.4</b> Once your data is clean, show what the final data set looks like.  However, do not print off a data frame with 200+ rows; show me the data in the most condensed form possible. <br>
-  <b>3.5</b> Provide summary information about the variables of concern in your cleaned data set. Do not just print off a bunch of code chunks with str(), summary(), etc.  Rather, provide me with a consolidated explanation, either with a table that provides summary info for each variable or a nicely written summary paragraph with inline code.
+  <b>3.5</b> Provide summary information about the variables of concern in your cleaned data set. Do not just print off a bunch of code chunks with <code>str()</code>, <code>summary()</code>, etc.  Rather, provide me with a consolidated explanation, either with a table that provides summary info for each variable or a nicely written summary paragraph with inline code.
 </td>
 <td align="center" valign="top"> 10 </td>
 </tr>
 <tr class="even">
 <td align="left" valign="top">Exploratory Data Analysis </td>
-<td align="left" valign="top"> </td>
-<td align="left" valign="top"> </td>
+<td align="left" valign="top"> 
+  <b>4.1</b> Uncover new information in the data that is not self-evident (i.e. do not just plot the data as it is; rather, slice and dice the data in different ways, create new variables, or join separate data frames to create new summary information). <br>
+  <b>4.2</b> Provide findings in the form of plots and tables. Show me you can display findings in different ways. <br>
+  <b>4.3</b> Graph(s) are carefully tuned for desired purpose. One graph illustrates one primary point and is appropriately formatted (plot and axis titles, legend if necessary, scales are appropriate, appropriate geoms used, etc.). <br>
+  <b>4.4</b> Table(s) carefully constructed to make it easy to perform important comparisons. Careful styling highlights important features. Size of table is appropriate. <br>
+  <b>4.5</b> Insights obtained from the analysis are thoroughly, yet succinctly, explained.  Easy to see and understand the interesting findinsg that you uncovered. <br>
+</td>
+<td align="center" valign="top"> 10 </td>
 </tr>
 <tr class="odd">
 <td align="left" valign="top">Modeling Results </td>
