@@ -38,5 +38,5 @@ After your lesson, I will ask you to conduct a self-assessment using the coarse 
 
 | **Measure** | **Highly Effective** | **Effective** | **Improvement Necessary** | **Does not Meet Standards** |
 |---------|------------------|-----------|-----------------------|-------------------------|
-| **Knowledge** | Expert in the subject area. | Knows the subject matter well. | Is familiar with the subject matter. | Has little familiarity with the subject matter. |
+| **Knowledge** | <font size="2">Expert in the subject area.</font> | Knows the subject matter well. | Is familiar with the subject matter. | Has little familiarity with the subject matter. |
 
