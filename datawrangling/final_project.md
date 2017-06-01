@@ -30,13 +30,17 @@ Each student will be responsible for ...
   <b>1.2</b> Outline the specific sub-problem you plan to address in this class. <br> 
   <b>1.3</b> Discuss your current proposed approach/analytic technique you think will address (fully or partially) this problem. <br> 
   <b>1.4</b> How will your analysis help the decision-maker? 
-  </td>
-<td align="left" valign="top"> 1 <br> 1 <br> 1 <br> 1 </td>
+</td>
+<td align="center" valign="top"> 4 </td>
 </tr>
 <tr class="even">
 <td align="left" valign="top">Packages Required </td>
-<td align="left" valign="top"> </td>
-<td align="left" valign="top"> </td>
+<td align="left" valign="top"> 
+  <b>2.1</b> All packages used are loaded upfront so the reader knows which are required to replicate the analysis. <br> 
+  <b>2.2</b> Messages and warnings resulting from loading the package are suppressed. <br> 
+  <b>2.3</b> Explanation is provided regarding the purpose of each package (there are over 10,000 packages, don't assume that I know why you loaded each package). 
+</td>
+<td align="left" valign="top"> 3 </td>
 </tr>
 <tr class="odd">
 <td align="left" valign="top">Data Preparation </td>
