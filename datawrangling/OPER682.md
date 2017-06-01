@@ -75,7 +75,7 @@ All required classroom material will be provided in class or online. Any recomme
 
 | Week          | Description  | Lesson Material | 
 |:-------------:|--------------|:--------:|
-| **1**         | **Introduction & Reproducibility**  | |
+| **1**         | **Introduction & Reproducibility**  | 
 |  Jun 26       | Intro to data science, R, and course outline | <a href="https://afit-r.github.io/day-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |  Jun 28       | Managing workflow & reproducibility | <a href="https://afit-r.github.io/day-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **2**         | **First Date Guidelines for Data**  | |
