@@ -115,7 +115,7 @@ Course grades will consist of:
 
 - 10% [engagement](engagement)
 - 20% [student led analytic learning](student_led)
-- 30% [deliverables](homework-guidelines)
+- 30% [deliverables](deliverables)
 - 40% [final project](final-project)
 
 - There will be no midterm or final exam
