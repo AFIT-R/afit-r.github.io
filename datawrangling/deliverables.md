@@ -11,7 +11,7 @@ The following outlines the deliverables expectations:
 
 
 <div id="general-homework-rubric" class="section level1" style="width: 100%;">
-<table style="font-size:12px;">
+<table style="font-size:13px;">
 <col width="10%">
 <col width="65%">
 <col width="20%">
