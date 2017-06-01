@@ -42,5 +42,5 @@ After your lesson, I will ask you to conduct a self-assessment using the coarse 
 | **Organization & Design** | Has clearly defined approach and a well-orchestrated design of the tutorial and class for students to learn the technique. | Has defined approach and a sound design of the tutorial and class for students to learn the technique. | Has poorly defined approach and design of the tutorial and class for students to learn the technique. | Has poorly defined approach and a haphazard design of the class that does not provide a clear path for students to learn the technique. |
 | **Tutorial** | blah | blah | blah | blah |
 | **Exercises** | blah | blah | blah | blah |
-| **Engagement** | blah | blah | blah | blah |
-| **Communication** | blah | blah | blah | blah |
+| **Engagement** | All students are actively engaged with the material. | Most students are engaged with the material. | Selected students are engaged with the material. | Students are not engaged with the material. |
+| **Communication** | Communication is clear, concise, cogent, and correct. | Communication is generally clear, concise, cogent, and correct. | Communication requires some corrections and/or amendments to correct errors. | Communication is not clear and misconveys important aspects of the material. |
