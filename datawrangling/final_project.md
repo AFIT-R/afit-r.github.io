@@ -31,7 +31,7 @@ Each student will be responsible for ...
   <b>1.3</b> Discuss your current proposed approach/analytic technique you think will address (fully or partially) this problem. <br> 
   <b>1.4</b> How will your analysis help the decision-maker? 
 </td>
-<td align="center" valign="top"> 4 </td>
+<td align="center" valign="top"> 10 </td>
 </tr>
 <tr class="even">
 <td align="left" valign="top">Packages Required </td>
@@ -40,12 +40,18 @@ Each student will be responsible for ...
   <b>2.2</b> Messages and warnings resulting from loading the package are suppressed. <br> 
   <b>2.3</b> Explanation is provided regarding the purpose of each package (there are over 10,000 packages, don't assume that I know why you loaded each package). 
 </td>
-<td align="left" valign="top"> 3 </td>
+<td align="center" valign="top"> 5 </td>
 </tr>
 <tr class="odd">
 <td align="left" valign="top">Data Preparation </td>
-<td align="left" valign="top"> </td>
-<td align="left" valign="top"> </td>
+<td align="left" valign="top"> 
+  <b>3.1</b> Original source where the data was obtained is cited and, if possible, hyperlinked. <br> 
+  <b>3.2</b> Source data is thoroughly explained (i.e. what was the original purpose of the data, when was it collected, how many variables did the original have, explain any peculiarities of the source data such as how missing values are recorded, or how data was imputed, etc.). <br> 
+  <b>3.3</b> Data cleaning steps are explained in the text (tell me why you are doing the data cleaning activities that you perform) and follow a logical process. <br>
+  <b>3.4</b> Once your data is clean, show what the final data set looks like.  However, do not print off a data frame with 200+ rows; show me the data in the most condensed form possible. <br>
+  <b>3.5</b> Provide summary information about the variables of concern in your cleaned data set. Do not just print off a bunch of code chunks with str(), summary(), etc.  Rather, provide me with a consolidated explanation, either with a table that provides summary info for each variable or a nicely written summary paragraph with inline code.
+</td>
+<td align="center" valign="top"> 10 </td>
 </tr>
 <tr class="even">
 <td align="left" valign="top">Exploratory Data Analysis </td>
