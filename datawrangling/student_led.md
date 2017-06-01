@@ -46,51 +46,64 @@ After your lesson, I will ask you to conduct a self-assessment using the coarse 
 | **Communication** | Communication is clear, concise, cogent, and correct. | Communication is generally clear, concise, cogent, and correct. | Communication requires some corrections and/or amendments to correct errors. | Communication is not clear and misconveys important aspects of the material. |
 
 
-<div id="general-homework-rubric" class="section level1" style="width: 100%;">
-<p><em>Also consult any specific guidance given in the relevant assignment itself.</em></p>
+<div id="general-homework-rubric" class="section level1" style="width: 120%;">
 <table style="font-size:12px;">
 <col width="10%">
-<col width="30%">
-<col width="30%">
-<col width="30%">
+<col width="22.5%">
+<col width="22.5%">
+<col width="22.5%">
+<col width="22.5%">
 <thead>
 <tr class="header">
-<th align="left">Topic</th>
-<th align="center">Excellent: <br> ✓+ coded as +</th>
-<th align="center">Satisfactory: <br> ✓ coded as 0</th>
-<th align="center">Needs work: <br> ✓- coded as -</th>
+<th align="left">Measure</th>
+<th align="center">Highly Effective: <br> coded as 3</th>
+<th align="center">Effective: <br> coded as 2</th>
+<th align="center">Improvement Necessary: <br> coded as 1</th>
+<th align="center">Does Not Meet Standards: <br> coded as 0</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left" valign="top">Coding style</td>
-<td align="left" valign="top">Student has gone beyond what was expected and required, proper coding <a href="http://uc-r.github.io/section2_basics#style">style</a> is followed, code is well commented</td>
-<td align="left" valign="top">Coding style lacks refinement and has some errors, but code is readable and has some comments</td>
-<td align="left" valign="top">Many errors in coding style, little attention paid to making the code human readable</td>
+<td align="left" valign="top">Knowledge</td>
+<td align="left" valign="top">Expert in the subject area. </td>
+<td align="left" valign="top">Knows the subject matter well. </td>
+<td align="left" valign="top">Is familiar with the subject matter. </td>
+<td align="left" valign="top">Has little familiarity with the subject matter. </td>
 </tr>
 <tr class="even">
-<td align="left" valign="top">Coding strategy</td>
-<td align="left" valign="top">Complicated problem broken down into sub-problems that are individually much simpler. Code is efficient, correct, and minimal. Code uses appropriate data structure (list, data frame, vector/matrix/array). Code checks for common errors</td>
-<td align="left" valign="top">Code is correct, but could be edited down to leaner code. Some “hacking” instead of using suitable data structure. Some checks for errors.</td>
-<td align="left" valign="top">Code tackles complicated problem in one big chunk. Code is repetitive and could easily be functionalized. No anticipation of errors.</td>
+<td align="left" valign="top">Organization & Design</td>
+<td align="left" valign="top">Has clearly defined approach and a well-orchestrated design of the tutorial and class for students to learn the technique. </td>
+<td align="left" valign="top">Has defined approach and a sound design of the tutorial and class for students to learn the technique. </td>
+<td align="left" valign="top">Has poorly defined approach and design of the tutorial and class for students to learn the technique. </td>
+<td align="left" valign="top">Has poorly defined approach and a haphazard design of the class that does not provide a clear path for students to learn the technique. </td>
 </tr>
 <tr class="odd">
-<td align="left" valign="top">Presentation: graphs</td>
-<td align="left" valign="top">Graph(s) carefully tuned for desired purpose. One graph illustrates one point</td>
-<td align="left" valign="top">Graph(s) well chosen, but with a few minor problems: inappropriate aspect ratios, poor labels.</td>
-<td align="left" valign="top">Graph(s) poorly chosen to support questions.</td>
+<td align="left" valign="top">Tutorial</td>
+<td align="left" valign="top"> </td>
+<td align="left" valign="top"> </td>
+<td align="left" valign="top"> </td>
+<td align="left" valign="top"> </td>
 </tr>
 <tr class="even">
-<td align="left" valign="top">Presentation: tables</td>
-<td align="left" valign="top">Table(s) carefully constructed to make it easy to perform important comparisons. Careful styling highlights important features.</td>
-<td align="left" valign="top">Table(s) generally appropriate but possibly some minor formatting deficiencies.</td>
-<td align="left" valign="top">Table(s) with too many, or inconsistent, decimal places. Table(s) not appropriate for questions and findings. Major display problems.</td>
+<td align="left" valign="top">Exercises</td>
+<td align="left" valign="top"> </td>
+<td align="left" valign="top"> </td>
+<td align="left" valign="top"> </td>
+<td align="left" valign="top"> </td>
 </tr>
 <tr class="odd">
-<td align="left" valign="top">Achievement, mastery, cleverness, creativity</td>
-<td align="left" valign="top">Student has gone beyond what was expected and required, e.g., extraordinary effort, additional tools not addressed by this course, unusually sophisticated application of tools from course.</td>
-<td align="left" valign="top">Tools and techniques from the course are applied very competently and, perhaps,somewhat creatively. Chosen task was acceptable, but fairly conservative in ambition.</td>
-<td align="left" valign="top">Student does not display the expected level of mastery of the tools and techniques in this course. Chosen task was too limited in scope.</td>
+<td align="left" valign="top">Engagement</td>
+<td align="left" valign="top">All students are actively engaged with the material. </td>
+<td align="left" valign="top">Most students are engaged with the material. </td>
+<td align="left" valign="top">Selected students are engaged with the material. </td>
+<td align="left" valign="top">Students are not engaged with the material. </td>
+</tr>
+<tr class="odd">
+<td align="left" valign="top">Communication</td>
+<td align="left" valign="top">Communication is clear, concise, cogent, and correct. </td>
+<td align="left" valign="top">Communication is generally clear, concise, cogent, and correct. </td>
+<td align="left" valign="top">Communication requires some corrections and/or amendments to correct errors. </td>
+<td align="left" valign="top">Communication is not clear and misconveys important aspects of the material. </td>
 </tr>
 </tbody>
 </table>
