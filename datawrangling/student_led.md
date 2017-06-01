@@ -81,10 +81,10 @@ After your lesson, I will ask you to conduct a self-assessment using the coarse 
 </tr>
 <tr class="odd">
 <td align="left" valign="top">Exercises</td>
-<td align="left" valign="top"> </td>
-<td align="left" valign="top"> </td>
-<td align="left" valign="top"> </td>
-<td align="left" valign="top"> </td>
+<td align="left" valign="top">Clearly defined and outlined exercises that provide a structured approach to practicing the analytic technique.  Not only provides the exercises but also provide solutions. </td>
+<td align="left" valign="top">Sufficiently outlined exercises that provide a structured approach to practicing the analytic technique.  Not only provides the exercises but also provide solutions. </td>
+<td align="left" valign="top">Exercises require corrections and could be better structured.  Solutions are insufficiently linked to the exercises. </td>
+<td align="left" valign="top">Exercises require significant corrections and even lead the learner astray.  Solutions are not provided.  </td>
 </tr>
 <tr class="even">
 <td align="left" valign="top">Engagement</td>
