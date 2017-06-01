@@ -73,40 +73,40 @@ All required classroom material will be provided in class or online. Any recomme
 
 *tentative*
 
-| Week          | Description  | Lesson Material | 
-|:-------------:|--------------|:--------:|
+| Week          | Lesson Description & Material | 
+|:-------------:|--------------|
 | **1**         | **Introduction & Reproducibility**  | 
-|  Jun 26       | Intro to data science, R, and course outline | <a href="https://afit-r.github.io/day-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-|  Jun 28       | Managing workflow & reproducibility | <a href="https://afit-r.github.io/day-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-| **2**         | **First Date Guidelines for Data**  | |
-|  Jul 3        | __*No Class*__  | |
-|  Jul 5        | Loading data, first date guidelines, initial visualizations | |
-| **3**         | **Exploratory Data Analysis**   | |
-|  Jul 10       | <code>dplyr</code> for data transformation | |
-|  Jul 12       | Advancing and integrating your visualizations | |
-| **4**         | **Controlling Your Data**  | |
-|  Jul 17       | Data structures & tidyness | |
-|  Jul 19       | Relational data | |
-| **5**         | **Dealing with Different Types of Data**  | |
-|  Jul 24       | Strings & regular expressions  | |
-|  Jul 26       | Factors & dates | |
-| **6**         | **Creating Efficient Code**  | |
-| Jul 31        | Writing functions | |
-| Aug 2         | Iteration | |
-| **7**         | **Bonus Week**    | |
-| Aug 7         | Analytic development | |
-| Aug 9         | Analytic development | |
-| **8**         | **Student-led Analytic Learning**    | |
-| Aug 14        | Analytic technique | |
-| Aug 16        | Analytic technique | |
-| **9**         | **Student-led Analytic Learning**    | |
-|  Aug 21       | Analytic technique | |
-|  Aug 23       | Analytic technique | |
-| **10**        | **Student-led Analytic Learning**    | |
-| Aug 28        | Analytic technique | |
-| Aug 30        | Analytic technique | |
-| **11**        | **Finals Week:**   | |
-| Sep 6         | *No class* - final project due  | |
+|  Jun 26       | Intro to data science, R, and course outline &nbsp;&nbsp; <a href="https://afit-r.github.io/day-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+|  Jun 28       | Managing workflow & reproducibility &nbsp;&nbsp; <a href="https://afit-r.github.io/day-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **2**         | **First Date Guidelines for Data**  | 
+|  Jul 3        | __*No Class*__  | 
+|  Jul 5        | Loading data, first date guidelines, initial visualizations | 
+| **3**         | **Exploratory Data Analysis**   | 
+|  Jul 10       | <code>dplyr</code> for data transformation | 
+|  Jul 12       | Advancing and integrating your visualizations | 
+| **4**         | **Controlling Your Data**  | 
+|  Jul 17       | Data structures & tidyness | 
+|  Jul 19       | Relational data | 
+| **5**         | **Dealing with Different Types of Data**  | 
+|  Jul 24       | Strings & regular expressions  | 
+|  Jul 26       | Factors & dates | 
+| **6**         | **Creating Efficient Code**  | 
+| Jul 31        | Writing functions | 
+| Aug 2         | Iteration | 
+| **7**         | **Bonus Week**    | 
+| Aug 7         | Analytic development | 
+| Aug 9         | Analytic development | 
+| **8**         | **Student-led Analytic Learning**    | 
+| Aug 14        | Analytic technique | 
+| Aug 16        | Analytic technique | 
+| **9**         | **Student-led Analytic Learning**    | 
+|  Aug 21       | Analytic technique | 
+|  Aug 23       | Analytic technique | 
+| **10**        | **Student-led Analytic Learning**    | 
+| Aug 28        | Analytic technique | 
+| Aug 30        | Analytic technique | 
+| **11**        | **Finals Week:**   | 
+| Sep 6         | *No class* - final project due  | 
 
 
 ## Grading Policies
