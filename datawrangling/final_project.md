@@ -10,7 +10,7 @@ Each student will be responsible for ...
 
 
 
-<div id="final-project-rubric" class="section level1" style="width: 100%;">
+<div id="final-project-rubric" class="section level1" style="width: 120%;">
 <table style="font-size:13px;">
 <col width="20%">
 <col width="70%">
