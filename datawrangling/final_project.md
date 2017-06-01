@@ -32,8 +32,12 @@ Each student will be responsible for ...
 <td align="left" valign="top">Packages Required </td>
 <td align="left" valign="top">
   <table> 
-    <tr>
+    <tr class="even">
     <td>1.1 </td>
+    <td>text </td>
+    </tr>
+    <tr class="even">
+    <td>1.2 </td>
     <td>text </td>
     </tr>
   </table>
