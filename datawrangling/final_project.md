@@ -30,7 +30,14 @@ Each student will be responsible for ...
 </tr>
 <tr class="even">
 <td align="left" valign="top">Packages Required </td>
-<td align="left" valign="top"> </td>
+<td align="left" valign="top">
+  <table> 
+    <tr>
+    <td>1.1 </td>
+    <td>text </td>
+    </tr>
+  </table>
+  </td>
 <td align="left" valign="top"> </td>
 </tr>
 <tr class="odd">
