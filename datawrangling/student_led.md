@@ -10,7 +10,6 @@ Each student will be responsible for facilitating the learning of an analytic te
 1. Develop a tutorial that uses a toy data set and provides a step-by-step approach to executing the analytic technique in R.
 2. Facilitate an active discussion on the analytic technique, a discussion of practical applications for the problem within the Department of Defense, and provide in-class exercises for the class to practice this technique in R. 
 
-
 Based on our course enrollment, I will ask you to sign up for one of the 12 student-facilitated lessons. I will hand out a sign-up sheet to the senior-ranking uniformed military student taking the class and ask him/her to be the POC for the sign-ups between class sessions 1 and 2.
 
 I will evaluate your facilitating based on the following performance measures:
@@ -32,7 +31,12 @@ I will evaluate your facilitating based on the following performance measures:
 
 Students facilitating a lesson need to meet with me at least a week prior to your lesson to propose how you plan to conduct it so that I can help you refine and/or improve it. What are my expectations when we meet at least a week prior to the lesson?  You should have already delved into the material at a depth greater than you expect of the other students, created a draft tutorial, and developed a plan for how you want to facilitate the lesson.  The more you have done, the more valuable any refinement is when we meet, and the better your lesson will likely go.  
 
-After your lesson, I will ask you to conduct a self-assessment using the coarse rubric shown on the following page.  I will complete one, too, but it’s important to develop your self-awareness in order to improve without external directives in future assignments.
+After your lesson, I will ask you to conduct a self-assessment using the coarse rubric shown below.  I will complete one, too, but it’s important to develop your self-awareness in order to improve without external directives in future assignments.
 
 
+
+
+| **Measure** | **Highly Effective** | **Effective** | **Improvement Necessary** | **Does not Meet Standards** |
+|---------|------------------|-----------|-----------------------|-------------------------|
+| **Knowledge** | Expert in the subject area. | Knows the subject matter well. | Is familiar with the subject matter. | Has little familiarity with the subject matter. |
 
