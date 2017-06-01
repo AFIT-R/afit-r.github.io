@@ -1,5 +1,5 @@
 ---
-title: Deliverables
+title: Project Deliverables
 author: Brad Boehmke
 layout: tutorial
 permalink: /deliverables
