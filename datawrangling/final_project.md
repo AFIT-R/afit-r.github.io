@@ -12,9 +12,9 @@ Each student will be responsible for ...
 
 <div id="final-project-rubric" class="section level1" style="width: 120%;">
 <table style="font-size:13px;">
-<col width="20%">
-<col width="70%">
-<col width="10%">
+<col width="15%">
+<col width="77%">
+<col width="8%">
 <thead>
 <tr class="header">
 <th align="left">Section</th>
