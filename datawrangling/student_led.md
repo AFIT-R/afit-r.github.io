@@ -34,18 +34,6 @@ Students facilitating a lesson need to meet with me at least a week prior to you
 After your lesson, I will ask you to conduct a self-assessment using the coarse rubric shown below.  I will complete one, too, but it’s important to develop your self-awareness in order to improve without external directives in future assignments.
 
 
-
-
-| **Measure** | **Highly Effective** | **Effective** | **Improvement Necessary** | **Does not Meet Standards** |
-|---------|------------------|-----------|-----------------------|-------------------------|
-| **Knowledge** | Expert in the subject area. | Knows the subject matter well. | Is familiar with the subject matter. | Has little familiarity with the subject matter. |
-| **Organization & Design** | Has clearly defined approach and a well-orchestrated design of the tutorial and class for students to learn the technique. | Has defined approach and a sound design of the tutorial and class for students to learn the technique. | Has poorly defined approach and design of the tutorial and class for students to learn the technique. | Has poorly defined approach and a haphazard design of the class that does not provide a clear path for students to learn the technique. |
-| **Tutorial** | blah | blah | blah | blah |
-| **Exercises** | blah | blah | blah | blah |
-| **Engagement** | All students are actively engaged with the material. | Most students are engaged with the material. | Selected students are engaged with the material. | Students are not engaged with the material. |
-| **Communication** | Communication is clear, concise, cogent, and correct. | Communication is generally clear, concise, cogent, and correct. | Communication requires some corrections and/or amendments to correct errors. | Communication is not clear and misconveys important aspects of the material. |
-
-
 <div id="general-homework-rubric" class="section level1" style="width: 120%;">
 <table style="font-size:12px;">
 <col width="10%">
@@ -79,9 +67,10 @@ After your lesson, I will ask you to conduct a self-assessment using the coarse 
 </tr>
 <tr class="odd">
 <td align="left" valign="top">Tutorial</td>
-<td align="left" valign="top"> </td>
-<td align="left" valign="top"> </td>
-<td align="left" valign="top"> </td>
+<td align="left" valign="top">Tutorial is reproducible and follows a clearly defined outline. Code is efficient and properly styled. Graphs and tables are fine tuned for desired purpose. Adequate mathematical notation is provided to clarify how the analytic technique is manipulating the data. Explanation of the technique and interpretation of the outputs are clear and concise. </td>
+<td align="left" valign="top">Tutorial is reproducible and follows a defined outline. Code is adquate and properly styled. Graphs and tables are tuned for desired purpose. Mathematical notation is provided to clarify how the analytic technique is manipulating the data. Explanation of the technique and interpretation of the outputs are provided. </td>
+<td align="left" valign="top">Tutorial is reproducible and but outline is ill-defined. Code is adquate but not properly styled. Graphs and tables are well selected but could be better tuned and formatted. Mathematical notation is provided but does not clarify how the analytic technique is manipulating the data. Explanation of the technique and interpretation of the outputs are poor. </td>
+<td align="left" valign="top">Tutorial is not reproducible and outline is ill-defined. Code is inadquate and poorly styled. Graphs and tables are not well selected and have formatting errors. Mathematical notation is insufficiently linked to the analytic technique. Explanation of the technique and interpretation of the outputs are poor and misleads the learner. </td>
 <td align="left" valign="top"> </td>
 </tr>
 <tr class="even">
