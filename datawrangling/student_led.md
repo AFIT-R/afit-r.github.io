@@ -13,7 +13,7 @@ Each student will be responsible for facilitating the learning of an analytic te
 
 Based on our course enrollment, I will ask you to sign up for one of the 12 student-facilitated lessons. I will hand out a sign-up sheet to the senior-ranking uniformed military student taking the class and ask him/her to be the POC for the sign-ups between class sessions 1 and 2.
 
-I will evaluate your facilitating based on the following five performance measures: (1) knowledge, (2) organization & design; (3) tutorial; (4) presentation; (5) exercises; (6) engagement; and (7) communication. A description of each, along with a rubric, follows.
+I will evaluate your facilitating based on the following performance measures:
 
 1. __Knowledge__: You should become a subject matter expert in the topic you are facilitating. This will require substantial independent learning. However, I highly recommend you select an analytic technique that you plan to apply to your final project *and* aligns with your thesis problem.  This will allow you to refine your knowledge during this class, apply your knowledge to your thesis, and start extracting results.
 
