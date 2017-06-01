@@ -102,4 +102,5 @@ After your lesson, I will ask you to conduct a self-assessment using the coarse 
 </tr>
 </tbody>
 </table>
+<p><em>Total possible points: 21</em></p>
 </div>
