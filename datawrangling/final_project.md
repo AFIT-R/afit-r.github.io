@@ -92,5 +92,5 @@ Each student will be responsible for ...
 </tr>
 </tbody>
 </table>
-<p><em>Total possible points: XX</em></p>
+<p><em>Total possible points: 60</em></p>
 </div>
