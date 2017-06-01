@@ -9,13 +9,12 @@ During the first half of the quarter, each student will need to submit 4 project
 
 The following outlines the deliverables expectations:
 
-<div id="general-homework-rubric" class="section level1" style="width: 120%;">
+<div id="general-homework-rubric" class="section level1" style="width: 100%;">
 <table style="font-size:12px;">
 <col width="10%">
-<col width="22.5%">
-<col width="22.5%">
-<col width="22.5%">
-<col width="22.5%">
+<col width="65%">
+<col width="20%">
+<col width="5%">
 <thead>
 <tr class="header">
 <th align="left">Deliverable</th>
