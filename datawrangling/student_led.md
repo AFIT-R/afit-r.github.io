@@ -71,16 +71,22 @@ After your lesson, I will ask you to conduct a self-assessment using the coarse 
 <td align="left" valign="top">Tutorial is reproducible and follows a defined outline. Code is adquate and properly styled. Graphs and tables are tuned for desired purpose. Mathematical notation is provided to clarify how the analytic technique is manipulating the data. Explanation of the technique and interpretation of the outputs are provided. </td>
 <td align="left" valign="top">Tutorial is reproducible and but outline is ill-defined. Code is adquate but not properly styled. Graphs and tables are well selected but could be better tuned and formatted. Mathematical notation is provided but does not clarify how the analytic technique is manipulating the data. Explanation of the technique and interpretation of the outputs are poor. </td>
 <td align="left" valign="top">Tutorial is not reproducible and outline is ill-defined. Code is inadquate and poorly styled. Graphs and tables are not well selected and have formatting errors. Mathematical notation is insufficiently linked to the analytic technique. Explanation of the technique and interpretation of the outputs are poor and misleads the learner. </td>
-<td align="left" valign="top"> </td>
 </tr>
 <tr class="even">
+<td align="left" valign="top">Presentation</td>
+<td align="left" valign="top">Clearly introduces the analytic technique and how it is applicable to military and industry problem. Provides a cogent recap of the tutorial.  Answers all student follow-up questions. Finishes prior to time limit. </td>
+<td align="left" valign="top">Sufficiently introduces the analytic technique and how it is applicable to military and/or industry problem. Provides a generally cogent recap of the tutorial.  Answers most student follow-up questions. Finishes on time or late. </td>
+<td align="left" valign="top">Introduces the analytic technique and relates to military or industry problem. Recap of the tutorial requires some clarification.  Has a hard time answering student follow-up questions. Finishes on time.  </td>
+<td align="left" valign="top">Introduces the analytic technique but does not adequately relate its use to a military or industry problem. Recap of the tutorial is not clear and requires clarification.  Insufficiently answers student follow-up questions. Finishes on late. </td>
+</tr>
+<tr class="odd">
 <td align="left" valign="top">Exercises</td>
 <td align="left" valign="top"> </td>
 <td align="left" valign="top"> </td>
 <td align="left" valign="top"> </td>
 <td align="left" valign="top"> </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left" valign="top">Engagement</td>
 <td align="left" valign="top">All students are actively engaged with the material. </td>
 <td align="left" valign="top">Most students are engaged with the material. </td>
