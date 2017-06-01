@@ -114,7 +114,7 @@ All required classroom material will be provided in class or online. Any recomme
 Course grades will consist of: 
 
 - 10% [engagement](engagement)
-- 20% [student led analytic learning]()
+- 20% [student led analytic learning](student_led)
 - 30% [deliverables](homework-guidelines)
 - 40% [final project](final-project)
 
