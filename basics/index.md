@@ -470,9 +470,9 @@ sqrt(-9)        # square root of -9
 ### Exercises
 
 1. Create variables `D = 1000`, `K = 5`, and `h = 0.05`.
-2. Compute $2 \times D \times K$.
-3. Compute $\frac{2 \times D \times K}{h}$.
-4. Now put this together to compute the Economic Order Quantity, which is $\sqrt{\frac{2 \times D \times K}{h}}$.  Save the output as `Q`.  (hint: you'll probably need the `sqrt()` function in R)
+2. Compute $$2 \times D \times K$$.
+3. Compute $$\frac{2 \times D \times K}{h}$$.
+4. Now put this together to compute the Economic Order Quantity, which is $$\sqrt{\frac{2 \times D \times K}{h}}$$.  Save the output as `Q`.  (hint: you'll probably need the `sqrt()` function in R)
 
 <br>
 
