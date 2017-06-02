@@ -7,7 +7,10 @@ permalink: /final_project
 
 Each student will be responsible for completing a final project.  The goal of this final project is to explore some aspect of your thesis research in a fully reproducible environment and with publication-worthy quality. Ideally, your final project will leverage your thesis data and address one or more of your thesis research objectives by applying an advanced analytic technique and interpreting the results.  
 
-Upon submission you will supply the final PDF report.  You will also submit the .Rmd file that produced the PDF report, your data, and any other files your .Rmd file leverages (images, .bib file, etc.).  Your submitted files should be named with your lastname, first and middle initial, then “d1” for deliverable one. For example my file name would be: boehmkebc_d1.R
+Upon submission you will supply the final PDF report.  You will also submit the .Rmd file that produced the PDF report, your data, and any other files your .Rmd file leverages (images, .bib file, etc.).  Your submitted files should be named with year, course number, lastname, first & middle initial, and then "finalproject." For example my file name would be: 
+
+- OPER 682 section: 2017_OPER682_boehmkebc_finalproject.Rmd
+- LOGM 682 section: 2017_LOGM682_boehmkebc_finalproject.Rmd
 
 
 
