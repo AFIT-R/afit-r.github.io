@@ -70,7 +70,14 @@ Upon submission you will supply the final PDF report.  You will also submit the 
 </tr>
 <tr class="odd">
 <td align="left" valign="top">Modeling Results </td>
-<td align="left" valign="top"> </td>
+<td align="left" valign="top"> 
+  <b>5.1</b> Properly introduce your modeling technique and its relevance to your problem. <br>
+  <b>5.2</b> Provide mathematical formulae to discribe how the analytic technique(s) compute results. <br>
+  <b>5.3</b> Implement the analytic technique efficiently. <br>
+  <b>5.4</b> Provide adequate interpretation of the results from your analysis.  Try to capture a balance in your explanation so that both an analyst and a senior leader can understand what the results mean. <br>
+  <b>5.5</b> Illustrate your findings in the form of plots and tables and fine tune these outputs to best describe your results. <br>
+  <b>5.6</b> Provide adequate justification and validation of your final approach and results.
+</td>
 <td align="center" valign="top"> 10 </td>
 </tr>
 <tr class="even">
