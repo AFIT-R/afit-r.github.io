@@ -27,7 +27,7 @@ Please read & work through the following prior to our first class.
 
 ### Reproducibility & Analytic Workflow in R
 
-- Read the tutorials on [R projects](r-projects), [R markdown](r_markdown), and [notebooks](r_notebook).
+- Read the tutorials on [R projects](r_projects), [R markdown](r_markdown), and [notebooks](r_notebook).
 - Watch [Projects in RStudio](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-managing-change-part-1/).
 - Watch [Getting Started with R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/).
 - Watch [Introducting Notebooks with R Markdown](https://www.rstudio.com/resources/webinars/introducing-notebooks-with-r-markdown/).
