@@ -5,8 +5,9 @@ layout: tutorial
 permalink: /final_project
 ---
 
-Each student will be responsible for ...
+Each student will be responsible for completing a final project.  The goal of this final project is to explore some aspect of your thesis research in a fully reproducible environment and with publication-worthy quality. Ideally, your final project will leverage your thesis data and address one or more of your thesis research objectives by applying an advanced analytic technique.  
 
+Upon submission you will supply the final PDF report; however, you will also submit the .Rmd file that includes all the text and code, your data, and any other files your .Rmd file leverages (images, .bib file, etc.).  Your submitted files should be named 
 
 
 
