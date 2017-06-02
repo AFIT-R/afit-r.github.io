@@ -32,7 +32,7 @@ If you have not already done so, be sure to read through the syllabus for your s
 ### Intro to R
 
 - Read the [Introduction to R tutorial](intro).
-- Work through the [R Basics tutorial](http://uc-r.github.io/section2_basics) to install R and RStudio and (re-)familiarize yourself with the basic functionality of the programming language.
+- Work through the [R Basics tutorial](basics) to install R and RStudio and (re-)familiarize yourself with the basic functionality of the programming language.
 - Watch RStudio's webinar on [writing code](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/).
 
 <hr>
