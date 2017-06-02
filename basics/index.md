@@ -69,7 +69,18 @@ The RStudio console is where all the action happens. There are four fundamental 
 </center>
 
 ### Script Editor
-The top left window is where your script files will display. There are multiple forms of script files but the basic one to start with is the .R file. To create a new file you use the **File -> New File** menu. To open an existing file you use either the **File -> Open File...** menu or the **Recent Files** menu to select from recently opened files. RStudio's source editor includes a variety of productivity enhancing features including syntax highlighting, code completion, multiple-file editing, and find/replace. A good introduction to the script editor can be found [here](https://support.rstudio.com/hc/en-us/articles/200484448-Editing-and-Executing-Code).
+The top left window is where your script files will display. There are multiple forms of script files but the basic one to start with is the .R file. To create a new file you use the **File &#187; New File menu**. To open an existing file you use either the **File &#187; Open File...** menu or the **Recent Files** menu to select from recently opened files. RStudio's source editor includes a variety of productivity enhancing features including syntax highlighting, code completion, multiple-file editing, and find/replace. A good introduction to the script editor can be found [here](https://support.rstudio.com/hc/en-us/articles/200484448-Editing-and-Executing-Code).
+
+The script editor is a great place to put code you care about. Keep experimenting in the console, but once you have written code that works and does what you want, put it in the script editor. RStudio will automatically save the contents of the editor when you quit RStudio, and will automatically load it when you re-open. Nevertheless, it’s a good idea to save your scripts regularly and to back them up.  
+
+To execute the code in the script editor you have two options:
+
+1. Place the cursor on the line that you would like to execute and execute Cmd/Ctrl + Enter.  Alternatively, you could hit the **Run** button in the toolbar.
+2. If you want to run *all* lines of code in the script then you can highlight the lines you want to run and then execute one of the options in #1.
+
+<center>
+<img src="/public/images/run_code.png">
+</center>
 
 ### Workspace Environment
 The top right window is the workspace environment which captures much of your your current R working environment and includes any user-defined objects (vectors, matrices, data frames, lists, functions).  When saving your R working session, these are the components along with the script files that will be saved in your working directory, which is the default location for all file inputs and outputs.  To get or set your working directory so you can direct where your files are saved:
@@ -79,25 +90,32 @@ The top right window is the workspace environment which captures much of your yo
 getwd()                  
 
 # set the working directory to a specified directory
-setwd(directory_name)    
+setwd("path/of/directory")   
 ```
 
-For example, if I call `getwd()` the file path "/Users/bradboehmke/Desktop/Personal/Data Wrangling" is returned.  If I want to set the working directory to the "Workspace" folder within the "Data Wrangling" directory I would use `setwd("Workspace")`.  Now if I call `getwd()` again it returns "/Users/bradboehmke/Desktop/Personal/Data Wrangling/Workspace".
+For example, if I call `getwd()` the file path "/Users/bradboehmke/Desktop/Personal/Data Wrangling" is returned.  If I want to set the working directory to the "Workspace" folder within the "Data Wrangling" directory I would use `setwd("Workspace")`.  Now if I call `getwd()` again it returns "/Users/bradboehmke/Desktop/Personal/Data Wrangling/Workspace". An alternative solution is to go to the following location in your toolbar **Session &#187; Set Working Directory &#187; Choose Directory** and select the directory of choice (much easier!).
 
-The workspace environment will also list your user defined objects such as vectors, matrices, data frames, lists, and functions. To identify or remove the objects (i.e. vectors, data frames, user defined functions, etc.) in your current R environment:
+The workspace environment will also list your user defined objects such as vectors, matrices, data frames, lists, and functions. For example, if you type the following in your console:
+
+```r
+x <- 2
+y <- 3
+```
+
+You will now see `x` and `y` listed in your workspace environment.  To identify or remove the objects (i.e. vectors, data frames, user defined functions, etc.) in your current R environment:
 
 ```r
 # list all objects
 ls()              
 
 # identify if an R object with a given name is present
-exists("object_name")        
+exists("x")        
 
 # remove defined object from the environment
-rm("object_name")            
+rm(x)            
 
 # you can remove multiple objects by using the `c()` function
-rm(c("object1", "object2"))  
+rm(c(x, y))  
 
 # basically removes everything in the working environment -- use with caution!
 rm(list = ls())              
@@ -117,30 +135,18 @@ history(100)
 history(Inf)     
 ```
 
-You can also save and load your workspaces.  Saving your workspace will save all R files and objects within your workspace to a .RData file in your working directory and loading your workspace will load any .RData files in your working directory.
-
+### Console
+The bottom left window contains the console. You can code directly in this window but it will not save your code. It is best to use this window when you are simply wanting to perform calculator type functions.  This is also where your outputs will be presented when you run code in your script.  Go ahead and type the following in your console:
 
 ```r
-# save all items in workspace to a .RData file
-save.image()                                  
-
-# save specified objects to a .RData file
-save(object1, object2, file = "myfile.RData")    
-
-# load workspace into current session
-load("myfile.RData")                             
+2 * 3 + 8 / 2
 ```
-
-Note that saving the workspace without specifying the working directory will default to saving in the current directory.  You can further specify where to save the .RData by including the path: `save(object1, object2, file = "/users/name/folder/myfile.RData")`
-
-### Console
-The bottom left window contains the console. You can code directly in this window but it will not save your code. It is best to use this window when you are simply wanting to perform calculator type functions.  This is also where your outputs will be presented when you run code in your script.
 
 ### Misc. Displays
 The bottom right window contains multiple tabs. The **Files** tab allows you to see which files are available in your working directory. The **Plots** tab will display any plots/graphics that are produced by your code. The **Packages** tab will list all packages downloaded to your computer and also the ones that are loaded (more on this later). And the **Help** tab allows you to search for topics you need help on and will also display any help responses (more on this later as well).
 
 ### Workspace Options & Shortcuts {#options}
-There are multiple options available for you to set and customize your console. You can view and set options for the current R session:
+There are multiple options available for you to set and customize your console. You can read about,  and set, available options for the current R session with the following code.  For now you don't need to worry about making any adjustments, just know that *many* options do exist.
 
 ```r
 # learn about available options
