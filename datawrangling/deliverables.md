@@ -12,10 +12,10 @@ The following describes each deliverable and provides the expectations based on 
 
 <div id="general-homework-rubric" class="section level1" style="width: 100%;">
 <table style="font-size:13px;">
-<col width="10%">
-<col width="65%">
-<col width="15%">
-<col width="10%">
+<col width="8%">
+<col width="55%">
+<col width="20%">
+<col width="17%">
 <thead>
 <tr class="header">
 <th align="left">Deliverable</th>
