@@ -27,10 +27,10 @@ Please read & work through the following prior to our first class.
 
 ### Reproducibility & Analytic Workflow in R
 
-- Read the tutorials on [R projects](r_projects), [R markdown](r_markdown), and [notebooks](r_notebook) (*optional*).
+- Read the tutorials on [R Projects](r_projects), [R Markdown](r_markdown), and [R Notebooks](r_notebook) (*optional*).
 - Watch [Projects in RStudio](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-managing-change-part-1/).
 - Watch [Getting Started with R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/).
-- Watch [Introducting Notebooks with R Markdown](https://www.rstudio.com/resources/webinars/introducing-notebooks-with-r-markdown/) (*optional*).
+- Watch [Introducing Notebooks with R Markdown](https://www.rstudio.com/resources/webinars/introducing-notebooks-with-r-markdown/) (*optional*).
 
 Note: If you are unable to produce the PDF report with R Markdown and your error says something along the lines of <code>"pandoc: pdflatex not found. pdflatex is needed for pdf output."</code> then you need to install a recommended TeX distribution for your platform:
 
