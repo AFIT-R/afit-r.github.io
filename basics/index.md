@@ -477,7 +477,10 @@ sqrt(-9)        # square root of -9
 <br>
 
 ## Vectorization {#vectorization}
-A key difference between R and many other languages is a topic known as vectorization. What does this mean? It means that many functions that are to be applied individually to each element in a vector of numbers require a *loop* assessment to evaluate; however, in R many of these functions have been coded in C to perform much faster than a `for` loop would perform.  For example, let's say you want to add the elements of two seperate vectors of numbers (`x` and `y`). 
+
+### Looping versus Vectorization
+
+A key difference between R and many other languages is a topic known as vectorization. What does this mean? It means that many functions that are to be applied individually to each element in a vector of numbers require a *loop* assessment to evaluate; however, in R many of these functions have been coded in C to perform much faster than a `for` loop would perform.  For example, let's say you want to add the elements of two separate vectors of numbers (`x` and `y`). 
 
 
 ```r
@@ -507,17 +510,24 @@ for (i in seq_along(x)) {
 ## [1] 2 5 8
 ```
 
-Instead, in R, `+` is a vectorized function which can operate on entire vectors at once. So rather than creating `for` loops for many function, you can just use simple syntax:
+Instead, in R, `+` is a vectorized function which can operate on entire vectors at once. So rather than creating `for` loops for many functions, you can just use simple syntax:
 
 
 ```r
+# add each element in x and y
 x + y
 ## [1] 2 5 8
+
+# multiply each element in x and y
 x * y
 ## [1]  1  6 16
+
+# compare each element in x to y
 x > y
 ## [1] FALSE  TRUE FALSE
 ```
+
+### Recycling
 
 When performing vector operations in R, it is important to know about *recycling*. When performing an operation on two or more vectors of unequal length, R will recycle elements of the shorter vector(s) to match the longest vector. For example:
 
@@ -535,7 +545,7 @@ long + short
 ##  [1]  2  4  6  8 10  7  9 11 13 15
 ```
 
-The elements of `long` and `short` are added together starting from the first element of both vectors. When R reaches the end of the `short` vector, it starts again at the first element of `short` and contines until it reaches the last element of the `long` vector. This functionality is very useful when you want to perform the same operation on every element of a vector. For example, say we want to multiply every element of our vector long by 3:
+The elements of `long` and `short` are added together starting from the first element of both vectors. When R reaches the end of the `short` vector, it starts again at the first element of `short` and continues until it reaches the last element of the `long` vector. This functionality is very useful when you want to perform the same operation on every element of a vector. For example, say we want to multiply every element of our vector long by 3:
 
 
 ```r
@@ -546,7 +556,7 @@ long * c
 ##  [1]  3  6  9 12 15 18 21 24 27 30
 ```
 
-Remember there are no scalars in R, so `c` is actually a vector of length 1; in order to add its value to every element of `long`, it is recycled to match the length of `long`.
+There are no scalars[^scalars] in R, so `c` is actually a vector of length 1; in order to add its value to every element of `long`, it is recycled to match the length of `long`.
 
 When the length of the longer object is a multiple of the shorter object length, the recycling occurs silently. When the longer object length is not a multiple of the shorter object length, a warning is given:
 
@@ -560,6 +570,13 @@ even_length + odd_length
 ## of shorter object length
 ##  [1]  2  4  6  5  7  9  8 10 12 11
 ```
+
+### Exercises
+
+1. Create this vector `my_vec <- 1:10`.
+2. Add 1 to every element in `my_vec`.
+3. Divide every element in `my_vec` by 2.
+4. Create a second vector `my_vec2 <- 10:18` and add `my_vec` to `my_vec2`.
 
 <br>
 
