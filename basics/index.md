@@ -287,20 +287,18 @@ There are thousands of helpful R packages for you to use, but navigating them al
 <br>
 
 ## Assignment & Evaluation {#assignment}
-The first operator you'll run into is the assignment operator. The assignment operator is used to *assign* a value. For instance we can assign the value 3 to the variable `x` using the `<-` assignment operator.  We can then evaluate the variable by simply typing `x` at the command line which will return the value of `x`.  Note that prior to the value returned you'll see `## [1]` in the command line.  This simply implies that the output returned is the first output. Note that you can type any comments in your code by preceding the comment with the hashtag (`#`) symbol.  Any values, symbols, and texts following `#` will not be evaluated.
+
+### Assignment
+
+The first operator you'll run into is the assignment operator. The assignment operator is used to *assign* a value. For instance we can assign the value 3 to the variable `x` using the `<-` assignment operator.  
 
 
 ```r
 # assignment
 x <- 3
-
-# evaluation
-x
-## [1] 3
 ```
 
 Interestingly, R actually allows for five assignment operators:
-
 
 ```r
 # leftward assignment
@@ -319,6 +317,18 @@ The operators `<<-` is normally only used in functions which we will not get int
 
 Overwhelmed yet?  Don't be.  This is just meant to show you that there are options and you will likely come across them sooner or later.  My suggestion is to stick with the tried and true `<-` operator.  This is the most conventional assignment operator used and is what you will find in all the base R source code...which means it should be good enough for you. 
 
+### Evaluation
+
+We can then evaluate the variable by simply typing `x` at the command line which will return the value of `x`.  Note that prior to the value returned you'll see `## [1]` in the command line.  This simply implies that the output returned is the first output. Note that you can type any comments in your code by preceding the comment with the hash tag (`#`) symbol.  Any values, symbols, and texts following `#` will not be evaluated.
+
+```r
+# evaluation
+x
+## [1] 3
+```
+
+### Case Sensitivity
+
 Lastly, note that R is a case sensitive programming language.  Meaning all variables, functions, and objects must be called by their exact spelling:
 
 
@@ -333,9 +343,19 @@ x * Y * z
 ## Error in eval(expr, envir, enclos): object 'Y' not found
 ```
 
+### Exercises
+
+1. Assign the value 5 to variable `x` (note how this shows up in your *Global Environment*). 
+2. Assign the character "abc" to variable `y`.
+3. Evaluate the value of `x` and `y` at the command line.
+4. Now use the `rm()` function to remove these objects from you working environment.
+
 <br>
 
 ## R as a Calculator {#calculator}
+
+### Basic Arithmetic
+
 At its most basic function R can be used as a calculator.  When applying basic arithmetic, the PEMBDAS order of operations applies: **p**arentheses first followed by **e**xponentiation, **m**ultiplication and **d**ivision, and final **a**ddition and **s**ubtraction.
 
 
@@ -394,7 +414,38 @@ pi
 ## [1] 3.141592653589793115998
 ```
 
-When performing undefined calculations R will produce `Inf` and `NaN` outputs.
+We can also perform integer divide (`%/%`) and modulo (`%%`) functions.  The integer divide function will give the integer part of a fraction while the modulo will provide the remainder.
+
+
+```r
+42 / 4          # regular division
+## [1] 10.5
+
+42 %/% 4        # integer division
+## [1] 10
+
+42 %% 4         # modulo (remainder)
+## [1] 2
+```
+
+### Miscellaneous Mathematical Functions
+
+There are many built-in functions to be aware of.  These include but are not limited to the following.  Go ahead and run this code in your console.
+
+```r
+x <- 10
+
+abs(x)      # absolute value
+sqrt(x)     # square root
+exp(x)      # exponential transformation
+log(x)      # logarithmic transformation
+cos(x)      # cosine and other trigonometric functions
+```
+
+
+### Infinite, and NaN Numbers
+
+When performing undefined calculations, R will produce `Inf` (*infinity*) and `NaN` (*not a number*) outputs.
 
 
 ```r
@@ -415,19 +466,13 @@ sqrt(-9)        # square root of -9
 ## [1] NaN
 ```
 
-The last two functions to mention are the integer divide (`%/%`) and modulo (`%%`) functions.  The integer divide function will give the integer part of a fraction while the modulo will provide the remainder.
 
+### Exercises
 
-```r
-42 / 4          # regular division
-## [1] 10.5
-
-42 %/% 4        # integer division
-## [1] 10
-
-42 %% 4         # modulo (remainder)
-## [1] 2
-```
+1. Create variables `D = 1000`, `K = 5`, and `h = 0.05`.
+2. Compute $2 \times D \times K$.
+3. Compute $\frac{2 \times D \times K}{h}$.
+4. Now put this together to compute the Economic Order Quantity, which is $\sqrt{\frac{2 \times D \times K}{h}}$.  Save the output as `Q`.  (hint: you'll probably need the `sqrt()` function in R)
 
 <br>
 
