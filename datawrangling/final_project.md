@@ -5,9 +5,9 @@ layout: tutorial
 permalink: /final_project
 ---
 
-Each student will be responsible for completing a final project.  The goal of this final project is to explore some aspect of your thesis research in a fully reproducible environment and with publication-worthy quality. Ideally, your final project will leverage your thesis data and address one or more of your thesis research objectives by applying an advanced analytic technique.  
+Each student will be responsible for completing a final project.  The goal of this final project is to explore some aspect of your thesis research in a fully reproducible environment and with publication-worthy quality. Ideally, your final project will leverage your thesis data and address one or more of your thesis research objectives by applying an advanced analytic technique and interpreting the results.  
 
-Upon submission you will supply the final PDF report; however, you will also submit the .Rmd file that includes all the text and code, your data, and any other files your .Rmd file leverages (images, .bib file, etc.).  Your submitted files should be named 
+Upon submission you will supply the final PDF report.  You will also submit the .Rmd file that produced the PDF report, your data, and any other files your .Rmd file leverages (images, .bib file, etc.).  Your submitted files should be named with your lastname, first and middle initial, then “d1” for deliverable one. For example my file name would be: boehmkebc_d1.R
 
 
 
@@ -30,7 +30,7 @@ Upon submission you will supply the final PDF report; however, you will also sub
   <b>1.1</b> Provide an introduction and some background regarding your overarching thesis problem. <br> 
   <b>1.2</b> Outline the specific sub-problem you plan to address in this class. <br> 
   <b>1.3</b> Discuss your current proposed approach/analytic technique you think will address (fully or partially) this problem. <br> 
-  <b>1.4</b> How will your analysis help the decision-maker? 
+  <b>1.4</b> Explain how your analysis will help the decision-maker. 
 </td>
 <td align="center" valign="top"> 10 </td>
 </tr>
