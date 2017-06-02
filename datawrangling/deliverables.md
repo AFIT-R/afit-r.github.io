@@ -14,8 +14,8 @@ The following describes each deliverable and provides the expectations based on 
 <table style="font-size:13px;">
 <col width="10%">
 <col width="65%">
-<col width="20%">
-<col width="5%">
+<col width="15%">
+<col width="10%">
 <thead>
 <tr class="header">
 <th align="left">Deliverable</th>
