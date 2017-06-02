@@ -165,54 +165,51 @@ For a thorough tutorial regarding the RStudio console and how to customize diffe
 <img src="https://raw.githubusercontent.com/uc-r/uc-r.github.io/master/public/images/RStudio%20Cheatsheet.png">
 </center>
 
+### Exercises 
+
+1. Identify what working directory you are working out of.
+2. Create a folder on your computer titled *Learning R*.  Within R, set your working directory to this folder.
+3. Type `pi` in the console. Set the option to show 8 digits. Re-type `pi` in the console.
+4. Type `?pi` in the console.  Note that documentation on this object pops up in the *Help* tab in the Misc. Display.
+5. Now check out your code *History* tab.
+6. Create a new .R file and save this as *my-first-script* (note how this now appears in your *Learning R* folder).  Type `pi` in line 1 of this script, `option(digits = 8)` in line 2, and `pi` again in line three.  Execute this code one line at a time and then re-execute all lines at once.
+
+
 <br>
 
 ## Getting Help {#getting_help}
 
-The help documentation and support in R is comprehensive and easily accessible from the command line.  
+The help documentation and support in R is comprehensive and easily accessible from the command line (aka the console).
 
 ### General Help {#general_help}
 To leverage general help resources you can use:  
 
 ```r
-help.start()           # provides general help links
-help.search("text")    # searches the help system for documentation matching a given character string
+# provides general help links
+help.start()   
+
+# searches the help system for documentation matching a given character string
+help.search("linear regression") 
 ```
 
-Note that the `help.search("some text here")` function requires a character string enclosed in quotation marks.
-
-
-### Getting Help on Packages
-
-For more direct help on packages that are installed on your computer:
-
-
-```r
-help(package = "packagename")      # provides details regarding contents of a package
-vignette(package = "packagename")  # list vignettes available for a specific package
-vignette("vignettename")           # view specific vignette
-vignette()                         # view all vignettes on your computer
-```
-
-Note that some packages will have multiple vignettes.  For instance `vignette(package = "grid")` will list the 13 vignettes available for the grid package.  To access one of the specific vignettes you simply use `vignette("vignettename")`.  
+Note that the `help.search("some text here")` function requires a character string enclosed in quotation marks. So if you are in search of time series functions in R, using `help.search("time series")` will pull up a healthy list of vignettes and code demonstrations that illustrate packages and functions that work with time series data.
 
 
 ### Getting Help on Functions
 
-For more direct help on functions that are installed on your computer:
-
+For more direct help on functions that are installed on your computer you can use the following.  Test these out in your console:
 
 ```r
-help(functionname)      # provides details for specific function
-?functionname           # provides same information as help(functionname) 
-example(functionname)   # provides examples for said function
+help(mean)      # provides details for specific function 
+?mean           # provides same information as help(functionname) 
+example(mean)   # provides examples for said function
 ```
 
-Note that the `help()` and `?` function calls only work for functions within loaded packages.  If you want to see details on a function in a package that is installed on your computer but not loaded in the active R session you can use `help(functionname, package = "packagename")`.  Another alternative is to use the `::` operator as in `help(packagename::functionname)`.
+Note that the `help()` and `?` function calls only work for functions within loaded packages.  You'll understand what this means shortly.
 
 
 ### Getting Help from the Web
-Typically, a problem you may be encountering is not new and others have faced, solved, and documented the same issue online.  The following resources can be used to search for online help.  Although, I typically just google the problem and find answers relatively quickly.
+Typically, a problem you may be encountering is not new and others have faced, solved, and documented the same issue online.  The following resources can be used to search for online help.  Although, I typically just Google the problem and find answers relatively quickly.
 
 * `RSiteSearch("key phrase")`:  searches for the key phrase in help manuals and archived mailing lists on the [R Project website]("http://search.r-project.org/").
 * [Stack Overflow](http://stackoverflow.com/): a searchable Q&A site oriented toward programming issues.  75% of my answers typically come from Stack Overflow.
@@ -220,48 +217,31 @@ Typically, a problem you may be encountering is not new and others have faced, s
 * [R-seek](http://rseek.org): a Google custom search that is focused on R-specific websites
 * [R-bloggers](http://www.r-bloggers.com/): a central hub of content collected from over 500 bloggers who provide news and tutorials about R.
 
+### Exercises
+
+1. Search for documentation, code demonstrations and help pages regarding "linear regression".
+2. The `stats` package is a core package that comes with base R.  Pull up the help documentation regarding this package.
+3. Within the `grid` package there is an introductory vignette titled "grid".  Access this vignette.
+4. Assume you want to make a logarithmic transformation using the `log` function.  Check out the help information on this function.
+
 <br>
 
 
 ## Working with packages {#packages}
 
-In R, the fundamental unit of shareable code is the package.  A package bundles together code, data, documentation, and tests and provides an easy method to share with others[^hadley_R_Packages].  As of June 2016 there were over 8000 packages available on [CRAN](https://cran.r-project.org), 1000 on [Bioconductor](https://www.bioconductor.org), and countless more available through [GitHub](https://github.com).  This huge variety of packages is one of the reasons that R is so successful: chances are that someone has already solved a problem that you're working on, and you can benefit from their work by downloading their package.
-
+In R, the fundamental unit of share-able code is the package.  A package bundles together code, data, documentation, and tests and provides an easy method to share with others[^hadley_R_Packages].  As of May 2017 there were over 10,000 packages available on [CRAN](https://cran.r-project.org), 1000 on [Bioconductor](https://www.bioconductor.org), and countless more available through [GitHub](https://github.com).  This huge variety of packages is one of the reasons that R is so successful: chances are that someone has already solved a problem that you're working on, and you can benefit from their work by downloading their package.
 
 ### Installing Packages {#install}
 
-To install packages: 
-
-
-```r
-# install packages from CRAN
-install.packages("packagename")   
-```
-
-As previously stated, packages are also available through Bioconductor and GitHub.  To download Bioconductor packages:
-
+The most common place to get packages from is CRAN. To install packages from CRAN you use `install.packages("packagename")`.  For instance, if you want to install the `ggplot2` package, which is a very popular visualization package you would type the following in the console: 
 
 ```r
-# link to Bioconductor URL
-source("http://bioconductor.org/biocLite.R")  
-
-# install core Bioconductor packages
-biocLite()                                    
-
-# install specific Bioconductor package
-biocLite("packagename")                       
+# install package from CRAN
+install.packages("ggplot2")   
 ```
 
-And to download GitHub packages:
+As previously stated, packages are also available through Bioconductor and GitHub. Bioconductor provides R packages primarily for genomic data analyses and packages on GitHub are usually under development but have not gone through all the checks and balances to be loaded onto CRAN (aka download and use these packages at your discretion).  You can learn how to install Bioconductor packages [here](https://www.bioconductor.org/install/) and GitHub packages [here](https://cran.r-project.org/web/packages/githubinstall/vignettes/githubinstall.html). 
 
-
-```r
-# the devtools package provides a simply function to download GitHub packages
-install.packages("devtools")                      
-
-# install package which exists at github.com/username/packagename
-devtools::install_github("username/packagename")  
-```
 
 ### Loading Packages {#load}
 
@@ -276,32 +256,18 @@ library(packagename)
 packagename::functionname    
 ```
 
-For instance, if you want to have full access to the tidyr package you would use `library(tidyr)`; however, if you just wanted to use the `gather()` function without loading the tidyr package you can use `tidyr::gather(function arguments)`.
+For instance, if you want to have full access to the tidyr package you would use `library(tidyr)`; however, if you just wanted to use the `gather()` function which is provided by the tidyr package without fully loading tidyr you can use `tidyr::gather(...)` (here `...` just represents the arguments that you would include in this function).
 
 
 ### Getting Help on Packages {#help}
 
-For help on packages that are installed on your computer:
-
+For more direct help on packages that are installed on your computer you can use the `help` and `vignette` functions.  Here we can get help on the `ggplot2` package with the following:
 
 ```r
-# provides details regarding contents of a package
-help(package = "packagename")
-
-# see all packages installed
-library()                          
-
-# see packages currently loaded
-search()                           
-
-# list vignettes available for a specific package
-vignette(package = "packagename")  
-
-# view specific vignette
-vignette("vignettename")           
-
-# view all vignettes on your computer
-vignette()                         
+help(package = "ggplot2")      # provides details regarding contents of a package
+vignette(package = "ggplot2")  # list vignettes available for a specific package
+vignette("ggplot2-specs")      # view specific vignette
+vignette()                     # view all vignettes on your computer
 ```
 
 Note that some packages will have multiple vignettes.  For instance `vignette(package = "grid")` will list the 13 vignettes available for the grid package.  To access one of the specific vignettes you simply use `vignette("vignettename")`.
@@ -309,6 +275,14 @@ Note that some packages will have multiple vignettes.  For instance `vignette(pa
 ### Useful packages
 There are thousands of helpful R packages for you to use, but navigating them all can be a challenge.  To help you out, RStudio compiled a [guide](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages) to some of the best packages for loading, manipulating, visualizing, analyzing, and reporting data.  In addition, their list captures packages that specialize in spatial data, time series and financial data, increasing spead and performance, and developing your own R packages. 
 
+### Exercises
+
+`dplyr` is an extremely popular package for common data transformation activities and is available from CRAN.  Perform the following tasks:
+
+1. Install the `dplyr` package.
+2. Load the `dplyr` package.
+3. Access the help documentation for the `dplyr` package.
+4. Check out the vignette(s) for `dplyr`
 
 <br>
 
