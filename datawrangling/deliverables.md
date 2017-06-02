@@ -7,6 +7,11 @@ permalink: /deliverables
 
 During the first half of the quarter, each student will need to submit 4 project deliverables.  Each of these deliverables will contribute towards your final project report and are worth 10 points each.  The purpose of these deliverables are to provide you with ample time to methodically develop your final project and it allows me to provide feedback to help shape your final project.
 
+Upon submission you will only need to supply the PDF report. Your submitted report should be named with year, course number, lastname, first & middle initial, and then "dn" for the appropriate deliverable. For example my file name for deliverable 1 would be: 
+
+- OPER 682 section: 2017_OPER682_boehmkebc_d1.Rmd
+- LOGM 682 section: 2017_LOGM682_boehmkebc_d1.Rmd
+
 The following describes each deliverable and provides the expectations based on the [final project standards](final_project):
 
 
