@@ -17,7 +17,7 @@ To be an effective and efficient analyst you need to understand how to manage yo
 
 ## Tutorials & Resources
 
-Please read & work through the following prior to our first class. 
+Read & work through the following prior to class. 
 
 
 ### Reproducibility
