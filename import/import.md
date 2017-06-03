@@ -137,7 +137,7 @@ To illustrate, we can use `read_csv()` which is equivalent to base R's `read.csv
 
 ```r
 library(readr)
-mydata_3 = read_csv("mydata.csv")
+mydata_3 <- read_csv("mydata.csv")
 mydata_3
 ##   variable 1 variable 2 variable 3
 ## 1         10       beer       TRUE
@@ -189,6 +189,13 @@ read_csv("mydata.csv", n_max = 2)
 Similar to base R, `readr` also offers functions to import .txt files (`read_delim()`), fixed-width files (`read_fwf()`), general text files (`read_table()`), and more. 
 
 These examples provide the basics for reading in text files. However, sometimes even text files can offer unanticipated difficulties with their formatting.  Both the base R and `readr` functions offer many arguments to deal with different formatting issues and I suggest you take time to look at the help files for these functions to learn more (i.e. `?read.table`).
+
+### Exercises
+
+1. Download and read in this [*flights.csv* file](https://www.dropbox.com/s/jtkdultbfp2a6sk/flights.csv?dl=1).
+2. Can you figure out how to read in the first line to see the titles? Try read in the first 1,000 lines and only the first 6 columns (check out the help file at `?read_csv`. 
+3. What function would you use to read in a .tsv file? See if you are correct by downloading and reading in this [*facebook.tsv* file](https://www.dropbox.com/s/bpmgrke55lcw13g/facebook.tsv?dl=1).
+4. What function would you use to read a file where fields were separated with "|"?
 
 
 <br>
