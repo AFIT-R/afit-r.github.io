@@ -18,25 +18,25 @@ My purpose in the following sections is to discuss these topics at a level meant
 <br>
 
 ## Importing Spreadsheet Data Files Stored Online {#importing_spreadsheet_data}
-The most basic form of getting data from online is to import tabular (i.e. .txt, .csv) or Excel files that are being hosted online. This is often not considered *web scraping*[^fn_scrap1]; however, I think its a good place to start introducing the user to interacting with the web for obtaining data. Importing tabular data is especially common for the many types of government data available online.  A quick perusal of [Data.gov](https://www.data.gov/) illustrates nearly 188,510 examples. In fact, we can provide our first example of importing online tabular data by downloading the Data.gov CSV file that lists all the federal agencies that supply data to Data.gov. 
+The most basic form of getting data from online is to import tabular (i.e. .txt, .csv) or Excel files that are being hosted online. This is often not considered *web scraping*[^fn_scrap1]; however, I think its a good place to start introducing the user to interacting with the web for obtaining data. Importing tabular data is especially common for the many types of government data available online.  A quick perusal of [Data.gov](https://www.data.gov/metrics) illustrates over 190,000 examples. In fact, we can provide our first example of importing online tabular data by downloading the Data.gov .csv file that lists all the federal agencies that supply data to Data.gov. 
 
 
 ```r
 # the url for the online CSV
-url <- "https://www.data.gov/media/federal-agency-participation.csv"
+url <- "https://s3.amazonaws.com/bsp-ocsit-prod-east-appdata/datagov/wordpress/agency-participation.csv"
 
 # use read.csv to import
 data_gov <- read.csv(url, stringsAsFactors = FALSE)
 
 # for brevity I only display first 6 rows
-data_gov[1:6, c(1,3:4)]
-##                                      Agency.Name Datasets Last.Entry
-## 1           Commodity Futures Trading Commission        3 01/12/2014
-## 2           Consumer Financial Protection Bureau        2 09/26/2015
-## 3           Consumer Financial Protection Bureau        2 09/26/2015
-## 4 Corporation for National and Community Service        3 01/12/2014
-## 5 Court Services and Offender Supervision Agency        1 01/12/2014
-## 6                      Department of Agriculture      698 12/01/2015
+head(data_gov)
+                                     Agency.Name                 Sub.Agency.Publisher Organization.Type Datasets Last.Entry
+1                Broadcasting Board of Governors                                          Federal-Other        6 01/12/2014
+2           Commodity Futures Trading Commission                                          Federal-Other        3 01/12/2014
+3           Consumer Financial Protection Bureau                                          Federal-Other        2 09/26/2015
+4           Consumer Financial Protection Bureau Consumer Financial Protection Bureau     Federal-Other        2 09/26/2015
+5 Corporation for National and Community Service                                          Federal-Other        3 01/12/2014
+6 Court Services and Offender Supervision Agency                                          Federal-Other        1 01/12/2014
 ```
 
 Downloading Excel spreadsheets hosted online can be performed just as easily.  Recall that there is not a base R function for importing Excel data; however, several packages exist to handle this capability.  One package that works smoothly with pulling Excel data from urls is [`gdata`](https://cran.r-project.org/web/packages/gdata/index.html).  With `gdata` we can use `read.xls()` to download this [Fair Market Rents for Section 8 Housing](http://catalog.data.gov/dataset/fair-market-rents-for-the-section-8-housing-assistance-payments-program) Excel file from the given url. 
@@ -61,7 +61,7 @@ rents[1:6, 1:10]
 ## 6 101199999 101199999  599  481  505  791 1061     11     1  99999
 ```
 
-Note that many of the arguments covered in the [Importing Data chapter](http://afit-r.github.io/import#import_excel_files) (i.e. specifying sheets to read from, skipping lines) also apply to `read.xls()`. In addition, `gdata` provides some useful functions (`sheetCount()` and `sheetNames()`) for identifying if multiple sheets exist prior to downloading.
+Note that many of the arguments covered in the [Importing Data chapter](http://afit-r.github.io/import#import_excel_files) (i.e. specifying sheets to read from, skipping lines) also apply to `read.xls()`. In addition, `gdata` provides some useful functions (`sheetCount()` and `sheetNames()`) for identifying if multiple sheets exist prior to downloading.  Check out `?gdata` for more help.
 
 Another common form of file storage is using zip files.  For instance, the [Bureau of Labor Statistics](http://www.bls.gov/home.htm) (BLS) stores their [public-use microdata](http://www.bls.gov/cex/pumdhome.htm) for the [Consumer Expenditure Survey](http://www.bls.gov/cex/home.htm) in .zip files.  We can use `download.file()` to download the file to your working directory and then work with this data as desired.
 
@@ -70,8 +70,8 @@ Another common form of file storage is using zip files.  For instance, the [Bure
 url <- "http://www.bls.gov/cex/pumd/data/comma/diary14.zip"
 
 # download .zip file and unzip contents
-download.file(url, dest="dataset.zip", mode="wb") 
-unzip ("dataset.zip", exdir = "./")
+download.file(url, dest = "dataset.zip", mode = "wb") 
+unzip("dataset.zip", exdir = "./")
 
 # assess the files contained in the .zip file which
 # unzips as a folder named "diary14"
