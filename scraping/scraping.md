@@ -119,102 +119,72 @@ zip_data2[1:5, 1:10]
 ## 5 2825381     0 2.50    2        2  20510        3        D        2        D
 ```
 
-One last common scenario I'll cover when importing spreadsheet data from online is when we identify multiple data sets that we'd like to download but are not centrally stored in a .zip format or the like. As a simple example lets look at the [average consumer price data](http://www.bls.gov/data/#prices) from the BLS. The BLS holds multiple data sets for different types of commodities within one [url](http://download.bls.gov/pub/time.series/ap/); however, there are separate links for each individual data set.  More complicated cases of this will have the links to tabular data sets scattered throughout a webpage[^fn_scrap2]. The [`XML`](https://cran.r-project.org/web/packages/XML/index.html) package provides the useful `getHTMLLinks()` function to identify these links.
+One last common scenario I'll cover when importing spreadsheet data from online is when we identify multiple data sets that we'd like to download but are not centrally stored in a single .zip format or the like. For example there are multiple data files scattered throughout the [Maryland State Board of Elections websiteMaryland State Board of Elections website](http://www.elections.state.md.us/elections/2012/election_data/index.html) that we may want to download.  The first objective here is to identify the relevant links.  The [`XML`](https://cran.r-project.org/web/packages/XML/index.html) package provides the useful `getHTMLLinks()` function to identify these links.
 
 
 ```r
 library(XML)
 
-# url hosting multiple links to data sets
-url <- "http://download.bls.gov/pub/time.series/ap/"
-
-# identify the links available
+url <- "http://www.elections.state.md.us/elections/2012/election_data/index.html"
 links <- getHTMLLinks(url)
-
-links
-##  [1] "/pub/time.series/"                           
-##  [2] "/pub/time.series/ap/ap.area"                 
-##  [3] "/pub/time.series/ap/ap.contacts"             
-##  [4] "/pub/time.series/ap/ap.data.0.Current"       
-##  [5] "/pub/time.series/ap/ap.data.1.HouseholdFuels"
-##  [6] "/pub/time.series/ap/ap.data.2.Gasoline"      
-##  [7] "/pub/time.series/ap/ap.data.3.Food"          
-##  [8] "/pub/time.series/ap/ap.footnote"             
-##  [9] "/pub/time.series/ap/ap.item"                 
-## [10] "/pub/time.series/ap/ap.period"               
-## [11] "/pub/time.series/ap/ap.series"               
-## [12] "/pub/time.series/ap/ap.txt"
+head(links)
+## [1] "http://www.maryland.gov/"                              
+## [2] "../../../index.html"                                   
+## [3] "../../../index.html"                                   
+## [4] "https://www.facebook.com/MarylandStateBoardofElections"
+## [5] "https://twitter.com/md_sbe"                            
+## [6] "http://www.maryland.gov/pages/social_media.aspx"
 ```
 
-This allows us to assess which files exist that may be of interest.  In this case the links that we are primarily interested in are the ones that contain "data" in their name (links 4-7 listed above).  We can use the [`stringr`](https://cran.r-project.org/web/packages/stringr/index.html) package to extract these desired links which we will use to download the data.
+However, this provides all the links on the page.  For this example we will only concentrate on the links that contain .csv files.  Here, we see that there are 307 .csv files.
 
 
 ```r
 library(stringr)
 
 # extract names for desired links and paste to url
-links_data <- links[str_detect(links, "data")]
+links_data <- links[str_detect(links, ".csv")]
 
-# paste url to data links to have full url for data sets
-# use str_sub and regexpr to paste links at appropriate 
-# starting point
-filenames <- paste0(url, str_sub(links_data, 
-                    start = regexpr("ap.data", links_data)))
-
-filenames
-## [1] "http://download.bls.gov/pub/time.series/ap/ap.data.0.Current"       
-## [2] "http://download.bls.gov/pub/time.series/ap/ap.data.1.HouseholdFuels"
-## [3] "http://download.bls.gov/pub/time.series/ap/ap.data.2.Gasoline"      
-## [4] "http://download.bls.gov/pub/time.series/ap/ap.data.3.Food"
+length(links_data)
+## [1] 307
 ```
 
-We can now proceed to develop a simple [`for` loop](http://afit-r.github.io/control_statements#for_loop) function to download each data set. We store the results in a list which contains 4 items, one item for each data set.  Each list item contains the url in which the data was extracted from and the dataframe containing the downloaded data.  We're now ready to analyze these data sets as necessary. 
+If we wanted to we could loop through and download all 307 .csv files.  However, for simplicity we'll just download the first six files and save each one as a separate data frame. 
 
 
 ```r
-# create empty list to dump data into
-data_ls <- list()
+links_data <- head(links_data)
 
-for(i in 1:length(filenames)){
-        url <- filenames[i]
-        data <- read.delim(url)
-        data_ls[[length(data_ls) + 1]] <- list(url = filenames[i], data = data)
+for(i in seq_along(links_data)) {
+  
+  # step 1: paste .csv portion of link to the base URL
+  url <- paste0("http://www.elections.state.md.us/elections/2012/election_data/",
+                links_data[i])
+  
+  # step 2: download .csv file and save as df
+  df <- read.csv(url)
+  
+  # step 3: rename df
+  assign(paste0("df", i), df)
 }
+```
 
-str(data_ls)
-## List of 4
-##  $ :List of 2
-##   ..$ url : chr "http://download.bls.gov/pub/time.series/ap/ap.data.0.Current"
-##   ..$ data:'data.frame':	144712 obs. of  5 variables:
-##   .. ..$ series_id     : Factor w/ 878 levels "APU0000701111    ",..: 1 1 ...
-##   .. ..$ year          : int [1:144712] 1995 1995 1995 1995 1995 1995 ...
-##   .. ..$ period        : Factor w/ 12 levels "M01","M02","M03",..: 1 2 3 4 ...
-##   .. ..$ value         : num [1:144712] 0.238 0.242 0.242 0.236 0.244 ...
-##   .. ..$ footnote_codes: logi [1:144712] NA NA NA NA NA NA ...
-##  $ :List of 2
-##   ..$ url : chr "http://download.bls.gov/pub/time.series/ap/ap.data.1.Hou..."
-##   ..$ data:'data.frame':	90339 obs. of  5 variables:
-##   .. ..$ series_id     : Factor w/ 343 levels "APU000072511     ",..: 1 1 ...
-##   .. ..$ year          : int [1:90339] 1978 1978 1979 1979 1979 1979 1979 ...
-##   .. ..$ period        : Factor w/ 12 levels "M01","M02","M03",..: 11 12 ...
-##   .. ..$ value         : num [1:90339] 0.533 0.545 0.555 0.577 0.605 0.627 ...
-##   .. ..$ footnote_codes: logi [1:90339] NA NA NA NA NA NA ...
-##  $ :List of 2
-##   ..$ url : chr "http://download.bls.gov/pub/time.series/ap/ap.data.2.Gas..."
-##   ..$ data:'data.frame':	69357 obs. of  5 variables:
-##   .. ..$ series_id     : Factor w/ 341 levels "APU000074712     ",..: 1 1 ...
-##   .. ..$ year          : int [1:69357] 1973 1973 1973 1974 1974 1974 1974 ...
-##   .. ..$ period        : Factor w/ 12 levels "M01","M02","M03",..: 10 11 ...
-##   .. ..$ value         : num [1:69357] 0.402 0.418 0.437 0.465 0.491 0.528 ...
-##   .. ..$ footnote_codes: logi [1:69357] NA NA NA NA NA NA ...
-##  $ :List of 2
-##   ..$ url : chr "http://download.bls.gov/pub/time.series/ap/ap.data.3.Food"
-##   ..$ data:'data.frame':	122302 obs. of  5 variables:
-##   .. ..$ series_id     : Factor w/ 648 levels "APU0000701111    ",..: 1 1 ...
-##   .. ..$ year          : int [1:122302] 1980 1980 1980 1980 1980 1980 1980 ...
-##   .. ..$ period        : Factor w/ 12 levels "M01","M02","M03",..: 1 2 3 4 ...
-##   .. ..$ value         : num [1:122302] 0.203 0.205 0.211 0.206 0.207 0.21 ...
-##   .. ..$ footnote_codes: logi [1:122302] NA NA NA NA NA NA ...
+I now have the six downloaded data frames in my global environment saved as "df1", "df2", "df3", "df4", "df5", and "df6"
+
+
+```r
+sapply(paste0("df", 1:6), exists)
+##  df1  df2  df3  df4  df5  df6 
+## TRUE TRUE TRUE TRUE TRUE TRUE
+
+head(df1)
+##   County                            Candidate.Name Party             Office.Name Office.District Winner CONG.08 CONG.04 CONG.07 CONG.01 CONG.03 CONG.02 CONG.05 CONG.06
+## 1      0                              Barack Obama   DEM   President - Vice Pres                      Y   30138   37385   38838   15734   26963   22444   34224   26702
+## 2      0 Uncommitted To Any Presidential Candidate   DEM   President - Vice Pres                           3186    1815    2797    6007    4959    4408    3640    4991
+## 3      0                      Raymond Levi Blagmon   DEM U.S. Senator                                       443     662     672     568     646     594     589     786
+## 4      0                                Ben Cardin   DEM U.S. Senator                                 Y   28493   22818   31357   16589   25800   20669   23218   24589
+## 5      0                              J. P. Cusick   DEM U.S. Senator                                       350     229     387     686     526     562     612     713
+## 6      0                              Chris Garner   DEM U.S. Senator                                       976     694     733    1232     829     838     961    1577
 ```
 
 These examples provide the basics required for downloading most tabular and Excel files from online. However, this is just the beginning of importing/scraping data from the web.  Next, we'll start exploring the more conventional forms of [scraping text](#scraping_HTML_text) and [data](#scraping_HTML_tables) stored in HTML webpages.
@@ -1332,8 +1302,6 @@ Also, note that `httr` provides several other useful functions not covered here 
 
 
 [^fn_scrap1]: In [Automated Data Collection with R](http://www.amazon.com/Automated-Data-Collection-Practical-Scraping/dp/111883481X/ref=pd_sim_14_1?ie=UTF8&dpID=51Tm7FHxWBL&dpSrc=sims&preST=_AC_UL160_SR108%2C160_&refRID=1VJ1GQEY0VCPZW7VKANX") Munzert et al. state that "[t]he first way to get data from the web is almost too banal to be considered here and actually not a case of web scraping in the narrower sense."
-
-[^fn_scrap2]: An example is provided in [Automated Data Collection with R](http://www.amazon.com/Automated-Data-Collection-Practical-Scraping/dp/111883481X/ref=pd_sim_14_1?ie=UTF8&dpID=51Tm7FHxWBL&dpSrc=sims&preST=_AC_UL160_SR108%2C160_&refRID=1VJ1GQEY0VCPZW7VKANX") in which they use a similar approach to extract desired CSV files scattered throughout the [Maryland State Board of Elections websiteMaryland State Board of Elections website](http://www.elections.state.md.us/elections/2012/election_data/index.html).
 
 [^selector]: You can learn more about selectors at [flukeout.github.io](http://flukeout.github.io/)
 
