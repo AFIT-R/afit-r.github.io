@@ -1323,8 +1323,8 @@ Also, note that `httr` provides several other useful functions not covered here 
 
 ### Exercises
 
-1. Go to https://www.opendatanetwork.com/, search for open source data sets in your metropolitan area.
-2. Now use the RSocrata R package to connect with one of these data set APIs and import the data.
+1. Go to [opendatanetwork.com](https://www.opendatanetwork.com), search for open source data sets in your metropolitan area.
+2. Now use the [RSocrata](https://cran.r-project.org/web/packages/RSocrata/index.html) package to connect with one of these data set APIs and import the data.
 3. Use the recently published [rscorecard](https://cran.r-project.org/web/packages/rscorecard/index.html) package to download Department of Education College Scorecard data for your undergrad school.
 
 
