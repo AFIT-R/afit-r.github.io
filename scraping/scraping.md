@@ -191,9 +191,9 @@ These examples provide the basics required for downloading most tabular and Exce
 
 ### Exercises
 
-1. Import the following csv file directly from this url: https://bradleyboehmke.github.io/public/data/reddit.csv. 
-2. Import the .xlsx file directly from this url: http://www.huduser.gov/portal/datasets/fmr/fmr2017/FY2017_4050_FMR.xlsx.
-3. Go to this University of Dayton webpage http://academic.udayton.edu/kissock/http/Weather/citylistUS.htm.  Download the weather data for a selected city.  Can you download data for all the Alabama cities?  
+1. Import the following csv file directly from this url: [https://bradleyboehmke.github.io/public/data/reddit.csv](https://bradleyboehmke.github.io/public/data/reddit.csv). 
+2. Import the .xlsx file directly from this url: [http://www.huduser.gov/portal/datasets/fmr/fmr2017/FY2017_4050_FMR.xlsx](http://www.huduser.gov/portal/datasets/fmr/fmr2017/FY2017_4050_FMR.xlsx).
+3. Go to this University of Dayton webpage [http://academic.udayton.edu/kissock/http/Weather/citylistUS.htm](http://academic.udayton.edu/kissock/http/Weather/citylistUS.htm).  Download the weather data for a selected city.  Can you download data for all the Alabama cities?  
 
 <br>
 
@@ -495,6 +495,18 @@ body_text %>%
 
 
 So there we have it, text scraping in a nutshell.  Although not all encompassing, this section covered the basics of scraping text from HTML documents. Whether you want to scrape text from all common text-containing nodes such as `<div>`, `<p>`, `<ul>` and the like or you want to scrape from a specific node using the specific ID, this section provides you the basic fundamentals of using `rvest` to scrape the text you need. In the next section we move on to scraping data from HTML tables.
+
+### Exercises
+
+See if you can scrape and clean chapter 1 of Philosopher's Stone located at:
+[http://www.readbooksvampire.com/J.K._Rowling/Harry_Potter_and_the_Philosophers_Stone/01.html](http://www.readbooksvampire.com/J.K._Rowling/Harry_Potter_and_the_Philosophers_Stone/01.html)
+
+Follow these steps:
+
+1. Import the HTML/XML content.
+2. The book text is contained in the `<td>` nodes so extract these nodes out of the HTML content.
+3. Extract the text out of the `<td> nodes (the text of interest is in the 5th element so you can index for this element).
+4. Minor cleaning can be done by removing the "\r\n" throughout the text (this is just embedded HTML code within the text). 
 
 <br>
 
