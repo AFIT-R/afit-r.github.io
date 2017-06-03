@@ -14,7 +14,7 @@ The first step to any data analysis process is to *get* the data.  Data can come
 <br>
 
 ## Importing Text Files {#import_text_files}
-Text files are a popular way to hold and exchange tabular data as almost any data application supports exporting data to the CSV (or other text file) format.  Text file formats use delimiters to separate the different elements in a line, and each line of data is in its own line in the text file.  Therefore, importing different kinds of text files can follow a fairly consistent process once you've identified the delimiter.
+Text files are a popular way to hold and exchange tabular data as almost any data application supports exporting data to the .csv (or other text file) format.  Text file formats use delimiters to separate the different elements in a line, and each line of data is in its own line in the text file.  Therefore, importing different kinds of text files can follow a fairly consistent process once you've identified the delimiter.
 
 There are two main groups of functions that we can use to read in text files:
 
@@ -23,7 +23,7 @@ There are two main groups of functions that we can use to read in text files:
 
 
 ### Base R functions {#base_text_import}
-`read.table()` is a multipurpose work-horse function in base R for importing data.  The functions `read.csv()` and `read.delim()` are special cases of `read.table()` in which the defaults have been adjusted for efficiency.  To illustrate these functions let's work with this [CSV file](https://www.dropbox.com/s/63wgqkmd7b3o3wd/mydata.csv?dl=1) which looks like (be sure to save this file in your working directory):
+`read.table()` is a multipurpose work-horse function in base R for importing data.  The functions `read.csv()` and `read.delim()` are special cases of `read.table()` in which the defaults have been adjusted for efficiency.  To illustrate these functions let's work with this [.csx file](https://www.dropbox.com/s/63wgqkmd7b3o3wd/mydata.csv?dl=1) which looks like (be sure to save this file in your working directory):
 
 
 ```r
