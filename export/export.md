@@ -14,7 +14,7 @@ Although getting data into R is essential, getting data out of R can be just as 
 <br>
 
 ## Exporting to text files {#export_text_files}
-As mentioned in the [importing data section](http://afit-r.github.io/import), text files are a popular way to hold and exchange tabular data as almost any data application supports exporting data to the CSV (or other text file) formats.  Consequently, exporting data to a text file is a pretty standard operation. Plus, since you've already learned how to import text files you pretty much have the basics required to write to text files...we just use a slightly different naming convention. 
+As mentioned in the [importing data section](http://afit-r.github.io/import), text files are a popular way to hold and exchange tabular data as almost any data application supports exporting data to the .csv (or other text file) formats.  Consequently, exporting data to a text file is a pretty standard operation. Plus, since you've already learned how to import text files you pretty much have the basics required to write to text files...we just use a slightly different naming convention. 
 
 Similar to the examples provided in the importing text files section, the two main groups of functions that I will demonstrate to write to text files include [base R functions](#base) and [`readr` package functions](#readr).
 
@@ -28,7 +28,7 @@ Similar to the examples provided in the importing text files section, the two ma
 ```r
 df <- data.frame(var1 = c(10, 25, 8), 
                  var2 = c("beer", "wine", "cheese"), 
-                          var3 = c(TRUE, TRUE, FALSE),
+                 var3 = c(TRUE, TRUE, FALSE),
                  row.names = c("billy", "bob", "thornton"))
 
 df
@@ -38,7 +38,7 @@ df
 ## thornton    8 cheese FALSE
 ```
 
-To export `df` to a CSV file we can use `write.csv()`. Additional arguments allow you to exclude row and column names, specify what to use for missing values, add or remove quotations around character strings, etc.  
+To export `df` to a .csv file we can use `write.csv()`. Additional arguments allow you to exclude row and column names, specify what to use for missing values, add or remove quotations around character strings, etc.  
 
 
 ```r
@@ -46,13 +46,13 @@ To export `df` to a CSV file we can use `write.csv()`. Additional arguments allo
 write.csv(df, file = "export_csv")
 
 # write to a csv and save in a different directory
-write.csv(df, file = "/folder/subfolder/subsubfolder/export_csv")
+write.csv(df, file = "folder/subfolder/subsubfolder/export_csv")
 
 # write to a csv file with added arguments
 write.csv(df, file = "export_csv", row.names = FALSE, na = "MISSING!")
 ```
 
-In addition to CSV files, we can also write to other text files using `write.table` and `write.delim()`.
+In addition to .csv files, we can also write to other text files using `write.table` and `write.delim()`.
 
 
 ```r
@@ -74,7 +74,7 @@ library(readr)
 write_csv(df, path = "export_csv2")
 
 # write to a csv and save in a different directory
-write_csv(df, path = "/folder/subfolder/subsubfolder/export_csv2")
+write_csv(df, path = "folder/subfolder/subsubfolder/export_csv2")
 
 # write to a csv file without column names
 write_csv(df, path = "export_csv2", col_names = FALSE)
@@ -85,6 +85,13 @@ write_delim(df, path = "export_txt2", col_names = FALSE)
 # write to a csv with UTF-8 Byte order mark to indicate to Excel the csv is UTF-8 encoded
 write_excel_csv(df, path = "export_csv2", col_names = FALSE)
 ```
+
+### Exercises
+
+1. Export the built-in data set `mtcars` to a .csv file on your computer.
+2. Create a subfolder titled "data" in your working directory.  Now save `mtcars` to a .csv file in that subfolder.
+3. Export the built-in data set `iris` to a UTF-8 encoded .csv file with `write_excel_csv`.
+4. Export the built-in data set `USArrests` as a tab separated file.
 
 <br>
 
