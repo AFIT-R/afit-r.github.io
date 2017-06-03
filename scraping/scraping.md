@@ -30,13 +30,13 @@ data_gov <- read.csv(url, stringsAsFactors = FALSE)
 
 # for brevity I only display first 6 rows
 head(data_gov)
-                                     Agency.Name                 Sub.Agency.Publisher Organization.Type Datasets Last.Entry
-1                Broadcasting Board of Governors                                          Federal-Other        6 01/12/2014
-2           Commodity Futures Trading Commission                                          Federal-Other        3 01/12/2014
-3           Consumer Financial Protection Bureau                                          Federal-Other        2 09/26/2015
-4           Consumer Financial Protection Bureau Consumer Financial Protection Bureau     Federal-Other        2 09/26/2015
-5 Corporation for National and Community Service                                          Federal-Other        3 01/12/2014
-6 Court Services and Offender Supervision Agency                                          Federal-Other        1 01/12/2014
+##                                      Agency.Name                 Sub.Agency.Publisher Organization.Type Datasets Last.Entry
+## 1                Broadcasting Board of Governors                                          Federal-Other        6 01/12/2014
+## 2           Commodity Futures Trading Commission                                          Federal-Other        3 01/12/2014
+## 3           Consumer Financial Protection Bureau                                          Federal-Other        2 09/26/2015
+## 4           Consumer Financial Protection Bureau Consumer Financial Protection Bureau     Federal-Other        2 09/26/2015
+## 5 Corporation for National and Community Service                                          Federal-Other        3 01/12/2014
+## 6 Court Services and Offender Supervision Agency                                          Federal-Other        1 01/12/2014
 ```
 
 Downloading Excel spreadsheets hosted online can be performed just as easily.  Recall that there is not a base R function for importing Excel data; however, several packages exist to handle this capability.  One package that works smoothly with pulling Excel data from urls is [`gdata`](https://cran.r-project.org/web/packages/gdata/index.html).  With `gdata` we can use `read.xls()` to download this [Fair Market Rents for Section 8 Housing](http://catalog.data.gov/dataset/fair-market-rents-for-the-section-8-housing-assistance-payments-program) Excel file from the given url. 
