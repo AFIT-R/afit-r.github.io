@@ -189,6 +189,12 @@ head(df1)
 
 These examples provide the basics required for downloading most tabular and Excel files from online. However, this is just the beginning of importing/scraping data from the web.  Next, we'll start exploring the more conventional forms of [scraping text](#scraping_HTML_text) and [data](#scraping_HTML_tables) stored in HTML webpages.
 
+### Exercises
+
+1. Import the following csv file directly from this url: https://bradleyboehmke.github.io/public/data/reddit.csv. 
+2. Import the .xlsx file directly from this url: http://www.huduser.gov/portal/datasets/fmr/fmr2017/FY2017_4050_FMR.xlsx.
+3. Go to this University of Dayton webpage http://academic.udayton.edu/kissock/http/Weather/citylistUS.htm.  Download the weather data for a selected city.  Can you download data for all the Alabama cities?  
+
 <br>
 
 ## Scraping HTML Text {#scraping_HTML_text}
