@@ -498,15 +498,13 @@ So there we have it, text scraping in a nutshell.  Although not all encompassing
 
 ### Exercises
 
-See if you can scrape and clean chapter 1 of Philosopher's Stone located at:
-[http://www.readbooksvampire.com/J.K._Rowling/Harry_Potter_and_the_Philosophers_Stone/01.html](http://www.readbooksvampire.com/J.K._Rowling/Harry_Potter_and_the_Philosophers_Stone/01.html)
+1. See if you can scrape chapter 1 of Philosopher's Stone located [here](http://www.readbooksvampire.com/J.K._Rowling/Harry_Potter_and_the_Philosophers_Stone/01.html). To do so follow these steps:
+   1. Import the HTML/XML content.
+   2. The book text is contained in the `<td>` nodes so extract these nodes out of the HTML content.
+   3. Extract the text out of the `<td> nodes (the text of interest is in the 5th element so you can index for this element).
+   4. Bonus: Minor cleaning can be done by removing the "\r\n" throughout the text (this is just embedded HTML code within the text). 
+2. Extract all the text from the main body content for the [Wikipedia entry on the War in Afghanistan](https://en.wikipedia.org/wiki/War_in_Afghanistan_(2001%E2%80%932014)).  Can you scrape just the references on this page?
 
-Follow these steps:
-
-1. Import the HTML/XML content.
-2. The book text is contained in the `<td>` nodes so extract these nodes out of the HTML content.
-3. Extract the text out of the `<td> nodes (the text of interest is in the 5th element so you can index for this element).
-4. Minor cleaning can be done by removing the "\r\n" throughout the text (this is just embedded HTML code within the text). 
 
 <br>
 
@@ -820,6 +818,11 @@ str(bls_table3)
 ```
 
 Between `rvest` and `XML`, scraping HTML tables is relatively easy once you get fluent with the syntax and the available options.  This section covers just the basics of both these packages to get you moving forward with scraping tables. In the [next section](#scraping_api) we move on to working with application program interfaces (APIs) to get data from the web.
+
+### Exercises
+
+1. Scrape the [2016 GDP nominal rankings table](http://statisticstimes.com/economy/countries-by-projected-gdp.php) provided by Statistics Times.
+2. Scrape any of the tables [here](http://statisticstimes.com/economy/economy-statistics.php) that summarize world economic measures.
 
 <br>
 
