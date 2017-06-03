@@ -107,6 +107,8 @@ As previously mentioned, many organizations still rely on Excel to hold and shar
 Although `readr` and its brother `readxl` do not provide direct exportation to Excel files, the `readr` function does provide a simple function to encode a .csv file as UTF-8 encoded, which will be recognized by Excel:
 
 ```r
+library(readr)
+
 write_excel_csv(df, path = "df", col_names = FALSE)
 ```
 
@@ -314,6 +316,12 @@ x2 <- readRDS("x.rds")
 identical(x, x2)
 [1] TRUE
 ```
+
+### Exercises
+
+1. Export the built-in data set `USArrests` as a *export1.rds* file.
+2. Export the built-in data sets `USArrests`, `mtcars`, and `iris` as a single *export2.RData* file.
+3. Now import the *export1.rds* and *export2.RData* data files.
 
 <br>
 
