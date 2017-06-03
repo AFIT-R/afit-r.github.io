@@ -23,7 +23,7 @@ There are two main groups of functions that we can use to read in text files:
 
 
 ### Base R functions {#base_text_import}
-`read.table()` is a multipurpose work-horse function in base R for importing data.  The functions `read.csv()` and `read.delim()` are special cases of `read.table()` in which the defaults have been adjusted for efficiency.  To illustrate these functions let's work with this [.csx file](https://www.dropbox.com/s/63wgqkmd7b3o3wd/mydata.csv?dl=1) which looks like (be sure to save this file in your working directory):
+`read.table()` is a multipurpose work-horse function in base R for importing data.  The functions `read.csv()` and `read.delim()` are special cases of `read.table()` in which the defaults have been adjusted for efficiency.  To illustrate these functions let's work with this [.csv file](https://www.dropbox.com/s/63wgqkmd7b3o3wd/mydata.csv?dl=1) which looks like (be sure to save this file in your working directory):
 
 
 ```r
@@ -42,8 +42,8 @@ mydata <- read.csv("mydata.csv")
 Once you have imported the data there are several ways to get an initial view of this data prior to performing any analysis.  First, you can view it in your console by evaluating the `mydata` object you just created. Alternatively, you can use RStudio’s built-in data viewer to get a scroll-able view of the complete data set using `View` or use `str` to assess the **str**ucture of the data.  Try the following:
 
 ```r
-View(customer)
-str(customer)
+View(mydata)
+str(mydata)
 ```
 
 Note that when we assess the structure of the data set, `variable.2` is automatically coerced to a factor variable and `variable.3` is automatically coerced to a logical variable.  If you are unfamiliar with data types in R you can learn about them in the *Data Types* section of this website or, if you're in one of my classes, we will cover these concepts later. Furthermore, any whitespace in the column names are replaced with a ".". 
@@ -111,7 +111,7 @@ read.table("mydata.csv", sep = ",", header = TRUE, nrows = 2)
 ## 2         25       wine       TRUE
 ```
 
-In addition to CSV files, there are other text files that `read.table` works with.  The primary difference is what separates the elements.  For example, tab delimited text files typically end with the `.txt` extension.  You can also use the `read.delim()` function as, similiar to `read.csv()`, `read.delim()` is a wrapper of `read.table()` with defaults set specifically for tab delimited files. We can read in this [.txt file](https://www.dropbox.com/s/35vbtblzfx3gkna/mydata.txt?dl=1) with the following:
+In addition to .csv files, there are other text files that `read.table` works with.  The primary difference is what separates the elements.  For example, tab delimited text files typically end with the `.txt` extension.  You can also use the `read.delim()` function as, similiar to `read.csv()`, `read.delim()` is a wrapper of `read.table()` with defaults set specifically for tab delimited files. We can read in this [.txt file](https://www.dropbox.com/s/35vbtblzfx3gkna/mydata.txt?dl=1) with the following:
 
 ```r
 # reading in tab delimited text files
@@ -195,7 +195,7 @@ These examples provide the basics for reading in text files. However, sometimes 
 1. Download and read in this [*flights.csv* file](https://www.dropbox.com/s/jtkdultbfp2a6sk/flights.csv?dl=1).
 2. Can you figure out how to read in the first line to see the titles? Try read in the first 1,000 lines and only the first 6 columns (check out the help file at `?read_csv`. 
 3. What function would you use to read in a .tsv file? See if you are correct by downloading and reading in this [*facebook.tsv* file](https://www.dropbox.com/s/bpmgrke55lcw13g/facebook.tsv?dl=1).
-4. What function would you use to read a file where fields were separated with "|"?
+4. What function would you use to read a file where fields were separated with "<plaintext>|</plaintext>"?
 
 
 <br>
