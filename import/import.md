@@ -313,8 +313,8 @@ readr::read_rds("mydata.rds")
 
 ### Exercises
 
-1. Import this [mydata.rds file](https://www.dropbox.com/s/s4ix9d2fx479pyt/mydata.rds?dl=1)
-2. Import this [sheets1and2.RData](https://www.dropbox.com/s/nrbztk6dtfpk8aa/sheets1and2.RData?dl=1). 
+1. Import this [mydata.rds file](https://www.dropbox.com/s/s4ix9d2fx479pyt/mydata.rds?dl=1).
+2. Import this [sheets1and2.RData file](https://www.dropbox.com/s/nrbztk6dtfpk8aa/sheets1and2.RData?dl=1). 
 3. How many objects did exercise 1 and 2 import into your global environment?
 
 
