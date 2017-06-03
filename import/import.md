@@ -14,7 +14,7 @@ The first step to any data analysis process is to *get* the data.  Data can come
 <br>
 
 ## Importing Text Files {#import_text_files}
-Text files are a popular way to hold and exchange tabular data as almost any data application supports exporting data to the CSV (or other text file) formats.  Text file formats use delimiters to separate the different elements in a line, and each line of data is in its own line in the text file.  Therefore, importing different kinds of text files can follow a fairly consistent process once you've identified the delimiter.
+Text files are a popular way to hold and exchange tabular data as almost any data application supports exporting data to the CSV (or other text file) format.  Text file formats use delimiters to separate the different elements in a line, and each line of data is in its own line in the text file.  Therefore, importing different kinds of text files can follow a fairly consistent process once you've identified the delimiter.
 
 There are two main groups of functions that we can use to read in text files:
 
@@ -23,7 +23,7 @@ There are two main groups of functions that we can use to read in text files:
 
 
 ### Base R functions {#base_text_import}
-`read.table()` is a multipurpose work-horse function in base R for importing data.  The functions `read.csv()` and `read.delim()` are special cases of `read.table()` in which the defaults have been adjusted for efficiency.  To illustrate these functions let's work with a CSV file that is saved in our working directory which looks like:
+`read.table()` is a multipurpose work-horse function in base R for importing data.  The functions `read.csv()` and `read.delim()` are special cases of `read.table()` in which the defaults have been adjusted for efficiency.  To illustrate these functions let's work with this [CSV file](https://www.dropbox.com/s/63wgqkmd7b3o3wd/mydata.csv?dl=1) which looks like (be sure to save this file in your working directory):
 
 
 ```r
@@ -33,17 +33,23 @@ variable 1,variable 2,variable 3
 8,cheese,FALSE
 ```
 
-To read in the CSV file we can use `read.csv()`.  Note that when we assess the structure of the data set that we read in, `variable.2` is automatically coerced to a factor variable and `variable.3` is automatically coerced to a logical variable.  Furthermore, any whitespace in the column names are replaced with a ".". 
+To read in the CSV file we can use `read.csv()`.  
+
+```r
+mydata <- read.csv("mydata.csv")
+```
+
+Once you have imported the data there are several ways to get an initial view of this data prior to performing any analysis.  First, you can view it in your console by evaluating the `mydata` object you just created. Alternatively, you can use RStudio’s built-in data viewer to get a scroll-able view of the complete data set using `View` or use `str` to assess the **str**ucture of the data.  Try the following:
+
+```r
+View(customer)
+str(customer)
+```
+
+Note that when we assess the structure of the data set, `variable.2` is automatically coerced to a factor variable and `variable.3` is automatically coerced to a logical variable.  If you are unfamiliar with data types in R you can learn about them in the *Data Types* section of this website or, if you're in one of my classes, we will cover these concepts later. Furthermore, any whitespace in the column names are replaced with a ".". 
 
 
 ```r
-mydata = read.csv("mydata.csv")
-mydata
-##   variable.1 variable.2 variable.3
-## 1         10       beer       TRUE
-## 2         25       wine       TRUE
-## 3          8     cheese      FALSE
-
 str(mydata)
 ## 'data.frame':	3 obs. of  3 variables:
 ##  $ variable.1: int  10 25 8
@@ -55,7 +61,7 @@ However, we may want to read in `variable.2` as a character variable rather then
 
 
 ```r
-mydata_2 = read.csv("mydata.csv", stringsAsFactors = FALSE)
+mydata_2 <- read.csv("mydata.csv", stringsAsFactors = FALSE)
 mydata_2
 ##   variable.1 variable.2 variable.3
 ## 1         10       beer       TRUE
@@ -69,19 +75,19 @@ str(mydata_2)
 ##  $ variable.3: logi  TRUE TRUE FALSE
 ```
 
-As previously stated `read.csv` is just a wrapper for `read.table` but with adjusted default arguments.  Therefore, we can use `read.table` to read in this same data.  The two arguments we need to be aware of are the field separator (`sep`) and the argument indicating whether the file contains the names of the variables as its first line (`header`).  In `read.table` the defaults are `sep = ""` and `header = FALSE` whereas in `read.csv` the defaults are `sep = ","` and `header = TRUE`.  There are multiple other arguments we can use for certain situations which we illustrate below:
+As previously stated `read.csv` is just a wrapper function for `read.table` but with adjusted default arguments.  Therefore, we can use `read.table` to read in this same data.  The two arguments we need to be aware of are the field separator (`sep`) and the argument indicating whether the file contains the names of the variables as its first line (`header`).  In `read.table` the defaults are `sep = ""` and `header = FALSE` whereas in `read.csv` the defaults are `sep = ","` and `header = TRUE`.  There are multiple other arguments we can use for certain situations which we illustrate below:
 
 
 ```r
 # provides same results as read.csv above
-read.table("mydata.csv", sep=",", header = TRUE, stringsAsFactors = FALSE)
+read.table("mydata.csv", sep = ",", header = TRUE, stringsAsFactors = FALSE)
 ##   variable.1 variable.2 variable.3
 ## 1         10       beer       TRUE
 ## 2         25       wine       TRUE
 ## 3          8     cheese      FALSE
 
 # set column and row names
-read.table("mydata.csv", sep=",", header = TRUE, stringsAsFactors = FALSE,
+read.table("mydata.csv", sep = ",", header = TRUE, stringsAsFactors = FALSE,
            col.names = c("Var 1", "Var 2", "Var 3"),
            row.names = c("Row 1", "Row 2", "Row 3"))
 ##       Var.1  Var.2 Var.3
@@ -90,7 +96,7 @@ read.table("mydata.csv", sep=",", header = TRUE, stringsAsFactors = FALSE,
 ## Row 3     8 cheese FALSE
 
 # manually set the classes of the columns 
-set_classes <- read.table("mydata.csv", sep=",", header = TRUE,
+set_classes <- read.table("mydata.csv", sep = ",", header = TRUE,
                           colClasses = c("numeric", "character", "character"))
 str(set_classes)
 ## 'data.frame':	3 obs. of  3 variables:
@@ -99,14 +105,13 @@ str(set_classes)
 ##  $ variable.3: chr  "TRUE" "TRUE" "FALSE"
 
 # limit the number of rows to read in
-read.table("mydata.csv", sep=",", header = TRUE, nrows = 2)
+read.table("mydata.csv", sep = ",", header = TRUE, nrows = 2)
 ##   variable.1 variable.2 variable.3
 ## 1         10       beer       TRUE
 ## 2         25       wine       TRUE
 ```
 
-In addition to CSV files, there are other text files that `read.table` works with.  The primary difference is what separates the elements.  For example, tab delimited text files typically end with the `.txt` extension.  You can also use the `read.delim()` function as, similiar to `read.csv()`, `read.delim()` is a wrapper of `read.table()` with defaults set specifically for tab delimited files.
-
+In addition to CSV files, there are other text files that `read.table` works with.  The primary difference is what separates the elements.  For example, tab delimited text files typically end with the `.txt` extension.  You can also use the `read.delim()` function as, similiar to `read.csv()`, `read.delim()` is a wrapper of `read.table()` with defaults set specifically for tab delimited files. We can read in this [.txt file](https://www.dropbox.com/s/35vbtblzfx3gkna/mydata.txt?dl=1) with the following:
 
 ```r
 # reading in tab delimited text files
@@ -117,7 +122,7 @@ read.delim("mydata.txt")
 ## 3          8     cheese      FALSE
 
 # provides same results as read.delim
-read.table("mydata.txt", sep="\t", header = TRUE)
+read.table("mydata.txt", sep = "\t", header = TRUE)
 ##   variable.1 variable.2 variable.3
 ## 1         10       beer       TRUE
 ## 2         25       wine       TRUE
