@@ -1321,6 +1321,12 @@ This provides a fairly simple example of incorporating OAuth authorization. The 
 
 Also, note that `httr` provides several other useful functions not covered here for communicating with APIs (i.e. `POST()`, `BROWSE()`). For more on these other `httr` capabilities see this [quickstart vignette](https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html).
 
+### Exercises
+
+1. Go to https://www.opendatanetwork.com/, search for open source data sets in your metropolitan area.
+2. Now use the RSocrata R package to connect with one of these data set APIs and import the data.
+3. Use the recently published [rscorecard](https://cran.r-project.org/web/packages/rscorecard/index.html) package to download Department of Education College Scorecard data for your undergrad school.
+
 
 [^fn_scrap1]: In [Automated Data Collection with R](http://www.amazon.com/Automated-Data-Collection-Practical-Scraping/dp/111883481X/ref=pd_sim_14_1?ie=UTF8&dpID=51Tm7FHxWBL&dpSrc=sims&preST=_AC_UL160_SR108%2C160_&refRID=1VJ1GQEY0VCPZW7VKANX") Munzert et al. state that "[t]he first way to get data from the web is almost too banal to be considered here and actually not a case of web scraping in the narrower sense."
 
