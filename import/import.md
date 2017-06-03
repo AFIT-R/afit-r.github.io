@@ -195,7 +195,7 @@ These examples provide the basics for reading in text files. However, sometimes 
 1. Download and read in this [*flights.csv* file](https://www.dropbox.com/s/jtkdultbfp2a6sk/flights.csv?dl=1).
 2. Can you figure out how to read in the first line to see the titles? Try read in the first 1,000 lines and only the first 6 columns (check out the help file at `?read_csv`. 
 3. What function would you use to read in a .tsv file? See if you are correct by downloading and reading in this [*facebook.tsv* file](https://www.dropbox.com/s/bpmgrke55lcw13g/facebook.tsv?dl=1).
-4. What function would you use to read a file where fields were separated with "<plaintext>|</plaintext>"?
+4. What function would you use to read a file where fields were separated with "<pre>|</pre>"?
 
 
 <br>
