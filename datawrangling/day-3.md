@@ -16,7 +16,7 @@ Consequently, this session will give you a strong foundation for the different w
 
 ## Tutorials & Resources
 
-Read and work through the following tutorials. Due to the holiday we do not have class.  However, the skills and functions introduced in these tutorials will be built on with the [day-4](day-4) material and are also necessary to complete your project deliverable due at the end of the week...so don't put this material off until the last minute!
+Read and work through the following tutorials. Due to the holiday we do not have class.  However, the skills and functions introduced in these tutorials will be built on with the [Day 4](day-4) material and are also necessary to complete your project deliverable due at the end of the week...so don't put this material off until the last minute!
 
 ### Importing and exporting spreadsheet data
 
@@ -25,18 +25,13 @@ Read and work through the following tutorials. Due to the holiday we do not have
     - Newbies can focus on the following sections of this tutorial: [exporting to text files](exporting#export_text_files) and [exporting to R objects](exporting#export_r_objects).
     - Optional: Those more ambitious can also work through [exporting to Excel portion](exporting#export_excel_files).
 
+### Scraping text & tables
+
+- Read & work through the [Importing spreadsheet data files stored online](scraping#importing_spreadsheet_data) portion of the [Scraping Data tutorial](/scraping)
+- Optional: For those more advanced folks, work through the following sections of the [Scraping Data tutorial](scraping): [Scraping HTML text](scraping#scraping_HTML_text), [Scraping HTML tables](scraping#scraping_HTML_tables), and [Leveraging APIs to scrape data](scraping#scraping_api)
 
 <hr>
 
 ## Class Prep
 
-Complete the following before class:
-
-1. Follow along in the [Getting Started with R Markdown webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/) to create the final integrated .Rmd file that this webinar explains how to produce. If you are having any hiccups in getting the final HTML and PDF reports to populate you will have a chance to work with your group in class to resolve.
-2. Bring electronic copies of the following to class:
-   - Thesis problem statement.
-   - Thesis research objectives.
-   - Identify the one objective you'd like to try answer through this class and the analytic technique you plan to apply to do so.
-   - An image relevant to the problem statement or analytic technique.
-
-See you in class!
+There is no class; however, I would advise you to follow along and complete the exercises throughout the tutorials. 
