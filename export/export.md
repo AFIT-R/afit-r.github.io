@@ -96,13 +96,23 @@ write_excel_csv(df, path = "export_csv2", col_names = FALSE)
 <br>
 
 ## Exporting to Excel files {#export_excel_files}
-As previously mentioned, many organizations still rely on Excel to hold and share data so exporting to Excel is a useful bit of knowledge.  And rather than saving to a .csv file to send to a co-worker who wants to work in Excel, its more efficient to just save R outputs directly to an Excel workbook. Since I covered importing data with the [`xlsx` package](#xlsx), I'll also cover exporting data with this package.  However, the `readxl` package which I demonstrated in the importing data section does not have a function to export to Excel. But there is a lesser known package called [`r2excel`](#r2excel) that provides exporting and formatting functions for Excel which I will cover.
+As previously mentioned, many organizations still rely on Excel to hold and share data so exporting to Excel is a useful bit of knowledge.  And rather than saving to a .csv file to send to a co-worker who wants to work in Excel, its more efficient to just save R outputs directly to an Excel workbook. Here I'll cover how to write and format Excel files with:
 
+- [`readr` package](#readrexport)
 - [`xlsx` package](#xlsx)
 - [`r2excel`](#r2excel)
 
+### readr package {#readrexport}
+
+Although `readr` and its brother `readxl` do not provide direct exportation to Excel files, the `readr` function does provide a simple function to encode a .csv file as UTF-8 encoded, which will be recognized by Excel:
+
+```r
+write_excel_csv(df, path = "df", col_names = FALSE)
+```
+
 ### xlsx package {#xlsx}
-Saving a data frame to a .xlsx file is as easy as saving to a .csv file:
+
+The [xlsx package](https://cran.r-project.org/web/packages/xlsx/index.html) provides exporting and formatting capabibilities for Excel 2007 and Excel 97/2000/XP/2003 file formats.  Although these file formats are a bit outdated this package provides some nice formatting options.  Saving a data frame to a .xlsx file is as easy as saving to a .csv file:
 
 
 ```r
@@ -209,7 +219,7 @@ saveWorkbook(wb, file = "output_example_3.xlsx")
  
  
 ### r2excel package {#r2excel}
-Although Formatting Excel files using the `xlsx` package is possible, the last section illustrated that it is a bit cumbersome. For this reason, [A. Kassambara](https://github.com/kassambara) created the `r2excel` package which depends on the `xlsx` package but provides easy to use functions for Excel formatting.  The following provides a simple example but you can find many additional formatting functions [here](http://www.sthda.com/english/wiki/r2excel-read-write-and-format-easily-excel-files-using-r-software)
+Although Formatting Excel files using the `xlsx` package is possible, the last section illustrated that it is a bit cumbersome (plus xlsx only creates and formats Excel 2007 or less formats). For this reason, [A. Kassambara](https://github.com/kassambara) created the `r2excel` package which depends on the `xlsx` package but provides easy to use functions for Excel formatting.  The following provides a simple example but you can find many additional formatting functions [here](http://www.sthda.com/english/wiki/r2excel-read-write-and-format-easily-excel-files-using-r-software)
 
 
 ```r
@@ -267,6 +277,12 @@ saveWorkbook(wb, file = "output_example_4.xlsx")
 <center>
 <img src="/public/images/exporting_data/output_example_4.png" alt="Formatted Excel Output Example 2" vspace="25">
 </center> 
+
+### Exercises
+
+1. Export the built-in data set `mtcars` to a UTF-8 encoded .csv file with `write_excel_csv`.
+2. Export the built-in data sets `mtcars` and `iris` into the same Excel workbook but on separate spreadsheets.
+3. Add additional formatting to the the workbook created in #2 such as a worksheet title, subtitle, author, and date.
 
 <br>
 
