@@ -76,11 +76,11 @@ All required classroom material will be provided in class or online. Any recomme
 | Week          | Lesson Description & Material | 
 |:-------------:|--------------|
 | **1**         | **Introduction & Reproducibility**  | 
-|  Jun 26       | Intro to data science, R, and course outline &nbsp;&nbsp; <a href="https://afit-r.github.io/day-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-|  Jun 28       | Managing workflow & reproducibility &nbsp;&nbsp; <a href="https://afit-r.github.io/day-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+|  Jun 26       | Intro to data science, R, and course outline &nbsp;&nbsp; <a href="https://afit-r.github.io/session-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+|  Jun 28       | Managing workflow & reproducibility &nbsp;&nbsp; <a href="https://afit-r.github.io/session-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **2**         | **First Date Guidelines for Data**  | 
-|  Jul 3        | __*No Class*__  &nbsp;&nbsp; <a href="https://afit-r.github.io/day-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-|  Jul 5        | Loading data, first date guidelines, initial visualizations  &nbsp;&nbsp; <a href="https://afit-r.github.io/day-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
+|  Jul 3        | __*No Class*__  &nbsp;&nbsp; <a href="https://afit-r.github.io/session-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
+|  Jul 5        | Loading data, first date guidelines, initial visualizations  &nbsp;&nbsp; <a href="https://afit-r.github.io/session-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **3**         | **Exploratory Data Analysis**   | 
 |  Jul 10       | <code>dplyr</code> for data transformation | 
 |  Jul 12       | Advancing and integrating your visualizations | 
