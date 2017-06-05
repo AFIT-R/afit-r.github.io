@@ -21,7 +21,7 @@ A codebook is a technical description of the data that was collected for a parti
 R comes with many built-in data sets. To see the 100+ data sets that come with R just type `data()` in your console and you'll see a list that looks like:
 
 <center>
-<img src="https://uc-r.github.io/public/images/dataWrangling/built-in-data.png" alt="Built-in Data" style="width: 75%; height: 75%">
+<img src="/public/images/dataWrangling/built-in-data.png" alt="Built-in Data" style="width: 75%; height: 75%">
 </center> 
 
 For any of these built-in data sets you will find the "codebook," the technical description of the data by typing `?` and then the name of the data set. This will bring up the "codebook" in your Help console. For instance, `?mtcars` will provide you with the technical information regarding the `mtcars` built-in data set. 
