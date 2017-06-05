@@ -43,7 +43,7 @@ Getting the codebook for data that you are importing and using for your own anal
 
 The important thing to remember is that you need to identify the documentation that explicitly tells you about the data you are working with. If not then in your analysis you need to state what the implied meaning of the data is; however, you should also state that ambiguity may exist if a codebook can not be identified.  With your final project, I expect you to explain the describe the source data you analyze and provide a citation (or URL link if possible) to the source database and codebook.
 
-### Exercise
+## Exercise
 
 This [site](http://academic.udayton.edu/kissock/http/Weather/citylistUS.htm) contains files of daily average temperatures for 157 U.S. cities. Identify the following:
 
