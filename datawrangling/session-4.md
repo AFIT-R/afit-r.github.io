@@ -1,7 +1,7 @@
 ---
 layout: tutorial
-title: Day 4
-permalink: /day-4
+title: Session 4
+permalink: /session-4
 ---
 
 During the first half of this week you learned to import data. However, data by themselves are pretty useless so we need to start doing some basic care and feeding of the data we've imported. The second half of this week we investigate good practices for when we get a new data set. Spending a little time up front to understand your data will help speed up your analysis later on. Thus, for this session we are going to focus on three objectives that we should have when we first open up a new data set:
