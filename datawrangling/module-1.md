@@ -1,10 +1,10 @@
 ---
 layout: tutorial
-title: Session 1
-permalink: /session-1
+title: Module 1
+permalink: /module-1
 ---
 
-Welcome to session 1! The first day will focus on making sure everyone is on the same page regarding the syllabus, deliverables, small group assignment and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
+Welcome to the first session! This first module will focus on making sure everyone is on the same page regarding the syllabus, deliverables, small group assignment and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
 
 <hr>
 
