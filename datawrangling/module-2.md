@@ -1,7 +1,7 @@
 ---
 layout: tutorial
-title: Session 2
-permalink: /session-2
+title: Module 2
+permalink: /module-2
 ---
 
 The workflow one uses for data analysis will determine the efficiency and reproducibility of that analysis. For example...
@@ -11,7 +11,7 @@ The workflow one uses for data analysis will determine the efficiency and reprod
 - one day you will need to go back to an analysis you did two months ago and re-execute the analysis with new data.
 - one day you will need to turn your thesis analysis into a written report and then convert the same analysis into a defense presentation.
 
-To be an effective and efficient analyst you need to understand how to manage your analytic workflow so that it fosters an organized environment and allows you to easily reproduce your work.  Furthermore, our data analysis should rarely live independent from our written report but, rather, be integrated with it.  This session will teach you how to organize your R files with R Projects and how you can use R Markdown in notebook mode for analyst-to-analyst communication, and in report mode for analyst-to-decision-maker communication.
+To be an effective and efficient analyst you need to understand how to manage your analytic workflow so that it fosters an organized environment and allows you to easily reproduce your work.  Furthermore, our data analysis should rarely live independent from our written report but, rather, be integrated with it.  This module will teach you how to organize your R files with R Projects and how you can use R Markdown in notebook mode for analyst-to-analyst communication, and in report mode for analyst-to-decision-maker communication.
 
 <hr>
 
