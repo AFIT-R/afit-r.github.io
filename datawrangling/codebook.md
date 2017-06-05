@@ -6,17 +6,24 @@ permalink: /codebook
 
 A codebook is a technical description of the data that was collected for a particular purpose. It describes how the data are arranged in the computer file or files, what the various numbers and letters mean, and any special instructions on how to use the data properly. Like any other kind of "book," some codebooks are better than others. The best codebooks have:
 
-1. Description of the study: who did it, why they did it, how they did it.
-2. Sampling information: what was the population studied, how was the sample drawn, what was the response rate.
-3. Structure of the data within the file: hierarchical, multiple cards, etc.
-4. Details about the data such as:
+1. Purpose of the data collection:
+    - Original organizational intent of the data collection.
+    - If data collection was a result of a study - who did it, why they did it, how they did it.
+2. Sampling information
+    - Where are the data generated.
+    - What is the data collection process - are their multiple data scrubbing processes or are the data considered "raw".
+    - What population are the data collected from.
+    - How was the sample drawn.
+    - What was the response rate.
+3. Details about the data such as:
     - Variable name: The name or number assigned to each variable in the data collection.
     - Variable label: A brief description to identify the variable for the user.
     - Question text: Where applicable, the exact wording from survey questions. ["In general, would you say your health is . . ."]
     - Values: The actual coded values in the data for this variable. [i.e. 1, 2, 3, 4, 5]
-    - Value labels: The textual descriptions of the codes. [i.e. Excellent, Very Good, Good, Fair, Poor]
+    - Value labels: The textual descriptions of the codes if the "true" value differs from the numeric values recorded. [i.e. Excellent, Very Good, Good, Fair, Poor]
     - Summary statistics: Number of observations, record length, number of records per observation, etc.
-    - Missing data: Where applicable, the values and labels used to code missing data.
+    - Missing data: Where applicable, the values and labels used to code missing data. [i.e. -99 is commonly used for missing values in weather data]
+4. Structure of the data: hierarchical/aggregated, centralized or disparate data sources that need to be, or have been, merged, etc.
     
 R comes with many built-in data sets. To see the 100+ data sets that come with R just type `data()` in your console and you'll see a list that looks like:
 
