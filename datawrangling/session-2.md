@@ -1,7 +1,7 @@
 ---
 layout: tutorial
-title: Day 2
-permalink: /day-2
+title: Session 2
+permalink: /session-2
 ---
 
 The workflow one uses for data analysis will determine the efficiency and reproducibility of that analysis. For example...
