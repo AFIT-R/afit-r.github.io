@@ -38,7 +38,7 @@ Getting the codebook for data that you are importing and using for your own anal
 
 - NOAA Hourly Precipitation: [[Data](https://catalog.data.gov/dataset/u-s-hourly-precipitation-data/resource/95bd76b0-3140-42d9-a8a1-fbd0e65c8e71?inner_span=True)] [[Codebook](https://catalog.data.gov/dataset/u-s-hourly-precipitation-data/resource/4e173be5-d962-467f-9240-02e233ccb454?inner_span=True)] 
 - Consumer Expenditure Survey: [[Data](https://www.icpsr.umich.edu/icpsrweb/ICPSR/series/20)] [[Codebook](https://www.icpsr.umich.edu/icpsrweb/ICPSR/ssvd/series/20/variables)]
-- College Scorecard:  [[Data](https://catalog.data.gov/dataset/college-scorecard/resource/b8f3d10b-0974-40db-b5fa-3c87ecae516b)] [[Codebook](https://collegescorecard.ed.gov/data/documentation/)]
+- College Scorecard:  [[Data](https://catalog.data.gov/dataset/college-scorecard)] [[Codebook](https://collegescorecard.ed.gov/data/documentation/)]
 - Consumer Complaints: [[Data](https://catalog.data.gov/dataset/consumer-complaint-database/resource/2f297213-7198-4be1-af1e-2d2623e7f6e9)] [[Codebook](https://cfpb.github.io/api/ccdb//)]
 
 The important thing to remember is that you need to identify the documentation that explicitly tells you about the data you are working with. If not then in your analysis you need to state what the implied meaning of the data is; however, you should also state that ambiguity may exist if a codebook can not be identified.  With your final project, I expect you to explain the describe the source data you analyze and provide a citation (or URL link if possible) to the source database and codebook.
