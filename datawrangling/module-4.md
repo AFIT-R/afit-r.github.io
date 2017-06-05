@@ -10,6 +10,8 @@ In module 3 you learned to import data. However, data by themselves are pretty u
 2. Learn about the data
 3. Visualize the data
 
+<hr>
+
 ## Tutorials & Resources
 
 Please work through the following tutorials prior to class. The skills and functions introduced in these tutorials will be necessary to complete your project deliverable #2.
@@ -18,4 +20,11 @@ __1. Review the codebook:__ Understanding the source data is crucial to any anal
 
 __2. Learn about the data:__ When first opening a data set it is important to get a basic understanding of the data dimensions (rows and columns), what the data looks like, how many missing values are in the data, and some basic summary statistics such as mean, median, and the range of each variable. Read and work through [*Learn About the Data*](about_the_data) to understand some of the first things you should do with a fresh data set.
 
-__3. Quick visualizations:__ It is also good to get an initial understanding of your data through visual means.  Module 6 will deep dive into creating more sophisticated visualizations; however, it is important to understand how to do some standard plotting for quick data exploration.  Read and work through [*Getting Started with Charts in R*](about_the_data)
+__3. Quick visualizations:__ It is also good to get an initial understanding of your data through visual means.  Module 6 will deep dive into creating more sophisticated visualizations; however, it is important to understand how to do some standard plotting for quick data exploration.  Read and work through [*Getting Started with Charts in R*](about_the_data).
+
+<hr>
+
+## Class Prep
+
+Bring your thesis/dissertation data to class along with the codebook (if available). Be ready to import and get to know your data in class!
+
