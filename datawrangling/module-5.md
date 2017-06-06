@@ -16,9 +16,13 @@ Combining the activities of data transformation and visualization in a methodica
 
 ## Tutorials & Resources
 
-Please work through the following tutorials prior to class. The skills and functions introduced in these tutorials will be necessary to complete your project deliverable #3.
+Being able to create visualizations (graphical representations) of data is a key step in data analysis. In this module you will learn to use the `ggplot2` library to visualize your data. As illustrated in the last module R does provide built-in plotting functions; however, the `ggplot2` library implements what is known as the [Grammar of Graphics](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448). This makes it particularly effective for describing how visualizations should represent data, and has turned it into the preeminent plotting library in R.
 
-__Visualize your data:__ Being able to create visualizations (graphical representations) of data is a key step in data analysis. In this module you will learn to use the `ggplot2` library to visualize your data. As illustrated in the last module R does provide built-in plotting functions; however, the `ggplot2` library implements what is known as the [Grammar of Graphics](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448). This makes it particularly effective for describing how visualizations should represent data, and has turned it into the preeminent plotting library in R. Read [Chapter 3: Data Visualization](http://r4ds.had.co.nz/data-visualisation.html) in R for Data Science.
+The following tutorials will provide you the knowledge and skills required to create the meaningful, elegant, and finely tuned  data visualizations that I will be looking for in the remainder of your project deliverables.
+
+1. __Introduction to `ggplot2`:__ Read [Chapter 3: Data Visualization](http://r4ds.had.co.nz/data-visualisation.html) in R for Data Science to get an introduction to the `ggplot2` package.
+
+2. __Advancing your visualizations:__ 
 
 
 
