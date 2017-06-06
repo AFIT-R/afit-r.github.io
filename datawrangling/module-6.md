@@ -20,7 +20,7 @@ Please work through the following tutorials prior to class. The skills and funct
 
 1. __Transform your data:__ Although many fundamental data manipulation functions exist in R, they have been a bit convoluted to date and have lacked consistent coding and the ability to easily flow together. `dplyr` is one such package which was built for the sole purpose of simplifying the process of manipulating, sorting, summarizing, and joining data frames.  Read and work through [Chapter 5: Data Transformation](http://r4ds.had.co.nz/transform.html) in R for Data Science.
 
-2. __Exploratory data analysis:__Combining visualization and data transformation allows you to efficiently explore your data. Read and work through [Chapter 7: Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html) in R for Data Science. 
+2. __Exploratory data analysis:__ Combining visualization and data transformation allows you to efficiently explore your data. Read and work through [Chapter 7: Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html) in R for Data Science. 
 
 
 <hr>
