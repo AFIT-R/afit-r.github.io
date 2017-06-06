@@ -80,7 +80,7 @@ All required classroom material will be provided in class or online. Any recomme
 |  Jun 28       | Managing workflow & reproducibility &nbsp;&nbsp; <a href="https://afit-r.github.io/module-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **2**         | **First Date Guidelines for Data**  | 
 |  Jul 3        | Importing & exporting data (__*No Class*__)  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-|  Jul 5        | Getting to know your data & initial visualizations  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
+|  Jul 5        | Getting to know your data  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **3**         | **Exploratory Data Analysis**   | 
 |  Jul 10       | <code>dplyr</code> for data transformation | 
 |  Jul 12       | Advancing and integrating your visualizations | 
