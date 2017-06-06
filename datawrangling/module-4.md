@@ -20,7 +20,7 @@ __1. Review the codebook:__ Understanding the source data is crucial to any anal
 
 __2. Learn about the data:__ When first opening a data set it is important to get a basic understanding of the data dimensions (rows and columns), what the data looks like, how many missing values are in the data, and some basic summary statistics such as mean, median, and the range of each variable. Read and work through [*Learn About the Data*](about_the_data) to understand some of the first things you should do with a fresh data set.
 
-__3. Quick visualizations:__ It is also good to get an initial understanding of your data through visual means.  Module 6 will deep dive into creating more sophisticated visualizations; however, it is important to understand how to do some basic plotting for quick data exploration.  Read and work through [*Getting Started with Charts in R*](quickplots).
+__3. Quick visualizations:__ It is also good to get an initial understanding of your data through visual means.  Module 5 will deep dive into creating more sophisticated visualizations; however, it is important to understand how to do some basic plotting for quick data exploration.  Read and work through [*Getting Started with Charts in R*](quickplots).
 
 <hr>
 
