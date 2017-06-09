@@ -10,7 +10,7 @@ Last week we discussed general guidelines for first interacting with a new data 
 2. Early in the data wrangling process you will likely need to sort, filter, or summarize your data set or even create new variables from the existing data. You will learn how to work with the `dplyr` package to perform many common data transformation and manipulation tasks.
 
 
-Combining the activities of data transformation and visualization in a methodical way is what defines *exploratory data analysis* (EDA). Only by systematically applying these techniques will you be able to answer and refine questions about your data.  Module 5 focuses on the transformation component of EDA.
+Combining the activities of data transformation and visualization in a methodical way is what defines *exploratory data analysis* (EDA). Only by systematically applying these techniques will you be able to answer and refine questions about your data.  Module 5 focuses on the visualization component of EDA.
 
 <hr>
 
