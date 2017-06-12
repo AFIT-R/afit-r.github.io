@@ -113,7 +113,7 @@ This tutorial only shows you functions to assess these attributes.  In the other
 
 <br>
 
-Exercises:
+## Exercises:
 
 1. Identify the data structure and attributes for the built-in `sleep` data set.
 2. Identify the data structure and attributes for the built-in `state.name` data set.
