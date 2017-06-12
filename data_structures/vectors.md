@@ -4,7 +4,7 @@ title: Managing Vectors
 permalink: /vectors
 ---
 
-The basic structure in R is the vector.  A vector is a sequence of data elements of the same basic type: [integer](http://afit-r.github.io/integer_double/), [double](http://afit-r.github.io/integer_double/), logical, or [character](http://afit-r.github.io/characters) (there are two additional vector types which I will not discuss - complex and raw). This tutorial provides you with the basics of managing vectors.
+The basic structure in R is the vector.  A vector is a sequence of data elements of the same basic type: [integer](http://afit-r.github.io/integer_double/), [double](http://afit-r.github.io/integer_double/), [logical](logicals), or [character](http://afit-r.github.io/characters) (there are two additional vector types which I will not discuss - complex and raw). This tutorial provides you with the basics of managing vectors.
 
 * [Creating vectors](#creating_vectors)
 * [Adding on to vectors](#vectors_adding)
