@@ -26,7 +26,7 @@ Please work through the following tutorials prior to class.
    
 Putting our focus back on data frames, a relatively new "modified" version of the data frame has been established and is referred to as a *tibble*.  Tibbles are data frames, but they tweak some older behaviors to make life a little easier. Go ahead and read through the [Managing Tibbles](tutorial).
 
-2. __How to make your data "tidy":__ The majority of our analyses will be for the purpose of studying a specific data frame/tibble.  However, most functions require your data frame to be well organized and in a specific format.  This may require you to manipulate the structure of your data (i.e. long vs. wide data) so that it is properly organized for the next activity.  Read and work through [Chapter 12: Tidy Data](http://r4ds.had.co.nz/tidy-data.html) to learn how to organize your data the "tidy" way.
+2\. __How to make your data "tidy":__ The majority of our analyses will be for the purpose of studying a specific data frame/tibble.  However, most functions require your data frame to be well organized and in a specific format.  This may require you to manipulate the structure of your data (i.e. long vs. wide data) so that it is properly organized for the next activity.  Read and work through [Chapter 12: Tidy Data](http://r4ds.had.co.nz/tidy-data.html) to learn how to organize your data the "tidy" way.
 
 <hr>
 
