@@ -86,7 +86,7 @@ All required classroom material will be provided in class or online. Any recomme
 |  Jul 12       | <code>dplyr</code> for data transformation  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-6" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **4**         | **Controlling Your Data**  | 
 |  Jul 17       | Data structures & tidyness  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-7" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-|  Jul 19       | Relational data | 
+|  Jul 19       | Relational data &nbsp;&nbsp; <a href="https://afit-r.github.io/module-8" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **5**         | **Dealing with Different Types of Data**  | 
 |  Jul 24       | Strings & regular expressions  | 
 |  Jul 26       | Factors & dates | 
