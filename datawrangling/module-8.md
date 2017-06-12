@@ -10,7 +10,7 @@ It’s rare that a data analysis involves only a single data set. Typically you 
 
 ## Tutorials & Resources
 
-To learn how to work with joining relational data read and work through [Chapter 13: Relational Data](http://r4ds.had.co.nz/relational-data.html) of R for Data Science.
+- Read and work through [Chapter 13: Relational Data](http://r4ds.had.co.nz/relational-data.html) of R for Data Science.
 
 <hr>
 
