@@ -271,4 +271,16 @@ v1[[1]]
 ## [1] 8
 ```
 
+<br>
+
+## Exercises
+
+1. Check out the built-in character vector `state.name`.
+2. How many elements are in this vector?
+3. What attributes does this vector have? 
+4. Can you name each vector element with “V1”, “V2”, …, “V50” (shortcut: `paste0("v", 1:50)`)?
+5. Now what attributes does this vector have?
+6. Subset `state.name` for those elements with the following names: V35, V17, V14, V38.
+
+
 [^preserve_simplify]: See Hadley Wickham's section on [Simplifying vs. Preserving Subsetting](http://adv-r.had.co.nz/Subsetting.html#subsetting-operators) to learn more.
