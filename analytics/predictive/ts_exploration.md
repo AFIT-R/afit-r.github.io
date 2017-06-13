@@ -14,7 +14,7 @@ This tutorial serves as an introduction to exploring and visualizing time series
 
 1. [Replication requirements](#replication): What you'll need to reproduce the analysis.
 2. [Creating time series objects](#ts_objects): Convert your data to a `ts` object for time series analysis.
-3. [Time series plots](#ts_plots): Basic plotting of `ts` objects.
+3. [Time series plots](#ts_plots): Basic visualization of `ts` objects and differentiating trends, seasonality, and cycle variation.
 4. [Seasonal plots](#seasonal_plots): Plotting seasonality trends in time series data.
 5. [Autocorrelation of time series](#acf): Computing and visualizing autocorrelation.
 6. [White noise](#white): Differentiating signal from the noise.
