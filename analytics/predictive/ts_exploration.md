@@ -4,7 +4,7 @@ title: Exploring & Visualizing Time Series
 permalink: /ts_exploration
 ---
 
-<img src="/public/images/analytics/times_series/unnamed-chunk-6-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-6-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
 Time series forecasting is performed in nearly every organization that works with quantifiable data.  Retail stores forecast sales. Energy companies forecast reserves, production, demand, and prices. Educational institutions forecast enrollment. Goverments forecast tax receipts and spending. International financial organizations forecast inflation and economic activity.  The list is long but the point is short - forecasting is a fundamental analytic process in every organization.  The purpose of this tutorial is to get you started doing some fundamental time series exploration and visualization.
 
 
@@ -106,7 +106,7 @@ Here, we use the `autoplot()` function to produce time plots of `ts` data. In ti
 autoplot(pass.ts)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 Often, we'll have time series data that has multiple variables.  For example, the `fpp2::arrivals` data set has time series data for "quarterly international arrivals (in thousands) to Australia from Japan, New Zealand, UK and the US. 1981Q1 - 2012Q3."  So this time series data has two variables (over and above the time stamp data) - (1) arrivals in thousands and (2) country.
 
@@ -133,7 +133,7 @@ autoplot(arrivals)
 autoplot(arrivals, facets = TRUE)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
 You may have noticed that `autoplot()` looks a lot like `ggplot2` outputs.  That's because many of the visualizations in the `forecast` package are built on top of `ggplot2`.  This allows us to easily add on to these plots with `ggplot2` syntax.  For example, we can add a smooth trend line and adjust titles:
 
@@ -146,7 +146,7 @@ autoplot(arrivals, facets = TRUE) +
        x = NULL)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
 
 
 These initial visualizations may spur additional questions such as what was the min, max, or average arrival amount for Japan.  We can index and use many normal functions to assess these types of questions. 
@@ -177,7 +177,7 @@ In viewing time series plots we can describe different components.  We can descr
 autoplot(fpp2::qcement)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 
 - the __trend__ is the long-term increase or decrease in the data. There is an increasing trend in the cement data.
@@ -197,7 +197,7 @@ There are a few useful ways of plotting data to emphasize seasonal patterns and 
 ggseasonplot(qcement, year.labels=FALSE, continuous=TRUE)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
 
 This is the same `qcement` data shown above, but now the data from each season are overlapped. A seasonal plot allows the underlying seasonal pattern to be seen more clearly, and can be useful in identifying years in which the pattern changes.  Here, we see that cement production has consistently increased over the years as the lower (darker) lines represent earlier years and the higher (lighter) lines represent recent years.  Also, we see that cement production tends to be the lowest in Q1 and typically peaks in Q3 before leveling off or decreasing slightly in Q4.
 
@@ -213,7 +213,7 @@ ggseasonplot(a10, year.labels=FALSE, continuous=TRUE, polar = TRUE)
 ```
 
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
 
 An alternative plot that emphasizes the seasonal patterns is where the data for each season (quarter in our example) are collected together in separate mini time plots. A subseries plot produced by `ggsubseriesplot()` creates mini time plots for each season. Here, the mean for each season is shown as a blue horizontal line.
@@ -223,7 +223,7 @@ An alternative plot that emphasizes the seasonal patterns is where the data for 
 ggsubseriesplot(qcement)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
 
 This form of plot enables the underlying seasonal pattern to be seen clearly, and also shows the changes in seasonality over time. It is especially useful in identifying changes within particular seasons. In this example, the plot is not particularly revealing; but in some cases, this is the most useful way of viewing seasonal changes over time.
 
@@ -231,7 +231,7 @@ This form of plot enables the underlying seasonal pattern to be seen clearly, an
 
 ## Autocorrelation of Time Series {#acf}
 
-Another way to look at time series data is to plot each observation against another observation that occurred some time previously. For example, you could plot $y_t$ against $y_{t−1}$. This is called a lag plot because you are plotting the time series against lags of itself. The `gglagplot()` function produces various types of lag plots.
+Another way to look at time series data is to plot each observation against another observation that occurred some time previously. For example, you could plot $$y_t$$ against $$y_{t−1}$$. This is called a lag plot because you are plotting the time series against lags of itself. The `gglagplot()` function produces various types of lag plots.
 
 The correlations associated with the lag plots form what is called the "autocorrelation function". When these correlations are plotted, we get an ACF plot. The `ggAcf()` function produces ACF plots.
 
@@ -249,7 +249,7 @@ gglagplot(ausbeer)
 ggAcf(ausbeer)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
 
 When data are either seasonal or cyclic, the ACF will peak around the seasonal lags or at the average cycle length.  Thus, we see that the maximal autocorrelation for the `ausbeer` data occurs at a lag of 4 (right plot above).  This makes sense since this is quarterly production data so the highest correlated value for a particular quarter will be the same quarter in the previous year.
 
@@ -266,7 +266,7 @@ autoplot(AirPassengers)
 ggAcf(AirPassengers)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
 
 2\. Seasonality will induce peaks at the seasonal lags.  Think about the holidays, each holiday will have certain products that peak at that time each year and so the strongest correlation will be the values at that same time each year.
 
@@ -279,7 +279,7 @@ autoplot(USAccDeaths)
 ggAcf(USAccDeaths)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
 
 3\. Cyclicity induces peaks at the average cycle length.  Here we see that there tends to be cyclic impact to the mink population every 10 years.  We also see this cause a peak in the ACF plot.
 
@@ -292,7 +292,7 @@ autoplot(mink)
 ggAcf(mink)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-25-1.png" style="display: block; margin: auto;" />
 
 <br>
 
@@ -307,18 +307,18 @@ wn <- ts(rnorm(36))
 autoplot(wn)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
 
-For white noise series, we expect each autocorrelation to be close to zero. Of course, they are not exactly equal to zero as there is some random variation. For a white noise series, we expect 95% of the spikes in the ACF to lie within $\pm 2 / \sqrt{T} where *T* is the length of the time series. It is common to plot these bounds on a graph of the ACF. If there are one or more large spikes outside these bounds, or if more than 5% of spikes are outside these bounds, then the series is probably not white noise.
+For white noise series, we expect each autocorrelation to be close to zero. Of course, they are not exactly equal to zero as there is some random variation. For a white noise series, we expect 95% of the spikes in the ACF to lie within $$\pm 2 / \sqrt{T}$$ where *T* is the length of the time series. It is common to plot these bounds on a graph of the ACF. If there are one or more large spikes outside these bounds, or if more than 5% of spikes are outside these bounds, then the series is probably not white noise.
 
-When using `ggAcf`, the dotted blue lines represent the 95% threshold.  Here, we see that none of the autocorrelations exceed the blue line $\pm 2 / \sqrt{50} = \pm0.28$ so we can be confident there is no time series component to this data.
+When using `ggAcf`, the dotted blue lines represent the 95% threshold.  Here, we see that none of the autocorrelations exceed the blue line $$\pm 2 / \sqrt{50} = \pm0.28$$ so we can be confident there is no time series component to this data.
 
 
 ```r
 ggAcf(wn)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
 
 Assessing autocorrelation can be quite useful for data sets where trends and seasonalities are heard to see.  For example, the following displays the monthly number of pigs slaughtered in Victoria, Australia from 1990-1995.  There may be a slight trend over time but it is unclear.
 
@@ -329,7 +329,7 @@ pigs.ts <- ts(pigs[121:188], start = c(1990, 1), frequency = 12)
 autoplot(pigs.ts)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
 
 However, looking at the ACF plot makes the feature more clear. There is more information in this data than the plain time series plot provided.  We see that the first three lags clearly exceed the blue line suggesting there is possible some signal in this time series component that can be used in a forecasting approach.
 
@@ -338,11 +338,11 @@ However, looking at the ACF plot makes the feature more clear. There is more inf
 ggAcf(pigs.ts)
 ```
 
-<img src="exploring_and_visualizing_files/figure-html/unnamed-chunk-29-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/unnamed-chunk-29-1.png" style="display: block; margin: auto;" />
 
 The ACF plots test if an individual lag autocorrelation is different than zero.  An alternative approach is to use the Ljung-Box test, which tests whether any of a group of autocorrelations of a time series are different from zero.  In essence it tests the "overall randomness" based on a number of lags.  If the result is a small *p*-value than it indicates the data are probably not white noise.
 
-Here, we perform a Ljung-Box test on the first 24 lag autocorrelations. The resulting *p*-value is significant at $p < .001$ so this supports our ACF plot consideration above where we stated its likely this is not purely white noise and that some time series information exists in this data.
+Here, we perform a Ljung-Box test on the first 24 lag autocorrelations. The resulting *p*-value is significant at $$p < .001$$ so this supports our ACF plot consideration above where we stated its likely this is not purely white noise and that some time series information exists in this data.
 
 
 ```r
