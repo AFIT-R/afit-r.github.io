@@ -5,11 +5,7 @@ layout: page
 permalink: /oper682
 ---
 
-Welcome to Operational Data Science with R! This course provides an intensive, hands-on introduction to data science with the R programming language. You will learn the fundamental skills required to acquire, munge, transform, manipulate, visualize, and model data in a computing environment that fosters reproducibility.
-
-
-## Course Overview
-Data Science is the study of the generalizable extraction of knowledge from data. Being a data scientist requires an integrated skill set spanning operations research, statistics, and computer science along with a good understanding of crafting a problem formulation for effective solutions. This course will introduce students to this rapidly growing field and equip them with some of its basic principles and tools as well as its general mindset.  Students will learn concepts, techniques and tools they need to deal with various facets of data science practice, including data collection and integration, exploratory data analysis, descriptive and predictive modeling, data product creation, evaluation, and effective communication. The focus in the treatment of these topics will be on breadth, rather than depth, and emphasis will be placed on integration and synthesis of concepts and their application to solving problems. To make the learning contextual, real datasets from a variety of Air Force domains will be used. 
+Welcome to Applied Business Analytics with R! This course provides an applied introduction to the field of business analytics, which has been defined as the extensive use of data, statistical and quantitative analysis, exploratory and predictive models, and fact-based management to drive decisions and actions.  In this course you will experience an intensive, hands-on introduction to applied business analytics with the R programming language. You will learn and apply the fundamental skills required to acquire, munge, transform, manipulate, visualize, and analyze data in a computing environment that fosters reproducibility. 
 
 
 
@@ -20,12 +16,12 @@ Data Science is the study of the generalizable extraction of knowledge from data
   <a href="https://twitter.com/bradleyboehmke" target="_blank" style="color:#515151;"><i class="fa fa-twitter"></i></a> &nbsp;
   <a href="https://github.com/bradleyboehmke" target="_blank" style="color:#515151;"><i class="fa fa-github" style="font-size:1em"></i></a> &nbsp;
   <a href="https://www.linkedin.com/in/brad-boehmke-ph-d-9b0a257" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
-* Day(s): Monday & Wednesday
-* Time: 3:00-4:30
+* Day(s): Tuesday & Wednesday
+* Time: 8:00-9:30 am
 * Location: Bldg 640, Rm 232
 * Credits: 3
 * Prereqs: NA
-* Webpage: [https://afit-r.github.io/oper682](https://afit-r.github.io/oper682)
+* Webpage: [https://afit-r.github.io/logm682](https://afit-r.github.io/logm682)
 * Additional Resources: [https://afit-r.github.io/](https://afit-r.github.io/)
 
 
@@ -51,7 +47,7 @@ This class emphasizes a *"flipped"* class style where you learn the material out
 
 ### First Half of Quarter
 
-Each week I plan to have you read through selected tutorials on specific analytic activities in R. I will assign problems/activities that you will need to perform prior to each session. Then in each class I'll spend about 15-30 minutes reviewing the analytic activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the last hour of class you and your small group will work together to complete another task. 
+Each week I plan to have you read through selected tutorials on specific analytic activities in R. I will assign problems/activities that you will need to perform prior to each session. Then in each class I'll spend about 15-30 minutes reviewing the analytic activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the last 30-45 min of class you and your small group will work together to complete another task. 
 
 The purpose for this course structure is multi-dimensional:
 
