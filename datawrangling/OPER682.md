@@ -51,7 +51,7 @@ This class emphasizes a *"flipped"* class style where you learn the material out
 
 ### First Half of Quarter
 
-Each week I plan to have you read through selected tutorials on specific analytic activities in R. I will assign problems/activities that you will need to perform prior to each session. Then in each class I'll spend about 15-30 minutes reviewing the analytic activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the last hour of class you and your small group will work together to complete another task. 
+Each week I plan to have you read through selected tutorials on specific analytic activities in R. I will assign problems/activities that you will need to perform prior to each session. Then in each class I'll spend about 15-30 minutes reviewing the analytic activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the 30-45 minutes of class you and your small group will work together to complete another task. 
 
 The purpose for this course structure is multi-dimensional:
 
