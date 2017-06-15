@@ -2,7 +2,7 @@
 title: LOGM 682&#58; Applied Business Analytics with R
 author: Brad Boehmke
 layout: page
-permalink: /oper682
+permalink: /logm682
 ---
 
 Welcome to Applied Business Analytics with R! This course provides an applied introduction to the field of business analytics, which has been defined as the extensive use of data, statistical and quantitative analysis, exploratory and predictive models, and fact-based management to drive decisions and actions.  In this course you will experience an intensive, hands-on introduction to applied business analytics with the R programming language. You will learn and apply the fundamental skills required to acquire, munge, transform, manipulate, visualize, and analyze data in a computing environment that fosters reproducibility. 
