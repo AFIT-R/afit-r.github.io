@@ -88,7 +88,7 @@ All required classroom material will be provided in class or online. Any recomme
 |  Jul 17       | Data structures & tidyness  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-7" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 |  Jul 19       | Relational data &nbsp;&nbsp; <a href="https://afit-r.github.io/module-8" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **5**         | **Dealing with Different Types of Data**  | 
-|  Jul 24       | Strings & regular expressions  | 
+|  Jul 24       | Strings & regular expressions &nbsp;&nbsp; <a href="https://afit-r.github.io/module-9" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 |  Jul 26       | Factors & dates | 
 | **6**         | **Creating Efficient Code**  | 
 | Jul 31        | Writing functions | 
