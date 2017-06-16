@@ -4,7 +4,7 @@ title: Module 9
 permalink: /module-9
 ---
 
-In the last several modules we have been learning to import, tidy, manipulate, and visualize our data. For the most part this was applied to pretty standard data.  Unfortunately, many times our data are not standard and contain very messy character strings that we need to clean up or extract patterns from.  This module is going to teach you some of the basics of working with character strings and regular expressions.  
+In the last several modules we have been learning to import, tidy, manipulate, and visualize our data. For the most part this was applied to some fairly standard data.  Unfortunately, many times our data are not standard and contain very messy character strings that we need to clean up or extract patterns from.  This module is going to teach you some of the basics of working with character strings and regular expressions.  
 
 <hr>
 
