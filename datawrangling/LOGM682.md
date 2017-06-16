@@ -72,34 +72,34 @@ All required classroom material will be provided in class or online. Any recomme
 | Week          | Lesson Description & Material | 
 |:-------------:|--------------|
 | **1**         | **Introduction & Reproducibility**  | 
-|  Jun 26       | Intro to data science, R, and course outline &nbsp;&nbsp; <a href="https://afit-r.github.io/module-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+|  Jun 27       | Intro to data science, R, and course outline &nbsp;&nbsp; <a href="https://afit-r.github.io/module-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |  Jun 28       | Managing workflow & reproducibility &nbsp;&nbsp; <a href="https://afit-r.github.io/module-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **2**         | **First Date Guidelines for Data**  | 
-|  Jul 3        | Importing & exporting data (__*No Class*__)  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
+|  Jul 4        | Importing & exporting data (__*No Class*__)  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 |  Jul 5        | Getting to know your data  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **3**         | **Exploratory Data Analysis**   | 
-|  Jul 10       | Advancing your visualizations with <code>ggplot2</code> &nbsp;&nbsp; <a href="https://afit-r.github.io/module-5" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  | 
+|  Jul 11       | Advancing your visualizations with <code>ggplot2</code> &nbsp;&nbsp; <a href="https://afit-r.github.io/module-5" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  | 
 |  Jul 12       | <code>dplyr</code> for data transformation  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-6" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **4**         | **Controlling Your Data**  | 
-|  Jul 17       | Data structures & tidyness  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-7" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
+|  Jul 18       | Data structures & tidyness  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-7" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 |  Jul 19       | Relational data &nbsp;&nbsp; <a href="https://afit-r.github.io/module-8" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **5**         | **Dealing with Different Types of Data**  | 
-|  Jul 24       | Strings & regular expressions &nbsp;&nbsp; <a href="https://afit-r.github.io/module-9" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
+|  Jul 25       | Strings & regular expressions &nbsp;&nbsp; <a href="https://afit-r.github.io/module-9" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 |  Jul 26       | Factors & dates | 
 | **6**         | **Creating Efficient Code**  | 
-| Jul 31        | Writing functions | 
+| Aug 1         | Writing functions | 
 | Aug 2         | Iteration | 
 | **7**         | **Bonus Week**    | 
-| Aug 7         | Analytic development | 
+| Aug 9         | Analytic development | 
 | Aug 9         | Analytic development | 
 | **8**         | **Student-led Analytic Learning**    | 
-| Aug 14        | Analytic technique | 
+| Aug 15        | Analytic technique | 
 | Aug 16        | Analytic technique | 
 | **9**         | **Student-led Analytic Learning**    | 
-|  Aug 21       | Analytic technique | 
+|  Aug 22       | Analytic technique | 
 |  Aug 23       | Analytic technique | 
 | **10**        | **Student-led Analytic Learning**    | 
-| Aug 28        | Analytic technique | 
+| Aug 29        | Analytic technique | 
 | Aug 30        | Analytic technique | 
 | **11**        | **Finals Week:**   | 
 | Sep 6         | *No class* - final project due  | 
