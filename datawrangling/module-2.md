@@ -45,10 +45,6 @@ Note: If you are unable to produce the PDF report with R Markdown and your error
 Complete the following before class:
 
 1. Follow along in the [Getting Started with R Markdown webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/) to create the final integrated .Rmd file that this webinar explains how to produce. If you are having any hiccups in getting the final HTML and PDF reports to populate you will have a chance to work with your group in class to resolve.
-2. Bring electronic copies of the following to class:
-   - Thesis problem statement.
-   - Thesis research objectives.
-   - Identify the one objective you'd like to try answer through this class and the analytic technique you plan to apply to do so.
-   - An image relevant to the problem statement or analytic technique.
+2. Bring an electronic headshot (.png, jpeg.) of yourself to class.  You may also want to bring a current resume or bio as it will help you with the in-class activity.
 
 See you in class!
