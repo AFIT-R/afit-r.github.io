@@ -350,6 +350,15 @@ frequency %>%
 
 The high correlations, which are all statistically significant (p-values < 0.0001), suggests that the relationship between the word frequencies is highly similar across the entire Harry Potter series. 
 
+<br>
+
+## Exercises
+
+1. Tidy the `chamber_of_secrets` book so that your text data are organized by chapter and unnested by word.  See how your output changes by unnesting by bi-grams and tri-grams.
+2. Remove stop words and perform word frequency analysis for the `chamber_of_secrets` book by identifying:
+    - the top 10 most common words across the entire book
+    - the top 5 most common words for each chapter
+3. Remove stop words and perform word frequency analysis for both the `philosophers_stone` and `chamber_of_secrets` (at the book level, not chapter level). Can you figure out how to compare how similar (or different) the word frequencies are in these two books?
 
 
 
