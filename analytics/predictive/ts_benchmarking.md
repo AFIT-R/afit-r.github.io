@@ -219,7 +219,7 @@ A  training set is a data set that is used to discover possible relationships. A
 
 Therefore, time series partitioning into training and test sets is done by taking a training partition from earlier observations and then using a later partition for the test set.
 
-<img src="benchmark_methods_files/figure-html/partitioning-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/partitioning-1.png" style="display: block; margin: auto;" />
 
 
 One function that can be used to create training and test sets is `subset.ts()`, which returns a subset of a time series where the start and end of the subset are specified using *index* values.  The `gold` time series comprises daily gold prices over 1108 trading days. Let's use the first 1000 days as a training set.  We can also create a test data set of the remaining data.
