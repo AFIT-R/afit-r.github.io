@@ -249,7 +249,7 @@ train3 <- window(ausbeer, start = c(1970, 1), end = c(1995, 4))
 
 ## Evaluating Forecast Accuracy {#accuracy}
 
-For evaluating predictive performance, several measures are commonly used to assess the predictive accuracy of a forecasting method.  In all cases, *the measures are based on the test data set*, which serves as a more objective basis than the training period to assess predictive accuracy.  Given a forecast and it's given errors ($e_t$), the commonly used accuracy measures are listed below:
+For evaluating predictive performance, several measures are commonly used to assess the predictive accuracy of a forecasting method.  In all cases, *the measures are based on the test data set*, which serves as a more objective basis than the training period to assess predictive accuracy.  Given a forecast and it's given errors ($$e_t$$), the commonly used accuracy measures are listed below:
 
 <div class="figure" style="text-align: center">
 <center>
@@ -377,7 +377,7 @@ However, assuming we want to perform a 1-step forecast (predicting the next valu
 
 This procedure is sometimes known as a *"rolling forecasting origin"* because the *"origin"* ($$k+i−1$$) at which the forecast is based rolls forward in time as displayed by each row in the above illustration.
 
-With time series forecasting, one-step forecasts may not be as relevant as multi-step forecasts. In this case, the cross-validation procedure based on a rolling forecasting origin can be modified to allow multi-step errors to be used. Suppose we are interested in models that produce good *h*-step-ahead forecasts. Here, we simply adjust the above algorithm so that we select the observation at time $k+h+i−1$ for the test set, use the observations at times $$1,2,\dots,k+i−1$$ to estimate the forecasting model, compute the *h*-step error on the forecast for time $$k+h+i−1$$, rinse & repeat until we can compute the forecasting accuracy for all errors calculated. For a 2-step-ahead forecast this looks like:
+With time series forecasting, one-step forecasts may not be as relevant as multi-step forecasts. In this case, the cross-validation procedure based on a rolling forecasting origin can be modified to allow multi-step errors to be used. Suppose we are interested in models that produce good *h*-step-ahead forecasts. Here, we simply adjust the above algorithm so that we select the observation at time $$k+h+i−1$$ for the test set, use the observations at times $$1,2,\dots,k+i−1$$ to estimate the forecasting model, compute the *h*-step error on the forecast for time $$k+h+i−1$$, rinse & repeat until we can compute the forecasting accuracy for all errors calculated. For a 2-step-ahead forecast this looks like:
 
 <div class="figure" style="text-align: center">
 <center>
