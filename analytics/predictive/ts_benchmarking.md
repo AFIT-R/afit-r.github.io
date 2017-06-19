@@ -35,7 +35,7 @@ library(fpp2)
 
 ## Naive Forecasting Methods {#naive}
 
-Although it is tempting to apply "sophisticated" forecasting methods, one must remember to consider *naive forecasts*.  A naive forecast is simply the most recently observed value. In other words, at the time *t*, the *k*-step-ahead naive forecast ($F_{t+k}$) equals the observed value at time *t* ($y_t$).
+Although it is tempting to apply "sophisticated" forecasting methods, one must remember to consider *naive forecasts*.  A naive forecast is simply the most recently observed value. In other words, at the time *t*, the *k*-step-ahead naive forecast ($$F_{t+k}$$) equals the observed value at time *t* ($$y_t$$).
 
 $$F_{t+k} = y_t \tag{1}$$
 
@@ -75,7 +75,7 @@ summary(fc_goog)
 ## 1010         838.96 802.8062 875.1138 783.6675 894.2525
 ```
 
-You will notice the forecast output provides a point forecast (the last observed value in the `goog` data set) and prediction confidence levels at the 80% and 95% level. A prediction interval gives an interval within which we expect $y_i$ to lie with a specified probability. For example, assuming the forecast errors are uncorrelated and normally distributed, then a simple 95% prediction interval for the next observation in a time series is
+You will notice the forecast output provides a point forecast (the last observed value in the `goog` data set) and prediction confidence levels at the 80% and 95% level. A prediction interval gives an interval within which we expect $$y_i$$ to lie with a specified probability. For example, assuming the forecast errors are uncorrelated and normally distributed, then a simple 95% prediction interval for the next observation in a time series is
 
 $$\hat y_t \pm 1.96 \hat{\sigma} \tag{2}$$
 
@@ -365,15 +365,15 @@ A more sophisticated version of training/test sets is cross-validation. You can 
 However, assuming we want to perform a 1-step forecast (predicting the next value in the series), time series cross-validation will:
 
 1. Select the observations at, and prior to, time *k* (blue dots).
-2. Select the observation at $k+1$ for the test data (red dot).
-3. Discard the observations at $k+2,k+3,\dots, k+n$ (white dots).
-4. Compute the error on the forecast for time $k+1$.
-5. Repeat steps 1-4 above for $i = 1,2,\dots,T-k$ where *T* is the total number of observations.
+2. Select the observation at $$k+1$$ for the test data (red dot).
+3. Discard the observations at $$k+2,k+3,\dots, k+n$$ (white dots).
+4. Compute the error on the forecast for time $$k+1$$.
+5. Repeat steps 1-4 above for $$i = 1,2,\dots,T-k$$ where *T* is the total number of observations.
 6. Compute the forecast accuracy measures based on the errors obtained.
 
-This procedure is sometimes known as a *"rolling forecasting origin"* because the *"origin"* ($k+i−1$) at which the forecast is based rolls forward in time as displayed by each row in the above illustration.
+This procedure is sometimes known as a *"rolling forecasting origin"* because the *"origin"* ($$k+i−1$$) at which the forecast is based rolls forward in time as displayed by each row in the above illustration.
 
-With time series forecasting, one-step forecasts may not be as relevant as multi-step forecasts. In this case, the cross-validation procedure based on a rolling forecasting origin can be modified to allow multi-step errors to be used. Suppose we are interested in models that produce good *h*-step-ahead forecasts. Here, we simply adjust the above algorithm so that we select the observation at time $k+h+i−1$ for the test set, use the observations at times $1,2,\dots,k+i−1$ to estimate the forecasting model, compute the *h*-step error on the forecast for time $k+h+i−1$, rinse & repeat until we can compute the forecasting accuracy for all errors calculated. For a 2-step-ahead forecast this looks like:
+With time series forecasting, one-step forecasts may not be as relevant as multi-step forecasts. In this case, the cross-validation procedure based on a rolling forecasting origin can be modified to allow multi-step errors to be used. Suppose we are interested in models that produce good *h*-step-ahead forecasts. Here, we simply adjust the above algorithm so that we select the observation at time $k+h+i−1$ for the test set, use the observations at times $$1,2,\dots,k+i−1$$ to estimate the forecasting model, compute the *h*-step error on the forecast for time $$k+h+i−1$$, rinse & repeat until we can compute the forecasting accuracy for all errors calculated. For a 2-step-ahead forecast this looks like:
 
 <div class="figure" style="text-align: center">
 <img src="/public/images/analytics/time_series/two_step_cv.png" alt="Two-Step Ahead Time Series Cross-Validation" width="600px" />
