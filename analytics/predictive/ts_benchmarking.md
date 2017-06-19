@@ -252,8 +252,10 @@ train3 <- window(ausbeer, start = c(1970, 1), end = c(1995, 4))
 For evaluating predictive performance, several measures are commonly used to assess the predictive accuracy of a forecasting method.  In all cases, *the measures are based on the test data set*, which serves as a more objective basis than the training period to assess predictive accuracy.  Given a forecast and it's given errors ($e_t$), the commonly used accuracy measures are listed below:
 
 <div class="figure" style="text-align: center">
+<center>
 <img src="/public/images/analytics/time_series/accuracy.png" alt="Forecast Accuracy Measures" width="600px" />
 <p class="caption">Forecast Accuracy Measures</p>
+</center>
 </div>
 
 Note that each measure has its strengths and weaknesses.  For example, if you want to compare forecast accuracy between two series on very different scales you can't compare the MAE or MSE for these forecast as these measures depend on the scale of the time series data. MAPE is often better for comparisons but only if our data are all positive and have no zeros or small values.  It also assumes a natural zero so it can't be used for temperature forecasts as these are based on arbitrary zero scales. MASE is similar to MAE but is scaled so that it can be compared across different data series.  You can read more about each of these measures [here](https://www.otexts.org/fpp/2/5); however, for now just keep in mind that for all these measures a <u>smaller value</u> signifies a <u>better forecast</u>.
@@ -358,8 +360,10 @@ A more sophisticated version of training/test sets is cross-validation. You can 
 
 
 <div class="figure" style="text-align: center">
+<center>
 <img src="/public/images/analytics/time_series/ts_validation.png" alt="Time Series Cross-Validation" width="600px" />
 <p class="caption">Time Series Cross-Validation</p>
+</center>
 </div>
 
 However, assuming we want to perform a 1-step forecast (predicting the next value in the series), time series cross-validation will:
