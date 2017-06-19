@@ -376,8 +376,10 @@ This procedure is sometimes known as a *"rolling forecasting origin"* because th
 With time series forecasting, one-step forecasts may not be as relevant as multi-step forecasts. In this case, the cross-validation procedure based on a rolling forecasting origin can be modified to allow multi-step errors to be used. Suppose we are interested in models that produce good *h*-step-ahead forecasts. Here, we simply adjust the above algorithm so that we select the observation at time $k+h+i−1$ for the test set, use the observations at times $$1,2,\dots,k+i−1$$ to estimate the forecasting model, compute the *h*-step error on the forecast for time $$k+h+i−1$$, rinse & repeat until we can compute the forecasting accuracy for all errors calculated. For a 2-step-ahead forecast this looks like:
 
 <div class="figure" style="text-align: center">
+<center>
 <img src="/public/images/analytics/time_series/two_step_cv.png" alt="Two-Step Ahead Time Series Cross-Validation" width="600px" />
 <p class="caption">Two-Step Ahead Time Series Cross-Validation</p>
+</center>
 </div>
 
 This seems tedious, however, there is a simple function that implements this procedure.  The `tsCV` function applies a forecasting model to a sequence of training sets from a given time series and provides the errors as the output.  However, we need to compute our own accuracy measures with these errors.
