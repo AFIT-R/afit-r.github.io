@@ -103,7 +103,7 @@ fc_goog <- naive(goog, 25)
 autoplot(fc_goog)
 ```
 
-<img src="benchmark_methods_files/figure-html/naive_fc-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/naive_fc-1.png" style="display: block; margin: auto;" />
 
 For seasonal data, a related idea is to use the corresponding season from the last year of data. For example, if you want to forecast the sales volume for next March, you would use the sales volume from the previous March. For a series with *M* seasons, we can write this as
 
@@ -154,7 +154,7 @@ Similar to `naive`, we can plot the `snaive` model with autoplot.
 autoplot(fc_beer)
 ```
 
-<img src="benchmark_methods_files/figure-html/snaive_fc-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/snaive_fc-1.png" style="display: block; margin: auto;" />
 
 <br>
 
@@ -177,7 +177,7 @@ A convenient function to use to check these assumptions is the `checkresiduals` 
 checkresiduals(fc_goog)
 ```
 
-<img src="benchmark_methods_files/figure-html/fc_goog_checkresids-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/fc_goog_checkresids-1.png" style="display: block; margin: auto;" />
 
 ```
 ## 
@@ -196,7 +196,7 @@ If we compare that to the `fc_beer` seasonal naive model we see that there is an
 checkresiduals(fc_beer)
 ```
 
-<img src="benchmark_methods_files/figure-html/fc_beer_checkresids-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/fc_beer_checkresids-1.png" style="display: block; margin: auto;" />
 
 ```
 ## 
@@ -252,7 +252,7 @@ train3 <- window(ausbeer, start = c(1970, 1), end = c(1995, 4))
 For evaluating predictive performance, several measures are commonly used to assess the predictive accuracy of a forecasting method.  In all cases, *the measures are based on the test data set*, which serves as a more objective basis than the training period to assess predictive accuracy.  Given a forecast and it's given errors ($e_t$), the commonly used accuracy measures are listed below:
 
 <div class="figure" style="text-align: center">
-<img src="images/accuracy.png" alt="Forecast Accuracy Measures" width="600px" />
+<img src="/public/images/analytics/time_series/accuracy.png" alt="Forecast Accuracy Measures" width="600px" />
 <p class="caption">Forecast Accuracy Measures</p>
 </div>
 
@@ -358,7 +358,7 @@ A more sophisticated version of training/test sets is cross-validation. You can 
 
 
 <div class="figure" style="text-align: center">
-<img src="images/ts_validation.png" alt="Time Series Cross-Validation" width="600px" />
+<img src="/public/images/analytics/time_series/ts_validation.png" alt="Time Series Cross-Validation" width="600px" />
 <p class="caption">Time Series Cross-Validation</p>
 </div>
 
@@ -376,7 +376,7 @@ This procedure is sometimes known as a *"rolling forecasting origin"* because th
 With time series forecasting, one-step forecasts may not be as relevant as multi-step forecasts. In this case, the cross-validation procedure based on a rolling forecasting origin can be modified to allow multi-step errors to be used. Suppose we are interested in models that produce good *h*-step-ahead forecasts. Here, we simply adjust the above algorithm so that we select the observation at time $k+h+i−1$ for the test set, use the observations at times $1,2,\dots,k+i−1$ to estimate the forecasting model, compute the *h*-step error on the forecast for time $k+h+i−1$, rinse & repeat until we can compute the forecasting accuracy for all errors calculated. For a 2-step-ahead forecast this looks like:
 
 <div class="figure" style="text-align: center">
-<img src="images/two_step_cv.png" alt="Two-Step Ahead Time Series Cross-Validation" width="600px" />
+<img src="/public/images/analytics/time_series/two_step_cv.png" alt="Two-Step Ahead Time Series Cross-Validation" width="600px" />
 <p class="caption">Two-Step Ahead Time Series Cross-Validation</p>
 </div>
 
