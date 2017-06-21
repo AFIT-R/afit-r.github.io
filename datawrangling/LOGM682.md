@@ -87,8 +87,8 @@ All required classroom material will be provided in class or online. Any recomme
 |  Jul 25       | Strings & regular expressions &nbsp;&nbsp; <a href="https://afit-r.github.io/module-9" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 |  Jul 26       | Factors & dates &nbsp;&nbsp; <a href="https://afit-r.github.io/module-10" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **6**         | **Creating Efficient Code**  | 
-| Aug 1         | Writing functions | 
-| Aug 2         | Iteration | 
+| Aug 1         | Writing functions &nbsp;&nbsp; <a href="https://afit-r.github.io/module-11" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
+| Aug 2         | Iteration &nbsp;&nbsp; <a href="https://afit-r.github.io/module-12" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **7**         | **Bonus Week**    | 
 | Aug 9         | Analytic development | 
 | Aug 9         | Analytic development | 
