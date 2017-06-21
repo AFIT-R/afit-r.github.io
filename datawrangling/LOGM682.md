@@ -90,7 +90,7 @@ All required classroom material will be provided in class or online. Any recomme
 | Aug 1         | Writing functions &nbsp;&nbsp; <a href="https://afit-r.github.io/module-11" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | Aug 2         | Iteration &nbsp;&nbsp; <a href="https://afit-r.github.io/module-12" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
 | **7**         | **Bonus Week**    | 
-| Aug 9         | Analytic development | 
+| Aug 8         | Analytic development | 
 | Aug 9         | Analytic development | 
 | **8**         | **Student-led Analytic Learning**    | 
 | Aug 15        | Analytic technique | 
