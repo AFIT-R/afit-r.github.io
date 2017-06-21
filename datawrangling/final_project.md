@@ -51,7 +51,7 @@ Upon submission you will supply the final PDF report.  You will also submit the 
 <td align="left" valign="top"> 
   <b>3.1</b> Original source where the data was obtained is cited and, if possible, hyperlinked. <br> 
   <b>3.2</b> Source data is thoroughly explained (i.e. what was the original purpose of the data, when was it collected, how many variables did the original have, explain any peculiarities of the source data such as how missing values are recorded, or how data was imputed, etc.). <br> 
-  <b>3.3</b> Data cleaning steps are explained in the text (tell me why you are doing the data cleaning activities that you perform) and follow a logical process. <br>
+  <b>3.3</b> Data importing and cleaning steps are explained in the text (tell me why you are doing the data cleaning activities that you perform) and follow a logical process. <br>
   <b>3.4</b> Once your data is clean, show what the final data set looks like.  However, do not print off a data frame with 200+ rows; show me the data in the most condensed form possible. <br>
   <b>3.5</b> Provide summary information about the variables of concern in your cleaned data set. Do not just print off a bunch of code chunks with <code>str()</code>, <code>summary()</code>, etc.  Rather, provide me with a consolidated explanation, either with a table that provides summary info for each variable or a nicely written summary paragraph with inline code.
 </td>
