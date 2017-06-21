@@ -40,7 +40,7 @@ The following describes each deliverable and provides the expectations based on 
 <td align="center" valign="top">2</td>
 <td align="left" valign="top">Rmarkdown PDF report that builds onto deliverable 1 by loading your data, providing source code information, and creating a data dictionary. </td>
 <td align="left" valign="top">Friday, July 7 NLT 11:59PM ET </td>
-<td align="left" valign="top">1.1-1.4, 2.1-2.3, 3.1-3.2, 7.1-7.3 </td>
+<td align="left" valign="top">1.1-1.4, 2.1-2.3, 3.1-3.3, 7.1-7.3 </td>
 </tr>
 <tr class="odd">
 <td align="center" valign="top">3</td>
