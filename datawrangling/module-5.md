@@ -22,7 +22,7 @@ The following tutorials will provide you the knowledge and skills required to cr
 
 1. __Introduction to `ggplot2`:__ Read and work through [Chapter 3: Data Visualization](http://r4ds.had.co.nz/data-visualisation.html) in R for Data Science to get an introduction to the `ggplot2` package.
 
-2. __Advancing your visualizations:__ In your final project I will be looking for publication worthy visualizations. Thus, I fully expect your visualization to improve with each deliverable submitted. Therefore it is essential that you learn how to use some of the more advanced features of `ggplot2` and other packages that work with `ggplot2`.  Here are some resources to help you take your visualizations to the next level:  
+2. __Advancing your visualizations:__ In your final project I will be looking for publication worthy visualizations. Thus, I fully expect your visualizations to improve with each deliverable submitted. Therefore it is essential that you learn how to use some of the more advanced features of `ggplot2` and other packages that work with `ggplot2`.  Here are some resources to help you take your visualizations to the next level:  
     - Reading and working through [Chapter 28: Graphics for Communication](http://r4ds.had.co.nz/graphics-for-communication.html) in R for Data Science.
     - Review some of the currently available [advanced plotting tutorials](ggplot).
 
