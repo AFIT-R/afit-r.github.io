@@ -7,7 +7,7 @@ permalink: /module-10
 Two common data types that we often deal with in analyses are factors and dates:
 
 - Factors are used to represent categorical data, variables that have a fixed and known set of possible values (i.e. Gender: Female vs. Male; Months: Jan, Feb, ..., Dec; Country: U.S., Germany, Japan).  
-- Time series data have various date-time stamp information that can be very useful if we know how to properly work with date time.
+- Time series data have various date-time stamp information that can be very useful if we know how to properly work with them.
 
 This module will teach you how to deal with these two data types.
 
@@ -24,3 +24,4 @@ This module will teach you how to deal with these two data types.
 
 ## Class Prep
 
+Work through the exercises in each of the tutorials provided.
