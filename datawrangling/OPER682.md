@@ -22,7 +22,7 @@ Data Science is the study of the generalizable extraction of knowledge from data
   <a href="https://www.linkedin.com/in/brad-boehmke-ph-d-9b0a257" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
 * Day(s): Monday & Wednesday
 * Time: 3:00-4:30
-* Location: Bldg 640, Rm 232
+* Location: Bldg 646, Rm 218
 * Credits: 3
 * Prereqs: NA
 * Webpage: [https://afit-r.github.io/oper682](https://afit-r.github.io/oper682)
