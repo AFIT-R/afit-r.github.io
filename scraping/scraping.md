@@ -15,6 +15,8 @@ My purpose in the following sections is to discuss these topics at a level meant
 - [Scraping HTML table data](#scraping_HTML_tables)
 - [Leveraging APIs to scrape data](#scraping_api)
 
+- *Note: the examples provided below were performed in 2015. Consequently, if you apply the code provide throughout these examples your outputs may differ due to webpages and their content changing over time.* 
+
 <br>
 
 ## Importing Spreadsheet Data Files Stored Online {#importing_spreadsheet_data}
@@ -75,8 +77,10 @@ install.packages("gdata")
 If you are a Windows user and attempt to attach the `gdata` library immediately after installation, you will likely receive the warning message given in Figure 1. You will not be able to download excel spreadsheets from the internet without installing some additional software.
 
 <div class="figure" style="text-align: center">
+<center>
 <img src="/public/images/importing/perlmissing.jpg" alt="gdata without Perl" width="600px" />
 <p class="caption">gdata without Perl</p>
+</center>
 </div>
 
 Unfortunately, it's not as straightforward to fix as the error message would indicate. Running ``installXLSXsupport()`` won't completely solve your problem without Perl software installed. In order for gdata to function properly, you must install ActiveState Perl using the following link: http://www.activestate.com/activeperl/. The download could take up to 10 minutes or so, and when finished, you will need to find where the software was stored on your machine (likely directly on the C:/ Drive).
@@ -147,7 +151,7 @@ zip_data2[1:5, 1:10]
 ## 5 2825381     0 2.50    2        2  20510        3        D        2        D
 ```
 
-One last common scenario I'll cover when importing spreadsheet data from online is when we identify multiple data sets that we'd like to download but are not centrally stored in a single .zip format or the like. For example there are multiple data files scattered throughout the [Maryland State Board of Elections websiteMaryland State Board of Elections website](http://www.elections.state.md.us/elections/2012/election_data/index.html) that we may want to download.  The first objective here is to identify the relevant links.  The [`XML`](https://cran.r-project.org/web/packages/XML/index.html) package provides the useful `getHTMLLinks()` function to identify these links.
+One last common scenario I'll cover when importing spreadsheet data from online is when we identify multiple data sets that we'd like to download but are not centrally stored in a single .zip format or the like. For example there are multiple data files scattered throughout the [Maryland State Board of Elections website](http://www.elections.state.md.us/elections/2012/election_data/index.html) that we may want to download.  The first objective here is to identify the relevant links.  The [`XML`](https://cran.r-project.org/web/packages/XML/index.html) package provides the useful `getHTMLLinks()` function to identify these links.
 
 
 ```r
@@ -1029,7 +1033,7 @@ climate$data
 ## Variables not shown: fl_so (chr), fl_t (chr)
 ```
 
-Since we recently had some snow here let's pull data on snow fall for 2015. We adjust the limit argument (by default `ncdc` limits results to 25) and identify the data type we want.  By sorting we see what days experienced the greatest snowfall (don't worry, the results are reported in mm!).
+At the time of this post we had recently had some snow here so let's pull data on snow fall for 2015. We adjust the limit argument (by default `ncdc` limits results to 25) and identify the data type we want.  By sorting we see what days experienced the greatest snowfall (don't worry, the results are reported in mm!).
 
 
 ```r
@@ -1353,7 +1357,7 @@ Also, note that `httr` provides several other useful functions not covered here 
 
 1. Go to [opendatanetwork.com](https://www.opendatanetwork.com), search for open source data sets in your metropolitan area.
 2. Now use the [RSocrata](https://cran.r-project.org/web/packages/RSocrata/index.html) package to connect with one of these data set APIs and import the data.
-3. Use the recently published [rscorecard](https://cran.r-project.org/web/packages/rscorecard/index.html) package to download Department of Education College Scorecard data for your undergrad school.
+3. Use the [rscorecard](https://cran.r-project.org/web/packages/rscorecard/index.html) package to download Department of Education College Scorecard data for your undergrad school.
 
 
 [^fn_scrap1]: In [Automated Data Collection with R](http://www.amazon.com/Automated-Data-Collection-Practical-Scraping/dp/111883481X/ref=pd_sim_14_1?ie=UTF8&dpID=51Tm7FHxWBL&dpSrc=sims&preST=_AC_UL160_SR108%2C160_&refRID=1VJ1GQEY0VCPZW7VKANX") Munzert et al. state that "[t]he first way to get data from the web is almost too banal to be considered here and actually not a case of web scraping in the narrower sense."
