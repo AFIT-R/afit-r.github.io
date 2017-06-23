@@ -61,7 +61,35 @@ rents[1:6, 1:10]
 ## 6 101199999 101199999  599  481  505  791 1061     11     1  99999
 ```
 
-Note that many of the arguments covered in the [Importing Data chapter](http://afit-r.github.io/import#import_excel_files) (i.e. specifying sheets to read from, skipping lines) also apply to `read.xls()`. In addition, `gdata` provides some useful functions (`sheetCount()` and `sheetNames()`) for identifying if multiple sheets exist prior to downloading.  Check out `?gdata` for more help.
+Note that many of the arguments covered in the [Importing Data section](import#import_excel_files) (i.e. specifying sheets to read from, skipping lines) also apply to `read.xls()`. In addition, `gdata` provides some useful functions (`sheetCount()` and `sheetNames()`) for identifying if multiple sheets exist prior to downloading.  Check out `?gdata` for more help.
+
+<hr>
+
+__Special note when using gdata on Windows:__  When downloading excel spreadsheets from the internet, Mac users will be able to install the `gdata` package, attach the library, and be highly functional right away. Windows users, on the other hand, do not have a Perl interpreter installed by default.
+
+
+```r
+install.packages("gdata")
+```
+
+If you are a Windows user and attempt to attach the `gdata` library immediately after installation, you will likely receive the warning message given in Figure 1. You will not be able to download excel spreadsheets from the internet without installing some additional software.
+
+<div class="figure" style="text-align: center">
+<img src="/public/images/importing/perlmissing.jpg" alt="gdata without Perl" width="600px" />
+<p class="caption">gdata without Perl</p>
+</div>
+
+Unfortunately, it's not as straightforward to fix as the error message would indicate. Running ``installXLSXsupport()`` won't completely solve your problem without Perl software installed. In order for gdata to function properly, you must install ActiveState Perl using the following link: http://www.activestate.com/activeperl/. The download could take up to 10 minutes or so, and when finished, you will need to find where the software was stored on your machine (likely directly on the C:/ Drive).
+
+Once Perl software has been installed, you will need to direct R to find it each time you call the function.
+
+
+```r
+# use read.xls to import
+rents <- read.xls(url, perl = "C:/Perl64/bin/perl.exe")
+```
+
+<hr>
 
 Another common form of file storage is using zip files.  For instance, the [Bureau of Labor Statistics](http://www.bls.gov/home.htm) (BLS) stores their [public-use microdata](http://www.bls.gov/cex/pumdhome.htm) for the [Consumer Expenditure Survey](http://www.bls.gov/cex/home.htm) in .zip files.  We can use `download.file()` to download the file to your working directory and then work with this data as desired.
 
