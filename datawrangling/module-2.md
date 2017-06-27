@@ -47,4 +47,4 @@ Complete the following before class:
 1. Follow along in the [Getting Started with R Markdown webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/) to create the final integrated .Rmd file that produces the dynamic stock report. If you are having any hiccups in getting the final HTML and PDF reports to populate you will have a chance to work with your group in class to resolve.
 2. Bring an electronic headshot (.png, jpeg.) of yourself to class.  You may also want to bring a current resume or bio as it will help you with the in-class activity.
 
-See you in class!
+You can download class material here: &nbsp; <a href="http://bit.ly/R-module-2" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
