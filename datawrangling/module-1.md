@@ -48,5 +48,5 @@ Complete the following before class:
    - LOGM 682: 2017_LOGM682_boehmkebc_session1.R.
    - You will follow this naming convention throughout the course.
 
-See you in class!
+You can download class material here: &nbsp; <a href="http://bit.ly/R-module-1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
 
