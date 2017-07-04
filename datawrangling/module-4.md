@@ -29,3 +29,5 @@ __3. Quick visualizations:__ It is also good to get an initial understanding of 
 1. Work through the exercises in the module 3 & 4 tutorials.  Bring your answers (and code) to class.
 2. Bring your thesis/dissertation data to class along with the codebook (if available). If you do not have your thesis data then identify an interesting data set you want to analyze for your final project and bring it to class. Be ready to import and get to know your data in class!
 
+You can download class material here: &nbsp; <a href="https://www.dropbox.com/sh/tey9ckv5oe4mb10/AABrb7JScVlrPSXwc1BlhI5la?dl=1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
+
