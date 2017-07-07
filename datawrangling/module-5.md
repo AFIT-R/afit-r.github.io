@@ -34,3 +34,5 @@ The following tutorials will provide you the knowledge and skills required to cr
 
 1. Work through as many of the exercises as you can in Chapters 3 & 28 of R for Data Science.
 2. Identify at least 10 specific questions you want to ask of your thesis data.  What types of visualizations do you need to explore to answer these questions?  Be ready to use `ggplot2` to answer these questions in class.
+
+You can download class material here: &nbsp; <a href="https://www.dropbox.com/sh/futo8vyyuwl2mib/AABBl1ukLyPa6hinhqfsAkBBa?dl=1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
