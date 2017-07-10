@@ -23,3 +23,5 @@ Please work through the following tutorials prior to class. The skills and funct
 
 1. Work through the exercises in Chapters 5 & 7 of R for Data Science.
 2. Building onto the last module, expand the previous list of questions or identify at least 10 new questions you want to ask of your thesis data.  What exploratory data analysis sequences do you need to implement to answer these questions?  Be ready to use `dplyr` and `ggplot2` to answer these questions in class.
+
+You can download class material here: &nbsp; <a href="https://www.dropbox.com/sh/9jpldjzfnuwjsgb/AACALEFMv183eJR7ISkw9zCja?dl=1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
