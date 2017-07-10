@@ -26,3 +26,5 @@ In the last several modules we have been learning to import, tidy, manipulate, a
 ## Class Prep
 
 Work through as many exercises as you can in [*Chapter 14: Strings*](http://r4ds.had.co.nz/strings.html) of R for Data Science and in the [*Tidying Text and Word Frequency*](tidy_text) tutorial.  Don't worry, you will get more practice in class!
+
+You can download class material here: &nbsp; <a href="https://www.dropbox.com/sh/axacoaoru1ua66r/AAC-5JzjyUEXdT9Vl26YMBkpa?dl=1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
