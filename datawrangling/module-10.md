@@ -25,3 +25,5 @@ This module will teach you how to deal with these two data types.
 ## Class Prep
 
 Work through the exercises in each of the tutorials provided.
+
+You can download class material here: &nbsp; <a href="https://www.dropbox.com/sh/ko9i8c2fx0fkzdh/AAD-N_SoLLqqiDjS0evW8fYaa?dl=1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
