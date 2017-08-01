@@ -24,6 +24,6 @@ Thus, minimizing duplication by writing efficient code is important to becoming 
 
 ## Class Prep
 
-TBD
+You can download class material here: &nbsp; <a href="https://www.dropbox.com/sh/nxutf9lgg2trp07/AAB7E8MF6dWyFfCOvuXcKKTma?dl=1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
 
 [^footnote]: According to [Dave Thomas](http://www.artima.com/intv/dry.html), "DRY says that every piece of system knowledge should have one authoritative, unambiguous representation. Every piece of knowledge in the development of something should have a single representation. A system's knowledge is far broader than just its code. It refers to database schemas, test plans, the build system, even documentation."
