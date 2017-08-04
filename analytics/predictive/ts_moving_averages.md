@@ -18,8 +18,7 @@ Smoothing methods are a family of forecasting methods that average values over m
 
 ## Replication Requirements {#replication}
 
-There are four R packages outside of the base set of functions that will be used in the tutorial. The first two, `tidyverse` and `gridExtra`, work together to create customizable and easily interpretable visualizations of the data. The `lubridate` package allows the user to manipulate dates, and the `fpp2` package allows for many of the processes described to be executed with fewer commands.
-
+There are four R packages outside of the base set of functions that will be used in the tutorial:
 
 ```r
 library(tidyverse)      # data manipulation and visualization
@@ -298,10 +297,12 @@ $$
 
 where $$k=(m-1)/2$$ and the weights are given by $$[a_{-k}, \dots, a_k]$$. It is important that the weights all sum to one and that they are symmetric so that $$a_j = a_{-j}$$. This simple *m*-MA is a special case where all the weights are equal to $$1/m$$. A major advantage of weighted moving averages is that they yield a smoother estimate of the trend-cycle. Instead of observations entering and leaving the calculation at full weight, their weights are slowly increased and then slowly decreased resulting in a smoother curve. Some specific sets of weights are widely used such as the following:
 
+<center>
 <div class="figure" style="text-align: center">
 <img src="/public/images/analytics/time_series/common_wt_avg.png" alt="Commonly used weights in weighted moving averages (Hyndman &amp; Athanasopoulos, 2014" width="400px" />
-<p class="caption">Commonly used weights in weighted moving averages (Hyndman & Athanasopoulos, 2014</p>
+<p class="caption">Fig: Commonly used weights in weighted moving averages (Hyndman & Athanasopoulos, 2014)</p>
 </div>
+</center>
 
 For example, the `AirPassengers` data contains an entry for every month in a 12 year span, so a time period would consist of 12 time units. A **2 x 12-MA** set-up is the preferred method for such data. The observation itself, as well as the 5 observations immediately before and after it, receives weight $$\frac{1}{12} = 0.083$$, while the data point for that month last year and that month the following year both receive weight $$\frac{1}{24} = 0.042$$. 
 
