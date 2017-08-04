@@ -77,7 +77,7 @@ savings %>%
   geom_line()
 ```
 
-<img src="MovingAverages_files/figure-html/ma_plot1-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/ma_plot1-1.png" style="display: block; margin: auto;" />
 
 
 You may notice that as the number of points used for the average increases, the curve becomes smoother and smoother. Choosing a value for $k$ is a balance between eliminating noise while still capturing the data's true structure. For this set, the 10 year moving average ($k = 121$) eliminates most of the pattern and is probably too much smoothing, while a 1 year moving average ($k = 13$) offers little more than just looking at the data itself.  We can see this by zooming into the 2000-2015 time range:
@@ -91,7 +91,7 @@ savings %>%
   coord_cartesian(xlim = c(date("2000-01-01"), date("2015-04-01")), ylim = c(0, 11))
 ```
 
-<img src="MovingAverages_files/figure-html/ma_plot2-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/ma_plot2-1.png" style="display: block; margin: auto;" />
 
 To understand how these different moving averages compare we can compute the [MSE and MAPE](ts_benchmarking#accuracy).  Both of these error rates will increase as you choose a larger *k* to average over; however, if you or your leadership are indifferent between a 6-9% error rate then you may want to illustrate trends with a 3 year moving average rather than a 1 year moving average.
 
@@ -142,7 +142,7 @@ autoplot(savings.ts, series = "Data") +
   ylab("Savings Rate")
 ```
 
-<img src="MovingAverages_files/figure-html/ma_plot3-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/ma_plot3-1.png" style="display: block; margin: auto;" />
 
 ## Trailing Moving Average for Forecasting
 
@@ -188,7 +188,7 @@ savings_tma %>%
   geom_line()
 ```
 
-<img src="MovingAverages_files/figure-html/ma_plot4-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/ma_plot4-1.png" style="display: block; margin: auto;" />
 
 
 ## Moving Averages of Moving Averages
@@ -246,7 +246,7 @@ elecsales.df %>%
   geom_line(aes(y = value, color = ma))
 ```
 
-<img src="MovingAverages_files/figure-html/ma_plot5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/ma_plot5-1.png" style="display: block; margin: auto;" />
 
 This 2 x 4-MA process produces the best fit yet. It massages out some of the noise while maintaining the overall trend of the data. Other combinations of moving averages are possible, such as 3 x 3-MA. To maintain symmetry, if your first moving average is an even number of points, the follow-up MA should also contain an even number. Likewise, if your first MA uses an odd number of points, the follow-up should use an odd number of points.  Just keep in mind that moving averages of moving averages will lose information as you do not retain as many data points.
 
@@ -285,7 +285,7 @@ autoplot(elecsales, series = "Data") +
   ggtitle("Annual electricity sales: South Australia")
 ```
 
-<img src="MovingAverages_files/figure-html/ma_plot6-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/ma_plot6-1.png" style="display: block; margin: auto;" />
 
 
 ## Weighted Moving Averages
@@ -299,7 +299,7 @@ $$
 where $k=(m-1)/2$ and the weights are given by $[a_{-k}, \dots, a_k]$. It is important that the weights all sum to one and that they are symmetric so that $a_j = a_{-j}$. This simple *m*-MA is a special case where all the weights are equal to $1/m$. A major advantage of weighted moving averages is that they yield a smoother estimate of the trend-cycle. Instead of observations entering and leaving the calculation at full weight, their weights are slowly increased and then slowly decreased resulting in a smoother curve. Some specific sets of weights are widely used such as the following:
 
 <div class="figure" style="text-align: center">
-<img src="images/common_wt_avg.png" alt="Commonly used weights in weighted moving averages (Hyndman &amp; Athanasopoulos, 2014" width="400px" />
+<img src="/public/images/analytics/time_series/common_wt_avg.png" alt="Commonly used weights in weighted moving averages (Hyndman &amp; Athanasopoulos, 2014" width="400px" />
 <p class="caption">Commonly used weights in weighted moving averages (Hyndman & Athanasopoulos, 2014</p>
 </div>
 
@@ -348,7 +348,7 @@ autoplot(AirPassengers, series = "Data") +
   labs(x = NULL, y = "Passengers")
 ```
 
-<img src="MovingAverages_files/figure-html/ma_plot7-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/time_series/ma_plot7-1.png" style="display: block; margin: auto;" />
 
 You can see we've smoothed out the seasonality but have captured the overall trend.
 
