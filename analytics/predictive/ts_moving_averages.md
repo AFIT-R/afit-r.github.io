@@ -38,7 +38,7 @@ $$
 \hat{y_t} = \dfrac{y_{t-2} + y_{t-1} + y_{t} + y_{t+1} + y_{t+2}}{5}
 $$
 
-where *t* is the time step that you are smoothing at and 5 is the number of points being used to calculate the average (which moving forward will be denoted as $k$). To compute moving averages on our data we can leverage the `rollmean` function from the `zoo` package.  Here, we focus on the personal savings rate (`psavert`) variable in the `economics` data frame.  Using `mutate` and `rollmean`, I compute the 13, 25, ..., 121 month moving average values and add this data back to the data frame.  Note that we need to explicitly state to fill any years that cannot be computed (due to lack of data) with NA.
+where *t* is the time step that you are smoothing at and 5 is the number of points being used to calculate the average (which moving forward will be denoted as *k*). To compute moving averages on our data we can leverage the `rollmean` function from the `zoo` package.  Here, we focus on the personal savings rate (`psavert`) variable in the `economics` data frame.  Using `mutate` and `rollmean`, I compute the 13, 25, ..., 121 month moving average values and add this data back to the data frame.  Note that we need to explicitly state to fill any years that cannot be computed (due to lack of data) with NA.
 
 
 ```r
@@ -80,7 +80,7 @@ savings %>%
 <img src="/public/images/analytics/time_series/ma_plot1-1.png" style="display: block; margin: auto;" />
 
 
-You may notice that as the number of points used for the average increases, the curve becomes smoother and smoother. Choosing a value for $k$ is a balance between eliminating noise while still capturing the data's true structure. For this set, the 10 year moving average ($k = 121$) eliminates most of the pattern and is probably too much smoothing, while a 1 year moving average ($k = 13$) offers little more than just looking at the data itself.  We can see this by zooming into the 2000-2015 time range:
+You may notice that as the number of points used for the average increases, the curve becomes smoother and smoother. Choosing a value for *k* is a balance between eliminating noise while still capturing the data's true structure. For this set, the 10 year moving average ($$k = 121$$) eliminates most of the pattern and is probably too much smoothing, while a 1 year moving average ($$k = 13$$) offers little more than just looking at the data itself.  We can see this by zooming into the 2000-2015 time range:
 
 
 ```r
@@ -290,20 +290,20 @@ autoplot(elecsales, series = "Data") +
 
 ## Weighted Moving Averages
 
-A moving average of a moving average can be thought of as a symmetric MA that has different weights on each nearby observation. For example, the 2x4-MA discussed above is equivalent to a weighted 5-MA with weights given by $\big[\frac{1}{8},\frac{1}{4},\frac{1}{4},\frac{1}{4},\frac{1}{8} \big]$. In general, a weighted *m*-MA can be written as
+A moving average of a moving average can be thought of as a symmetric MA that has different weights on each nearby observation. For example, the 2x4-MA discussed above is equivalent to a weighted 5-MA with weights given by $$\big[\frac{1}{8},\frac{1}{4},\frac{1}{4},\frac{1}{4},\frac{1}{8} \big]$$. In general, a weighted *m*-MA can be written as
 
 $$
 \hat{T}_t = \sum^k_{j=-k} a_j y_{t+j}
 $$
 
-where $k=(m-1)/2$ and the weights are given by $[a_{-k}, \dots, a_k]$. It is important that the weights all sum to one and that they are symmetric so that $a_j = a_{-j}$. This simple *m*-MA is a special case where all the weights are equal to $1/m$. A major advantage of weighted moving averages is that they yield a smoother estimate of the trend-cycle. Instead of observations entering and leaving the calculation at full weight, their weights are slowly increased and then slowly decreased resulting in a smoother curve. Some specific sets of weights are widely used such as the following:
+where $$k=(m-1)/2$$ and the weights are given by $$[a_{-k}, \dots, a_k]$$. It is important that the weights all sum to one and that they are symmetric so that $$a_j = a_{-j}$$. This simple *m*-MA is a special case where all the weights are equal to $$1/m$$. A major advantage of weighted moving averages is that they yield a smoother estimate of the trend-cycle. Instead of observations entering and leaving the calculation at full weight, their weights are slowly increased and then slowly decreased resulting in a smoother curve. Some specific sets of weights are widely used such as the following:
 
 <div class="figure" style="text-align: center">
 <img src="/public/images/analytics/time_series/common_wt_avg.png" alt="Commonly used weights in weighted moving averages (Hyndman &amp; Athanasopoulos, 2014" width="400px" />
 <p class="caption">Commonly used weights in weighted moving averages (Hyndman & Athanasopoulos, 2014</p>
 </div>
 
-For example, the `AirPassengers` data contains an entry for every month in a 12 year span, so a time period would consist of 12 time units. A **2 x 12-MA** set-up is the preferred method for such data. The observation itself, as well as the 5 observations immediately before and after it, receives weight $\frac{1}{12} = 0.083$, while the data point for that month last year and that month the following year both receive weight $\frac{1}{24} = 0.042$. 
+For example, the `AirPassengers` data contains an entry for every month in a 12 year span, so a time period would consist of 12 time units. A **2 x 12-MA** set-up is the preferred method for such data. The observation itself, as well as the 5 observations immediately before and after it, receives weight $$\frac{1}{12} = 0.083$$, while the data point for that month last year and that month the following year both receive weight $$\frac{1}{24} = 0.042$$. 
 
 We can produce this weighted moving average using the `ma` function as we did in the last section
 
