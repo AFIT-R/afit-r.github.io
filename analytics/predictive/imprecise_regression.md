@@ -4,9 +4,10 @@ title: Imprecise Regression
 permalink: /imprecise_regression
 ---
 
+<img src="/public/images/analytics/imprecise_regression/unnamed-chunk-3-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
 Imprecise regression is a generalization of linear regression that gives us stronger tools for modeling uncertainty. In a typical linear regression setting, we consider the input data to be precise observations: single points. In imprecise regression, we generalize the notion of observations to intervals rather than points. This allows us to more accurately represent scenarios with measurement error or other sources of uncertainty that make our input data "fuzzy". In many regression applications, the error introduced by treating the observations as precise numbers is insignificant. However, when there is deep uncertainty or high sensitivity to changes in the model, imprecise regression is appropriate. In a military context, we often face both of these challenges, particularly in intelligence applications. 
 
-This tutorial is based on the imprecise regression work in [@cattaneo2012likelihood]. 
+This tutorial is based on the imprecise regression work in [Cattaneo and Wiencierz (2012)](http://www.sciencedirect.com/science/article/pii/S0888613X12000862). 
 
 <br>
 
@@ -113,7 +114,7 @@ The likelihood-based imprecise regression method that we consider here is more l
 plot(data_idf, typ="draft", k.x=10, k.y=10, p.cex=1.5, y.las=1, y.adj=6)
 ```
 
-<img src="2017_OPER682_keithaj_tutorial_v03_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/imprecise_regression/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 <br>
 
@@ -129,7 +130,7 @@ Before we can estimate the slope and intercept, we need to set some parameters f
 
 `p` is the quantile we are interested in estimating. The default value is set to the median, at 0.5. In standard least squares regression, we estimate the mean response. LIR uses [quantile regression](https://en.wikipedia.org/wiki/Quantile_regression), where we estimate the *median* response (or any other quantile of interest).
 
-`bet` is the $\beta$ value that controls the confidence level of our results. Setting $\beta = 0.5$ results in an asymptotically lower bounded confidence level of 76.1%. See [@Cattaneo2012] for more details on setting $\beta$.
+`bet` is the $\beta$ value that controls the confidence level of our results. Setting $\beta = 0.5$ results in an asymptotically lower bounded confidence level of 76.1%. See [Cattaneo and Wiencierz (2012)](http://www.sciencedirect.com/science/article/pii/S0888613X12000862) for more details on setting $\beta$.
 
 `epsilon` is the probability that a given interval-valued observation does not contain the true value. The default value is set to 0, indicating that all of the interval data contain the true values. While `p` and `bet` control the type of output we are interested in, `epsilon` is a parametric representation of reality. The value is typically set subjectively based on the analyst's confidence in the data but in some cases quantitative information may be available based on past data or similar systems. Setting `epsilon` makes the assumption that $P(X_{\text{low}} \leq X \leq X_{\text{high}} \text{ and } Y_{\text{low}} \leq Y \leq Y_{\text{high}}) \geq 1-\epsilon$.
 
@@ -215,7 +216,7 @@ plot(model_lir, typ="qlrm", lrm.col="blue", pl.dat=TRUE, pl.dat.typ="draft",
      k.x=10, k.y=10, y.las=1, y.adj=6)
 ```
 
-<img src="2017_OPER682_keithaj_tutorial_v03_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/imprecise_regression/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 The non-convex nature of the results can also be seen directly in the parameter estimates, which have an unusual, jagged shape. Again the best estimate is highlighted in blue. 
 
@@ -224,7 +225,7 @@ The non-convex nature of the results can also be seen directly in the parameter 
 plot(model_lir, typ="para", x.adj=0.7, y.las=1, y.adj=6, y.padj=-3)
 ```
 
-<img src="2017_OPER682_keithaj_tutorial_v03_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/imprecise_regression/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 The graphical results here, and the numeric intervals presented earlier, emphasize the uncertainty that remains in our result. As you might have expected, the large uncertainty in our data has carried through to our results. The benefit is that we have quantified this uncertainty, numerically and visually, and can readily communicate it to a decision maker. In precise regression, we know that we have model misspecification risk, but it is difficult to know how much or how that compares among different models.  
 
