@@ -4,7 +4,7 @@ title: Imprecise Regression
 permalink: /imprecise_regression
 ---
 
-<img src="/public/images/analytics/imprecise_regression/unnamed-chunk-3-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 40%; height: 40%;" />
+<img src="/public/images/analytics/imprecise_regression/unnamed-chunk-3-1.png"  style="float:right; margin: 2px -5px 0px 10px; width: 50%; height: 50%;" />
 Imprecise regression is a generalization of linear regression that gives us stronger tools for modeling uncertainty. In a typical linear regression setting, we consider the input data to be precise observations: single points. In imprecise regression, we generalize the notion of observations to intervals rather than points. This allows us to more accurately represent scenarios with measurement error or other sources of uncertainty that make our input data "fuzzy". In many regression applications, the error introduced by treating the observations as precise numbers is insignificant. However, when there is deep uncertainty or high sensitivity to changes in the model, imprecise regression is appropriate. In a military context, we often face both of these challenges, particularly in intelligence applications. 
 
 This tutorial is based on the imprecise regression work in [Cattaneo and Wiencierz (2012)](http://www.sciencedirect.com/science/article/pii/S0888613X12000862). 
@@ -33,7 +33,7 @@ For this tutorial, we'll use  a toy data set from `linLIR` called `toy.smps`. Th
 
 ```r
 # Packages
-library(linLIR) # imprecise regression
+library(linLIR) 
 
 # Load data
 data("toy.smps")
@@ -68,7 +68,7 @@ To use the `linLIR` package, we need to convert our data to a specialized data s
 
 
 ```r
-data_idf <- idf.create(toy.smps, var.labels=c("x","y"))
+data_idf <- idf.create(toy.smps, var.labels = c("x", "y"))
 summary(data_idf)
 ## 
 ## Summary of interval data frame
@@ -111,16 +111,15 @@ The likelihood-based imprecise regression method that we consider here is more l
 
 
 ```r
-plot(data_idf, typ="draft", k.x=10, k.y=10, p.cex=1.5, y.las=1, y.adj=6)
+plot(data_idf, typ = "draft", k.x = 10, k.y = 10, p.cex = 1.5, y.las = 1, y.adj = 6)
 ```
 
 <img src="/public/images/analytics/imprecise_regression/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
-<br>
 
 ## Likelihood-based imprecise regression {#lir}
 
-The `linLIR` package is built specifically for simple linear regression, so we'll be fitting the model $y=a+bx$, using the imprecise data. Mirroring the set nature of the $x$ and $y$ variables, our estimates for $a$ and $b$ will also be set-valued. 
+The `linLIR` package is built specifically for simple linear regression, so we'll be fitting the model $y=a+bx$, using the imprecise data. Mirroring the set nature of the $$x$$ and $$y$$ variables, our estimates for $$a$$ and $$b$$ will also be set-valued. 
 
 Before we can estimate the slope and intercept, we need to set some parameters for the LIR method. We'll call the `s.linlir` function to conduct the optimization. The syntax is `s.linlir(dat.idf, var=NULL, p=0.5, bet, epsilon=0, a.grid=100)`, let's consider each input:
 
@@ -130,17 +129,17 @@ Before we can estimate the slope and intercept, we need to set some parameters f
 
 `p` is the quantile we are interested in estimating. The default value is set to the median, at 0.5. In standard least squares regression, we estimate the mean response. LIR uses [quantile regression](https://en.wikipedia.org/wiki/Quantile_regression), where we estimate the *median* response (or any other quantile of interest).
 
-`bet` is the $\beta$ value that controls the confidence level of our results. Setting $\beta = 0.5$ results in an asymptotically lower bounded confidence level of 76.1%. See [Cattaneo and Wiencierz (2012)](http://www.sciencedirect.com/science/article/pii/S0888613X12000862) for more details on setting $\beta$.
+`bet` is the $$\beta$$ value that controls the confidence level of our results. Setting $$\beta = 0.5$$ results in an asymptotically lower bounded confidence level of 76.1%. See [Cattaneo and Wiencierz (2012)](http://www.sciencedirect.com/science/article/pii/S0888613X12000862) for more details on setting $$\beta$$.
 
-`epsilon` is the probability that a given interval-valued observation does not contain the true value. The default value is set to 0, indicating that all of the interval data contain the true values. While `p` and `bet` control the type of output we are interested in, `epsilon` is a parametric representation of reality. The value is typically set subjectively based on the analyst's confidence in the data but in some cases quantitative information may be available based on past data or similar systems. Setting `epsilon` makes the assumption that $P(X_{\text{low}} \leq X \leq X_{\text{high}} \text{ and } Y_{\text{low}} \leq Y \leq Y_{\text{high}}) \geq 1-\epsilon$.
+`epsilon` is the probability that a given interval-valued observation does not contain the true value. The default value is set to 0, indicating that all of the interval data contain the true values. While `p` and `bet` control the type of output we are interested in, `epsilon` is a parametric representation of reality. The value is typically set subjectively based on the analyst's confidence in the data but in some cases quantitative information may be available based on past data or similar systems. Setting `epsilon` makes the assumption that $$P(X_{\text{low}} \leq X \leq X_{\text{high}} \text{ and } Y_{\text{low}} \leq Y \leq Y_{\text{high}}) \geq 1-\epsilon$$.
 
 `a.grid` is a parameter that controls the fineness of the approximation used to calculate the results. We'll use the default. 
 
-To summarize, we'll use our dataset, set $\beta = 0.5$ and take the default for the rest of the settings. 
+To summarize, we'll use our dataset, set $$\beta = 0.5$$ and take the default for the rest of the settings. 
 
 
 ```r
-model_lir <- s.linlir(data_idf, bet=0.5)
+model_lir <- s.linlir(data_idf, bet = 0.5)
 summary(model_lir)
 ## 
 ## Simple linear LIR analysis results 
@@ -167,15 +166,18 @@ summary(model_lir)
 
 Given these parameters, the goal of quantile regression is to determine the regression line that results in the smallest band containing the desired quantile of data points. In precise quantile regression, we use residuals to find this optimal function. In imprecise quantile regression, we consider the so-called lower and upper residuals, which are the distance between the regression line and the closest and furthest points of a given set-valued observation. 
 
+$$
 \begin{align*}
 \mathcal{B} &:= \left\{\frac{\bar{y}_i-\bar{y}_j}{\underline{x}_i-\underline{x}_j} \,:\, (i, j) \in \mathcal{D}^2 \text{ and } \underline{x}_i > \underline{x}_j \text{ and  }\bar{y}_i > \bar{y}_j \right\} \,\cup\, \\
 & \left\{\frac{\underline{y}_i-\underline{y}_j}{\underline{x}_i-\underline{x}_j} \,:\, (i, j) \in \mathcal{D}^2 \text{ and } \underline{x}_i > \underline{x}_j \text{ and  }\underline{y}_i < \underline{y}_j \right\} \,\cup\, \\
 & \left\{\frac{\bar{y}_i-\bar{y}_j}{\bar{x}_i-\bar{x}_j} \,:\, (i, j) \in \mathcal{D}^2 \text{ and } \bar{x}_i > \bar{x}_j \text{ and  }\bar{y}_i < \bar{y}_j \right\} \,\cup\, \\
 & \left\{\frac{\underline{y}_i-\underline{y}_j}{\bar{x}_i-\bar{x}_j} \,:\, (i, j) \in \mathcal{D}^2 \text{ and } \bar{x}_i > \bar{x}_j \text{ and  }\underline{y}_i > \underline{y}_j \right\} \,\cup\, \{0\}
 \end{align*}
+$$
 
 These lower and upper residuals will produce a set of regression lines, rather than a single line. 
 
+$$
 \begin{align*}
 \underline{z}_{b,i} = 
 \begin{cases}
@@ -184,7 +186,9 @@ These lower and upper residuals will produce a set of regression lines, rather t
 \underline{y}_i - b\bar{x}_i & \text{if } b > 0
 \end{cases}
 \end{align*}
+$$
 
+$$
 \begin{align*}
 \bar{z}_{b,i} = 
 \begin{cases}
@@ -193,20 +197,23 @@ These lower and upper residuals will produce a set of regression lines, rather t
 \bar{y}_i - b\underline{x}_i & \text{if } b > 0
 \end{cases}
 \end{align*}
+$$
 
-From this set, we'll find the set of all *undominated* regression functions. We call a regression function undominated if no other function provides a better fit across all possible lower and upper residuals. Mathematically, we find this set by first finding smallest upper residual across all possible regression functions, $\bar{q}_{LRM} = \inf_{f \in F{\bar{r}_{f,(\bar{k})}}}$, then take the set of all functions whose lower residual is less than or equal to that bound, $\mathcal{U} = \{f \in F : \underline{r}_{f,(\underline{k})} \leq \bar{q}_{LRM}\}$. Combining these formulas with our explicit residuals, we have
+From this set, we'll find the set of all *undominated* regression functions. We call a regression function undominated if no other function provides a better fit across all possible lower and upper residuals. Mathematically, we find this set by first finding smallest upper residual across all possible regression functions, $$\bar{q}_{LRM} = \inf_{f \in F{\bar{r}_{f,(\bar{k})}}}$$, then take the set of all functions whose lower residual is less than or equal to that bound, $$\mathcal{U} = \{f \in F : \underline{r}_{f,(\underline{k})} \leq \bar{q}_{LRM}\}$$. Combining these formulas with our explicit residuals, we have
 
+$$
 \begin{align*}
 \bar{q}_{LRM} &= \frac{1}{2} \min_{(b,j) \in \mathcal{B} \times \{1,\ldots,n-\bar{k}+1\}}{(\bar{z}_{b,[j]}-\underline{z}_{b,(j)})} \\
 \mathcal{U} = \{f \in \mathcal{F} \,:\, \bar{r}_{f,(\bar{k})} = \bar{q}_{LRM}\} &\supseteq \{f_{a',b'} \,:\, (b',j') \in  \text{argmin}_{(b,j) \in \mathcal{B} \times \{1,\ldots,n-\bar{k}+1\}}\{(\bar{z}_{b,[j]}-\underline{z}_{b,(j)})\} \\
 & \text{ and } a' = \frac{1}{2} (\underline{z}_{b',(j')}+\bar{z}_{b',[j']})  \}
 \end{align*}
+$$
 
 This set of functions represents the statistical uncertainty from the finite sample (like precise regression) but also the measurement uncertainty from the imprecise data (unlike precise regression). 
 
 The good news: `linLIR` implements an algorithm that conducts this search and optimization process. 
 
-The bad news: the algorithmic complexity is $O(n^3\log{n})$...which is very expensive and also why our sample set is only 17 observations! A sample size of 500 observations should take about an hour to run. 
+The bad news: the algorithmic complexity is $$O(n^3\log{n})$$...which is very expensive and also why our sample set is only 17 observations! A sample size of 500 observations should take about an hour to run. 
 
 In this case, the set of undominated regression functions does not have a conclusively positive or negative slope, likely because of the outliers in the top right. However, our best estimate in blue, the likelihood-based region minimax (LRM) estimate (listed as "f.lrm" in the numeric results), agrees with the majority of undominated functions with a significant negative slope. Unlike confidence intervals in precise regression, note that our set of functions is not convex - there are spaces between some lines. This feature of imprecise regression is common when there is significant variation in the shape and spacing of the data. When the data are more homogenous and we have more samples, the result-set tends to approach a convex set, which resembles a traditional confidence interval. It is also important to note that this package randomly samples a subset of lines to display on the plot to restrict computation and graphics processing, which can also result in incorrectly displayed whitespace.  
 
@@ -241,25 +248,16 @@ Another closely related approach is traditional sensitivity analysis. This is ea
 
 ## Exercises {#exercises}
 
-1. Using the `linLIR` package load the `pm10` dataset as an interval data frame (don't forget to start with a clean session of R...no tidyverse). Extract the first 50 rows of the data and label the first variable as "Particulate Matter" and the second as "VO2 Max". Particulate matter ($PM_{10}$) is the standardized relative parts per million of coarse pollutants in the air, a measure of air quality. Maximal aerobic capacity ($VO_2 \text{Max}$) is the maximal rate of oxygen uptake during exercise, a measure of fitness.
+1. Using the `linLIR` package load the `pm10` dataset as an interval data frame (don't forget to start with a clean session of R...no tidyverse). Extract the first 50 rows of the data and label the first variable as "Particulate Matter" and the second as "VO2 Max". Particulate matter ($$PM_{10}$$) is the standardized relative parts per million of coarse pollutants in the air, a measure of air quality. Maximal aerobic capacity ($$VO_2 \text{Max}$$) is the maximal rate of oxygen uptake during exercise, a measure of fitness.
 
-     Plot $VO_2 \text{Max}$ by $PM_{10}$. Which variable is measured more precisely?
+     Plot $$VO_2 \text{Max}$ by $PM_{10}$$. Which variable is measured more precisely?
 
      (Note: this a notional interpretation of the toy variables in the package and does not reflect real data)
 
 
-
-
-
 2. Fit a likelihood-based imprecise regression model predicting the 80th percentile of V02 Max by Particulate Matter. What are your interval estimates for the slope and intercept of the regression line? 
 
-
-
-
 3. Plot the undominated regression lines from your previous model. Give two possible explanations for the white space between the regression lines.
-
-
-
 
 4. How does your confidence level change if you fit the 50th percentile instead? Why?
 
