@@ -4,7 +4,7 @@ title: Imprecise Regression
 permalink: /imprecise_regression
 ---
 
-<img src="/public/images/analytics/imprecise_regression/unnamed-chunk-3-1.png"  style="float:right; margin: 2px -5px 0px 10px; width: 50%; height: 50%;" />
+<img src="/public/images/analytics/imprecise_regression/unnamed-chunk-3-1.png"  style="float:right; margin: 0px -5px 0px 10px; width: 45%; height: 45%;" />
 Imprecise regression is a generalization of linear regression that gives us stronger tools for modeling uncertainty. In a typical linear regression setting, we consider the input data to be precise observations: single points. In imprecise regression, we generalize the notion of observations to intervals rather than points. This allows us to more accurately represent scenarios with measurement error or other sources of uncertainty that make our input data "fuzzy". In many regression applications, the error introduced by treating the observations as precise numbers is insignificant. However, when there is deep uncertainty or high sensitivity to changes in the model, imprecise regression is appropriate. In a military context, we often face both of these challenges, particularly in intelligence applications. 
 
 This tutorial is based on the imprecise regression work in [Cattaneo and Wiencierz (2012)](http://www.sciencedirect.com/science/article/pii/S0888613X12000862). 
@@ -119,9 +119,9 @@ plot(data_idf, typ = "draft", k.x = 10, k.y = 10, p.cex = 1.5, y.las = 1, y.adj 
 
 ## Likelihood-based imprecise regression {#lir}
 
-The `linLIR` package is built specifically for simple linear regression, so we'll be fitting the model $y=a+bx$, using the imprecise data. Mirroring the set nature of the $$x$$ and $$y$$ variables, our estimates for $$a$$ and $$b$$ will also be set-valued. 
+The `linLIR` package is built specifically for simple linear regression, so we'll be fitting the model $$y=a+bx$$, using the imprecise data. Mirroring the set nature of the $$x$$ and $$y$$ variables, our estimates for $$a$$ and $$b$$ will also be set-valued. 
 
-Before we can estimate the slope and intercept, we need to set some parameters for the LIR method. We'll call the `s.linlir` function to conduct the optimization. The syntax is `s.linlir(dat.idf, var=NULL, p=0.5, bet, epsilon=0, a.grid=100)`, let's consider each input:
+Before we can estimate the slope and intercept, we need to set some parameters for the LIR method. We'll call the `s.linlir` function to conduct the optimization. The syntax is `s.linlir(dat.idf, var = NULL, p = 0.5, bet, epsilon = 0, a.grid = 100)`, let's consider each input:
 
 `dat.idf` is the interval data frame that contains our data. We created this in our previous step.
 
@@ -219,7 +219,7 @@ In this case, the set of undominated regression functions does not have a conclu
 
 
 ```r
-plot(model_lir, typ="qlrm", lrm.col="blue", pl.dat=TRUE, pl.dat.typ="draft",
+plot(model_lir, typ = "qlrm", lrm.col = "blue", pl.dat = TRUE, pl.dat.typ = "draft",
      k.x=10, k.y=10, y.las=1, y.adj=6)
 ```
 
@@ -229,7 +229,7 @@ The non-convex nature of the results can also be seen directly in the parameter 
 
 
 ```r
-plot(model_lir, typ="para", x.adj=0.7, y.las=1, y.adj=6, y.padj=-3)
+plot(model_lir, typ = "para", x.adj = 0.7, y.las = 1, y.adj = 6, y.padj = -3)
 ```
 
 <img src="/public/images/analytics/imprecise_regression/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
@@ -250,7 +250,7 @@ Another closely related approach is traditional sensitivity analysis. This is ea
 
 1. Using the `linLIR` package load the `pm10` dataset as an interval data frame (don't forget to start with a clean session of R...no tidyverse). Extract the first 50 rows of the data and label the first variable as "Particulate Matter" and the second as "VO2 Max". Particulate matter ($$PM_{10}$$) is the standardized relative parts per million of coarse pollutants in the air, a measure of air quality. Maximal aerobic capacity ($$VO_2 \text{Max}$$) is the maximal rate of oxygen uptake during exercise, a measure of fitness.
 
-     Plot $$VO_2 \text{Max}$ by $PM_{10}$$. Which variable is measured more precisely?
+     Plot $$VO_2 \text{Max}$$ by $$PM_{10}$$. Which variable is measured more precisely?
 
      (Note: this a notional interpretation of the toy variables in the package and does not reflect real data)
 
