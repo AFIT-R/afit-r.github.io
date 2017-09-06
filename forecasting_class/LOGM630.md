@@ -5,7 +5,10 @@ layout: page
 permalink: /logm630
 ---
 
-Welcome to Applied Business Analytics with R! This course provides an applied introduction to the field of business analytics, which has been defined as the extensive use of data, statistical and quantitative analysis, exploratory and predictive models, and fact-based management to drive decisions and actions.  In this course you will experience an intensive, hands-on introduction to applied business analytics with the R programming language. You will learn and apply the fundamental skills required to acquire, munge, transform, manipulate, visualize, and analyze data in a computing environment that fosters reproducibility. 
+Companies, governments and other organizations now collect and analyze huge amounts of data about suppliers, clients, employees, citizens, transactions, and much more. There are a number of ways organizations can use this data. Business analytics uses this data to make better decisions and forecasting is a powerful and commonly used branch of business analytics. Forecasting especially can provide a potent toolkit for analyzing time series data.
+
+This course focuses on forecasting time series, where past and present values are used to forecast future values of a series of interest. This course covers issues relating to different steps of the forecasting process, from goal definition, through data visualization, modeling, and performance evaluation to model deployment.
+ 
 
 
 
@@ -21,98 +24,46 @@ Welcome to Applied Business Analytics with R! This course provides an applied in
 * Location: Bldg 640, Rm 232
 * Credits: 3
 * Prereqs: NA
-* Webpage: [https://afit-r.github.io/logm682](https://afit-r.github.io/logm682)
-* Additional Resources: [https://afit-r.github.io/](https://afit-r.github.io/)
+* Webpage: [https://afit-r.github.io/logm630](https://afit-r.github.io/logm682)
+* Additional Resources: [http://www.forecastingbook.com/](http://www.forecastingbook.com/)
 
 
 ## Course Objectives
 
-Upon successfully completing this course, you will be able to:
+The primary objective of this course is to help the student understand the basic analytic techniques and processes for forecasting and how to use them to make better decisions. More specifically, at the completion of the course, each student should be able to:
 
-- Perform your data analysis in a literate programming environment
-- Import and manage structured and unstructured data
-- Manipulate, transform, and summarize your data
-- Join disparate data sources
-- Methodically explore and visualize your data
-- Perform iterative functions
-- Write your own functions
-- Understand the implementation of a breadth of modeling techniques
-- Execute an analytic technique thoroughly
+- Define a forecasting task and workflow
+- Evaluate a forecasting performance
+- Apply and be familiar with popular forecasting methods
+- Explore, identify and model different types of patterns in time series
+- Be able to implement a forecasting process in practice
 
-...all with R!
+
+## Resources
+
+Students can use one of the following books.  Both books cover the same topics, one focuses on implementing the techniques in the R programming language while the other focuses on implemention with XLMiner, an Excel add-on.
+
+- *Practical Time Series Forecasting with R: A Hands-On Guide* (2nd Ed.) by Shmueli & Lichtendahl, ISBN-10: 0997847913
+- *Practical Time Series Forecasting: A Hands-On Guide* (3rd Ed.) by G. Shmueli, ISBN-10: 0991576659
+
+In addition to the book, students will participate in a 6 week free online course ([Business Analytics Using Forecasting](https://www.futurelearn.com/courses/business-analytics-forecasting)) led by the author of the textbook.  This course closely aligns with the book and covers the first 7 chapters.  Students will need to register for this couse and be prepared to start the first session on Oct 2nd.  Students can find a link to register for this course at [http://www.forecastingbook.com/mooc](http://www.forecastingbook.com/mooc).
+
+Students can also leverage the textbook’s website ([http://www.forecastingbook.com/home](http://www.forecastingbook.com/home)) for additional resources such as data, R code, XLMiner tutorial videos, and additional video discussions for each chapter of the book.
+
 
 ## Class Structure 
 
-This class emphasizes a *"flipped"* class style where you learn the material outside of class and then spend the majority of in-class time reviewing and executing code.
+This course blends textbook reading with online lectures and demonstrations that emphasize discussion and illustration of methods, as well as hands-on, practical applications that provide both a sound base of learning and an opportunity to test and develop skill.  Students will blend learning from the textbook with the 6 week online course.  A **flipped** classroom will be emphasized where students spend time outside the classroom learning the material via the textbook and online course and the majority of in-class activities will be reserved to review, clarify, and do hands-on projects.  Thus, students should bring a laptop to class and be prepared to implement the tools and skills they are learning.  Students should expect to dedicate approximately 2 hours of time outside of the classroom performing coursework for every 1 hour in the classroom.
 
-### First Half of Quarter
+## Performance Evaluation
 
-Each week I plan to have you read through selected tutorials on specific analytic activities in R. I will assign problems/activities that you will need to perform prior to each session. Then in each class I'll spend about 15-30 minutes reviewing the analytic activity and answer any burning questions. Then you will break up into defined small groups and review each others code and approaches to solving the assigned problems. And finally, for the last 30-45 min of class you and your small group will work together to complete another task. 
+This is a project-based course.  Depending on enrollment, students will work in groups of 4-5 students.  Throughout the course each group will spend classroom time completing *__all three__* of the case studies listed in the back of the textbook. Your final course grade will be determined according to the following requirements and their respective weights. 
 
-The purpose for this course structure is multi-dimensional:
-
-1. It will teach you to read and learn R programming tutorials and techniques on your own
-2. The out-of-class assignments will force you to come to each class prepared and these assignments will also prepare you for your final project
-3. The in-class peer review will help you get feedback on your code and also teach you to review other people's code
-4. The in-class small group work will teach you to work on a coding task collaboratively and within a constrained time limit
-
-### Second Half of Quarter
-
-The second half of the quarter will be student driven.  Students will select an analytic technique that is relevant to their thesis.  Students will learn how to execute this technique along with interpreting and validating the results.  Students will generate a toy-problem tutorial and present/teach to the class.  Furthermore, students will apply this technique to their thesis data for their final project.  By the end of this class you should have initial results for one of your thesis objectives!
-
-
-## Material
-
-All required classroom material will be provided in class or online. Any recommended yet optional material will also be provided in the classroom notes.
-
-## Schedule
-
-*tentative*
-
-| Week          | Lesson Description & Material | 
-|:-------------:|--------------|
-| **1**         | **Introduction & Reproducibility**  | 
-|  Jun 27       | Intro to data science, R, and course outline &nbsp;&nbsp; <a href="https://afit-r.github.io/module-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-|  Jun 28       | Managing workflow & reproducibility &nbsp;&nbsp; <a href="https://afit-r.github.io/module-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-| **2**         | **First Date Guidelines for Data**  | 
-|  Jul 4        | Importing & exporting data (__*No Class*__)  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-|  Jul 5        | Getting to know your data  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-| **3**         | **Exploratory Data Analysis**   | 
-|  Jul 11       | Advancing your visualizations with <code>ggplot2</code> &nbsp;&nbsp; <a href="https://afit-r.github.io/module-5" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  | 
-|  Jul 12       | <code>dplyr</code> for data transformation  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-6" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-| **4**         | **Controlling Your Data**  | 
-|  Jul 18       | Data structures & tidyness  &nbsp;&nbsp; <a href="https://afit-r.github.io/module-7" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-|  Jul 19       | Relational data &nbsp;&nbsp; <a href="https://afit-r.github.io/module-8" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-| **5**         | **Dealing with Different Types of Data**  | 
-|  Jul 25       | Text mining &nbsp;&nbsp; <a href="https://afit-r.github.io/module-9" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-|  Jul 26       | Factors & dates &nbsp;&nbsp; <a href="https://afit-r.github.io/module-10" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-| **6**         | **Creating Efficient Code**  | 
-| Aug 1         | Writing functions &nbsp;&nbsp; <a href="https://afit-r.github.io/module-11" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-| Aug 2         | Iteration &nbsp;&nbsp; <a href="https://afit-r.github.io/module-12" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> | 
-| **7**         | **Bonus Week**    | 
-| Aug 8         | Analytic development | 
-| Aug 9         | Analytic development | 
-| **8**         | **Student-led Analytic Learning**    | 
-| Aug 15        | Analytic technique | 
-| Aug 16        | Analytic technique | 
-| **9**         | **Student-led Analytic Learning**    | 
-|  Aug 22       | Analytic technique | 
-|  Aug 23       | Analytic technique | 
-| **10**        | **Student-led Analytic Learning**    | 
-| Aug 29        | Analytic technique | 
-| Aug 30        | Analytic technique | 
-| **11**        | **Finals Week:**   | 
-| Sep 6         | *No class* - final project due  | 
-
-
-## Grading Policies
-
-Course grades will consist of: 
-
-- 10% [engagement](engagement)
-- 20% [student-led analytic learning](student_led)
-- 30% [project deliverables](deliverables)
-- 40% [final project](final_project)
+- 15% [Case studies eval #1]()
+- 15% [Case studies eval #2]()
+- 20% [Group presentation]()
+- 40% [Final case study]()
+- 10% [Engagement]()
 
 - There will be no midterm or final exam
 
@@ -127,6 +78,53 @@ Final grades will be distributed according to the following cutoffs:
 - C &nbsp;&nbsp;&nbsp;&nbsp;       73 – 76%
 - C- &nbsp;&nbsp;      70 – 72%
 - D & F &nbsp;  Hopefully None!
+
+### Case Study Evaluations
+
+Throughout the term you will progressively complete all three case studies.  You will submit your case study progress two times during the term for progress evaluations.  These progress checks will provide you direction for final completion.  Further guidance regarding expectations for each case study evaluation will be provided in class.
+
+### Group Presentation
+
+During week 10, each group will select one of their case studies to present.  Although your case study analysis may only be 90% complete at this time, this provides an opportunity to present your work to date and receive feedback from the class and instructor on where improvements and clarification could be made.  Further guidance regarding expectations for the group presentation will be provided in class.
+
+### Final Case Study
+
+Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  Further guidance regarding expectations for the final case study submissions will be provided in class.
+
+### Engagement
+
+At the end of the term I will have all students perform a peer assessment of their small group members. This assessment will rate each member in several areas regarding:
+
+- Engaging in quality discussions with the group to improve forecasting knowledge
+- Coming to each class prepared to further the case study analyses
+- Providing adequate contribution to group work
+- Working well as a team member in the small group activities
+- etc.
+
+I will use this feedback to help in determining your level of engagement. 
+
+
+## Schedule
+
+*tentative*
+
+| Week    | Dates  | Lesson Description | Learning Material | Deliverables |
+|:-------:|--------|--------------------|-------------------|--------------|
+| **1**   |Oct 2-6      | Forecasting approach & data |          |              |
+| **2**   |Oct 9-13     | Performance Evaluation      |          |              |
+| **3**   |Oct 16-20    | Overview of forecasting methods & Understanding smoothing methods |          |              |
+| **4**   |Oct 23-27    | Understanding smoothing methods |          |    Case studies Eval #1          |
+| **5**   |Oct 30-Nov 3 | Regression models: trend and seasonality |          |              |
+| **6**   |Nov 6-10     | Regression models: autocorrelation & external information |          |              |
+| **7**   |Nov 13-17    | Communication & maintenance |          |    Case studies Eval #2    |
+| **8**   |Nov 20-24    | Forecasting binary outcomes |          |              |
+| **9**   |Nov 27-Dec 1 | Neural networks             |          |              |
+| **10**  |Dec 4-8      | Group presentations         |          |  Group presentation  |
+| **11**  |Dec 11-15    | Finals week                 |          |  Case studies due  |
+
+
+
+
 
 
 ## Software
