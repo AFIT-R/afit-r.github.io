@@ -5,7 +5,7 @@ permalink: /ann_regression
 ---
 
 <img src="/public/images/analytics/deep_learning/regress05-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 30%; height: 30%;" />
-Regression ANNs predict an output variable as a function of the inputs. The input features (independent variables) can be categorical or numeric types, however, for regression ANNs, we require a numeric dependent variable. If the output variable is a categorical variable (or binary) the ANN will function as a classifier (see next tutorial).
+Regression ANNs predict an output variable as a function of the inputs. The input features (independent variables) can be categorical or numeric types, however, for regression ANNs, we require a numeric dependent variable. If the output variable is a categorical variable (or binary) the ANN will function as a classifier (see [next tutorial](ann_classification)).
 
 <br>
 
@@ -240,7 +240,7 @@ We have briefly covered regression ANNs in this tutorial. In the next tutorial w
 * `RSNNS`  
 * `h2o`
 
-Before you move on to the next tutorial, test your new knowledge on the exercises that follow.
+Before you move on to the [next tutorial](ann_classification), test your new knowledge on the exercises that follow.
 
 1. Why do we split the yacht data into a training and test data sets?
 2. Re-load the Yacht Data from the UCI Machine learning repository yacht data **without scaling**. Run any regression ANN. What happens? Why do you think this happens?
