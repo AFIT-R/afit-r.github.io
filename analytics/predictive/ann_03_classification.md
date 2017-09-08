@@ -60,7 +60,7 @@ A brief examination of the data set...
 ggpairs(Hab_Data, title = "Scatterplot Matrix of the Features of the Haberman's Survival Data Set")
 ```
 
-<img src="ANN_classification_files/figure-html/class01-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/deep_learning/class01-1.png" style="display: block; margin: auto;" />
 
 shows that many more patients survived at least 5 years after the operation. Of the patients that survived (bottom-subplots of the `Survival` row in the Scatterplot Matrix), we see many of the patients have few numbers of positive axillary nodes detected. Examination of the `Age` feature shows a few of the most elderly patients died within 5 years, and of the youngest patients we see increased 5-year survivability. We forego any more detailed visual inspection in favor of learning the relationships between the features using our classification ANN. 
 
@@ -111,7 +111,7 @@ The `Hab_NN1` is a list containing all parameters of the classification ANN as w
 plot(Hab_NN1, rep = 'best')
 ```
 
-<img src="ANN_classification_files/figure-html/class02-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/deep_learning/class02-1.png" style="display: block; margin: auto;" />
 
 The error displayed in this plot is the cross-entropy error, which is a measure of the differences between the predicted and observed output for each of the observations in the `Hab_Data` data set. To view the `Hab_NN1` AIC, BIC, and error metrics run the following.
 
@@ -179,7 +179,7 @@ Class_NN_ICs %>%
   ggtitle("AIC, BIC, and Cross-Entropy Error of the Classification ANNs", "Note: ce Error displayed is 100 times its true value")
 ```
 
-<img src="ANN_classification_files/figure-html/class03-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/deep_learning/class03-1.png" style="display: block; margin: auto;" />
 
 The plot indicates that as we add hidden layers and nodes within those layers, our AIC and cross-entropy error grows. The BIC appears to remain relatively constant across the designs. Here we have a case where Occam's razor clearly applies, the 'best' classification ANN is the simplest. 
 <br>
