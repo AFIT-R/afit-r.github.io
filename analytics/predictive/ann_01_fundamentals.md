@@ -50,19 +50,18 @@ The artificial analog of the biologic neuron is shown below in figure 2. In the 
 The inputs to the artificial neuron may correspond to raw data values, or in deeper architectures, may be outputs from preceding artificial neurons. The transfer function sums all the inputs together (cumulative inputs). If the summed input values reach a specified threshold, the activation function generates an output signal (all or nothing). The output signal then moves to a raw output or other neurons depending on specific ANN architecture. This basic artificial neuron is combined with multiple other artificial neurons to create an ANNs such as the ones shown in figure 3. 
 
 <a href="https://commons.wikimedia.org/wiki/File:Single_layer_ann.svg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Single_layer_ann.svg" style="float: left; width: 30%; margin-right: 10%; margin-bottom: 0.5em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Single_layer_ann.svg" style="float: left; width: 25%; margin-right: 10%; margin-bottom: 0.5em;">
 </a>
 <a href="https://commons.wikimedia.org/wiki/File:Two_layer_ann.svg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Two_layer_ann.svg" style="float: left; width: 30%; margin-right: 10%; margin-bottom: 0.5em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Two_layer_ann.svg" style="float: left; width: 25%; margin-right: 10%; margin-bottom: 0.5em;">
 </a>
-<a href="https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg" style="float: left; width: 30%; margin-right: 10%; margin-bottom: 0.5em;">
+<a href="https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg" style="float: left; width: 28%; margin-right: 1%; margin-bottom: 0.5em;">
 </a>
 
 <p style="clear: both;"></p>
 
-<center>
-Figure 3: Examples of Multi-Neuron ANNs
-</center>
+
+**Figure 3: Examples of Multi-Neuron ANNs**--Source: Click images
 
 ANNs are often described as having an **Input** layer, **Hidden** layer, and **Output** layer. The input layer reads in data values from a user provided input. Within the hidden layer is where a majority of the 'learning' takes place, and the output layer displays the results of the ANN. In the bottom plot of the figure, each of the red input nodes correspond to an input vector $$\vec{x}_{i}$$. Each of the black lines with correspond to a weight, $$w^{(l)}_{ij}$$, and describe how artificial neurons are connections to one another within the ANN. The $$i$$ subscript identifies the source and the $$j$$ subscript describes to which artificial neuron the weight connects the source to. The green output nodes are the output vectors $$\vec{y}_{q}$$. 
 
