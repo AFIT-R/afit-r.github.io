@@ -58,6 +58,8 @@ The inputs to the artificial neuron may correspond to raw data values, or in dee
 <a href="https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg" style="float: left; width: 30%; margin-right: 10%; margin-bottom: 0.5em;">
 </a>
 
+<p style="clear: both;">
+
 <center>
 Figure 3: Examples of Multi-Neuron ANNs
 </center>
