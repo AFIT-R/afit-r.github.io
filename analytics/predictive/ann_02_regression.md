@@ -4,6 +4,7 @@ title: Regression Artificial Neural Network
 permalink: /ann_regression
 ---
 
+<img src="/public/images/analytics/deep_learning/regress05-1.png"  style="float:right; margin: 2px 0px 0px 10px; width: 30%; height: 30%;" />
 Regression ANNs predict an output variable as a function of the inputs. The input features (independent variables) can be categorical or numeric types, however, for regression ANNs, we require a numeric dependent variable. If the output variable is a categorical variable (or binary) the ANN will function as a classifier (see next tutorial).
 
 <br>
