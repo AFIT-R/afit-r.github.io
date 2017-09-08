@@ -49,9 +49,10 @@ The artificial analog of the biologic neuron is shown below in figure 2. In the 
 
 The inputs to the artificial neuron may correspond to raw data values, or in deeper architectures, may be outputs from preceding artificial neurons. The transfer function sums all the inputs together (cumulative inputs). If the summed input values reach a specified threshold, the activation function generates an output signal (all or nothing). The output signal then moves to a raw output or other neurons depending on specific ANN architecture. This basic artificial neuron is combined with multiple other artificial neurons to create an ANNs such as the ones shown in figure 3. 
 
-
-![Figure 3: Examples Multi-Neuron ANNs](https://upload.wikimedia.org/wikipedia/commons/b/be/Single_layer_ann.svg)![Figure 3: Examples Multi-Neuron ANNs](https://upload.wikimedia.org/wikipedia/commons/7/7f/Two_layer_ann.svg)![Figure 3: Examples Multi-Neuron ANNs](https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg)
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Single_layer_ann.svg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Two_layer_ann.svg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+<p style="clear: both;">
 
 **Figure 3: Examples of Multi-Neuron ANNs** Sources:
 Top-Left: McStrother [Wikipedia](https://commons.wikimedia.org/wiki/File:Single_layer_ann.svg)
