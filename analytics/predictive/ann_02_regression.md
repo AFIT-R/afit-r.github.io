@@ -137,9 +137,10 @@ We have constructed the most basic of regression ANNs without modifying any of t
 # 2-Hidden Layers, Layer-1 4-neurons, Layer-2, 1-neuron, logistic activation
 # function
 set.seed(12321)
-Yacht_NN2 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Disp_Ratio + 
-    Beam_Draut_Ratio + Length_Beam_Ratio + Froude_Num, data = Yacht_Data_Train, 
-    hidden = c(4, 1), act.fct = "logistic")
+Yacht_NN2 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Disp_Ratio + Beam_Draut_Ratio + Length_Beam_Ratio + Froude_Num, 
+                       data = Yacht_Data_Train, 
+                       hidden = c(4, 1), 
+                       act.fct = "logistic")
 
 ## Training Error
 NN2_Train_SSE <- sum((Yacht_NN2$net.result - Yacht_Data_Train[, 7])^2)/2
@@ -158,9 +159,10 @@ Yacht_Data_Test <- Yacht_Data_Test %>% mutate_all(scale11)
 # 2-Hidden Layers, Layer-1 4-neurons, Layer-2, 1-neuron, tanh activation
 # function
 set.seed(12321)
-Yacht_NN3 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Disp_Ratio + 
-    Beam_Draut_Ratio + Length_Beam_Ratio + Froude_Num, data = Yacht_Data_Train, 
-    hidden = c(4, 1), act.fct = "tanh")
+Yacht_NN3 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Disp_Ratio + Beam_Draut_Ratio + Length_Beam_Ratio + Froude_Num, 
+                       data = Yacht_Data_Train, 
+                       hidden = c(4, 1), 
+                       act.fct = "tanh")
 
 ## Training Error
 NN3_Train_SSE <- sum((Yacht_NN3$net.result - Yacht_Data_Train[, 7])^2)/2
@@ -171,9 +173,9 @@ NN3_Test_SSE <- sum((Test_NN3_Output - Yacht_Data_Test[, 7])^2)/2
 
 # 1-Hidden Layer, 1-neuron, tanh activation function
 set.seed(12321)
-Yacht_NN4 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Disp_Ratio + 
-    Beam_Draut_Ratio + Length_Beam_Ratio + Froude_Num, data = Yacht_Data_Train, 
-    act.fct = "tanh")
+Yacht_NN4 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Disp_Ratio + Beam_Draut_Ratio + Length_Beam_Ratio + Froude_Num, 
+                       data = Yacht_Data_Train, 
+                       act.fct = "tanh")
 
 ## Training Error
 NN4_Train_SSE <- sum((Yacht_NN4$net.result - Yacht_Data_Train[, 7])^2)/2
@@ -183,13 +185,17 @@ Test_NN4_Output <- compute(Yacht_NN4, Yacht_Data_Test[, 1:6])$net.result
 NN4_Test_SSE <- sum((Test_NN4_Output - Yacht_Data_Test[, 7])^2)/2
 
 # Bar plot of results
-Regression_NN_Errors <- tibble(Network = rep(c("NN1", "NN2", "NN3", "NN4"), 
-    each = 2), DataSet = rep(c("Train", "Test"), time = 4), SSE = c(NN1_Train_SSE, 
-    NN1_Test_SSE, NN2_Train_SSE, NN2_Test_SSE, NN3_Train_SSE, NN3_Test_SSE, 
-    NN4_Train_SSE, NN4_Test_SSE))
+Regression_NN_Errors <- tibble(Network = rep(c("NN1", "NN2", "NN3", "NN4"), each = 2), 
+                               DataSet = rep(c("Train", "Test"), time = 4), 
+                               SSE = c(NN1_Train_SSE, NN1_Test_SSE, 
+                                       NN2_Train_SSE, NN2_Test_SSE, 
+                                       NN3_Train_SSE, NN3_Test_SSE, 
+                                       NN4_Train_SSE, NN4_Test_SSE))
 
-Regression_NN_Errors %>% ggplot(aes(Network, SSE, fill = DataSet)) + geom_col(position = "dodge") + 
-    ggtitle("Regression ANN's SSE")
+Regression_NN_Errors %>% 
+  ggplot(aes(Network, SSE, fill = DataSet)) + 
+  geom_col(position = "dodge") + 
+  ggtitle("Regression ANN's SSE")
 ```
 
 <img src="/public/images/analytics/deep_learning/regress03-1.png" style="display: block; margin: auto;" />
@@ -209,9 +215,11 @@ We have looked at one ANN for each of the hyperparameter settings. Generally, re
 
 ```r
 set.seed(12321)
-Yacht_NN2 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Disp_Ratio + 
-    Beam_Draut_Ratio + Length_Beam_Ratio + Froude_Num, data = Yacht_Data_Train, 
-    hidden = c(4, 1), act.fct = "logistic", rep = 10)
+Yacht_NN2 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Disp_Ratio + Beam_Draut_Ratio + Length_Beam_Ratio + Froude_Num, 
+                       data = Yacht_Data_Train, 
+                       hidden = c(4, 1), 
+                       act.fct = "logistic", 
+                       rep = 10)
 
 plot(Yacht_NN2, rep = "best")
 ```
