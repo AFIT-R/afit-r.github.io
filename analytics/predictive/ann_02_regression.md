@@ -58,11 +58,11 @@ Prior to any data analysis lets take a look at the data set.
 ggpairs(Yacht_Data, title = "Scatterplot Matrix of the Features of the Yacht Data Set")
 ```
 
-<img src="ANN_regression_files/figure-html/regress01-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/deep_learning/regress01-1.png" style="display: block; margin: auto;" />
 
 Here we see an excellent summary of the variation of each feature in our data set. Draw your attention to the bottom-most strip of scatter-plots. This shows the `residuary resistance` as a function of the other data set features (independent experimental values). The greatest variation appears with the `Froude Number` feature. It will be interesting to see how this pattern appears in the subsequent regression ANNs. 
 
-Prior to regression ANN construction we first must split the Yacht data set into test and training data sets. Before we split, first scale each feature to fall in the $[0,1]$ interval.  
+Prior to regression ANN construction we first must split the Yacht data set into test and training data sets. Before we split, first scale each feature to fall in the $$[0,1]$$ interval.  
 
 
 ```r
@@ -80,7 +80,7 @@ Yacht_Data_Train <- sample_frac(tbl = Yacht_Data, replace = FALSE, size = 0.80)
 Yacht_Data_Test <- anti_join(Yacht_Data, Yacht_Data_Train)
 ```
 
-The `scale01()` function maps each data observation onto the $[0,1]$ interval as called in the `dplyr` `mutate_all()` function. We then provided a seed for reproducible results and randomly extracted (without replacement) 80% of the observations to build the `Yacht_Data_Train` data set. Using `dplyr`'s `anti_join()` function we extracted all the observations not within the `Yacht_Data_Train` data set as our test data set in `Yacht_Data_Test`.
+The `scale01()` function maps each data observation onto the $$[0,1]$$ interval as called in the `dplyr` `mutate_all()` function. We then provided a seed for reproducible results and randomly extracted (without replacement) 80% of the observations to build the `Yacht_Data_Train` data set. Using `dplyr`'s `anti_join()` function we extracted all the observations not within the `Yacht_Data_Train` data set as our test data set in `Yacht_Data_Test`.
 
 <br>
 
@@ -102,8 +102,7 @@ The `Yacht_NN1` is a list containing all parameters of the regression ANN as wel
 ```r
 plot(Yacht_NN1, rep = 'best')
 ```
-
-![](ANN_regression_files/figure-html/regress02-1.png)<!-- -->
+<img src="/public/images/analytics/deep_learning/regress02-1.png" style="display: block; margin: auto;" />
 
 This plot shows the weights learned by the `Yacht_NN1` neural network, and displays the number of iterations before convergence, as well as the SSE of the training data set. To manually compute the SSE you can use the following:
 
@@ -130,7 +129,7 @@ The `compute()` function outputs the response variable, in our case the `Residua
 
 ## Regression Hyperparameters {#hyper}
 
-We have constructed the most basic of regression ANNs without modifying any of the default hyperparameters associated with the `neuralnet()` function. We should try and improve the network by modifying its basic structure and hyperparameter modification. To begin we will add depth to the hidden layer of the network, then we will change the activation function from the *logistic* to the *tangent hyperbolicus* (tanh) to determine if these modifications can improve the test data set SSE. When using the tanh activation function, we first must rescale the data from $[0,1]$ to $[-1,1]$ using the `rescale` package. For the purposes of this exercise we will use the same random seed for reproducible results, generally this is not a best practice.
+We have constructed the most basic of regression ANNs without modifying any of the default hyperparameters associated with the `neuralnet()` function. We should try and improve the network by modifying its basic structure and hyperparameter modification. To begin we will add depth to the hidden layer of the network, then we will change the activation function from the *logistic* to the *tangent hyperbolicus* (tanh) to determine if these modifications can improve the test data set SSE. When using the tanh activation function, we first must rescale the data from $$[0,1]$$ to $$[-1,1]$$ using the `rescale` package. For the purposes of this exercise we will use the same random seed for reproducible results, generally this is not a best practice.
 
 
 ```r
@@ -192,7 +191,7 @@ Regression_NN_Errors %>% ggplot(aes(Network, SSE, fill = DataSet)) + geom_col(po
     ggtitle("Regression ANN's SSE")
 ```
 
-<img src="ANN_regression_files/figure-html/regress03-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/deep_learning/regress03-1.png" style="display: block; margin: auto;" />
 
 As evident from the plot, we see that the best regression ANN we found was `Yacht_NN2` with a training and test SSE of 0.0188 and 0.0057. We make this determination by the value of the training and test SSEs only. `Yacht_NN2`'s structure is presented here:
 
@@ -201,7 +200,7 @@ As evident from the plot, we see that the best regression ANN we found was `Yach
 plot(Yacht_NN2, rep = "best")
 ```
 
-<img src="ANN_regression_files/figure-html/regress04-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/deep_learning/regress04-1.png" style="display: block; margin: auto;" />
 
 
 We have looked at one ANN for each of the hyperparameter settings. Generally, researchers look at more than one ANN for a given setting of hyperparameters. This capability is built into the `neuralnet` package using the `rep` argument in the `neuralnet()` function. Using the `Yacht_NN2` hyperparameters we construct 10 different ANNs, and select the best of the 10.
@@ -216,7 +215,7 @@ Yacht_NN2 <- neuralnet(Residuary_Resist ~ LongPos_COB + Prismatic_Coeff + Len_Di
 plot(Yacht_NN2, rep = "best")
 ```
 
-<img src="ANN_regression_files/figure-html/regress05-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/deep_learning/regress05-1.png" style="display: block; margin: auto;" />
 
 By setting the same seed, prior to running the 10 repetitions of ANNs, we force the software to reproduce the exact same `Yacht_NN2` ANN for the first replication. The subsequent 9 generated ANNs, use a different random set of starting weights. Comparing the 'best' of the 10 repetitions, to the `Yacht_NN2`, we observe a decrease in training set error indicating we have a superior set of weights. 
 
