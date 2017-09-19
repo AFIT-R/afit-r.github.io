@@ -109,7 +109,7 @@ I will use this feedback to help in determining your level of engagement.
 *tentative*
 
 | Week    | Dates  | Lesson Description | Learning Material | Deliverables |
-|:-------:|--------|--------------------|-------------------|--------------|
+|:-------:|--------|--------------------|:-----------------:|:------------:|
 | **1**   |Oct 2-6      | Forecasting approach & data | CH 1 & 2 \nMOOC week 1   |              |
 | **2**   |Oct 9-13     | Performance Evaluation      |          |              |
 | **3**   |Oct 16-20    | Overview of forecasting methods & Understanding smoothing methods |          |              |
