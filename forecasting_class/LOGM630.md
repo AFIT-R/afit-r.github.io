@@ -59,11 +59,11 @@ This course blends textbook reading with online lectures and demonstrations that
 
 This is a project-based course.  Depending on enrollment, students will work in groups of 4-5 students.  Throughout the course each group will spend classroom time completing *__all three__* of the case studies listed in the back of the textbook. Your final course grade will be determined according to the following requirements and their respective weights. 
 
-- 15% [Case studies eval #1]()
-- 15% [Case studies eval #2]()
-- 20% [Group presentation]()
-- 40% [Final case study]()
-- 10% [Engagement]()
+- 15% [Case studies eval #1](#eval)
+- 15% [Case studies eval #2](#eval)
+- 20% [Group presentation](#pres)
+- 40% [Final case study](#final)
+- 10% [Engagement](#engage)
 
 - There will be no midterm or final exam
 
@@ -79,19 +79,19 @@ Final grades will be distributed according to the following cutoffs:
 - C- &nbsp;&nbsp;      70 – 72%
 - D & F &nbsp;  Hopefully None!
 
-### Case Study Evaluations
+### Case Study Evaluations {#eval}
 
 Throughout the term you will progressively complete all three case studies.  You will submit your case study progress two times during the term for progress evaluations.  These progress checks will provide you direction for final completion.  Further guidance regarding expectations for each case study evaluation will be provided in class.
 
-### Group Presentation
+### Group Presentation {#pres}
 
 During week 10, each group will select one of their case studies to present.  Although your case study analysis may only be 90% complete at this time, this provides an opportunity to present your work to date and receive feedback from the class and instructor on where improvements and clarification could be made.  Further guidance regarding expectations for the group presentation will be provided in class.
 
-### Final Case Study
+### Final Case Study {#final}
 
 Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  Further guidance regarding expectations for the final case study submissions will be provided in class.
 
-### Engagement
+### Engagement {#engage}
 
 At the end of the term I will have all students perform a peer assessment of their small group members. This assessment will rate each member in several areas regarding:
 
@@ -110,7 +110,7 @@ I will use this feedback to help in determining your level of engagement.
 
 | Week    | Dates  | Lesson Description | Learning Material | Deliverables |
 |:-------:|--------|--------------------|-------------------|--------------|
-| **1**   |Oct 2-6      | Forecasting approach & data |          |              |
+| **1**   |Oct 2-6      | Forecasting approach & data | CH 1 & 2 \nMOOC week 1   |              |
 | **2**   |Oct 9-13     | Performance Evaluation      |          |              |
 | **3**   |Oct 16-20    | Overview of forecasting methods & Understanding smoothing methods |          |              |
 | **4**   |Oct 23-27    | Understanding smoothing methods |          |    Case studies Eval #1          |
@@ -121,9 +121,6 @@ I will use this feedback to help in determining your level of engagement.
 | **9**   |Nov 27-Dec 1 | Neural networks             |          |              |
 | **10**  |Dec 4-8      | Group presentations         |          |  Group presentation  |
 | **11**  |Dec 11-15    | Finals week                 |          |  Case studies due  |
-
-
-
 
 
 
@@ -145,13 +142,3 @@ We will use this software during the course. Plan on bringing a computer to each
 5. __Late Assignments and Make-Ups:__ Late submissions will not be accepted.
 6. __Tentative Plan:__ The course syllabus is a general plan for the course; deviations announced to the class by the instructor may be necessary.
 
-
-## Acknowledgments:
-
-I have drawn ideas or readings from the following syllabi:
-
-* Garrett Grolemund & Hadley Wickham, [R for Data Science](http://r4ds.had.co.nz/index.html)
-* Jenny Bryan, [STAT 545: Data wrangling, exploration, and analysis with R](http://stat545.com/)
-* Lincoln Mullen, [HIST 688: Data and visualization in digital history](http://lincolnmullen.com/courses/data-dh.2016/)
-* Kieran Healy, [Soc 880: Data Visualization](http://socviz.github.io/soc880/)
-* Brad Boehmke, [Data Wrangling with R](http://uc-r.github.io/data_wrangling/syllabus)
