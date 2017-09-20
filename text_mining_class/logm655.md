@@ -72,48 +72,23 @@ Final grades will be distributed according to the following cutoffs:
 - C- &nbsp;&nbsp;      70 – 72%
 - D & F &nbsp;  Hopefully None!
 
-### Case Study Evaluations {#eval}
-
-Throughout the term you will progressively complete all three case studies.  You will submit your case study progress two times during the term for progress evaluations.  These progress checks will provide you direction for final completion.  Further guidance regarding expectations for each case study evaluation will be provided in class.
-
-### Group Presentation {#pres}
-
-During week 10, each group will select one of their case studies to present.  Although your case study analysis may only be 90% complete at this time, this provides an opportunity to present your work to date and receive feedback from the class and instructor on where improvements and clarification could be made.  Further guidance regarding expectations for the group presentation will be provided in class.
-
-### Final Case Study {#final}
-
-Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  Further guidance regarding expectations for the final case study submissions will be provided in class.
-
-### Engagement {#engage}
-
-At the end of the term I will have all students perform a peer assessment of their small group members. This assessment will rate each member in several areas regarding:
-
-- Engaging in quality discussions with the group to improve forecasting knowledge
-- Coming to each class prepared to further the case study analyses
-- Providing adequate contribution to group work
-- Working well as a team member in the small group activities
-- etc.
-
-I will use this feedback to help in determining your level of engagement. 
-
-
 ## Schedule
 
 *tentative*
 
 | Week    | Dates  | Lesson Description | Learning Material | Deliverables |
 |:-------:|--------|--------------------|:-----------------:|:------------:|
-| **1**   |Oct 2-6      | Forecasting approach & data | Ch 1-2 MOOC week 1   |              |
-| **2**   |Oct 9-13     | Performance Evaluation      | Ch 3 MOOC week 2 |              |
-| **3**   |Oct 16-20    | Overview of forecasting methods & Understanding smoothing methods | Ch 4-5 MOOC week 3 |              |
-| **4**   |Oct 23-27    | Understanding smoothing methods | Ch 5 MOOC week 4 |    Case studies Eval #1          |
-| **5**   |Oct 30-Nov 3 | Regression models: trend and seasonality | Ch 6 MOOC week 5 |              |
-| **6**   |Nov 6-10     | Regression models: autocorrelation & external information | Ch 7 MOOC week 6 |              |
-| **7**   |Nov 13-17    | Communication & maintenance | Ch 10 |    Case studies Eval #2    |
-| **8**   |Nov 20-24    | Forecasting binary outcomes | Ch 8  |              |
-| **9**   |Nov 27-Dec 1 | Neural networks             | Ch 9  |              |
+| **1**   |Oct 2-6      | Regular expressions |    |              |
+| **2**   |Oct 9-13     | Parsing & tidying text      |  |              |
+| **3**   |Oct 16-20    | n-gram, term-document, and word relationship analysis |  |              |
+| **4**   |Oct 23-27    | n-gram, term-document, and word relationship analysis |  |        |
+| **5**   |Oct 30-Nov 3 | Methods for sentiment analysis |  |              |
+| **6**   |Nov 6-10     | Methods for topic analysis |  |              |
+| **7**   |Nov 13-17    | Methods for text clustering | |      |
+| **8**   |Nov 20-24    | Methods for text classification |   |              |
+| **9**   |Nov 27-Dec 1 | Group presentations         |          |  Group presentation  |
 | **10**  |Dec 4-8      | Group presentations         |          |  Group presentation  |
-| **11**  |Dec 11-15    | Finals week                 |          |  Case studies due  |
+
 
 
 
@@ -122,7 +97,6 @@ I will use this feedback to help in determining your level of engagement.
 This is an applied course and you will be using software during class time. Therefore, plan on bringing a computer to each class meeting. Furthermore, you will need some software to perform the forecasting procedures.
 
 * [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/):  Students familiar with the R programming language can leverage this software. You can find details on how to download these [here](basics#installation). This is the software the instructor uses and is familiar with.
-* [XLMiner](https://www.solver.com/xlminer-platform): Students that are not comfortable with R programming can use the free student version of XLMiner.  Note that the instructor is not familiar with this software so you will be on your own for troubleshooting.  You can find details on how to download this sofware [here](xlminer_install).
 * [Slack](https://slack.com/) will replace e-mail and Blackboard for our course. You will receive an invitation to the [AFIT Forecasting slack team](https://afit-forecasting.slack.com). You may wish to install one of the [apps](https://slack.com/downloads/osx). 
 
 
