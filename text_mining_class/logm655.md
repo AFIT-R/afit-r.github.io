@@ -12,7 +12,7 @@ This course will introduce students to this rapidly growing field and equip them
 
 ## Class Information
 
-* Instructor: 
+* Instructors: 
     - [Brad Boehmke](http://bradleyboehmke.github.io/) &nbsp; 
   <a href="mailto:bradleyboehmke@gmail.com" target="_blank" style="color:#515151;"><i class="fa fa-envelope" style="font-size:1em"></i></a> &nbsp;
   <a href="https://twitter.com/bradleyboehmke" target="_blank" style="color:#515151;"><i class="fa fa-twitter"></i></a> &nbsp;
