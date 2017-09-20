@@ -52,7 +52,7 @@ This course blends textbook reading with online lectures and demonstrations that
 
 ## Performance Evaluation
 
-This is a project-based course.  Depending on enrollment, students will work in groups of 4-5 students.  Throughout the course each group will spend classroom time completing *__all three__* of the case studies listed in the back of the textbook. Your final course grade will be determined according to the following requirements and their respective weights. 
+Your final course grade will be determined according to the following requirements and their respective weights. 
 
 - 15% Lesson Planning/Topic Summarization
 - 25% Group Activities
