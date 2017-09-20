@@ -126,10 +126,11 @@ I will use this feedback to help in determining your level of engagement.
 
 ## Software
 
-We will use this software during the course. Plan on bringing a computer to each class meeting.
+This is an applied course and you will be using software during class time. Therefore, plan on bringing a computer to each class meeting. Furthermore, you will need some software to perform the forecasting procedures.
 
-* [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/) will be used to perform all programming activities, assignments, and the final project.  You can find details on how to download these [here](basics#installation).
-* [Slack](https://slack.com/) will replace e-mail and Blackboard for our course. You will receive an invitation to the [AFIT DSL slack team](https://afit-dsl.slack.com/). You may wish to install one of the [apps](https://slack.com/downloads/osx). 
+* [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/):  Students familiar with the R programming language can leverage this software. You can find details on how to download these [here](basics#installation). This is the software the instructor uses and is familiar with.
+* [XLMiner](https://www.solver.com/xlminer-platform): Students that are not comfortable with R programming can use the free student version of XLMiner.  Note that the instructor is not familiar with this software so you will be on your own for troubleshooting.
+* [Slack](https://slack.com/) will replace e-mail and Blackboard for our course. You will receive an invitation to the [AFIT Forecasting slack team](https://afit-forecasting.slack.com). You may wish to install one of the [apps](https://slack.com/downloads/osx). 
 
 
 
