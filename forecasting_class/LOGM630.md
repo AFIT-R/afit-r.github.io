@@ -24,7 +24,7 @@ This course focuses on forecasting time series, where past and present values ar
 * Location: Bldg 640, Rm 232
 * Credits: 3
 * Prereqs: NA
-* Webpage: [https://afit-r.github.io/logm630](https://afit-r.github.io/logm682)
+* Webpage: [https://afit-r.github.io/logm630](https://afit-r.github.io/logm630)
 * Additional Resources: 
     - [Book website](http://www.forecastingbook.com/)
     - [Forecasting tutorials](https://afit-r.github.io/predictive#time-series) (will continue to expand)
