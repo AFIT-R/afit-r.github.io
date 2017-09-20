@@ -18,7 +18,7 @@ This course will introduce students to this rapidly growing field and equip them
   <a href="https://twitter.com/bradleyboehmke" target="_blank" style="color:#515151;"><i class="fa fa-twitter"></i></a> &nbsp;
   <a href="https://github.com/bradleyboehmke" target="_blank" style="color:#515151;"><i class="fa fa-github" style="font-size:1em"></i></a> &nbsp;
   <a href="https://www.linkedin.com/in/brad-boehmke-ph-d-9b0a257" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
-    - (LTC Chris Smith](https://www.afit.edu/BIOS/bio.cfm?facID=284) &nbsp; 
+    - [LTC Chris Smith](https://www.afit.edu/BIOS/bio.cfm?facID=284) &nbsp; 
   <a href="mailto:christopher.smith@afit.edu" target="_blank" style="color:#515151;"><i class="fa fa-envelope" style="font-size:1em"></i></a> &nbsp; <a href="https://www.linkedin.com/in/christopher-smith-phd-2289391a/" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
 * Day(s): TBD
 * Time: TBD
@@ -40,32 +40,23 @@ The primary objective of this course is to help the student understand the basic
 - Lead and work within a group of researchers analyzing a specific text mining problem.
 
 
+## Course Text
 
-## Resources
-
-Students can use one of the following books.  Both books cover the same topics, one focuses on implementing the techniques in the R programming language while the other focuses on implemention with XLMiner, an Excel add-on.
-
-- *Practical Time Series Forecasting with R: A Hands-On Guide* (2nd Ed.) by Shmueli & Lichtendahl, ISBN-10: 0997847913
-- *Practical Time Series Forecasting: A Hands-On Guide* (3rd Ed.) by G. Shmueli, ISBN-10: 0991576659
-
-In addition to the book, students will participate in a 6 week free online course ([Business Analytics Using Forecasting](https://www.futurelearn.com/courses/business-analytics-forecasting)) led by the author of the textbook.  This course closely aligns with the book and covers the first 7 chapters.  Students will need to register for this couse and be prepared to start the first session on Oct 2nd.  Students can find a link to register for this course at [http://www.forecastingbook.com/mooc](http://www.forecastingbook.com/mooc).
-
-Students can also leverage the textbook’s website ([http://www.forecastingbook.com/home](http://www.forecastingbook.com/home)) for additional resources such as data, R code, XLMiner tutorial videos, and additional video discussions for each chapter of the book.
+1. Text Mining with R, A Tidy Approach, J. Silge and D. Robinson, free webversion: [http://tidytextmining.com/](http://tidytextmining.com/ )
+2. AFIT Data Science Lab R Programming gude. [https://afit-r.github.io/descriptive#text-mining](https://afit-r.github.io/descriptive#text-mining)
 
 
 ## Class Structure 
 
-This course blends textbook reading with online lectures and demonstrations that emphasize discussion and illustration of methods, as well as hands-on, practical applications that provide both a sound base of learning and an opportunity to test and develop skill.  Students will blend learning from the textbook with the 6 week online course.  A **flipped** classroom will be emphasized where students spend time outside the classroom learning the material via the textbook and online course and the majority of in-class activities will be reserved to review, clarify, and do hands-on projects.  Thus, students should bring a laptop to class and be prepared to implement the tools and skills they are learning.  Students should expect to dedicate approximately 2 hours of time outside of the classroom performing coursework for every 1 hour in the classroom.
+This course blends textbook reading with online lectures and demonstrations that emphasize discussion and illustration of methods, as well as hands-on, practical applications that provide both a sound base of learning and an opportunity to test and develop skill.  A **flipped** classroom will be emphasized where students spend time outside the classroom learning the material via the textbook and online material and the majority of in-class activities will be reserved to review, clarify, and do hands-on projects and coding.  Thus, students should bring a laptop to class and be prepared to implement the tools and skills they are learning.  Students should expect to dedicate approximately 2 hours of time outside of the classroom performing coursework for every 1 hour in the classroom.
 
 ## Performance Evaluation
 
 This is a project-based course.  Depending on enrollment, students will work in groups of 4-5 students.  Throughout the course each group will spend classroom time completing *__all three__* of the case studies listed in the back of the textbook. Your final course grade will be determined according to the following requirements and their respective weights. 
 
-- 15% [Case studies eval #1](#eval)
-- 15% [Case studies eval #2](#eval)
-- 20% [Group presentation](#pres)
-- 40% [Final case study](#final)
-- 10% [Engagement](#engage)
+- 15% Lesson Planning/Topic Summarization
+- 25% Group Activities
+- 60% Project
 
 - There will be no midterm or final exam
 
