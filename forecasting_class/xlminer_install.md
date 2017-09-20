@@ -9,7 +9,7 @@ permalink: /xlminer_install
 Please follow the steps below to ensure successful installation of the XLMiner software.  
 
 ## Warning for Mac users
-If you have a Mac -- the installation-based Analytic Solver Platform software is only available for PC (sorry!). However, they have a cloud-based solution at www.AnalyticSolver.com/student that you register and use. Using AnalyticSolver.com is just like using a Google doc -- you need internet access and the files live and breathe in the cloud, as it were. Everything you need for your course should be accessible there: just make sure you're using a Chrome browser and that the files you're uploading are saved as xlsx.
+If you have a Mac -- the installation-based Analytic Solver Platform software is only available for PC (sorry!). However, they have a cloud-based solution at [www.AnalyticSolver.com/student](www.AnalyticSolver.com/student) that you can register for and use. Using AnalyticSolver.com is just like using a Google doc -- you need internet access and the files live and breathe in the cloud, as it were. Everything you need for your course should be accessible there: just make sure you're using a Chrome browser and that the files you're uploading are saved as xlsx.
 
 ## Registration Procedure
 
