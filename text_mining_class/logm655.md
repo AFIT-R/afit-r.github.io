@@ -5,41 +5,40 @@ layout: page
 permalink: /logm655
 ---
 
-Companies, governments and other organizations now collect and analyze huge amounts of data about suppliers, clients, employees, citizens, transactions, and much more. There are a number of ways organizations can use this data. Business analytics uses this data to make better decisions and forecasting is a powerful and commonly used branch of business analytics. Forecasting especially can provide a potent toolkit for analyzing time series data.
+Text mining is the organization, classification, labeling and extraction of information from text sources. In these days of more information readily available through the internet, analysts and decision makers find themselves overloaded with data.  Text mining is an application which can help analysts glean necessary information either for general understanding about a corpus of text documents, or for putting text into a form useful for the application of alternative analysis techniques.  
 
-This course focuses on forecasting time series, where past and present values are used to forecast future values of a series of interest. This course covers issues relating to different steps of the forecasting process, from goal definition, through data visualization, modeling, and performance evaluation to model deployment.
+This course will introduce students to this rapidly growing field and equip them with some of its basic principles and tools as well as its general mindset.  Students will learn concepts, techniques and tools they need to deal with text mining practice in a Joint military context.
  
-
-
 
 ## Class Information
 
-* Instructor: [Brad Boehmke](http://bradleyboehmke.github.io/) &nbsp; 
+* Instructor: 
+    - [Brad Boehmke](http://bradleyboehmke.github.io/) &nbsp; 
   <a href="mailto:bradleyboehmke@gmail.com" target="_blank" style="color:#515151;"><i class="fa fa-envelope" style="font-size:1em"></i></a> &nbsp;
   <a href="https://twitter.com/bradleyboehmke" target="_blank" style="color:#515151;"><i class="fa fa-twitter"></i></a> &nbsp;
   <a href="https://github.com/bradleyboehmke" target="_blank" style="color:#515151;"><i class="fa fa-github" style="font-size:1em"></i></a> &nbsp;
   <a href="https://www.linkedin.com/in/brad-boehmke-ph-d-9b0a257" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
-* Day(s): Tuesday & Wednesday
-* Time: 8:00-9:30 am
-* Location: Bldg 640, Rm 232
+    - (LTC Chris Smith](https://www.afit.edu/BIOS/bio.cfm?facID=284) &nbsp; 
+  <a href="mailto:christopher.smith@afit.edu" target="_blank" style="color:#515151;"><i class="fa fa-envelope" style="font-size:1em"></i></a> &nbsp; <a href="https://www.linkedin.com/in/christopher-smith-phd-2289391a/" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
+* Day(s): TBD
+* Time: TBD
+* Location: TBD
 * Credits: 3
-* Prereqs: NA
-* Webpage: [https://afit-r.github.io/logm630](https://afit-r.github.io/logm682)
+* Prereqs: OPER/LOGM 682
+* Webpage: [https://afit-r.github.io/logm655](https://afit-r.github.io/logm655)
 * Additional Resources: 
-    - [Book website](http://www.forecastingbook.com/)
-    - [Forecasting tutorials](https://afit-r.github.io/predictive#time-series) (will continue to expand)
-    - [Business Analytics Using Forecasting](https://www.futurelearn.com/courses/business-analytics-forecasting) (online course you will work through during the first 6 weeks)
+    - [Book website](http://tidytextmining.com/)
+    - [Text mining tutorials](https://afit-r.github.io/descriptive#text-mining) (will continue to expand)
 
 
 ## Course Objectives
 
-The primary objective of this course is to help the student understand the basic analytic techniques and processes for forecasting and how to use them to make better decisions. More specifically, at the completion of the course, each student should be able to:
+The primary objective of this course is to help the student understand the basic techniques and processes for text mining and how to use them to make better decisions. More specifically, at the completion of the course, each student should be able to:
 
-- Define a forecasting task and workflow
-- Evaluate a forecasting performance
-- Apply and be familiar with popular forecasting methods
-- Explore, identify and model different types of patterns in time series
-- Be able to implement a forecasting process in practice
+- Understanding when, where, and how to perform text mining to appropriate problems and data sets.
+- Code and understand code using relevant R packages in text mining.
+- Lead and work within a group of researchers analyzing a specific text mining problem.
+
 
 
 ## Resources
