@@ -27,7 +27,7 @@ This course focuses on forecasting time series, where past and present values ar
 * Webpage: [https://afit-r.github.io/logm630](https://afit-r.github.io/logm682)
 * Additional Resources: 
     - [Book website](http://www.forecastingbook.com/)
-    - [Forecasting tutorials](https://afit-r.github.io/predictive#time-series) (will continue to expanded)
+    - [Forecasting tutorials](https://afit-r.github.io/predictive#time-series) (will continue to expand)
     - [Business Analytics Using Forecasting](https://www.futurelearn.com/courses/business-analytics-forecasting) (online course you will work through during the first 6 weeks)
 
 
