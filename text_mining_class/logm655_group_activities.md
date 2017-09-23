@@ -1,7 +1,7 @@
 ---
 title: Group Activities
 author: Brad Boehmke
-layout: page
+layout: tutorial
 permalink: /logm655_group_activities
 ---
 
