@@ -80,12 +80,12 @@ Final grades will be distributed according to the following cutoffs:
 |:-------:|--------|--------------------|:-----------------:|:------------:|
 | **1**   |Oct 2-6      | Regular expressions |    |              |
 | **2**   |Oct 9-13     | Parsing & tidying text      |  |              |
-| **3**   |Oct 16-20    | n-gram, term-document, and word relationship analysis |  |              |
-| **4**   |Oct 23-27    | n-gram, term-document, and word relationship analysis |  |        |
-| **5**   |Oct 30-Nov 3 | Methods for sentiment analysis |  |              |
-| **6**   |Nov 6-10     | Methods for topic analysis |  |              |
-| **7**   |Nov 13-17    | Methods for text clustering | |      |
-| **8**   |Nov 20-24    | Methods for text classification |   |              |
+| **3**   |Oct 16-20    | n-gram, term-document, and word relationship analysis |  | Student-led |
+| **4**   |Oct 23-27    | n-gram, term-document, and word relationship analysis |  | Student-led |
+| **5**   |Oct 30-Nov 3 | Methods for sentiment analysis |  | Student-led |
+| **6**   |Nov 6-10     | Methods for topic analysis |  | Student-led |
+| **7**   |Nov 13-17    | Methods for text clustering | | Student-led |
+| **8**   |Nov 20-24    | Methods for text classification |   | Student-led |
 | **9**   |Nov 27-Dec 1 | Group presentations         |          |  Group presentation  |
 | **10**  |Dec 4-8      | Group presentations         |          |  Group presentation  |
 
