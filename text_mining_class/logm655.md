@@ -56,7 +56,7 @@ Your final course grade will be determined according to the following requiremen
 
 - 15% Lesson Planning/Topic Summarization
 - 25% [Group Activities](logm655_group_activities)
-- 60% Project
+- 60% [Project](logm655_term_project)
 
 - There will be no midterm or final exam
 
