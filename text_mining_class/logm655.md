@@ -79,13 +79,13 @@ Final grades will be distributed according to the following cutoffs:
 | Week    | Dates  | Lesson Description | Learning Material | Deliverables |
 |:-------:|--------|--------------------|:-----------------:|:------------:|
 | **1**   |Oct 2-6      | Regular expressions |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>|              |
-| **2**   |Oct 9-13     | Parsing & tidying text      |  |              |
-| **3**   |Oct 16-20    | n-gram, term-document, and word relationship analysis |  | Student-led |
-| **4**   |Oct 23-27    | n-gram, term-document, and word relationship analysis |  | Student-led |
-| **5**   |Oct 30-Nov 3 | Methods for sentiment analysis |  | Student-led |
-| **6**   |Nov 6-10     | Methods for topic analysis |  | Student-led |
-| **7**   |Nov 13-17    | Methods for text clustering | | Student-led |
-| **8**   |Nov 20-24    | Methods for text classification |   | Student-led |
+| **2**   |Oct 9-13     | Parsing & tidying text      |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>|              |
+| **3**   |Oct 16-20    | n-gram, term-document, and word relationship analysis |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
+| **4**   |Oct 23-27    | n-gram, term-document, and word relationship analysis |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
+| **5**   |Oct 30-Nov 3 | Methods for sentiment analysis |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
+| **6**   |Nov 6-10     | Methods for topic analysis |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
+| **7**   |Nov 13-17    | Methods for text clustering |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
+| **8**   |Nov 20-24    | Methods for text classification |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
 | **9**   |Nov 27-Dec 1 | Student presentations         |          |  Presentation  |
 | **10**  |Dec 4-8      | Student presentations         |          |  Presentation  |
 
