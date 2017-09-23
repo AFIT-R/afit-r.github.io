@@ -86,8 +86,8 @@ Final grades will be distributed according to the following cutoffs:
 | **6**   |Nov 6-10     | Methods for topic analysis |  | Student-led |
 | **7**   |Nov 13-17    | Methods for text clustering | | Student-led |
 | **8**   |Nov 20-24    | Methods for text classification |   | Student-led |
-| **9**   |Nov 27-Dec 1 | Group presentations         |          |  Group presentation  |
-| **10**  |Dec 4-8      | Group presentations         |          |  Group presentation  |
+| **9**   |Nov 27-Dec 1 | Student presentations         |          |  Presentation  |
+| **10**  |Dec 4-8      | Student presentations         |          |  Presentation  |
 
 
 
