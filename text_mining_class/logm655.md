@@ -55,7 +55,7 @@ This course blends textbook reading with online lectures and demonstrations that
 Your final course grade will be determined according to the following requirements and their respective weights. 
 
 - 15% Lesson Planning/Topic Summarization
-- 25% Group Activities
+- 25% [Group Activities](logm655_group_activities)
 - 60% Project
 
 - There will be no midterm or final exam
