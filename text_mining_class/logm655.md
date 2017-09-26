@@ -20,8 +20,8 @@ This course will introduce students to this rapidly growing field and equip them
   <a href="https://www.linkedin.com/in/brad-boehmke-ph-d-9b0a257" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
     - [LTC Chris Smith](https://www.afit.edu/BIOS/bio.cfm?facID=284) &nbsp; 
   <a href="mailto:christopher.smith@afit.edu" target="_blank" style="color:#515151;"><i class="fa fa-envelope" style="font-size:1em"></i></a> &nbsp; <a href="https://www.linkedin.com/in/christopher-smith-phd-2289391a/" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
-* Day(s): TBD
-* Time: TBD
+* Day(s): Mon & Wed
+* Time: 10:30-12:00
 * Location: TBD
 * Credits: 3
 * Prereqs: OPER/LOGM 682
