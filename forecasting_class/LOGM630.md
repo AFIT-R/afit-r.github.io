@@ -21,7 +21,7 @@ This course focuses on forecasting time series, where past and present values ar
   <a href="https://www.linkedin.com/in/brad-boehmke-ph-d-9b0a257" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
 * Day(s): Tuesday & Thursday
 * Time: 8:00-9:30 am
-* Location: Bldg 640, Rm 232
+* Location: Bldg 640, Rm 244
 * Credits: 3
 * Prereqs: NA
 * Webpage: [https://afit-r.github.io/logm630](https://afit-r.github.io/logm630)
