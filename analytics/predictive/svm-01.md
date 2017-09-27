@@ -7,19 +7,15 @@ permalink: /svm
 The advent of computers brought on rapid advances in the field of statistical classification, one of which is the *Support Vector Machine*, or SVM. The goal of an SVM is to take groups of observations and construct boundaries to predict which group future observations belong to based on their measurements. The different groups that must be separated will be called "classes". SVMs can handle any number of classes, as well as observations of any dimension. SVMs can take almost any shape (including linear, radial, and polynomial, among others), and are generally flexible enough to be used in almost any classification endeavor that the user chooses to undertake.
 
 
-###tl;dr
+### tl;dr
 
 1. [Replication Requirements](#replication-requirements): What you'll need to reproduce the analysis in this tutorial
-
 2. [Maximal Margin Classifier](#maximal-margin-classifier): Constructing a classification line for completely separable data
-
 3. [Support Vector Classifiers](#support-vector-classifiers): Constructing a classification line for data that is not separable
-
 4. [Support Vector Machines](#support-vector-machines): Constructing a classification boundary, whether linear or nonlinear, for data that may or may not be separable
-
 5. [SVMs for Multiple Classes](#svms-for-multiple-classes): SVM techniques for more than 2 classes of observations
 
-###Replication Requirements
+### Replication Requirements
 
 In this tutorial, we will leverage the ``tidyverse`` package to perform data manipulation, the ``kernlab`` and ``e1071`` packages to perform calculations and produce visualizations related to SVMs, and the ``ISLR`` package to load a real world data set and demonstrate the functionality of Support Vector Machines. ``RColorBrewer`` is needed to create a custom visualization of SVMs fitted using ``kernlab`` with more than 2 classes of data. In order to allow for reproducible results, we set the random number generator explicitly.
 
@@ -39,7 +35,7 @@ library(RColorBrewer) # customized coloring of plots
 The data sets used in the tutorial (with the exception of `Khan`) will be generated using built-in R commands. The Support Vector Machine methodology is sound for any number of dimensions, but becomes difficult to visualize for more than 2. As previously mentioned, SVMs are robust for any number of classes, but we will stick to no more than 3 for the duration of this tutorial.
 
 
-###Maximal Margin Classifier
+### Maximal Margin Classifier
 
 If the classes are separable by a linear boundary, we can use a *Maximal Margin Classifier* to find the classification boundary. To visualize an example of separated data, we generate 40 random observations and assign them to two classes. Upon visual inspection, we can see that infinitely many lines exist that split the two classes.
 
@@ -85,7 +81,7 @@ plot(kernfit, data = x)
 
 ``kernlab`` shows a little more detail than ``e1071``, showing a color gradient that indicates how confidently a new point would be classified based on its features. Just as in the first plot, the support vectors are marked, in this case as filled-in points, while the classes are denoted by different shapes.
 
-###Support Vector Classifiers
+### Support Vector Classifiers
 
 As convenient as the maximal marginal classifier is to understand, most real data sets will not be fully separable by a linear boundary. To handle such data, we must use modified methodology. We simulate a new data set where the classes are more mixed.
 
@@ -139,9 +135,6 @@ tune.out <- tune(svm, y~., data = dat, kernel = "linear",
                  ranges = list(cost = c(0.001, 0.01, 0.1, 1, 5, 10, 100)))
 # extract the best model
 (bestmod <- tune.out$best.model)
-```
-
-```
 ## 
 ## Call:
 ## best.tune(method = svm, train.x = y ~ ., data = dat, ranges = list(cost = c(0.001, 
@@ -164,9 +157,6 @@ For our data set, the optimal cost (from amongst the choices we provided) is cal
 # Create a table of misclassified observations
 ypred <- predict(bestmod, dat)
 (misclass <- table(predict = ypred, truth = dat$y))
-```
-
-```
 ##        truth
 ## predict -1 1
 ##      -1  9 3
@@ -176,7 +166,7 @@ ypred <- predict(bestmod, dat)
 Using this support vector classifier, 80% of the observations were correctly classified, which matches what we see in the plot. If we wanted to test our classifier more rigorously, we could split our data into training and testing sets and then see how our SVC performed with the observations not used to construct the model. We will use this training-testing method later in this tutorial to validate our SVMs.
 
 
-###Support Vector Machines
+### Support Vector Machines
 
 Support Vector Classifiers are a subset of the group of classification structures known as *Support Vector Machines*. Support Vector Machines can construct classification boundaries that are nonlinear in shape. The options for classification structures using the ``svm()`` command from the ``e1071`` package are linear, polynomial, radial, and sigmoid. To demonstrate a nonlinear classification boundary, we will construct a new data set.
 
@@ -235,9 +225,6 @@ tune.out <- tune(svm, y~., data = dat[train,], kernel = "radial",
                  gamma = c(0.5,1,2,3,4)))
 # show best model
 tune.out$best.model
-```
-
-```
 ## 
 ## Call:
 ## best.tune(method = svm, train.x = y ~ ., data = dat[train, ], 
@@ -261,9 +248,6 @@ The model that reduces the error the most in the training data uses a cost of 1 
 # validate model performance
 (valid <- table(true = dat[-train,"y"], pred = predict(tune.out$best.model,
                                              newx = dat[-train,])))
-```
-
-```
 ##     pred
 ## true  1  2
 ##    1 58 19
@@ -272,7 +256,7 @@ The model that reduces the error the most in the training data uses a cost of 1 
 
 Our best-fitting model produces 65% accuracy in identifying classes. For such a complicated shape of observations, this performed reasonably well. We can challenge this method further by adding additional classes of observations.
 
-###SVMs for Multiple Classes
+### SVMs for Multiple Classes
 
 The procedure does not change for data sets that involve more than two classes of observations. We construct our data set the same way as we have previously, only now specifying three classes instead of two:
 
@@ -311,9 +295,6 @@ We can check to see how well our model fit the data by using the `predict()` com
 #construct table
 ypred <- predict(svmfit, dat)
 (misclass <- table(predict = ypred, truth = dat$y))
-```
-
-```
 ##        truth
 ## predict   0   1   2
 ##       0  38   2   4
@@ -353,7 +334,7 @@ points(dat[, 2:1], pch = 19, col = cols[predict(kernfit)])
 
 
 
-####Application
+#### Application
 
 The `Khan` data set contains data on 83 tissue samples with 2308 gene expression measurements on each sample. These were split into 63 training observations and 20 testing observations, and there are four distinct classes in the set. It would be impossible to visualize such data, so we choose the simplest classifier (linear) to construct our model. We will use the ``svm`` command from ``e1071`` to conduct our analysis.
 
@@ -362,9 +343,6 @@ The `Khan` data set contains data on 83 tissue samples with 2308 gene expression
 # fit model
 dat <- data.frame(x = Khan$xtrain, y=as.factor(Khan$ytrain))
 (out <- svm(y~., data = dat, kernel = "linear", cost=10))
-```
-
-```
 ## 
 ## Call:
 ## svm(formula = y ~ ., data = dat, kernel = "linear", cost = 10)
@@ -385,9 +363,6 @@ First of all, we can check how well our model did at classifying the training ob
 ```r
 # check model performance on training set
 table(out$fitted, dat$y)
-```
-
-```
 ##    
 ##      1  2  3  4
 ##   1  8  0  0  0
@@ -404,9 +379,6 @@ To perform validation, we can check how the model performs on the testing set:
 dat.te <- data.frame(x=Khan$xtest, y=as.factor(Khan$ytest))
 pred.te <- predict(out, newdata=dat.te)
 table(pred.te, dat.te$y)
-```
-
-```
 ##        
 ## pred.te 1 2 3 4
 ##       1 3 0 0 0
