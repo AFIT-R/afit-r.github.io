@@ -54,7 +54,7 @@ ggplot(data = dat, aes(x = x.2, y = x.1, color = y, shape = y)) +
   theme(legend.position = "none")
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 The goal of the maximal margin classifier is to identify the linear boundary that maximizes the total distance between the line and the closest point in each class. We can use the ``svm()`` function in the ``e1071`` package to find this boundary.
 
@@ -66,7 +66,7 @@ svmfit <- svm(y~., data = dat, kernel = "linear", scale = FALSE)
 plot(svmfit, dat)
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 In the plot, points that are represented by an "X" are the **support vectors**, or the points that directly affect the classification line. The points marked with an "o" are the other points, which don't affect the calculation of the line. This principle will lay the foundation for support vector machines. The same plot can be generated using the ``kernlab`` package, with the following results:
 
@@ -77,7 +77,7 @@ kernfit <- ksvm(x, y, type = "C-svc", kernel = 'vanilladot')
 plot(kernfit, data = x)
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 ``kernlab`` shows a little more detail than ``e1071``, showing a color gradient that indicates how confidently a new point would be classified based on its features. Just as in the first plot, the support vectors are marked, in this case as filled-in points, while the classes are denoted by different shapes.
 
@@ -100,7 +100,7 @@ ggplot(data = dat, aes(x = x.2, y = x.1, color = y, shape = y)) +
   theme(legend.position = "none")
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 Whether the data is separable or not, the ``svm()`` command syntax is the same. In the case of data that is not linearly separable, however, the `cost = ` argument takes on real importance. This quantifies the penalty associated with having an observation on the wrong side of the classification boundary. We can plot the fit in the same way as the completely separable case. We first use ``e1071``:
 
@@ -112,7 +112,7 @@ svmfit <- svm(y~., data = dat, kernel = "linear", cost = 10)
 plot(svmfit, dat)
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 By upping the cost of misclassification from 10 to 100, you can see the difference in the classification line. We repeat the process of plotting the SVM using the ``kernlab`` package:
 
@@ -124,7 +124,7 @@ kernfit <- ksvm(x,y, type = "C-svc", kernel = 'vanilladot', C = 100)
 plot(kernfit, data = x)
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 But how do we decide how costly these misclassifications actually are? Instead of specifying a cost up front, we can use the ``tune()`` function from ``e1071`` to test various costs and identify which value produces the best fitting model. 
 
@@ -186,7 +186,7 @@ ggplot(data = dat, aes(x = x.2, y = x.1, color = y, shape = y)) +
   theme(legend.position = "none")
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
 
 Notice that the data is not linearly separable, and furthermore, isn't all clustered together in a single group. There are two sections of class 1 observations with a cluster of class 2 observations in between. To demonstrate the power of SVMs, we'll take 100 random observations from the set and use them to construct our boundary. We set `kernel = "radial"` based on the shape of our data and plot the results.
 
@@ -201,7 +201,7 @@ svmfit <- svm(y~., data = dat[train,], kernel = "radial", gamma = 1, cost = 1)
 plot(svmfit, dat)
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
 The same procedure can be run using the ``kernlab`` package, which has far more `kernel` options than the corresponding function in ``e1071``. In addition to the four choices in ``e1071``, this package allows use of a hyperbolic tangent, Laplacian, Bessel, Spline, String, or ANOVA RBF kernel. To fit this data, we set the cost to be the same as it was before, 1.
 
@@ -213,9 +213,9 @@ kernfit <- ksvm(x[train,],y[train], type = "C-svc", kernel = 'rbfdot', C = 1, sc
 plot(kernfit, data = x[train,])
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
-We see that, at least visually, the SVM does a reasonable job of separating the two classes. To fit the model, we used `cost = 1`, but as mentioned previously, it isn't usually obvious which cost will produce the optimal classification boundary. We can use the `tune()` command to try several different values of cost as well as several different values of $\gamma$, a scaling parameter used to fit nonlinear boundaries.
+We see that, at least visually, the SVM does a reasonable job of separating the two classes. To fit the model, we used `cost = 1`, but as mentioned previously, it isn't usually obvious which cost will produce the optimal classification boundary. We can use the `tune()` command to try several different values of cost as well as several different values of $$\gamma$$, a scaling parameter used to fit nonlinear boundaries.
 
 
 ```r
@@ -241,7 +241,7 @@ tune.out$best.model
 ## Number of Support Vectors:  34
 ```
 
-The model that reduces the error the most in the training data uses a cost of 1 and $\gamma$ value of 0.5. We can now see how well the SVM performs by predicting the class of the 100 testing observations:
+The model that reduces the error the most in the training data uses a cost of 1 and $$\gamma$$ value of 0.5. We can now see how well the SVM performs by predicting the class of the 100 testing observations:
 
 
 ```r
@@ -274,9 +274,9 @@ ggplot(data = dat, aes(x = x.2, y = x.1, color = y, shape = y)) +
   theme(legend.position = "none")
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
-The commands don't change for the ``e1071`` package. We specify a cost and tuning parameter $\gamma$ and fit a support vector machine. The results and interpretation are similar to two-class classification.
+The commands don't change for the ``e1071`` package. We specify a cost and tuning parameter $$\gamma$$ and fit a support vector machine. The results and interpretation are similar to two-class classification.
 
 
 ```r
@@ -286,7 +286,7 @@ svmfit <- svm(y~., data = dat, kernel = "radial", cost = 10, gamma = 1)
 plot(svmfit, dat)
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
 
 We can check to see how well our model fit the data by using the `predict()` command, as follows:
 
@@ -330,7 +330,7 @@ contour(x = x.2, y = x.1, z = classes, levels = 1:3, labels = "", add = TRUE)
 points(dat[, 2:1], pch = 19, col = cols[predict(kernfit)])
 ```
 
-<img src="SVM_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/svm/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
 
 
 
