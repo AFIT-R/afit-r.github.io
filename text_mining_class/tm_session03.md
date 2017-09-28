@@ -1,10 +1,10 @@
 ---
 layout: tutorial
-title: Session 3
+title: Week 3
 permalink: /tm_session03
 ---
 
-A central question in text mining and natural language processing is how to quantify what a document is about. Can we do this by looking at the words that make up the document?  This session will help to answer this.
+A central question in text mining and natural language processing is how to quantify what a document is about. Can we do this by looking at the words that make up the document?  This week will help to answer this.
 
 <hr>
 
