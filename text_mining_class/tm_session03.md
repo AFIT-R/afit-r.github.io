@@ -4,7 +4,7 @@ title: Session 3
 permalink: /tm_session03
 ---
 
-A fundamental requirement to perform text mining is to get your text in a tidy format and being able to perform word frequency analysis. Text is often in an unstructured format so performing even the most basic analysis requires some re-structuring. Read and work through the Tidying Text and Word Frequency tutorial to learn how to tidy unstructured text.
+A central question in text mining and natural language processing is how to quantify what a document is about. Can we do this by looking at the words that make up the document?  This session will help to answer this.
 
 <hr>
 
@@ -13,11 +13,12 @@ A fundamental requirement to perform text mining is to get your text in a tidy f
 
 Please read & work through the following prior to our first class. 
 
-- Read the Preface and Chapter 1 of [Text Mining with R](http://tidytextmining.com/index.html) book.
-- Work through the [Text Mining: Creating Tidy Text](https://afit-r.github.io/tidy_text) tutorial and complete the exercises at the end of the tutorial.
+- Read Chapter 3: [Analyzing word and document frequency: tf-idf](http://tidytextmining.com/tfidf.html) of Text Mining with R.
+- Read Chapter 4: [Relationships between words: n-grams and correlations](http://tidytextmining.com/ngrams.html) of Text Mining with R.
+- Work through the [Term vs. Document Frequency](https://afit-r.github.io/tf-idf_analysis) and [Word Relationships](https://afit-r.github.io/word_relationships) tutorials for additional practice on a different data set.
 
 <hr>
 
 ## Class Prep
 
-No class due to the holiday!
+TBD
