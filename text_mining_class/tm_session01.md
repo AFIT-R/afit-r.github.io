@@ -4,7 +4,7 @@ title: Module 1
 permalink: /module-1
 ---
 
-Welcome to the first session! This first module will focus on making sure everyone is on the same page regarding the syllabus, deliverables, small group assignment and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
+Welcome to the first session! This first module will focus on making sure everyone is on the same page regarding the syllabus, deliverables, group work and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
 
 <hr>
 
@@ -15,7 +15,7 @@ Please read & work through the following prior to our first class.
 
 ### Syllabus
 
-If you have not already done so, be sure to read through the syllabus for your section [[OPER-682]](oper682) [[LOGM-682]](logm682) so that you understand the structure of my classes, the tentative schedule, grading policies, and other pertinent details.
+If you have not already done so, be sure to read through the syllabus for this [class](logm655) so that you understand the structure of the class, the tentative schedule, grading policies, and other pertinent details.
 
 ### Communication
 
@@ -24,28 +24,20 @@ If you have not already done so, be sure to read through the syllabus for your s
 - Watch and read the introductory material to get started with Slack [here](https://slack.com/is).
 - You can also read this [introduction to Slack](https://vimeo.com/133692325) from one of Kris Shaffer’s courses (although this is a completely different course and slack team it provides a nice introduction that you might find useful).  
 
-### Intro to Data Science
-
-- Read [The Analytic Cycle](analytic_cycle)
-- [Watch R's Role in Data Science](https://www.rstudio.com/resources/videos/rs-role-in-data-science/)
-
 ### Intro to R
+Most of you took the summer course OPER/LOGM 682, so you should all be spun up on the basics of R programming.  However, if you feel a little rusty feel free to start working through the following resources to refresh yourself:
 
 - Read the [Introduction to R tutorial](intro).
 - Work through the [R Basics tutorial](basics) to install R and RStudio and (re-)familiarize yourself with the basic functionality of the programming language.
-- Watch RStudio's webinar on [writing code](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/).
+- Work through the first couple of chapter of the [R for Data Science book](http://r4ds.had.co.nz/).
+
+### Regular Expressions
+
+- Read [Chapter 14: Strings](http://r4ds.had.co.nz/strings.html) in the R for Data Science Book.
+- Start working through the [String Manipulation in R with stringr] DataCamp tutorials.
 
 <hr>
 
 ## Class Prep
 
-Complete the following before class:
-
-1. Sign into the Slack channel and post a witty comment.
-2. Create a .R script and perform the exercises throughout the [R Basics tutorial](basics).  By the end of class submit this .R script to me via Slack.  Be sure to name this file with year, class number, lastname, first and middle initial, then "session1". For example my file name would be: 
-
-   - OPER 682: 2017_OPER682_boehmkebc_session1.R.
-   - LOGM 682: 2017_LOGM682_boehmkebc_session1.R.
-   - You will follow this naming convention throughout the course.
-
-You can download class material here: &nbsp; <a href="http://bit.ly/R-module-1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
+You can download class material here: &nbsp; <a href="https://www.dropbox.com/sh/akavy9jzkjoqefi/AAAzTvLwSOMUPHU97DiDE_FUa?dl=1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
