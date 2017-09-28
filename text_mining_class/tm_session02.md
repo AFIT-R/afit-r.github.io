@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Session 2
+title: Week 2
 permalink: /tm_session02
 ---
 
