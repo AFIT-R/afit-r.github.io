@@ -20,4 +20,4 @@ Please read & work through the following prior to our first class.
 
 ## Class Prep
 
-You can download class material here: &nbsp; <a href="https://www.dropbox.com/sh/itibh9devnwgdet/AADObEQFTUGsWAd1qN2y7J1za?dl=1" style="color:black;"><i class="fa fa-cloud-download" style="font-size:1em"></i></a>
+TBD
