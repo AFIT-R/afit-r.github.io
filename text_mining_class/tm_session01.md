@@ -1,10 +1,10 @@
 ---
 layout: tutorial
-title: Session 1
+title: Week 1
 permalink: /tm_session01
 ---
 
-Welcome to the first session! This first module will focus on making sure everyone is on the same page regarding the syllabus, deliverables, group work and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
+Welcome to the first week! This first module will focus on making sure everyone is on the same page regarding the syllabus, deliverables, group work and other administrative details.  We will also make sure you are up and running with R, RStudio, and Slack.
 
 <hr>
 
