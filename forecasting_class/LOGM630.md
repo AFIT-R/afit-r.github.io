@@ -113,7 +113,7 @@ I will use this feedback to help in determining your level of engagement.
 
 | Week    | Dates  | Lesson Description | Learning Material | Deliverables | Class Material |
 |:-------:|--------|--------------------|:-----------------:|:------------:|:------------:|
-| **1**   |Oct 2-6      | Forecasting approach & data | Ch 1-2 MOOC week 1   |  | <a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **1**   |Oct 2-6      | Forecasting approach & data | Ch 1-2 MOOC week 1   |  | <a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> &nbsp; <a href="" style="color:black;"><i class="fa fa-database" style="font-size:1em"></i></a> |
 | **2**   |Oct 9-13     | Performance Evaluation      | Ch 3 MOOC week 2 |  |  |
 | **3**   |Oct 16-20    | Overview of forecasting methods & Understanding smoothing methods | Ch 4-5 MOOC week 3 | |  |
 | **4**   |Oct 23-27    | Understanding smoothing methods | Ch 5 MOOC week 4 |    Case studies Eval #1  |   |
