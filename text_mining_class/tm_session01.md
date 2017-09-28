@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Module 1
+title: Session 1
 permalink: /tm_session01
 ---
 
