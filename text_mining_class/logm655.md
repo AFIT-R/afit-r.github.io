@@ -78,7 +78,7 @@ Final grades will be distributed according to the following cutoffs:
 
 | Week    | Dates  | Lesson Description | Learning Material | Deliverables |
 |:-------:|--------|--------------------|:-----------------:|:------------:|
-| **1**   |Oct 2-6      | Regular expressions |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>|              |
+| **1**   |Oct 2-6      | Regular expressions |<a href="https://afit-r.github.io/tm_session01" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>|              |
 | **2**   |Oct 9-13     | Parsing & tidying text      |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>|              |
 | **3**   |Oct 16-20    | n-gram, term-document, and word relationship analysis |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
 | **4**   |Oct 23-27    | n-gram, term-document, and word relationship analysis |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
