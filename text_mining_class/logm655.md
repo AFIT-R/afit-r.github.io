@@ -82,9 +82,9 @@ Final grades will be distributed according to the following cutoffs:
 | **2**   |Oct 9-13     | Parsing & tidying text      |<a href="https://afit-r.github.io/tm_session02" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>|              |
 | **3**   |Oct 16-20    | Methods for word relationship analysis |<a href="https://afit-r.github.io/tm_session03" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
 | **4**   |Oct 23-27    | Methods for topic analysis |<a href="https://afit-r.github.io/tm_session04" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
-| **5**   |Oct 30-Nov 3 | Methods for text classification |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
-| **6**   |Nov 6-10     | Methods for text clusering |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
-| **7**   |Nov 13-17    | Methods for sentiment analysis |<a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>| Student-led |
+| **5**   |Oct 30-Nov 3 | Methods for text classification | | Student-led |
+| **6**   |Nov 6-10     | Methods for text clusering | | Student-led |
+| **7**   |Nov 13-17    | Methods for sentiment analysis | | Student-led |
 | **8**   |Nov 20-24    | TBD | |   |
 | **9**   |Nov 27-Dec 1 | Student presentations         |          |  Presentation  |
 | **10**  |Dec 4-8      | Student presentations         |          |  Presentation  |
