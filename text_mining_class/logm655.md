@@ -22,7 +22,7 @@ This course will introduce students to this rapidly growing field and equip them
   <a href="mailto:christopher.smith@afit.edu" target="_blank" style="color:#515151;"><i class="fa fa-envelope" style="font-size:1em"></i></a> &nbsp; <a href="https://www.linkedin.com/in/christopher-smith-phd-2289391a/" target="_blank" style="color:#515151;"><i class="fa fa-linkedin" style="font-size:1em"></i></a>
 * Day(s): Mon & Wed
 * Time: 10:30-12:00
-* Location: TBD
+* Location: COA Conference Room
 * Credits: 3
 * Prereqs: OPER/LOGM 682
 * Webpage: [https://afit-r.github.io/logm655](https://afit-r.github.io/logm655)
