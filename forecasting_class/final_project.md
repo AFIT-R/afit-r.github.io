@@ -55,7 +55,7 @@ Throughout the term you will progressively complete all three case studies and t
 <tr class="even">
 <td align="left" valign="top">Partition Data </td>
 <td align="left" valign="top"> 
-  Outline and defend your approach for partitioning your data into training and validation sets to include:
+  Outline and defend your approach for partitioning your data into training and validation sets to include: <br>
   <b>4.1</b> How you decided on the length of the training and validation sets. <br>
   <b>4.2</b> Whether you performed cross-validation.
 </td>
@@ -64,7 +64,7 @@ Throughout the term you will progressively complete all three case studies and t
 <tr class="odd">
 <td align="left" valign="top">Apply Forecasting Methods </td>
 <td align="left" valign="top"> 
-  Discuss your methodical approach to applying your forecasting methods:
+  Discuss your methodical approach to applying your forecasting methods: <br>
   <b>5.1</b> Did you apply a simplistic, basic approach to act as a benchmark? <br>
   <b>5.2</b> What attributes in your data make your selected forecasting methods appropriate? <br>
   <b>5.3</b> How and why did you tune any parameters? <br>
@@ -75,7 +75,7 @@ Throughout the term you will progressively complete all three case studies and t
 <tr class="even">
 <td align="left" valign="top">Evaluate & Compare Performance </td>
 <td align="left" valign="top">
-  Illustrate the performance of your model(s) by visualizing and discussing:
+  Illustrate the performance of your model(s) by visualizing and discussing: <br>
   <b>6.1</b> Training and validation residuals. <br>
   <b>6.2</b> Training and validation accuracy measures. <br>
   <b>6.3</b> Confindence intervals. <br>
