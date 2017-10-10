@@ -84,7 +84,7 @@ Final grades will be distributed according to the following cutoffs:
 
 ### Case Study Evaluations {#eval}
 
-Throughout the term you will progressively complete all three case studies.  You will submit your case study progress two times during the term for progress evaluations.  These progress checks will provide you direction for final completion.  Further guidance regarding expectations for each case study evaluation will be provided in class.
+Throughout the term you will progressively complete all three case studies.  You will submit your case study progress two times during the term for progress evaluations.  These progress checks will provide you direction for final completion.  [Grading rubric](LOGM630_deliverables).
 
 ### Group Presentation {#pres}
 
@@ -92,7 +92,7 @@ During week 10, each group will select one of their case studies to present.  Al
 
 ### Final Case Study {#final}
 
-Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  [Grading rubric](/LOGM630_final_project).
+Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  [Grading rubric](LOGM630_final_project).
 
 ### Engagement {#engage}
 
