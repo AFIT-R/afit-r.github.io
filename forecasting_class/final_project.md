@@ -82,6 +82,8 @@ Throughout the term you will progressively complete all three case studies and t
   <b>6.4</b> Based on your evaluation and performance assessment, which final model did you select? <b>
   <b>6.5</b> Use the final selected model to forecast the required *k* steps ahead (provide both visual and numeric outputs.
 </td>
+<td align="center" valign="top"> 10 </td>
+</tr>
 <tr class="odd">
 <td align="left" valign="top">Summary </td>
 <td align="left" valign="top">
@@ -96,9 +98,10 @@ Throughout the term you will progressively complete all three case studies and t
 <tr class="even">
 <td align="left" valign="top">Formatting & Other Requirements </td>
 <td align="left" valign="top"> 
-  <b>7.1</b> Analysis is systematic - complicated problem broken down into sub-problems that are individually much simpler. aCode is efficient, correct, and minimal. Code uses appropriate data structure (list, data frame, vector/matrix/array). Code checks for common errors. <br>
+  <b>7.1</b> Analysis is systematic - complicated problem broken down into sub-problems that are individually much simpler. Analysis is efficient, correct, and minimal. <br>
+  <b>7.2</b> All case study questions in the back of the book were answered. <br>
   <b>7.3</b> Achievement, mastery, cleverness, creativity:  Tools and techniques from the course are applied very competently and, perhaps,somewhat creatively. Perhaps student has gone beyond what was expected and required, e.g., extraordinary effort, additional tools not addressed by this course, unusually sophisticated application of tools from course. <br>
-  <b>7.4</b> .Rmd fully executes without any errors and PDF produced matches the PDF report submitted by student.
+  <b>7.4</b> Analysis is reproducible meaning the instructor can fully re-create the analysis in the report due to the level of details provided or because the students provide the analysis code (.Rmd file) as an appendix.
 </td>
 <td align="center" valign="top"> 15 </td>
 </tr>
