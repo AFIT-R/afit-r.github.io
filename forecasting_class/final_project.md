@@ -2,16 +2,10 @@
 title: Final Project
 author: Brad Boehmke
 layout: tutorial
-permalink: /final_project
+permalink: /LOGM630_final_project
 ---
 
-Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project. Further guidance regarding expectations for the final case study submissions will be provided in class.
-Upon submission you will supply the final PDF report.  You will also submit the .Rmd file that produced the PDF report, your data, and any other files your .Rmd file leverages (images, .bib file, etc.).  Your submitted files should be named with year, course number, lastname, first & middle initial, and then "finalproject." For example my file name would be: 
-
-- OPER 682 section: 2017_OPER682_boehmkebc_finalproject.Rmd
-- LOGM 682 section: 2017_LOGM682_boehmkebc_finalproject.Rmd
-
-
+Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  Upon submission you will supply a PDF or Word report that addresses the following areas:
 
 <div id="final-project-rubric" class="section level1" style="width: 120%;">
 <table style="font-size:13px;">
