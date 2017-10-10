@@ -92,7 +92,7 @@ During week 10, each group will select one of their case studies to present.  Al
 
 ### Final Case Study {#final}
 
-Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  Further guidance regarding expectations for the final case study submissions will be provided in class.
+Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  [Grading rubric](/LOGM630_final_project).
 
 ### Engagement {#engage}
 
