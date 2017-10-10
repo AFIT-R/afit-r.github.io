@@ -32,7 +32,7 @@ The following describes each deliverable and provides the expectations based on 
 </tr>
 <tr class="even">
 <td align="center" valign="top">2</td>
-<td align="left" valign="top">In this second submission I expect you to build onto the first deliverable by refining any of your discussion regarding goal definition, exploratory data analysis, and data pre-processing.  Furthermore, I expect you to have applied multiple forecasting methodologies to your data a compared their performances. </td>
+<td align="left" valign="top">In this second submission I expect you to build onto the first deliverable by refining any of your discussion regarding goal definition, exploratory data analysis, and data pre-processing.  Furthermore, I expect you to have applied multiple forecasting methodologies to your data and compared their performances. </td>
 <td align="left" valign="top">Friday, November 17 NLT 11:59PM ET </td>
 <td align="left" valign="top">1.1-6.3 </td>
 </tr>
