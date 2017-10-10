@@ -20,21 +20,21 @@ The following describes each deliverable and provides the expectations based on 
 <th align="left">Deliverable</th>
 <th align="center">Description</th>
 <th align="center">Due Date</th>
-<th align="center"><a href="https://afit-r.github.io/final_project">Standards</a></th>
+<th align="center"><a href="https://afit-r.github.io/LOGM630_final_project">Standards</a></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="center" valign="top">1</td>
-<td align="left" valign="top">Rmarkdown PDF report providing background on your thesis and the problem statement that you want to answer in this class. </td>
-<td align="left" valign="top">Friday, June 30 NLT 11:59PM ET </td>
-<td align="left" valign="top"> 1.1-1.4 </td>
+<td align="left" valign="top">In this first submission I am looking for you to define the goal, perform exploratory data analysis, and pre-process your data to clean up any abnormalities. I also expect you to have partitioned your data and, at a minimum, have applied a naive forecasting methodology. </td>
+<td align="left" valign="top">Friday, October 27 NLT 11:59PM ET </td>
+<td align="left" valign="top"> 1.1-5.4 </td>
 </tr>
 <tr class="even">
 <td align="center" valign="top">2</td>
-<td align="left" valign="top">Rmarkdown PDF report that builds onto deliverable 1 by loading your data, providing source code information, and creating a data dictionary. </td>
-<td align="left" valign="top">Friday, July 7 NLT 11:59PM ET </td>
-<td align="left" valign="top">1.1-1.4, 2.1-2.3, 3.1-3.3, 7.1-7.3 </td>
+<td align="left" valign="top">In this second submission I expect you to have build onto the first deliverable by refining any of your discussion regarding goal definition, exploratory data analysis, and data pre-processing.  Furthermore, I expect you to have applied multiple forecasting methodologies to your data a compared their performances. </td>
+<td align="left" valign="top">Friday, November 17 NLT 11:59PM ET </td>
+<td align="left" valign="top">1.1-6.3 </td>
 </tr>
 </tbody>
 </table>
