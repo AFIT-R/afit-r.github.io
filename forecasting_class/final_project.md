@@ -5,7 +5,7 @@ layout: tutorial
 permalink: /LOGM630_final_project
 ---
 
-Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  Upon submission you will supply a PDF or Word report that addresses the following areas:
+Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  Upon submission you will supply a PDF or Word report that specifically addresses each of the case study assignment questions along with the following areas:
 
 <div id="final-project-rubric" class="section level1" style="width: 120%;">
 <table style="font-size:13px;">
@@ -21,62 +21,71 @@ Throughout the term you will progressively complete all three case studies and t
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left" valign="top">Introduction </td>
+<td align="left" valign="top">Define Goal </td>
 <td align="left" valign="top">
-  <b>1.1</b> Provide an introduction and some background regarding your overarching thesis problem. <br> 
-  <b>1.2</b> Outline the specific sub-problem you plan to address in this class. <br> 
-  <b>1.3</b> Discuss your current proposed approach/analytic technique you think will address (fully or partially) this problem. <br> 
-  <b>1.4</b> Explain how your analysis will help the decision-maker. 
+  Discuss the overarching goal of the case study and how forecasting helps to address the problem. Specifically, discuss:<br>
+  <b>1.1</b> The descriptive versus predictive goals. <br> 
+  <b>1.2</b> The forecasting horizon and updating needs. <br> 
+  <b>1.3</b> How the forecast will, or could be, used. <br> 
+  <b>1.4</b> Required automation. 
 </td>
 <td align="center" valign="top"> 5 </td>
-</tr>
-<tr class="even">
-<td align="left" valign="top">Packages Required </td>
-<td align="left" valign="top"> 
-  <b>2.1</b> All packages used are loaded upfront so the reader knows which are required to replicate the analysis. <br> 
-  <b>2.2</b> Messages and warnings resulting from loading the package are suppressed. <br> 
-  <b>2.3</b> Explanation is provided regarding the purpose of each package (there are over 10,000 packages, don't assume that I know why you loaded each package). 
-</td>
-<td align="center" valign="top"> 5 </td>
-</tr>
-<tr class="odd">
-<td align="left" valign="top">Data Preparation </td>
-<td align="left" valign="top"> 
-  <b>3.1</b> Original source where the data was obtained is cited and, if possible, hyperlinked. <br> 
-  <b>3.2</b> Source data is thoroughly explained (i.e. what was the original purpose of the data, when was it collected, how many variables did the original have, explain any peculiarities of the source data such as how missing values are recorded, or how data was imputed, etc.). <br> 
-  <b>3.3</b> Data importing and cleaning steps are explained in the text (tell me why you are doing the data cleaning activities that you perform) and follow a logical process. <br>
-  <b>3.4</b> Once your data is clean, show what the final data set looks like.  However, do not print off a data frame with 200+ rows; show me the data in the most condensed form possible. <br>
-  <b>3.5</b> Provide summary information about the variables of concern in your cleaned data set. Do not just print off a bunch of code chunks with <code>str()</code>, <code>summary()</code>, etc.  Rather, provide me with a consolidated explanation, either with a table that provides summary info for each variable or a nicely written summary paragraph with inline code.
-</td>
-<td align="center" valign="top"> 10 </td>
 </tr>
 <tr class="even">
 <td align="left" valign="top">Exploratory Data Analysis </td>
 <td align="left" valign="top"> 
-  <b>4.1</b> Uncover new information in the data that is not self-evident (i.e. do not just plot the data as it is; rather, slice and dice the data in different ways, create new variables, or join separate data frames to create new summary information). <br>
-  <b>4.2</b> Provide findings in the form of plots and tables. Show me you can display findings in different ways. <br>
-  <b>4.3</b> Graph(s) are carefully tuned for desired purpose. One graph illustrates one primary point and is appropriately formatted (plot and axis titles, legend if necessary, scales are appropriate, appropriate geoms used, etc.). <br>
-  <b>4.4</b> Table(s) carefully constructed to make it easy to perform important comparisons. Careful styling highlights important features. Size of table is appropriate. <br>
-  <b>4.5</b> Insights obtained from the analysis are thoroughly, yet succinctly, explained.  Easy to see and understand the interesting findinsg that you uncovered. <br>
+  Provide a background of the data to include:<br>
+  <b>2.1</b> Temporal frequency & granularity. <br> 
+  <b>2.2</b> Missing data, outliers, unequally spaced series, and other abnormalities. <br> 
+  <b>2.3</b> Presence of time series components such as level, trend, and seasonality. <br>
+  <b>2.4</b> Be sure to provide sufficient visualizations to illustrate these features.
 </td>
-<td align="center" valign="top"> 10 </td>
+<td align="center" valign="top"> 5 </td>
 </tr>
 <tr class="odd">
-<td align="left" valign="top">Modeling Results </td>
+<td align="left" valign="top">Pre-Process Data </td>
 <td align="left" valign="top"> 
-  <b>5.1</b> Properly introduce your modeling technique and its relevance to your problem. <br>
-  <b>5.2</b> Provide mathematical formulae to discribe how the analytic technique(s) compute results. <br>
-  <b>5.3</b> Implement the analytic technique efficiently. <br>
-  <b>5.4</b> Provide adequate interpretation of the results from your analysis.  Try to capture a balance in your explanation so that both an analyst and a senior leader can understand what the results mean. <br>
-  <b>5.5</b> Illustrate your findings in the form of plots and tables and fine tune these outputs to best describe your results. <br>
-  <b>5.6</b> Provide adequate justification and validation of your final approach and results.
+  Once you've identified all the attributes of your data discuss:<br>
+  <b>3.1</b> How you corrected for missing values, outliers, unequally spaced series, and other abnormalities. <br> 
+  <b>3.2</b> If you aggregated your data to a different level than provided. <br> 
+  <b>3.3</b> Any other data pre-processing steps you performed.
 </td>
 <td align="center" valign="top"> 10 </td>
 </tr>
 <tr class="even">
+<td align="left" valign="top">Partition Data </td>
+<td align="left" valign="top"> 
+  Outline and defend your approach for partitioning your data into training and validation sets to include:
+  <b>4.1</b> How you decided on the length of the training and validation sets. <br>
+  <b>4.2</b> Whether you performed cross-validation.
+</td>
+<td align="center" valign="top"> 10 </td>
+</tr>
+<tr class="odd">
+<td align="left" valign="top">Apply Forecasting Methods </td>
+<td align="left" valign="top"> 
+  Discuss your methodical approach to applying your forecasting methods:
+  <b>5.1</b> Did you apply a simplistic, basic approach to act as a benchmark? <br>
+  <b>5.2</b> What attributes in your data make your selected forecasting methods appropriate? <br>
+  <b>5.3</b> How and why did you tune any parameters? <br>
+  <b>5.4</b> Provide both visual and numeric outputs of your forecasting models.
+</td>
+<td align="center" valign="top"> 10 </td>
+</tr>
+<tr class="even">
+<td align="left" valign="top">Evaluate & Compare Performance </td>
+<td align="left" valign="top">
+  Illustrate the performance of your model(s) by visualizing and discussing:
+  <b>6.1</b> Training and validation residuals. <br>
+  <b>6.2</b> Training and validation accuracy measures. <br>
+  <b>6.3</b> Confindence intervals. <br>
+  <b>6.4</b> Based on your evaluation and performance assessment, which final model did you select? <b>
+  <b>6.5</b> Use the final selected model to forecast the required *k* steps ahead (provide both visual and numeric outputs.
+</td>
+<tr class="odd">
 <td align="left" valign="top">Summary </td>
 <td align="left" valign="top">
-  <b>6.1</b> Summarize the problem statement you addressed. <br>
+  <b>6.1</b> Summarize the forecasting problem you addressed. <br>
   <b>6.2</b> Summarize how you addressed this problem statement (the data used and the methodology employed). <br>
   <b>6.3</b> Summarize the interesting insights that your analysis provided. <br>
   <b>6.4</b> Summarize the policy or decision-making implications as a result of your analysis. <br>
@@ -84,11 +93,10 @@ Throughout the term you will progressively complete all three case studies and t
 </td>
 <td align="center" valign="top"> 5 </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left" valign="top">Formatting & Other Requirements </td>
 <td align="left" valign="top"> 
-  <b>7.1</b> Proper coding style is followed and code is well commented (see section regarding <a href="https://afit-r.github.io/basics#style">syle</a>). <br>
-  <b>7.2</b> Coding is systematic - complicated problem broken down into sub-problems that are individually much simpler. Code is efficient, correct, and minimal. Code uses appropriate data structure (list, data frame, vector/matrix/array). Code checks for common errors. <br>
+  <b>7.1</b> Analysis is systematic - complicated problem broken down into sub-problems that are individually much simpler. aCode is efficient, correct, and minimal. Code uses appropriate data structure (list, data frame, vector/matrix/array). Code checks for common errors. <br>
   <b>7.3</b> Achievement, mastery, cleverness, creativity:  Tools and techniques from the course are applied very competently and, perhaps,somewhat creatively. Perhaps student has gone beyond what was expected and required, e.g., extraordinary effort, additional tools not addressed by this course, unusually sophisticated application of tools from course. <br>
   <b>7.4</b> .Rmd fully executes without any errors and PDF produced matches the PDF report submitted by student.
 </td>
