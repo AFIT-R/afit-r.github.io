@@ -40,7 +40,7 @@ Throughout the term you will progressively complete all three case studies and t
   <b>2.3</b> Presence of time series components such as level, trend, and seasonality. <br>
   <b>2.4</b> Be sure to provide sufficient visualizations to illustrate these features.
 </td>
-<td align="center" valign="top"> 5 </td>
+<td align="center" valign="top"> 10 </td>
 </tr>
 <tr class="odd">
 <td align="left" valign="top">Pre-Process Data </td>
@@ -50,7 +50,7 @@ Throughout the term you will progressively complete all three case studies and t
   <b>3.2</b> If you aggregated your data to a different level than provided. <br> 
   <b>3.3</b> Any other data pre-processing steps you performed.
 </td>
-<td align="center" valign="top"> 10 </td>
+<td align="center" valign="top"> 5 </td>
 </tr>
 <tr class="even">
 <td align="left" valign="top">Partition Data </td>
@@ -59,7 +59,7 @@ Throughout the term you will progressively complete all three case studies and t
   <b>4.1</b> How you decided on the length of the training and validation sets. <br>
   <b>4.2</b> Whether you performed cross-validation.
 </td>
-<td align="center" valign="top"> 10 </td>
+<td align="center" valign="top"> 5 </td>
 </tr>
 <tr class="odd">
 <td align="left" valign="top">Apply Forecasting Methods </td>
@@ -79,7 +79,7 @@ Throughout the term you will progressively complete all three case studies and t
   <b>6.1</b> Training and validation residuals. <br>
   <b>6.2</b> Training and validation accuracy measures. <br>
   <b>6.3</b> Confindence intervals. <br>
-  <b>6.4</b> Based on your evaluation and performance assessment, which final model did you select? <b>
+  <b>6.4</b> Based on your evaluation and performance assessment, which final model did you select? <br>
   <b>6.5</b> Use the final selected model to forecast the required *k* steps ahead (provide both visual and numeric outputs.
 </td>
 <td align="center" valign="top"> 10 </td>
@@ -103,7 +103,7 @@ Throughout the term you will progressively complete all three case studies and t
   <b>7.3</b> Achievement, mastery, cleverness, creativity:  Tools and techniques from the course are applied very competently and, perhaps,somewhat creatively. Perhaps student has gone beyond what was expected and required, e.g., extraordinary effort, additional tools not addressed by this course, unusually sophisticated application of tools from course. <br>
   <b>7.4</b> Analysis is reproducible meaning the instructor can fully re-create the analysis in the report due to the level of details provided or because the students provide the analysis code (.Rmd file) as an appendix.
 </td>
-<td align="center" valign="top"> 15 </td>
+<td align="center" valign="top"> 10 </td>
 </tr>
 </tbody>
 </table>
