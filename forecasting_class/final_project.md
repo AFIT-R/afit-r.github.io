@@ -107,5 +107,9 @@ Throughout the term you will progressively complete all three case studies and t
 </tr>
 </tbody>
 </table>
-<p><em>Total possible points: 60</em></p>
+<p>
+  <em>Total possible points: 60</em>
+  <br>
+  <em>Due no later than: Sunday, December 10, 11:59PM ET</em>
+</p>
 </div>
