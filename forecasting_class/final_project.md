@@ -87,21 +87,21 @@ Throughout the term you will progressively complete all three case studies and t
 <tr class="odd">
 <td align="left" valign="top">Summary </td>
 <td align="left" valign="top">
-  <b>6.1</b> Summarize the forecasting problem you addressed. <br>
-  <b>6.2</b> Summarize how you addressed this problem statement (the data used and the methodology employed). <br>
-  <b>6.3</b> Summarize the interesting insights that your analysis provided. <br>
-  <b>6.4</b> Summarize the policy or decision-making implications as a result of your analysis. <br>
-  <b>6.5</b> Discuss the limitations of your analysis and how you, or someone else, could improve upon it.
+  <b>7.1</b> Summarize the forecasting problem you addressed. <br>
+  <b>7.2</b> Summarize how you addressed this problem statement (the data used and the methodology employed). <br>
+  <b>7.3</b> Summarize the interesting insights that your analysis provided. <br>
+  <b>7.4</b> Summarize the policy or decision-making implications as a result of your analysis. <br>
+  <b>7.5</b> Discuss the limitations of your analysis and how you, or someone else, could improve upon it.
 </td>
 <td align="center" valign="top"> 5 </td>
 </tr>
 <tr class="even">
 <td align="left" valign="top">Formatting & Other Requirements </td>
 <td align="left" valign="top"> 
-  <b>7.1</b> Analysis is systematic - complicated problem broken down into sub-problems that are individually much simpler. Analysis is efficient, correct, and minimal. <br>
-  <b>7.2</b> All case study questions in the back of the book were answered. <br>
-  <b>7.3</b> Achievement, mastery, cleverness, creativity:  Tools and techniques from the course are applied very competently and, perhaps,somewhat creatively. Perhaps student has gone beyond what was expected and required, e.g., extraordinary effort, additional tools not addressed by this course, unusually sophisticated application of tools from course. <br>
-  <b>7.4</b> Analysis is reproducible meaning the instructor can fully re-create the analysis in the report due to the level of details provided or because the students provide the analysis code (.Rmd file) as an appendix.
+  <b>8.1</b> Analysis is systematic - complicated problem broken down into sub-problems that are individually much simpler. Analysis is efficient, correct, and minimal. <br>
+  <b>8.2</b> All case study questions in the back of the book were answered. <br>
+  <b>8.3</b> Achievement, mastery, cleverness, creativity:  Tools and techniques from the course are applied very competently and, perhaps,somewhat creatively. Perhaps student has gone beyond what was expected and required, e.g., extraordinary effort, additional tools not addressed by this course, unusually sophisticated application of tools from course. <br>
+  <b>8.4</b> Analysis is reproducible meaning the instructor can fully re-create the analysis in the report due to the level of details provided or because the students provide the analysis code (.Rmd file) as an appendix.
 </td>
 <td align="center" valign="top"> 10 </td>
 </tr>
