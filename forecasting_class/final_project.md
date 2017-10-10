@@ -5,7 +5,7 @@ layout: tutorial
 permalink: /LOGM630_final_project
 ---
 
-Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of the group’s three submissions to grade for their final project.  Upon submission you will supply a PDF or Word report that specifically addresses each of the case study assignment questions along with the following areas:
+Throughout the term you will progressively complete all three case studies and the instructor will randomly draw one of your group’s three submissions to grade for your final project.  Upon submission you will supply a PDF or Word report that specifically addresses each of the case study assignment questions along with the following areas:
 
 <div id="final-project-rubric" class="section level1" style="width: 120%;">
 <table style="font-size:13px;">
