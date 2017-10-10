@@ -81,7 +81,7 @@ Throughout the term you will progressively complete all three case studies and t
   <b>6.3</b> Confindence intervals. <br>
   <b>6.4</b> Based on your evaluation and performance assessment, which final model did you select? <br>
   <b>6.5</b> Provide the mathematical notation for your final model. <br>
-  <b>6.6</b> Use the final selected model to forecast the required *k* steps ahead (provide both visual and numeric outputs.
+  <b>6.6</b> Use the final selected model to forecast the required <em>k</em> steps ahead (provide both visual and numeric outputs.
 </td>
 <td align="center" valign="top"> 10 </td>
 </tr>
