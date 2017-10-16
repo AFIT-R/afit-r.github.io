@@ -114,8 +114,8 @@ I will use this feedback to help in determining your level of engagement.
 | Week    | Dates  | Lesson Description | Learning Material | Deliverables | Class Material |
 |:-------:|--------|--------------------|:-----------------:|:------------:|:------------:|
 | **1**   |Oct 2-6      | Forecasting approach & data | Ch 1-2 MOOC week 1   |  | <a href="https://www.dropbox.com/sh/jx9kj291lp00vdo/AADAxUnpWUW5kQ0ftcwiRU00a?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> &nbsp; <a href="https://www.dropbox.com/sh/zun2snzq1ja1vid/AACoFmtVosDGh4QQyZBs4AMSa?dl=1" style="color:black;"><i class="fa fa-database" style="font-size:1em"></i></a> |
-| **2**   |Oct 9-13     | Performance Evaluation      | Ch 3 MOOC week 2 |  | <a href="https://www.dropbox.com/sh/pitxtmm6t3b8fqg/AABTNNyDedQpxeqkxuviISvha?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-| **3**   |Oct 16-20    | Overview of forecasting methods & Understanding smoothing methods | Ch 4-5 MOOC week 3 | | <a href="https://www.dropbox.com/sh/f44i22vhbsrvaw8/AADtqur4O5OpGN1hjvYBpjWza?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **2**   |Oct 9-13     | Performance Evaluation      | Ch 3 MOOC week 2-3 |  | <a href="https://www.dropbox.com/sh/pitxtmm6t3b8fqg/AABTNNyDedQpxeqkxuviISvha?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **3**   |Oct 16-20    | Overview of forecasting methods & Understanding smoothing methods | Ch 4-5 MOOC week 4 | | <a href="https://www.dropbox.com/sh/f44i22vhbsrvaw8/AADtqur4O5OpGN1hjvYBpjWza?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **4**   |Oct 23-27    | Understanding smoothing methods | Ch 5 MOOC week 4 |    Case studies Eval #1  |   |
 | **5**   |Oct 30-Nov 3 | Regression models: trend and seasonality | Ch 6 MOOC week 5 | |  |
 | **6**   |Nov 6-10     | Regression models: autocorrelation & external information | Ch 7 MOOC week 6 | |  |
