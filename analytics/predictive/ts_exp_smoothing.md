@@ -274,7 +274,7 @@ $$
 b_{t} = {\beta}(l_{t} - l_{t-1}) + (1 - \beta)b_{t-1}
 $$
 
-If we go back to our Google stock data, we can apply Holt's method in the following manner.  Here, we will not manually set the $$\alpha$$ and $$\beta$$ for our initial model and forecast forward 100 steps with $h=100$. We see that our forecast now does a better job capturing the positive trend in the data.
+If we go back to our Google stock data, we can apply Holt's method in the following manner.  Here, we will not manually set the $$\alpha$$ and $$\beta$$ for our initial model and forecast forward 100 steps with $$h=100$$. We see that our forecast now does a better job capturing the positive trend in the data.
 
 
 ```r
@@ -321,7 +321,7 @@ accuracy(holt.goog, goog.test)
 ## Test set     2.7220944 0.89540070  2.481272
 ```
 
-Similar to SES, we can tune the $\beta$ parameter to see if we can improve our predictive accuracy.  The `holt` function identified an optimal $$\beta = 0.0001$$; however, this optimal value is based on minimizing errors on the training set, not minimizing prediction errors on the test set.  Let's assess a tradespace of $$\beta$$ values and see if we gain some predictive accuracy.  Here, we loop through a series of $$\beta$$ values starting at 0.0001 all the way up to 0.5.  We see that there is a dip in our RMSE at 0.0601.
+Similar to SES, we can tune the $$\beta$$ parameter to see if we can improve our predictive accuracy.  The `holt` function identified an optimal $$\beta = 0.0001$$; however, this optimal value is based on minimizing errors on the training set, not minimizing prediction errors on the test set.  Let's assess a tradespace of $$\beta$$ values and see if we gain some predictive accuracy.  Here, we loop through a series of $$\beta$$ values starting at 0.0001 all the way up to 0.5.  We see that there is a dip in our RMSE at 0.0601.
 
 
 ```r
@@ -408,10 +408,10 @@ autoplot(decompose(qcement))
 For the Additive model, the regular equation form is:
 
 $$
-\hat{y}_{T+1} = L_t + kT_t + S_{t+k-m}
+\hat{y}_{t+1} = L_t + kT_t + S_{t+k-m}
 $$
 
-The level ($L_t$), trend ($T_t$), and season ($S_t$) are updated through a pair of updating equations, which is where you see the presence of the three smoothing paramters:
+The level ($$L_t$$), trend ($$T_t$$), and season ($$S_t$$) are updated through a pair of updating equations, which is where you see the presence of the three smoothing paramters:
 
 $$
 L_t = \alpha(y_t - S_{t-m}) + (1-\alpha)(L_{t-1} + T_{t-1}),
@@ -425,7 +425,7 @@ $$
 S_t = \gamma(y_t - L_t) + (1-\gamma)S_{t-m}.
 $$
 
-where $\alpha$, $\beta$, and $\gamma$ are the three smoothing parameters to deal with the level pattern, the trend, and the seasonality, respectively. Similar to SES and Holt's method, all three parameters are constrained to 0-1.  The component equations are as follows:
+where $$\alpha$$, $$\beta$$, and $$\gamma$$ are the three smoothing parameters to deal with the level pattern, the trend, and the seasonality, respectively. Similar to SES and Holt's method, all three parameters are constrained to 0-1.  The component equations are as follows:
 
 $$
 \hat{y}_{t+h} = l_{t} + hb_{t} + s_{t-m+h^{+}_{m}}
@@ -462,7 +462,7 @@ autoplot(forecast(qcement.hw))
 
 Consequently, if you wanted to apply a Holt's model where the error and trend were additive and no seasonality exists you would select `model = "AAN"`.  If you want to apply a Holt-Winters model where there is additive error, an exponential (multiplicative) trend, and additive seasonality you would select `model = "AMA"`.  If you are uncertain of the type of component then you use "Z".  So if you were uncertain of the components or if you want the model to select the best option, you could use `model = "ZZZ"` and the "optimal" model will be selected.
 
-If we assess our additive model we can see that $\alpha = 0.6208$, $\beta = 0.0001$, and $\gamma = 0.1913$
+If we assess our additive model we can see that $$\alpha = 0.6208$$, $$\beta = 0.0001$$, and $$\gamma = 0.1913$$
 
 
 ```r
@@ -539,7 +539,7 @@ $$
 \hat{y}_{T+1} = (L_t + kT_t)S_{t+k-m}
 $$
 
-The level ($L_t$), trend ($T_t$), and season ($S_t$) are updated through a pair of updating equations, which is where you see the presence of the three smoothing paramters:
+The level ($$L_t$$), trend ($$T_t$$), and season ($$S_t$$) are updated through a pair of updating equations, which is where you see the presence of the three smoothing paramters:
 
 $$
 L_t = \alpha y_t / S_{t-m} + (1-\alpha)(L_{t-1} + T_{t-1}),,
@@ -655,7 +655,7 @@ summary(qcement.hw5)
 ## Training set 0.5572228 0.04834983
 ```
 
-As we did in the [SES](#ses) and [Holt's method](#holts) section, we can optimize the $\gamma$ parameter in our Holt-Winters model.  Here, we use the additive error, trend and seasonality model that minimized our prediction errors above and identify the $\gamma$ parameter that minimizes forecast errors. In this case we see that $\gamma = 0.21$ minimizes the error rate.
+As we did in the [SES](#ses) and [Holt's method](#holts) section, we can optimize the $$\gamma$$ parameter in our Holt-Winters model.  Here, we use the additive error, trend and seasonality model that minimized our prediction errors above and identify the $$\gamma$$ parameter that minimizes forecast errors. In this case we see that $$\gamma = 0.21$$ minimizes the error rate.
 
 
 ```r
@@ -679,7 +679,7 @@ ggplot(error, aes(gamma, RMSE)) +
 
 <img src="/public/images/analytics/time_series/es13-1.png" style="display: block; margin: auto;" />
 
-If we update our model with this "optimal" $\gamma$ parameter we see that we bring our forecasting error rate down from 2.88% to 2.76%.  This is a small improvement, but often small improvements can have large business implications.
+If we update our model with this "optimal" $$\gamma$$ parameter we see that we bring our forecasting error rate down from 2.88% to 2.76%.  This is a small improvement, but often small improvements can have large business implications.
 
 
 ```r
@@ -730,7 +730,7 @@ autoplot(qcement.f6)
 
 ## Damping Methods {#damp}
 
-One last item to discuss is the idea of "damping" your forecast.  Damped forecasts use a damping coefficient denoted $\phi$ to more conservatively estimate the predicted trend.  Basically, if you believe that your additive or multiplicative trend is or will be slowing down ("flat-lining") in the near future then you are assuming it will dampen.
+One last item to discuss is the idea of "damping" your forecast.  Damped forecasts use a damping coefficient denoted $$\phi$$ to more conservatively estimate the predicted trend.  Basically, if you believe that your additive or multiplicative trend is or will be slowing down ("flat-lining") in the near future then you are assuming it will dampen.
 
 The equation form for an additive model with a damping coefficient is
 
@@ -746,7 +746,7 @@ $$
 \beta_t = \beta(L_t - L_{t-1}) + (1-\beta)\phi \beta_{t-1}.
 $$
 
-where $0 < \phi < 1$.  When $\phi = 1$ the method is the same as Holt's additive model.  As $\phi$ gets closer to 0, the trend becomes more conservative and flat-lines to a constant in the nearer future.  The end result of this method is that short-run forecasts are still trended while long-run forecasts are constant.
+where $$0 < \phi < 1$$.  When $$\phi = 1$$ the method is the same as Holt's additive model.  As $$\phi$$ gets closer to 0, the trend becomes more conservative and flat-lines to a constant in the nearer future.  The end result of this method is that short-run forecasts are still trended while long-run forecasts are constant.
 
 To illustrate the effect of a damped forecast we'll use the `fpp2::ausair` data set.  Here, we create several models (additive, additive + damped, multiplicative, multiplicative + damped).  In the plot you can see that the damped models (dashed lines) have more conservative trend lines and if we forecasted these far enough into the future we would see this trend flat-line.
 
@@ -777,7 +777,7 @@ autoplot(ausair) +
 
 <img src="/public/images/analytics/time_series/es15-1.png" style="display: block; margin: auto;" />
 
-The above models were for illustrative purposes only.  You would apply the same process as you saw in earlier sections to identify if a damped model predicts more accurately than a non-dampped model.  You can even apply the approaches you saw earlier for tuning this parameter to identify the optimal $\phi$ coefficient.
+The above models were for illustrative purposes only.  You would apply the same process as you saw in earlier sections to identify if a damped model predicts more accurately than a non-dampped model.  You can even apply the approaches you saw earlier for tuning this parameter to identify the optimal $$\phi$$ coefficient.
 
 <br>
 
