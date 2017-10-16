@@ -227,15 +227,15 @@ gridExtra::grid.arrange(p1, p2, nrow = 1)
 
 As mentioned and observed in the previous section, SES does not perform well with data that has a long-term trend. In the last section we illustrated how you can remove the trend with differencing and then perform SES.  An alternative method to apply exponential smoothing while capturing trend in the data is to use _Holt's Method_.  
 
-Holt's Method makes predictions for data with a trend using _**two**_ smoothing parameters, $\alpha$ and $\beta$, which correspond to the level and trend components, respectively. For Holt's method, the prediction will be a line of some non-zero slope that extends from the time step after the last collected data point onwards.
+Holt's Method makes predictions for data with a trend using _**two**_ smoothing parameters, $$\alpha$$ and $$\beta$$, which correspond to the level and trend components, respectively. For Holt's method, the prediction will be a line of some non-zero slope that extends from the time step after the last collected data point onwards.
 
-The methodology for predictions using data with a trend (Holt's Method) uses the following equation with $T$ observations. The *k*-step-ahead forecast is given by combining the level estimate at time *t* ($L_t$) and the trend estimate (which in this example is assumbed additive) at time *t* ($T_t$). 
+The methodology for predictions using data with a trend (Holt's Method) uses the following equation with $$T$$ observations. The *k*-step-ahead forecast is given by combining the level estimate at time *t* ($$L_t$$) and the trend estimate (which in this example is assumbed additive) at time *t* ($$T_t$$). 
 
 $$
 \hat{y}_{T+1} = L_t + kT_t
 $$
 
-The level ($L_t$) and trend ($T_t$) are updated through a pair of updating equations, which is where you see the presence of the two smoothing paramters:
+The level ($$L_t$$) and trend ($$T_t$$) are updated through a pair of updating equations, which is where you see the presence of the two smoothing paramters:
 
 $$
 L_t = \alpha{y_t} + \alpha(1-\alpha) (L_{t-1} + T_{t-1}),
@@ -245,12 +245,12 @@ $$
 T_t = \beta(L_t - L_{t-1}) + (1-\beta)T_{t-1}.
 $$
 
-In these equations, the first means that the level at time *t* is a weighted average of the actual value at time *t* and the level in the previous period, adjusted for trend.  The second equation means that the trend at time *t* is a weighted average of the trend in the previous period and the more recent information on the change in the level. Similar to SES, $\alpha$ and $\beta$ are constrained to 0-1 with higher values giving faster learning and lower values providing slower learning.
+In these equations, the first means that the level at time *t* is a weighted average of the actual value at time *t* and the level in the previous period, adjusted for trend.  The second equation means that the trend at time *t* is a weighted average of the trend in the previous period and the more recent information on the change in the level. Similar to SES, $$\alpha$$ and $$\beta$$ are constrained to 0-1 with higher values giving faster learning and lower values providing slower learning.
 
 To capture a _**multiplicative**_ (exponential) trend we make a minor adjustment in the above equations:
 
 $$
-\hat{y}_{T+1} = L_t \times kT_t
+\hat{y}_{t+1} = L_t \times kT_t
 $$
 
 $$
@@ -274,7 +274,7 @@ $$
 b_{t} = {\beta}(l_{t} - l_{t-1}) + (1 - \beta)b_{t-1}
 $$
 
-If we go back to our Google stock data, we can apply Holt's method in the following manner.  Here, we will not manually set the $\alpha$ and $\beta$ for our initial model and forecast forward 100 steps with $h=100$. We see that our forecast now does a better job capturing the positive trend in the data.
+If we go back to our Google stock data, we can apply Holt's method in the following manner.  Here, we will not manually set the $$\alpha$$ and $$\beta$$ for our initial model and forecast forward 100 steps with $h=100$. We see that our forecast now does a better job capturing the positive trend in the data.
 
 
 ```r
@@ -284,7 +284,7 @@ autoplot(holt.goog)
 
 <img src="/public/images/analytics/time_series/es6-1.png" style="display: block; margin: auto;" />
 
-Within `holt` you can manually set the $\alpha$ and $\beta$ parameters; however, if you leave those parameters as NULL, the `holt` function will actually identify the optimal model parameters. It does this by minimizing AIC and BIC values.  We can see the model selected by `holt`. In this case, $\alpha = 0.9967$ meaning fast learning in the day-to-day movements and $\beta = 0.0001$ which means slow learning for the trend. 
+Within `holt` you can manually set the $$\alpha$$ and $$\beta$$ parameters; however, if you leave those parameters as NULL, the `holt` function will actually identify the optimal model parameters. It does this by minimizing AIC and BIC values.  We can see the model selected by `holt`. In this case, $$\alpha = 0.9967$$ meaning fast learning in the day-to-day movements and $$\beta = 0.0001$$ which means slow learning for the trend. 
 
 
 ```r
@@ -321,7 +321,7 @@ accuracy(holt.goog, goog.test)
 ## Test set     2.7220944 0.89540070  2.481272
 ```
 
-Similar to SES, we can tune the $\beta$ parameter to see if we can improve our predictive accuracy.  The `holt` function identified an optimal $\beta = 0.0001$; however, this optimal value is based on minimizing errors on the training set, not minimizing prediction errors on the test set.  Let's assess a tradespace of $\beta$ values and see if we gain some predictive accuracy.  Here, we loop through a series of $\beta$ values starting at 0.0001 all the way up to 0.5.  We see that there is a dip in our RMSE at 0.0601.
+Similar to SES, we can tune the $\beta$ parameter to see if we can improve our predictive accuracy.  The `holt` function identified an optimal $$\beta = 0.0001$$; however, this optimal value is based on minimizing errors on the training set, not minimizing prediction errors on the test set.  Let's assess a tradespace of $$\beta$$ values and see if we gain some predictive accuracy.  Here, we loop through a series of $$\beta$$ values starting at 0.0001 all the way up to 0.5.  We see that there is a dip in our RMSE at 0.0601.
 
 
 ```r
@@ -345,7 +345,7 @@ ggplot(beta.fit, aes(beta, RMSE)) +
 
 <img src="/public/images/analytics/time_series/es7-1.png" style="display: block; margin: auto;" />
 
-Now let's refit our model with this optimal $\beta$ value and compare our predictive accuracy to our original model.  We see that our new model reduces our error rate (MAPE) down to 1.78%.  
+Now let's refit our model with this optimal $$\beta$$ value and compare our predictive accuracy to our original model.  We see that our new model reduces our error rate (MAPE) down to 1.78%.  
 
 
 ```r
@@ -371,7 +371,7 @@ accuracy(holt.goog.opt, goog.test)
 ## Test set     0.88797970  2.156113
 ```
 
-If we plot our original versus more recent optimal model we'll notice a couple things.  First, our predicted values for the optimal model are more conservative; in other words they are assuming a more gradual slope. Second, the confidence intervals are much more extreme.  So although our predictions were more accurate, our uncertainty increases.  The reason for this is that by increasing our $\beta$ value we are assuming faster learning from more recent observations.  And since there some quite a bit of turbulence in the recent time period, this is causing greater variance to be incorporated into our prediction intervals.  This requires a more indepth discussion than this tutorial will go into, but the important thing to keep in mind is that although we increase our prediction accuracy with parameter tuning, there are additional side effects that can occur, which may be harder to explain to decision-makers.
+If we plot our original versus more recent optimal model we'll notice a couple things.  First, our predicted values for the optimal model are more conservative; in other words they are assuming a more gradual slope. Second, the confidence intervals are much more extreme.  So although our predictions were more accurate, our uncertainty increases.  The reason for this is that by increasing our $$\beta$$ value we are assuming faster learning from more recent observations.  And since there some quite a bit of turbulence in the recent time period, this is causing greater variance to be incorporated into our prediction intervals.  This requires a more indepth discussion than this tutorial will go into, but the important thing to keep in mind is that although we increase our prediction accuracy with parameter tuning, there are additional side effects that can occur, which may be harder to explain to decision-makers.
 
 
 ```r
