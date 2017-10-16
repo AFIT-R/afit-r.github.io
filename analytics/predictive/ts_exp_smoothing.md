@@ -87,28 +87,28 @@ In both equations we can see that the most weight is placed on the most recent o
 </thead>
 <tbody>
 <tr class="odd">
-<th align="left">$$y_T$$</th>
+<th align="left">$$y_t$$</th>
 <th align="left">0.2</th>
 <th align="left">0.4</th>
 <th align="left">0.6</th>
 <th align="left">0.8</th>
 </tr>
 <tr class="even">
-<th align="left">$$y_{T-1}$$</th>
+<th align="left">$$y_{t-1}$$</th>
 <th align="left">0.16</th>
 <th align="left">0.24</th>
 <th align="left">0.26</th>
 <th align="left">0.16</th>
 </tr>
 <tr class="odd">
-<th align="left">$$y_{T-2}$$</th>
+<th align="left">$$y_{t-2}$$</th>
 <th align="left">0.128</th>
 <th align="left">0.144</th>
 <th align="left">0.096</th>
 <th align="left">0.032</th>
 </tr>
 <tr class="even">
-<th align="left">$$y_{T-3}$$</th>
+<th align="left">$$y_{t-3}$$</th>
 <th align="left">0.1024</th>
 <th align="left">0.0864</th>
 <th align="left">0.0384</th>
