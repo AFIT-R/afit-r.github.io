@@ -51,10 +51,10 @@ qcement.test <- window(qcement, start = c(2013, 1))
 
 The simplest of the exponentially smoothing methods is called "simple exponential smoothing" (SES).  The key point to remember is that SES is **suitable for data with no trend or seasonal pattern**. This section will illustrate why.
 
-For exponential smoothing, we weigh the recent observations more heavily than older observations. The weight of each observation is determined through the use of a *smoothing parameter*, which we will denote $$\alpha$$.  For a data set with $$T$$ observations, we calculate our predicted value, $$\hat{y}_{T+1}$$, which will be based on $$y_{1}$$ through $$y_{T}$$ as follows:
+For exponential smoothing, we weigh the recent observations more heavily than older observations. The weight of each observation is determined through the use of a *smoothing parameter*, which we will denote $$\alpha$$.  For a data set with $$T$$ observations, we calculate our predicted value, $$\hat{y}_{t+1}$$, which will be based on $$y_{1}$$ through $$y_{t}$$ as follows:
 
 $$
-\hat{y}_{T+1} = \alpha{y_T} + \alpha(1-\alpha)y_{T-1} + \dots + \alpha(1-\alpha)^{T-1}y_{1}
+\hat{y}_{t+1} = \alpha{y_t} + \alpha(1-\alpha)y_{t-1} + \dots + \alpha(1-\alpha)^{t-1}y_{1}
 $$
 
 where $$0 < \alpha \leq 1$$. It is also common to come to use the *component form* of this model, which uses the following set of equations.
@@ -125,7 +125,7 @@ In both equations we can see that the most weight is placed on the most recent o
 </table>
 </div>
 
-Let's go ahead and apply SES to the Google data using the `ses` function.  We manually set the $\alpha = .2$ for our initial model and forecast forward 100 steps with $h=100$. We see that our forecast projects a flatlined estimate into the future, which does not capture the positive trend in the data. This is why SES should not be used on data with a trend or seasonal component.
+Let's go ahead and apply SES to the Google data using the `ses` function.  We manually set the $$\alpha = .2$$ for our initial model and forecast forward 100 steps with $$h=100$$. We see that our forecast projects a flatlined estimate into the future, which does not capture the positive trend in the data. This is why SES should not be used on data with a trend or seasonal component.
 
 
 ```r
@@ -169,7 +169,7 @@ accuracy(ses.goog.dif, goog.dif.test)
 ## Test set      0.16841378   1.01854
 ```
 
-In our model we used the standard $\alpha = 0.20$; however, we can tune our alpha parameter to identify the value that reduces our forecasting error.  Here we loop through alpha values from 0.01-0.99 and identify the level that minimizes our test RMSE.  Turns out that $\alpha = 0.05$ minimizes our prediction error.
+In our model we used the standard $$\alpha = 0.20$$; however, we can tune our alpha parameter to identify the value that reduces our forecasting error.  Here we loop through alpha values from 0.01-0.99 and identify the level that minimizes our test RMSE.  Turns out that $$\alpha = 0.05$$ minimizes our prediction error.
 
 
 ```r
@@ -193,7 +193,7 @@ ggplot(alpha.fit, aes(alpha, RMSE)) +
 
 <img src="/public/images/analytics/time_series/es4-1.png" style="display: block; margin: auto;" />
 
-Now we can re-fit out SES with $\alpha = 0.05$.  Our performance metrics are not significantly different from our model where $\alpha = 0.20$; however, you will notice that the predicted confidence intervals are narrower (left chart).  And when we zoom into the predicted versus actuals (right chart) you see that for most observations, our predicted confidence intervals did well.
+Now we can re-fit out SES with $$\alpha = 0.05$$.  Our performance metrics are not significantly different from our model where $$\alpha = 0.20$$; however, you will notice that the predicted confidence intervals are narrower (left chart).  And when we zoom into the predicted versus actuals (right chart) you see that for most observations, our predicted confidence intervals did well.
 
 
 ```r
