@@ -79,7 +79,7 @@ In both equations we can see that the most weight is placed on the most recent o
 <thead>
 <tr class="header">
 <th align="left">Observation</th>
-<th align="left">$\alpha=0.2$</th>
+<th align="left">$$\alpha=0.2$$</th>
 <th align="left">$\alpha=0.4$</th>
 <th align="left">$\alpha=0.6$</th>
 <th align="left">$\alpha=0.8$</th>
