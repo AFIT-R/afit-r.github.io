@@ -456,9 +456,9 @@ autoplot(forecast(qcement.hw))
 
  So when specificying the model type you always specificy the error, trend, then seasonality (hence "ets").  The options you can specify for each component is as follows:
  
- - error: additive ("A"), multiplicative ("M"), unknown ("Z")
- - trend: none ("N"), additive ("A"), multiplicative ("M"), unknown ("Z")
- - seasonality: none ("N"), additive ("A"), multiplicative ("M"), unknown ("Z")
+ - <u>error</u>: additive ("A"), multiplicative ("M"), unknown ("Z")
+ - <u>trend</u>: none ("N"), additive ("A"), multiplicative ("M"), unknown ("Z")
+ - <u>seasonality</u>: none ("N"), additive ("A"), multiplicative ("M"), unknown ("Z")
 
 Consequently, if you wanted to apply a Holt's model where the error and trend were additive and no seasonality exists you would select `model = "AAN"`.  If you want to apply a Holt-Winters model where there is additive error, an exponential (multiplicative) trend, and additive seasonality you would select `model = "AMA"`.  If you are uncertain of the type of component then you use "Z".  So if you were uncertain of the components or if you want the model to select the best option, you could use `model = "ZZZ"` and the "optimal" model will be selected.
 
@@ -735,7 +735,7 @@ One last item to discuss is the idea of "damping" your forecast.  Damped forecas
 The equation form for an additive model with a damping coefficient is
 
 $$
-\hat{y}_{T+h} = L_t + (\phi + \phi^2 + \cdots + \phi^h)\beta_t
+\hat{y}_{t+h} = L_t + (\phi + \phi^2 + \cdots + \phi^h)\beta_t
 $$
 
 $$
@@ -788,5 +788,5 @@ Use the `usmelec` data set which is provided by the `fpp2` package.
 1. Discuss the merits of using a simple exponential smoothing model versus a Holt's or Holt-Winters model on this data.
 2. Partition the data so that you can forecast and assess your predictions for 2012-2013.
 3. Identify the exponential smoothing model that minimizes prediction error (RMSE & MAPE) for 2012-2013.
-4. Can you tune the smoothing parameters ($\alpha, \beta, \gamma, \phi$) to optimize predictive accuracy?
+4. Can you tune the smoothing parameters ($$\alpha, \beta, \gamma, \phi$$) to optimize predictive accuracy?
 5. Plot your final model's forecast against the actual data for 2012-2013.
