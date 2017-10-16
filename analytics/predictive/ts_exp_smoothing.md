@@ -51,13 +51,13 @@ qcement.test <- window(qcement, start = c(2013, 1))
 
 The simplest of the exponentially smoothing methods is called "simple exponential smoothing" (SES).  The key point to remember is that SES is **suitable for data with no trend or seasonal pattern**. This section will illustrate why.
 
-For exponential smoothing, we weigh the recent observations more heavily than older observations. The weight of each observation is determined through the use of a *smoothing parameter*, which we will denote $\alpha$.  For a data set with $T$ observations, we calculate our predicted value, $\hat{y}_{T+1}$, which will be based on $y_{1}$ through $y_{T}$ as follows:
+For exponential smoothing, we weigh the recent observations more heavily than older observations. The weight of each observation is determined through the use of a *smoothing parameter*, which we will denote $$\alpha$$.  For a data set with $$T$$ observations, we calculate our predicted value, $$\hat{y}_{T+1}$$, which will be based on $$y_{1}$$ through $$y_{T}$$ as follows:
 
 $$
 \hat{y}_{T+1} = \alpha{y_T} + \alpha(1-\alpha)y_{T-1} + \dots + \alpha(1-\alpha)^{T-1}y_{1}
 $$
 
-where $0 < \alpha \leq 1$. It is also common to come to use the *component form* of this model, which uses the following set of equations.
+where $$0 < \alpha \leq 1$$. It is also common to come to use the *component form* of this model, which uses the following set of equations.
 
 $$
 \hat{y}_{t+1} = l_{t}
@@ -67,7 +67,7 @@ $$
 l_{t} = \alpha{y_{t}} + (1 - \alpha)l_{t-1}
 $$
 
-In both equations we can see that the most weight is placed on the most recent observation. In practice, $\alpha$ equal to 0.1-0.2 tends to perform quite well but we'll demonstrate shortly how to tune this parameter.  When $\alpha$ is closer to 0 we consider this *slow learning* because the algorithm gives historical data more weight.  When $\alpha$ is closer to 1 we consider this *fast learning* because the algorithm gives more weight to the most recent observation; therefore, recent changes in the data will have a bigger impact on forecasted values. The following table illustrates how weighting changes based on the $\alpha$ parameter:
+In both equations we can see that the most weight is placed on the most recent observation. In practice, $$\alpha$$ equal to 0.1-0.2 tends to perform quite well but we'll demonstrate shortly how to tune this parameter.  When $$\alpha$$ is closer to 0 we consider this *slow learning* because the algorithm gives historical data more weight.  When $$\alpha$$ is closer to 1 we consider this *fast learning* because the algorithm gives more weight to the most recent observation; therefore, recent changes in the data will have a bigger impact on forecasted values. The following table illustrates how weighting changes based on the $$\alpha$$ parameter:
 
 <div id="alpha-chart" class="section level1" style="width: 100%;">
 <table style="font-size:13px;">
@@ -80,46 +80,46 @@ In both equations we can see that the most weight is placed on the most recent o
 <tr class="header">
 <th align="left">Observation</th>
 <th align="left">$$\alpha=0.2$$</th>
-<th align="left">$\alpha=0.4$</th>
-<th align="left">$\alpha=0.6$</th>
-<th align="left">$\alpha=0.8$</th>
+<th align="left">$$\alpha=0.4$$</th>
+<th align="left">$$\alpha=0.6$$</th>
+<th align="left">$$\alpha=0.8$$</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<th align="left">$y_T$</th>
+<th align="left">$$y_T$$</th>
 <th align="left">0.2</th>
 <th align="left">0.4</th>
 <th align="left">0.6</th>
 <th align="left">0.8</th>
 </tr>
 <tr class="even">
-<th align="left">$y_{T-1}$</th>
+<th align="left">$$y_{T-1}$$</th>
 <th align="left">0.16</th>
 <th align="left">0.24</th>
 <th align="left">0.26</th>
 <th align="left">0.16</th>
 </tr>
 <tr class="odd">
-<th align="left">$y_{T-2}$</th>
+<th align="left">$$y_{T-2}$$</th>
 <th align="left">0.128</th>
 <th align="left">0.144</th>
 <th align="left">0.096</th>
 <th align="left">0.032</th>
 </tr>
 <tr class="even">
-<th align="left">$y_{T-3}$</th>
+<th align="left">$$y_{T-3}$$</th>
 <th align="left">0.1024</th>
 <th align="left">0.0864</th>
 <th align="left">0.0384</th>
 <th align="left">0.0064</th>
 </tr>
 <tr class="odd">
-<th align="left">$\vdots$</th>
-<th align="left">$\vdots$</th>
-<th align="left">$\vdots$</th>
-<th align="left">$\vdots$</th>
-<th align="left">$\vdots$</th>
+<th align="left">$$\vdots$$</th>
+<th align="left">$$\vdots$$</th>
+<th align="left">$$\vdots$$</th>
+<th align="left">$$\vdots$$</th>
+<th align="left">$$\vdots$$</th>
 </tr>
 </tbody>
 </table>
