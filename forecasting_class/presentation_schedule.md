@@ -30,6 +30,31 @@ The following provides the group assignment for end-of-quarter presentations
 <td align="left" valign="top">Case 1 </td>
 <td align="left" valign="top">Thursday, Nov 30 </td>
 </tr>
+<tr class="odd">
+<td align="center" valign="top">Group 1</td>
+<td align="left" valign="top">Case 2 </td>
+<td align="left" valign="top">Tuesday, Dec 5 </td>
+</tr>
+<tr class="even">
+<td align="center" valign="top">Group 3</td>
+<td align="left" valign="top">Case 2 </td>
+<td align="left" valign="top">Tuesday, Dec 5 </td>
+</tr>
+<tr class="odd">
+<td align="center" valign="top">Group 2</td>
+<td align="left" valign="top">Case 3 </td>
+<td align="left" valign="top">Thursday, Dec 7 </td>
+</tr>
+<tr class="even">
+<td align="center" valign="top">Group 4</td>
+<td align="left" valign="top">Case 3 </td>
+<td align="left" valign="top">Thursday, Dec 7 </td>
+</tr>
+<tr class="odd">
+<td align="center" valign="top">Group 6</td>
+<td align="left" valign="top">Case 3 </td>
+<td align="left" valign="top">Thursday, Dec 7 </td>
+</tr>
 </tbody>
 </table>
 </div>
