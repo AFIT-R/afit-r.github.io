@@ -121,7 +121,7 @@ I will use this feedback to help in determining your level of engagement.
 | **6**   |Nov 6-10     | Regression models: trend, seasonality, & AR | Ch 6-7 MOOC week 5-6 | |  <a href="https://www.dropbox.com/sh/h77u5j0e9yq8ren/AABW009gpIMyVOda1o1vS4uja?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **7**   |Nov 13-17    | ARIMA Models | Ch 7 |    Case studies Eval #2    |  |
 | **8**   |Nov 20-24    | Forecasting binary outcomes | Ch 8  |              |  |
-| **9**   |Nov 27-Dec 1 | Neural networks             | Ch 9  |              |  |
+| **9**   |Nov 27-Dec 1 | Neural networks & Group presentations  | Ch 9  |              |  |
 | **10**  |Dec 4-8      | Group presentations         |          |  Group presentation  |  |
 | **11**  |Dec 11-15    | Finals week                 |          |  Case studies due  |  |
 
