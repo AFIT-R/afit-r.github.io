@@ -118,7 +118,7 @@ I will use this feedback to help in determining your level of engagement.
 | **3**   |Oct 16-20    | Overview of forecasting methods & Understanding smoothing methods | Ch 4-5 MOOC week 4 | | <a href="https://www.dropbox.com/sh/f44i22vhbsrvaw8/AADtqur4O5OpGN1hjvYBpjWza?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **4**   |Oct 23-27    | Understanding smoothing methods | Ch 5 MOOC week 4 |    Case studies Eval #1  |  <a href="https://www.dropbox.com/sh/ciwz12w9cgq39xg/AACD-uM1kt9CESd67pp_90vxa?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **5**   |Oct 30-Nov 3 | Case study review & wingman day | NA | |  |
-| **6**   |Nov 6-10     | Regression models: trend, seasonality, & AR | Ch 6-7 MOOC week 5-6 | |  <a href="" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **6**   |Nov 6-10     | Regression models: trend, seasonality, & AR | Ch 6-7 MOOC week 5-6 | |  <a href="https://www.dropbox.com/sh/h77u5j0e9yq8ren/AABW009gpIMyVOda1o1vS4uja?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **7**   |Nov 13-17    | ARIMA Models | Ch 7 |    Case studies Eval #2    |  |
 | **8**   |Nov 20-24    | Forecasting binary outcomes | Ch 8  |              |  |
 | **9**   |Nov 27-Dec 1 | Neural networks             | Ch 9  |              |  |
