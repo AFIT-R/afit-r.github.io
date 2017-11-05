@@ -5,7 +5,7 @@ layout: tutorial
 permalink: /LOGM630_presentations
 ---
 
-The following provides the group assignment for end-of-quarter presentations
+The for end-of-quarter group presentations are scheduled as follows:
 
 <div id="presentation-schedule" class="section level1" style="width: 75%;">
 <table style="font-size:13px;">
