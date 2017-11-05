@@ -88,7 +88,7 @@ Throughout the term you will progressively complete all three case studies.  You
 
 ### Group Presentation {#pres}
 
-During week 10, each group will select one of their case studies to present.  Although your case study analysis may only be 90% complete at this time, this provides an opportunity to present your work to date and receive feedback from the class and instructor on where improvements and clarification could be made.  Further guidance regarding expectations for the group presentation will be provided in class.
+During week 10, each group will select one of their case studies to present.  Although your case study analysis may only be 90% complete at this time, this provides an opportunity to present your work to date and receive feedback from the class and instructor on where improvements and clarification could be made.  Further guidance regarding expectations for the group presentation will be provided in class. [Presentation schedule](LOGM630_presentations).
 
 ### Final Case Study {#final}
 
