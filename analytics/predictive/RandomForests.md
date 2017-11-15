@@ -1,10 +1,8 @@
 ---
-title: "Tree-Based Methods"
-output: 
-  html_document:
-    keep_md: TRUE
+layout: tutorial
+title: Tree-Based Methods
+permalink: /tree_based_methods
 ---
-
 
 
 The relatively recent explosion in available computing power allows for old methods to be reborn as well as new methods to be created. One such machine learning algorithm that is directly the product of the computer age is the *random forest*, a computationally extensive prediction algorithm based on bootstrapped decision trees which possesses impressive predictive capability. Another machine learning algorithm, known as *boosting*, has taken prediction accuracy a step further, using sequential decision trees to fine-tune the analysis.
@@ -116,7 +114,7 @@ AHDfit <- rpart(AHD ~ ., data = Heart[trainHeart,], method = "class")
 rpart.plot(AHDfit)
 ```
 
-<img src="RandomForests_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="https://github.com/AFIT-R/afit-r.github.io/public/images/analytics/randomforest/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 We see that the first split is on the `ChestPain` variable, which is categorical. For categorical variables, the splits are done by factor level, where the "nonanginal", "nontypical", and "typical" categories correspond to the left path and all other levels correspond to the right path. In our case, the right path represents the "asymptomatic" condition. At subsequent splits, the other variables needed to determine the estimate are `Oldpeak`, `Ca`, and `RestECG`.
 
