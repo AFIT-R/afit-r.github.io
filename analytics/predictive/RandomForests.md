@@ -114,7 +114,7 @@ AHDfit <- rpart(AHD ~ ., data = Heart[trainHeart,], method = "class")
 rpart.plot(AHDfit)
 ```
 
-<img src="https://github.com/AFIT-R/afit-r.github.io/public/images/analytics/randomforest/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/randomforest/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 We see that the first split is on the `ChestPain` variable, which is categorical. For categorical variables, the splits are done by factor level, where the "nonanginal", "nontypical", and "typical" categories correspond to the left path and all other levels correspond to the right path. In our case, the right path represents the "asymptomatic" condition. At subsequent splits, the other variables needed to determine the estimate are `Oldpeak`, `Ca`, and `RestECG`.
 
@@ -299,7 +299,7 @@ This OOB error measure can be used to verify that we have planted enough trees. 
 plot(rf_salary)
 ```
 
-<img src="RandomForests_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/randomforest/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
 
 The plot indicates that 5000 trees is enough for the OOB error to have stabilized, so we can be confident that our random forest model is not suffering from underfitting.
 
@@ -342,7 +342,7 @@ Variable importance for random forests models is calculated using two different 
 varImpPlot(rf_salary)
 ```
 
-<img src="RandomForests_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/randomforest/unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
 
 Random forests purposefully overfit each bootstrapped data set and then compensate by averaging over a large number of trees. Another approach to training data is by planting purposefully underfitted trees that learn slowly and are built sequentially, also known as Boosting.
 
@@ -366,7 +366,7 @@ Unlike random forests, overfitting is a serious concern as the number of trees i
 bestHit <- gbm.perf(boost_salary, method = "cv")
 ```
 
-<img src="RandomForests_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/randomforest/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
 
 Once this sweet spot has been found, we can make predictions and calculate the sum of squared errors as before, taking note of the fact that `predict` requires the `n.trees` argument to be set.
 
@@ -494,7 +494,7 @@ par(mar = c(5,5,4,2))
 summary(boost_heart, n.trees = bestHeart, las = 1)
 ```
 
-<img src="RandomForests_files/figure-html/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/randomforest/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
 
 ```
 ##                 var     rel.inf
