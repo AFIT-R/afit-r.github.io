@@ -60,7 +60,7 @@ salfit <- rpart(formula = Salary ~ Years + Hits, data = Hitters[trainHit,],
 prp(salfit)
 ```
 
-<img src="public/images/analytics/randomforest/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/randomforest/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 Note the ease of interpretation. If we want to predict the log salary of a new hitter who had been in the league for 5 seasons and had 110 hits the previous season, we would start at the top of the tree and compare 5 years to 4.5 years. Seeing that 5 is not less than 4.5, we choose the right branch. Reaching the next split, we see that 110 hits is greater than 104 and choose the right branch at this split, arriving at our log salary estimate of 6.7 for our new player (which corresponds to a salary point estimate of $812,405.80).
 
@@ -76,7 +76,7 @@ salfit <- rpart(formula = Salary ~ Years + Hits, data = Hitters[trainHit,], meth
 rpart.plot(salfit)
 ```
 
-<img src="public/images/analytics/randomforest/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/randomforest/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 Based on this new, cross-validated decision tree, the estimate for the log salary of our new hitter becomes 6.6 ($735,095.20), and we can reasonably expect to have slightly more confidence in the accuracy of this point estimate. Each node in this visual display gives the estimate at each node as well as the percentage of training observations that are placed in that node. We can use the `predict` function to estimate the log salary for every hitter in the testing set as well as calculate the total error.
 
