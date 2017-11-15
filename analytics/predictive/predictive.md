@@ -29,5 +29,8 @@ Predictive methodologies use knowledge, usually extracted from historical data, 
 - [Neural Network for Regression](ann_regression)
 - [Neural Network for Classification](ann_classification)
 
+## Decision Trees
+- [Random Forests and Boosting](tree_based_methods)
+
 ## Resampling Methods
 - [Resampling Basics](resampling_methods)
