@@ -119,9 +119,9 @@ I will use this feedback to help in determining your level of engagement.
 | **4**   |Oct 23-27    | Understanding smoothing methods | Ch 5 MOOC week 4 |    Case studies Eval #1  |  <a href="https://www.dropbox.com/sh/ciwz12w9cgq39xg/AACD-uM1kt9CESd67pp_90vxa?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **5**   |Oct 30-Nov 3 | Case study review & wingman day | NA | |  |
 | **6**   |Nov 6-10     | Regression models: trend, seasonality, & AR | Ch 6-7 MOOC week 5-6 | |  <a href="https://www.dropbox.com/sh/h77u5j0e9yq8ren/AABW009gpIMyVOda1o1vS4uja?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-| **7**   |Nov 13-17    | ARIMA Models | Ch 7 |    Case studies Eval #2    | <a href="https://www.dropbox.com/sh/42s2b5x7cei7j1v/AAA3TSFHszhtEvPmMhBFwrO9a?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
-| **8**   |Nov 20-24    | Forecasting binary outcomes | Ch 8  |              |  |
-| **9**   |Nov 27-Dec 1 | Neural networks & Group presentations  | Ch 9  |              |  |
+| **7**   |Nov 13-17    | AR & MA Models | Ch 7 |    Case studies Eval #2    | <a href="https://www.dropbox.com/sh/42s2b5x7cei7j1v/AAA3TSFHszhtEvPmMhBFwrO9a?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **8**   |Nov 20-24    | ARIMA Models | Ch 7  |              |  |
+| **9**   |Nov 27-Dec 1 | Forecasting binary outcomes & Group presentations  | Ch 8  |   | <a href="https://www.dropbox.com/s/bn65zd1hfibxrxa/13-slides.pdf?dl=1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 | **10**  |Dec 4-8      | Group presentations         |          |  Group presentation  |  |
 | **11**  |Dec 11-15    | Finals week                 |          |  Case studies due  |  |
 
