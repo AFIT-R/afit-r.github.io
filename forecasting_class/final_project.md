@@ -111,6 +111,6 @@ Throughout the term you will progressively complete all three case studies and t
 <p>
   <em>Total possible points: 60</em>
   <br>
-  <em>Due no later than: Sunday, December 10, 11:59PM ET</em>
+  <em>Due no later than: Wednesday, December 13, 11:59PM ET</em>
 </p>
 </div>
