@@ -4,6 +4,7 @@ title: Univariate Statistical Inference
 permalink: /univariate_inference
 ---
 
+<img src="/public/images/analytics/univariate-inference/unnamed-chunk-4-1.png"  style="float:right; margin: 20px 0px 0px 5px;  width: 50%; height: 50%;" />
 After receiving data and completing some initial data exploration, we typically move on to performing some univariate estimation and prediction tasks.  A widespread tool for performing estimation and prediction is *statistical inference*.  Statistical inference is the process of deducing properties about a population where the population is assumed to be larger than the observed data set you are currently working with. In other words, statistical inference helps you estimate parameters of a larger population when the observed data you are working with is a subset of that population.  In this tutorial we examine univariate methods for statistical estimation and prediction that can provide you more confidence of your estimates when working with sample data.
 
 <br>
