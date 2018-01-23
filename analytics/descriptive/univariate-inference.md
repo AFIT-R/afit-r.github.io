@@ -223,7 +223,7 @@ Unfortunately, with respect to the population of our entire employee base, we ha
 
 $$ p \pm Z_{\alpha / 2} \sqrt{ \frac{p \cdot (1 - p)}{n} } \tag{2}$$
 
-where the sample proportion *p* is the point estimate of $\pi$ and the quantity $$Z_{\alpha / 2} \sqrt{\frac{p \cdot (1-p)}{n}}$$ represents the margin of error.  The quantity $$Z_{\alpha / 2}$$ depends on the confidence level:
+where the sample proportion *p* is the point estimate of $$\pi$$ and the quantity $$Z_{\alpha / 2} \sqrt{\frac{p \cdot (1-p)}{n}}$$ represents the margin of error.  The quantity $$Z_{\alpha / 2}$$ depends on the confidence level:
 
 - 90% confidence: $$Z_{\alpha / 2} = 1.645$$
 - 95% confidence: $$Z_{\alpha / 2} = 1.96$$
@@ -287,7 +287,7 @@ As the below table illustrates, there are four possible outcomes of a criminal t
 <img src="/public/images/analytics/univariate-inference/hypothesis_confusion_matrix.png" alt="Four possible outcomes of the criminal trial hypothesis test." width="1186" />
 </div>
 
-The probability of a Type I error is denoted as $\alpha$, while the probability of a Type II error is denoted as $\beta$. For a constant sample size, a decrease in $$\alpha$$ is associated with an increase in $$\beta$$, and vice versa. In statistical inference, $$\alpha$$ is usually fixed at some small value, such as 0.05, and called the *level of signficance*.
+The probability of a Type I error is denoted as $$\alpha$$, while the probability of a Type II error is denoted as $$\beta$$. For a constant sample size, a decrease in $$\alpha$$ is associated with an increase in $$\beta$$, and vice versa. In statistical inference, $$\alpha$$ is usually fixed at some small value, such as 0.05, and called the *level of signficance*.
 
 A common treatment of hypothesis testing for the mean is to restrict the hypotheses to the following three forms:
 
@@ -301,20 +301,20 @@ When the sample size is large or the population is normally distributed, we can 
 
 $$ t = \frac{\bar x - \mu_0}{s / \sqrt{n}} \tag{3} $$
 
-The value of *t* is interpreted as the number of standard errors above or below the hypothesized mean $$\mu$$, that the sample mean $$\bar x$$ resides, where the standard error equals $\frac{s}{\sqrt{n}}$.  When *t* is large, it provides supporting evidence against the null hypothesis $$H_0$$. How do we determing if we have enough supporting evidence to reject $$H_0$$?  This is measured by the *p*-value.
+The value of *t* is interpreted as the number of standard errors above or below the hypothesized mean $$\mu$$, that the sample mean $$\bar x$$ resides, where the standard error equals $$\frac{s}{\sqrt{n}}$$.  When *t* is large, it provides supporting evidence against the null hypothesis $$H_0$$. How do we determing if we have enough supporting evidence to reject $$H_0$$?  This is measured by the *p*-value.
 
 The *p*-value is the probability of observing a sample statistic (such as $$\bar x$$) at least as extreme as the statistic actually observed, if we assume $$H_0$$ is true.  Thus, a *p*-value of 0.05 suggests there is only a 5% probability of observing $$\bar x$$ if the population value is actually $$\mu_0$$ as $$H_0$$ suggests.  Consequently, the smaller the *p*-value, the smaller the probability that $$\bar x$$ aligns with the null hypothesis $$H_0$$.  So how small does the *p*-value need to be to reject $$H_0$$?
 
 Historically, $$p\texttt{-value} \leq 0.05$$ has been the cutoff commonly used to reject $$H_0$$.  However, it is becoming more common for data analysts to not think in terms of whether or not to reject $$H_0$$ so much as to *assess the strength of evidence against the null hypothesis*. The following table provides a rule-of-thumb for interpreting the strength of evidence against $$H_0$$ for various *p*-values.[^domains]
 
-*p*-value                            | Strength of Evidence Against $H_0$
+*p*-value                            | Strength of Evidence Against $$H_0$$
 ------------------------------------ | ----------------
-$p\texttt{-value} \leq 0.001$        | Extremely strong evidence
-$0.001 < p\texttt{-value} \leq 0.01$ | Very strong evidence
-$0.01 < p\texttt{-value} \leq 0.05$  | Solid evidence
-$0.05 < p\texttt{-value} \leq 0.10$  | Mild evidence
-$0.10 < p\texttt{-value} \leq 0.15$  | Slight evidence
-$0.15 < p\texttt{-value}$            | No evidence
+$$p\texttt{-value} \leq 0.001$$        | Extremely strong evidence
+$$0.001 < p\texttt{-value} \leq 0.01$$ | Very strong evidence
+$$0.01 < p\texttt{-value} \leq 0.05$$  | Solid evidence
+$$0.05 < p\texttt{-value} \leq 0.10$$  | Mild evidence
+$$0.10 < p\texttt{-value} \leq 0.15$$  | Slight evidence
+$$0.15 < p\texttt{-value}$$            | No evidence
 
 To perform a t-test in R we use the `t.test` function.  For example, if we believe the average square footage of all homes sold in Ames, IA is 1,600 square feet then our hypothesis test would state:
 
