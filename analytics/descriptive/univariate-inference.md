@@ -105,19 +105,19 @@ abline(v = mean(ames_pop$Sale_Price), col = "blue") # true population mean
 Unfortunately, when working with samples we typically do not have the population data to compare to so we need to estimate a confidence interval for our population mean by only using information from our sample.  To compute a confidence interval we can use the *t-interval*, which produces reliable confidence intervals so long as our population is from a normal distribution *or* the sample size is large. Equation 1 represents our t-interval
 
 $$ \bar x \pm t_{\alpha / 2} \bigg(\frac{s}{\sqrt{n}} \bigg) \tag{1} $$
-\noindent where the sample mean $\bar x$ is the point estimate and the quantity $t_{\alpha / 2} (\frac{s}{\sqrt{n}})$ represents the margin of error.  The multiplier $t_{\alpha / 2}$ is associated with the sample size and the confidence level, which is specified by you, the analyst.  A general rule of thumb when determining the appropriate multiplier is shown below.  The $t$ critical values are always larger than the $z$ values, and get progressively closer as $n-1$ gets larger. 
+\noindent where the sample mean $$\bar x$$ is the point estimate and the quantity $$t_{\alpha / 2} (\frac{s}{\sqrt{n}})$$ represents the margin of error.  The multiplier $$t_{\alpha / 2}$$ is associated with the sample size and the confidence level, which is specified by you, the analyst.  A general rule of thumb when determining the appropriate multiplier is shown below.  The $$t$$ critical values are always larger than the $$z$$ values, and get progressively closer as $$n-1$$ gets larger. 
 
 Sample size      | .90 | .95 | .99 
 ---------------- | --- | --- | --- 
-$t: n - 1 = 5$   | 2.02| 2.57|4.03
-$t: n - 1 = 15$  | 1.75| 2.13|2.95
-$t: n - 1 = 25$  | 1.71| 2.06|2.79  
-$t: n - 1 = 35$  | 1.69| 2.03|2.72
-$t: n - 1 = 50$  | 1.68| 2.01|2.68
-$t: n - 1 = 100$ | 1.66| 1.98|2.63
-$t: n - 1 = 500$ | 1.65| 1.96|2.58
+$$t: n - 1 = 5$$   | 2.02| 2.57|4.03
+$$t: n - 1 = 15$$  | 1.75| 2.13|2.95
+$$t: n - 1 = 25$$  | 1.71| 2.06|2.79  
+$$t: n - 1 = 35$$  | 1.69| 2.03|2.72
+$$t: n - 1 = 50$$  | 1.68| 2.01|2.68
+$$t: n - 1 = 100$$ | 1.66| 1.98|2.63
+$$t: n - 1 = 500$$ | 1.65| 1.96|2.58
 
-Using our original sample of the `ames` data, we can compute the 95% confidence interval.  Note that since our sample size is larger than 500 we use `qnorm(.975)` which computes $t_{\alpha / 2}$.
+Using our original sample of the `ames` data, we can compute the 95% confidence interval.  Note that since our sample size is larger than 500 we use `qnorm(.975)` which computes $$t_{\alpha / 2}$$.
 
 
 ```r
