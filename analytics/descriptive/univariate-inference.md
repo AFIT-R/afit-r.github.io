@@ -52,7 +52,7 @@ A *confidence interval estimate* of a population parameter consists of an interv
 
 $$ \texttt{point estimate} \pm \texttt{margin of error}$$
 
-\noindent where the margin of error is a measure of the precision of the interval estimate.  Smaller margin of errors indicate greater precision.  Why is it important to incorporate this margin of error when working with a sample?  As you can see, the mean sale price for the entire `ames` data set (the population) is 180,796.
+where the margin of error is a measure of the precision of the interval estimate.  Smaller margin of errors indicate greater precision.  Why is it important to incorporate this margin of error when working with a sample?  As you can see, the mean sale price for the entire `ames` data set (the population) is 180,796.
 
 
 ```r
@@ -105,7 +105,8 @@ abline(v = mean(ames_pop$Sale_Price), col = "blue") # true population mean
 Unfortunately, when working with samples we typically do not have the population data to compare to so we need to estimate a confidence interval for our population mean by only using information from our sample.  To compute a confidence interval we can use the *t-interval*, which produces reliable confidence intervals so long as our population is from a normal distribution *or* the sample size is large. Equation 1 represents our t-interval
 
 $$ \bar x \pm t_{\alpha / 2} \bigg(\frac{s}{\sqrt{n}} \bigg) \tag{1} $$
-\noindent where the sample mean $$\bar x$$ is the point estimate and the quantity $$t_{\alpha / 2} (\frac{s}{\sqrt{n}})$$ represents the margin of error.  The multiplier $$t_{\alpha / 2}$$ is associated with the sample size and the confidence level, which is specified by you, the analyst.  A general rule of thumb when determining the appropriate multiplier is shown below.  The $$t$$ critical values are always larger than the $$z$$ values, and get progressively closer as $$n-1$$ gets larger. 
+
+where the sample mean $$\bar x$$ is the point estimate and the quantity $$t_{\alpha / 2} (\frac{s}{\sqrt{n}})$$ represents the margin of error.  The multiplier $$t_{\alpha / 2}$$ is associated with the sample size and the confidence level, which is specified by you, the analyst.  A general rule of thumb when determining the appropriate multiplier is shown below.  The $$t$$ critical values are always larger than the $$z$$ values, and get progressively closer as $$n-1$$ gets larger. 
 
 Sample size      | .90 | .95 | .99 
 ---------------- | --- | --- | --- 
@@ -164,18 +165,18 @@ t.test(ames_sample$Sale_Price)
 <br>
 
 ## Reducing margin of error {#error}
-As we saw in the last section, margin of error is represented by $t_{\alpha / 2} (\frac{s}{\sqrt{n}})$ in Equation 1 above and determines the size of our confidence interval.  The smaller the margin of error, the more precise our estimate is.  Consequently, a common question is *how can we reduce our margin of error*?  The margin of error is made up of three properties:
+As we saw in the last section, margin of error is represented by $$t_{\alpha / 2} (\frac{s}{\sqrt{n}})$$ in Equation 1 above and determines the size of our confidence interval.  The smaller the margin of error, the more precise our estimate is.  Consequently, a common question is *how can we reduce our margin of error*?  The margin of error is made up of three properties:
 
-- $t_{\alpha / 2}$, which depends on the confidence level and the sample size.
+- $$t_{\alpha / 2}$$, which depends on the confidence level and the sample size.
 - *s*, the sample standard deviation, which is a characteristic of the data that we typically cannot change.
 - *n*, the sample size.
 
 Consequently, we can decrease the margin of error in two ways:
 
-- By decreasing the confidence level, which reduces the value of $t_{\alpha / 2}$ and therefore reduces the overal margin of error.  However, this is not recommended as it reduces the margin of error by reducing our confidence in the overall confidence interval.
+- By decreasing the confidence level, which reduces the value of $$t_{\alpha / 2}$$ and therefore reduces the overal margin of error.  However, this is not recommended as it reduces the margin of error by reducing our confidence in the overall confidence interval.
 - By increasing the sample size.  
 
-Increasing the sample size is the only way to decrease the margin of error while maintaining a constant level of confidence. In essence, increasing the sample size just means you are collecting more observations from the overall population and as you add more observations, your sample mean will be a better representation of the population mean.  We can illustrate this by sampling from $2, 3,\dots, n$ observations from the `ames` population and computing the sample mean.  As the below figure demonstrates, as the sample size approaches the population size the mean values converge with the true population mean.
+Increasing the sample size is the only way to decrease the margin of error while maintaining a constant level of confidence. In essence, increasing the sample size just means you are collecting more observations from the overall population and as you add more observations, your sample mean will be a better representation of the population mean.  We can illustrate this by sampling from $$2, 3,\dots, n$$ observations from the `ames` population and computing the sample mean.  As the below figure demonstrates, as the sample size approaches the population size the mean values converge with the true population mean.
 
 
 ```r
@@ -204,7 +205,7 @@ ggplot(results, aes(sample_size, mean_stat)) +
 <br>
 
 ## Confidence intervals of the proportion {#proportion}
-We can also produce confidence intervals for categorical variables.  The simplest approach is to perform inference on the *population proportion* ($\pi$). Consider the churn rate of our sample attrition data.  The sample shows that 16% of sampled employees had churned (aka attrition).
+We can also produce confidence intervals for categorical variables.  The simplest approach is to perform inference on the *population proportion* ($$\pi$$). Consider the churn rate of our sample attrition data.  The sample shows that 16% of sampled employees had churned (aka attrition).
 
 
 ```r
@@ -218,17 +219,17 @@ attr_sample %>%
 ## 2 Yes         121 0.165
 ```
 
-Unfortunately, with respect to the population of our entire employee base, we have no measure of confidence in how well this sample estimate aligns with the population churn rate.  In fact, it is nearly impossible that this value exactly equals $\pi$. Thus, we would prefer a *confidence interval for the population proportion*, which can be computed with the *Z-interval*:
+Unfortunately, with respect to the population of our entire employee base, we have no measure of confidence in how well this sample estimate aligns with the population churn rate.  In fact, it is nearly impossible that this value exactly equals $$\pi$$. Thus, we would prefer a *confidence interval for the population proportion*, which can be computed with the *Z-interval*:
 
 $$ p \pm Z_{\alpha / 2} \sqrt{ \frac{p \cdot (1 - p)}{n} } \tag{2}$$
 
-\noindent where the sample proportion *p* is the point estimate of $\pi$ and the quantity $Z_{\alpha / 2} \sqrt{\frac{p \cdot (1-p)}{n}}$ represents the margin of error.  The quantity $Z_{\alpha / 2}$ depends on the confidence level:
+where the sample proportion *p* is the point estimate of $\pi$ and the quantity $$Z_{\alpha / 2} \sqrt{\frac{p \cdot (1-p)}{n}}$$ represents the margin of error.  The quantity $$Z_{\alpha / 2}$$ depends on the confidence level:
 
-- 90% confidence: $Z_{\alpha / 2} = 1.645$
-- 95% confidence: $Z_{\alpha / 2} = 1.96$
-- 99% confidence: $Z_{\alpha / 2} = 2.576$
+- 90% confidence: $$Z_{\alpha / 2} = 1.645$$
+- 95% confidence: $$Z_{\alpha / 2} = 1.96$$
+- 99% confidence: $$Z_{\alpha / 2} = 2.576$$
 
-This Z-interval for $\pi$ may be used whenever both $n \times p \geq 5$ and $n(1-p) \geq 5$.  For example, a 95% confidence interval for the proportion of churners in the entire employee population is given by:
+This Z-interval for $$\pi$$ may be used whenever both $$n \times p \geq 5$$ and $$n(1-p) \geq 5$$.  For example, a 95% confidence interval for the proportion of churners in the entire employee population is given by:
 
 
 ```r
@@ -246,7 +247,7 @@ attr_sample %>%
 ## 2 Yes         121 0.165    0.138    0.191
 ```
 
-Now we can state that we are 95% confidence that the population attrition rate is between 13.8-19%. In fact, when we assess the population proportion in the attrition data we find that $\pi = 16\%$, which falls right in the middle of our estimated confidence interval.
+Now we can state that we are 95% confidence that the population attrition rate is between 13.8-19%. In fact, when we assess the population proportion in the attrition data we find that $$\pi = 16\%$$, which falls right in the middle of our estimated confidence interval.
 
 
 ```r
@@ -264,48 +265,47 @@ attr_pop %>%
 <br>
 
 ## Hypothesis testing for the mean {#hyp_mean}
-*Hypothesis testing* is a procedure where claims about the value of a population parameter (such as $\mu$ or $\pi$) may be considered using the evidence from the sample.  Two competing statements, or *hypotheses*, are crafted about the parameter value:
+*Hypothesis testing* is a procedure where claims about the value of a population parameter (such as $$\mu$$ or $$\pi$$) may be considered using the evidence from the sample.  Two competing statements, or *hypotheses*, are crafted about the parameter value:
 
-- The *null hypothesis* $H_0$ is the status quo hypothesis, representing what has been assumed about the value of the parameter.
+- The *null hypothesis* $$H_0$$ is the status quo hypothesis, representing what has been assumed about the value of the parameter.
 - The *alternative hypothesis* represents the alternative claim about the value of the parameter.
 
-Traditionally, the two possible conclusions of hypothesis testing have been (i) reject $H_0$ or (ii) do not reject $H_0$ based on the *p*-value (typically $p \leq 0.05$). For example, a criminal trial is a form of a hypothesis test where
+Traditionally, the two possible conclusions of hypothesis testing have been (i) reject $$H_0$$ or (ii) do not reject $$H_0$$ based on the *p*-value (typically $$p \leq 0.05$$). For example, a criminal trial is a form of a hypothesis test where
 
 $$ H_0: \texttt{Defendant is innocent} \hspace{.75cm} H_a: \texttt{Defendant is guilty} $$
 
 As the below table illustrates, there are four possible outcomes of a criminal trial with respect to the jury's decision, and what is true in reality.
 
 - Correct decisions:
-    - Do not reject $H_0$ if there is not enough evidence against the defendant. The jury acquits an innocent person.
-    - Reject $H_0$ if there is sufficient evidence against the defendant. The jury convicts a guilty person.
+    - Do not reject $$H_0$$ if there is not enough evidence against the defendant. The jury acquits an innocent person.
+    - Reject $$H_0$$ if there is sufficient evidence against the defendant. The jury convicts a guilty person.
 - Erroneous decisions:
-    - Type I error: Reject $H_0$ when $H_0$ is true. The jury convicts an innocent person.
-    - Type II error: Do not reject $H_0$ when $H_0$ is false. The jury acquits a guilter person.
+    - Type I error: Reject $$H_0$$ when $$H_0$$ is true. The jury convicts an innocent person.
+    - Type II error: Do not reject $$H_0$$ when $$H_0$$ is false. The jury acquits a guilter person.
 
 <div class="figure" style="text-align: center">
 <img src="/public/images/analytics/univariate-inference/hypothesis_confusion_matrix.png" alt="Four possible outcomes of the criminal trial hypothesis test." width="1186" />
-<p class="caption">Four possible outcomes of the criminal trial hypothesis test.</p>
 </div>
 
-The probability of a Type I error is denoted as $\alpha$, while the probability of a Type II error is denoted as $\beta$. For a constant sample size, a decrease in $\alpha$ is associated with an increase in $\beta$, and vice versa. In statistical inference, $\alpha$ is usually fixed at some small value, such as 0.05, and called the *level of signficance*.
+The probability of a Type I error is denoted as $\alpha$, while the probability of a Type II error is denoted as $\beta$. For a constant sample size, a decrease in $$\alpha$$ is associated with an increase in $$\beta$$, and vice versa. In statistical inference, $$\alpha$$ is usually fixed at some small value, such as 0.05, and called the *level of signficance*.
 
 A common treatment of hypothesis testing for the mean is to restrict the hypotheses to the following three forms:
 
-- Left-tailed test. $H_0: \mu \geq \mu_0$ versus $H_a: \mu < \mu_0$
-- Right-tailed test. $H_0: \mu \leq \mu_0$ versus $H_a: \mu > \mu_0$
-- Two-tailed test. $H_0: \mu = \mu_0$ versus $H_a: \mu \ne \mu_0$
+- Left-tailed test. $$H_0: \mu \geq \mu_0$$ versus $$H_a: \mu < \mu_0$$
+- Right-tailed test. $$H_0: \mu \leq \mu_0$$ versus $$H_a: \mu > \mu_0$$
+- Two-tailed test. $$H_0: \mu = \mu_0$$ versus $$H_a: \mu \ne \mu_0$$
 
-\noindent where $\mu_0$ represents a hypothesized value of $\mu$. 
+where $$\mu_0$$ represents a hypothesized value of $$\mu$$. 
 
 When the sample size is large or the population is normally distributed, we can use *t* (Equation 3) as a test statistic to determine whether *x* deviates from the hypothesized value enough to justify rejecting the null hypothesis.
 
 $$ t = \frac{\bar x - \mu_0}{s / \sqrt{n}} \tag{3} $$
 
-The value of *t* is interpreted as the number of standard errors above or below the hypothesized mean $\mu$, that the sample mean $\bar x$ resides, where the standard error equals $\frac{s}{\sqrt{n}}$.  When *t* is large, it provides supporting evidence against the null hypothesis $H_0$. How do we determing if we have enough supporting evidence to reject $H_0$?  This is measured by the *p*-value.
+The value of *t* is interpreted as the number of standard errors above or below the hypothesized mean $$\mu$$, that the sample mean $$\bar x$$ resides, where the standard error equals $\frac{s}{\sqrt{n}}$.  When *t* is large, it provides supporting evidence against the null hypothesis $$H_0$$. How do we determing if we have enough supporting evidence to reject $$H_0$$?  This is measured by the *p*-value.
 
-The *p*-value is the probability of observing a sample statistic (such as $\bar x$) at least as extreme as the statistic actually observed, if we assume $H_0$ is true.  Thus, a *p*-value of 0.05 suggests there is only a 5% probability of observing $\bar x$ if the population value is actually $\mu_0$ as $H_0$ suggests.  Consequently, the smaller the *p*-value, the smaller the probability that $\bar x$ aligns with the null hypothesis $H_0$.  So how small does the *p*-value need to be to reject $H_0$?
+The *p*-value is the probability of observing a sample statistic (such as $$\bar x$$) at least as extreme as the statistic actually observed, if we assume $$H_0$$ is true.  Thus, a *p*-value of 0.05 suggests there is only a 5% probability of observing $$\bar x$$ if the population value is actually $$\mu_0$$ as $$H_0$$ suggests.  Consequently, the smaller the *p*-value, the smaller the probability that $$\bar x$$ aligns with the null hypothesis $$H_0$$.  So how small does the *p*-value need to be to reject $$H_0$$?
 
-Historically, $p\texttt{-value} \leq 0.05$ has been the cutoff commonly used to reject $H_0$.  However, it is becoming more common for data analysts to not think in terms of whether or not to reject $H_0$ so much as to *assess the strength of evidence against the null hypothesis*. The following table provides a rule-of-thumb for interpreting the strength of evidence against $H_0$ for various *p*-values.[^domains]
+Historically, $$p\texttt{-value} \leq 0.05$$ has been the cutoff commonly used to reject $$H_0$$.  However, it is becoming more common for data analysts to not think in terms of whether or not to reject $$H_0$$ so much as to *assess the strength of evidence against the null hypothesis*. The following table provides a rule-of-thumb for interpreting the strength of evidence against $$H_0$$ for various *p*-values.[^domains]
 
 *p*-value                            | Strength of Evidence Against $H_0$
 ------------------------------------ | ----------------
@@ -318,10 +318,10 @@ $0.15 < p\texttt{-value}$            | No evidence
 
 To perform a t-test in R we use the `t.test` function.  For example, if we believe the average square footage of all homes sold in Ames, IA is 1,600 square feet then our hypothesis test would state:
 
-- $H_0$: $\mu = 1600$ 
-- $H_a: \mu \ne 1600$
+- $$H_0$$: $$\mu = 1600$$
+- $$H_a$$: $$\mu \ne 1600$$
 
-We can test this with `t.test`, which shows that $t = -8.5491$, which is sufficiently large.  In fact, it is so large that the *p*-value states there is less than $2.2 \times 10^{-16}$ probability of $\bar x = 1492.856$ if the population mean was 1600. This provides extremely strong evidence against $H_0$. The results also tell us that the 95% confidence interval for the population mean $\mu_0$, suggesting that the $\mu_0$ likely falls between 1468-1517 square feet.
+We can test this with `t.test`, which shows that $$t = -8.5491$$, which is sufficiently large.  In fact, it is so large that the *p*-value states there is less than $$2.2 \times 10^{-16}$$ probability of $$\bar x = 1492.856$$ if the population mean was 1600. This provides extremely strong evidence against $$H_0$$. The results also tell us that the 95% confidence interval for the population mean $$\mu_0$$, suggesting that the $$\mu_0$$ likely falls between 1468-1517 square feet.
 
 
 ```r
@@ -341,8 +341,8 @@ t.test(ames_sample$Gr_Liv_Area, mu = 1600)
 
 We can also perform right and left-tailed tests by including the `alternative` argument. For example, if you owned a home in Ames, IA that had 1200 square feet on the first floor and you wanted to test if your home's first floor square footage was larger than the average Ames home, you use `alternative = "greater"`[^left] to test, which suggests there is extremely strong evidence that your home's first floor is larger than the average Ames, IA home's first floor.
 
-- $H_0$: $\mu \leq 1200$ 
-- $H_a$: $\mu > 1200$
+- $$H_0$$: $$\mu \leq 1200$$ 
+- $$H_a$$: $$\mu > 1200$$
 
 
 ```r
@@ -364,22 +364,22 @@ t.test(ames_sample$First_Flr_SF, alternative = "greater")
 <br>
 
 ## Hypothesis testing for the proportion {#hyp_prop}
-Hypothesis tests may also be performed population proportions ($\pi$).  The test statistic is
+Hypothesis tests may also be performed population proportions ($$\pi$$).  The test statistic is
 
 $$ z = \frac{p - \pi_0}{\sqrt{(\pi_0(1-\pi) / n)}}  \tag{4} $$
 
-\noindent where $\pi_0$ is the hypothesized value of $\pi$, and *p* is the sample proportion
+where $$\pi_0$$ is the hypothesized value of $$\pi$$, and *p* is the sample proportion
 
 $$ p = \frac{\texttt{number of successes}}{n} $$
 
-The same logic applies for the *z* test statistic as the *t* test statistic.  A sufficiently large *z* value provides evidence against the null hypothesis $H_0$; and this strength of evidence can be measured by the *p*-value, which can be interpreted the same as discussed in the previous section.
+The same logic applies for the *z* test statistic as the *t* test statistic.  A sufficiently large *z* value provides evidence against the null hypothesis $$H_0$$; and this strength of evidence can be measured by the *p*-value, which can be interpreted the same as discussed in the previous section.
 
 We can apply the `prop.test` function in R for hypothesis testing of proportions. For example, we can use our `attr_sample` data to answer the question *do males and females represent and equal proportion of those employees that attrit*?  In this example the hypothesis is:
 
-- $H_0$: $\pi_f = 0.5$ 
-- $H_a$: $\pi_f \ne 0.5$
+- $$H_0$$: $$\pi_f = 0.5$$ 
+- $$H_a$$: $$\pi_f \ne 0.5$$
 
-Where the null is just testing if the proportion of females $\pi_f$ equals 50%.  If this hypothesis holds then men and women are approximately equally represented.   We see that in our example female represent 42% of those employees who churn.  We see that our `prop.test` results suggest that there is extremely strong evidence that females represent less than 50% of the attrition population (its estimated that they represent 38-45% based on the 95% confidence interval).  In fact, females represent 40% of the population (`attr_pop`) data. 
+Where the null is just testing if the proportion of females $$\pi_f$$ equals 50%.  If this hypothesis holds then men and women are approximately equally represented.   We see that in our example female represent 42% of those employees who churn.  We see that our `prop.test` results suggest that there is extremely strong evidence that females represent less than 50% of the attrition population (its estimated that they represent 38-45% based on the 95% confidence interval).  In fact, females represent 40% of the population (`attr_pop`) data. 
 
 
 ```r
