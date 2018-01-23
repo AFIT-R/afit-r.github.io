@@ -283,7 +283,7 @@ As the below table illustrates, there are four possible outcomes of a criminal t
     - Type II error: Do not reject $H_0$ when $H_0$ is false. The jury acquits a guilter person.
 
 <div class="figure" style="text-align: center">
-<img src="hypothesis_confusion_matrix.png" alt="Four possible outcomes of the criminal trial hypothesis test." width="1186" />
+<img src="/public/images/analytics/univariate-inference/hypothesis_confusion_matrix.png" alt="Four possible outcomes of the criminal trial hypothesis test." width="1186" />
 <p class="caption">Four possible outcomes of the criminal trial hypothesis test.</p>
 </div>
 
