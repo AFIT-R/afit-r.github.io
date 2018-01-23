@@ -110,7 +110,7 @@ $$ \bar x \pm t_{\alpha / 2} \bigg(\frac{s}{\sqrt{n}} \bigg) \tag{1} $$
 where the sample mean $$\bar x$$ is the point estimate and the quantity $$t_{\alpha / 2} (\frac{s}{\sqrt{n}})$$ represents the margin of error.  The multiplier $$t_{\alpha / 2}$$ is associated with the sample size and the confidence level, which is specified by you, the analyst.  A general rule of thumb when determining the appropriate multiplier is shown below.  The $$t$$ critical values are always larger than the $$z$$ values, and get progressively closer as $$n-1$$ gets larger. 
 
 Sample size      | .90 | .95 | .99 
----------------- | --- | --- | --- 
+:--------------: | :---: | :---: | :---: 
 $$t: n - 1 = 5$$   | 2.02| 2.57|4.03
 $$t: n - 1 = 15$$  | 1.75| 2.13|2.95
 $$t: n - 1 = 25$$  | 1.71| 2.06|2.79  
