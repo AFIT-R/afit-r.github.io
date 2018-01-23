@@ -107,19 +107,9 @@ Unfortunately, when working with samples we typically do not have the population
 
 $$ \bar x \pm t_{\alpha / 2} \bigg(\frac{s}{\sqrt{n}} \bigg) \tag{1} $$
 
-where the sample mean $$\bar x$$ is the point estimate and the quantity $$t_{\alpha / 2} (\frac{s}{\sqrt{n}})$$ represents the margin of error.  The multiplier $$t_{\alpha / 2}$$ is associated with the sample size and the confidence level, which is specified by you, the analyst.  A general rule of thumb when determining the appropriate multiplier is shown below.  The $$t$$ critical values are always larger than the $$z$$ values, and get progressively closer as $$n-1$$ gets larger. 
+where the sample mean $$\bar x$$ is the point estimate and the quantity $$t_{\alpha / 2} (\frac{s}{\sqrt{n}})$$ represents the margin of error.  The multiplier $$t_{\alpha / 2}$$ follows a *t* distribution with $$n-1$$ degrees of freedom and is associated with the confidence level (i.e. 90%, 95%, 99%), which is specified by you, the analyst.
 
-Sample size      | .90 | .95 | .99 
-:--------------: | :---: | :---: | :---: 
-$$t: n - 1 = 5$$   | 2.02| 2.57|4.03
-$$t: n - 1 = 15$$  | 1.75| 2.13|2.95
-$$t: n - 1 = 25$$  | 1.71| 2.06|2.79  
-$$t: n - 1 = 35$$  | 1.69| 2.03|2.72
-$$t: n - 1 = 50$$  | 1.68| 2.01|2.68
-$$t: n - 1 = 100$$ | 1.66| 1.98|2.63
-$$t: n - 1 = 500$$ | 1.65| 1.96|2.58
-
-Using our original sample of the `ames` data, we can compute the 95% confidence interval.  Note that since our sample size is larger than 500 we use `qnorm(.975)` which computes $$t_{\alpha / 2}$$.
+Using our original sample of the `ames` data, we can compute the 95% confidence interval.  Note that we can use `qt(.975, df = length(x) - 1)` which computes $$t_{\alpha / 2}$$.
 
 
 ```r
@@ -128,23 +118,23 @@ set.seed(123)
 ames_sample <- sample_frac(ames_pop, .5)
 
 # compute equation parameters
-xbar <- mean(ames_sample$Sale_Price)           # mean 
-sigma <- sd(ames_sample$Sale_Price)            # standard deviation
-denom <- sqrt(length(ames_sample$Sale_Price))  # square root of n
-multi <- qnorm(.975)                           # multiplier
+x <- ames_sample$Sale_Price
+xbar <- mean(x)                        # mean 
+multi <- qt(.975, df = length(x) - 1)  # multiplier
+sigma <- sd(x)                         # standard deviation
+denom <- sqrt(length(x))               # square root of n
 
 # compute standard error
 se <- multi * (sigma / denom)
 
 # lower and upper confidence boundary
 xbar + c(-se, se)
-## [1] 176805.3 184940.7
+## [1] 176802.0 184944.1
 ```
 
-Based on our sample data we can be 95% confident that the true population mean sales price is between \$176,805 and \$184,941.  In our case, we know the true population mean is \$180,796, which is appropriately captured by our 95% confidence interval. Consequently, when we only have sample data of a larger population we can adequately estimate the range that the true population parameter falls in with confidence intervals.
+Based on our sample data we can be 95% confident that the true population mean sales price is between \$176,802 and \$184,944.  In our case, we know the true population mean is \$180,796, which is appropriately captured by our 95% confidence interval. Consequently, when we only have sample data of a larger population we can adequately estimate the range that the true population parameter falls in with confidence intervals.
 
-Unfortunately, R does not have a built-in function to compute mean confidence intervals.  We could develop a function for this or we can just use the built-in `t.test` function. You will notice that we get slightly different results in our confidence intervals; this is because `t.test`... 
-
+Unfortunately, R does not have a built-in function to compute mean confidence intervals.  We could develop a function for this or we can just use the built-in `t.test` function, which provides confidence intervals along with other information we'll cover shortly.
 
 ```r
 t.test(ames_sample$Sale_Price)
@@ -224,7 +214,7 @@ Unfortunately, with respect to the population of our entire employee base, we ha
 
 $$ p \pm Z_{\alpha / 2} \sqrt{ \frac{p \cdot (1 - p)}{n} } \tag{2}$$
 
-where the sample proportion *p* is the point estimate of $$\pi$$ and the quantity $$Z_{\alpha / 2} \sqrt{\frac{p \cdot (1-p)}{n}}$$ represents the margin of error.  The quantity $$Z_{\alpha / 2}$$ depends on the confidence level:
+where the sample proportion *p* is the point estimate of $$\pi$$ and the quantity $$Z_{\alpha / 2} \sqrt{\frac{p \cdot (1-p)}{n}}$$ represents the margin of error.  $$Z_{\alpha / 2}$$ is the z value providing an area of $$\alpha / 2$$ in the upper tail of the standard normal distribution.  Typical values include:
 
 - 90% confidence: $$Z_{\alpha / 2} = 1.645$$
 - 95% confidence: $$Z_{\alpha / 2} = 1.96$$
