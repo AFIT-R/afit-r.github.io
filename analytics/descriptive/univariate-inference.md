@@ -337,15 +337,15 @@ We can also perform right and left-tailed tests by including the `alternative` a
 
 
 ```r
-t.test(ames_sample$First_Flr_SF, alternative = "greater")
+t.test(ames_sample$First_Flr_SF, mu = 1200, alternative = "less")
 ## 
 ## 	One Sample t-test
 ## 
 ## data:  ames_sample$First_Flr_SF
-## t = 119.48, df = 1464, p-value < 0.00000000000000022
-## alternative hypothesis: true mean is greater than 0
+## t = -5.1802, df = 1464, p-value = 0.0000001263
+## alternative hypothesis: true mean is less than 1200
 ## 95 percent confidence interval:
-##  1134.289      Inf
+##      -Inf 1165.977
 ## sample estimates:
 ## mean of x 
 ##  1150.133
@@ -355,7 +355,7 @@ t.test(ames_sample$First_Flr_SF, alternative = "greater")
 <br>
 
 ## Hypothesis testing for the proportion {#hyp_prop}
-Hypothesis tests may also be performed population proportions ($$\pi$$).  The test statistic is
+Hypothesis tests may also be performed for population proportions ($$\pi$$).  The test statistic is
 
 $$ z = \frac{p - \pi_0}{\sqrt{(\pi_0(1-\pi) / n)}}  \tag{4} $$
 
@@ -370,7 +370,7 @@ We can apply the `prop.test` function in R for hypothesis testing of proportions
 - $$H_0$$: $$\pi_f = 0.5$$ 
 - $$H_a$$: $$\pi_f \ne 0.5$$
 
-Where the null is just testing if the proportion of females $$\pi_f$$ equals 50%.  If this hypothesis holds then men and women are approximately equally represented.   We see that in our example female represent 42% of those employees who churn.  We see that our `prop.test` results suggest that there is extremely strong evidence that females represent less than 50% of the attrition population (its estimated that they represent 38-45% based on the 95% confidence interval).  In fact, females represent 40% of the population (`attr_pop`) data. 
+where the null is just testing if the proportion of females $$\pi_f$$ equals 50%.  If this hypothesis holds then men and women are approximately equally represented.   We see that in our example females represent 42% of those employees who churn.  We see that our `prop.test` results suggest that there is extremely strong evidence that females represent less than 50% of the attrition population (its estimated that they represent 38-45% based on the 95% confidence interval).  In fact, females represent 40% of the population (`attr_pop`) data. 
 
 
 ```r
@@ -422,4 +422,4 @@ table(attr_sample$Gender) %>%
 
 
 [^domains]: Note that depending on the domain (i.e. healthcare versus physics) the interpretations may differ.
-[^left]: Alternatively, you can use `alternative = "less"` to perform a left-tailed test.
+[^left]: Alternatively, you can use `alternative = "greater"` to perform a right-tailed test.
