@@ -100,7 +100,7 @@ abline(v = mean(sample_mean), col = "red")          # average of 1000 sample mea
 abline(v = mean(ames_pop$Sale_Price), col = "blue") # true population mean
 ```
 
-<img src="univariate_inference_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/univariate-inference/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 Unfortunately, when working with samples we typically do not have the population data to compare to so we need to estimate a confidence interval for our population mean by only using information from our sample.  To compute a confidence interval we can use the *t-interval*, which produces reliable confidence intervals so long as our population is from a normal distribution *or* the sample size is large. Equation 1 represents our t-interval
 
@@ -197,7 +197,7 @@ ggplot(results, aes(sample_size, mean_stat)) +
   geom_hline(yintercept = mean(ames_pop$Sale_Price), color = "red", lty = "dashed")
 ```
 
-<img src="univariate_inference_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="/public/images/analytics/univariate-inference/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 
 
