@@ -8,12 +8,22 @@ Predictive methodologies use knowledge, usually extracted from historical data, 
 
 <br>
 
-## Linear Models
+## Supervised Regression
 - [Linear Regression](linear_regression)
 - [Linear Model Selection](model_selection)
 - [Regularized Regression](regularized_regression)
 - [Regression Trees](regression_trees)
 - [Imprecise Regression](imprecise_regression)
+
+## Supervised Classification
+- [Naïve Bayes](naive_bayes)
+- [Logistic Regression](logistic_regression)
+- [Linear & Quadratic Discriminant Analysis](discriminant_analysis)
+- [Support Vector Machines](svm)
+- [Random Forests and Boosting](tree_based_methods)
+
+## Resampling Methods
+- [Resampling Basics](resampling_methods)
 
 ## Time Series
 - [Exploring & Visualizing Times Series](ts_exploration)
@@ -21,17 +31,9 @@ Predictive methodologies use knowledge, usually extracted from historical data, 
 - [Moving Averages](ts_moving_averages)
 - [Exponential Smoothing](ts_exp_smoothing)
 
-## Supervised Learning
-- [Naîve Bayes](naive_bayes)
-- [Logistic Regression](logistic_regression)
-- [Linear & Quadratic Discriminant Analysis](discriminant_analysis)
-- [Support Vector Machines](svm)
-- [Random Forests and Boosting](tree_based_methods)
-
 ## Deep Learning
 - [Neural Network Fundamentals](ann_fundamentals)
 - [Neural Network for Regression](ann_regression)
 - [Neural Network for Classification](ann_classification)
 
-## Resampling Methods
-- [Resampling Basics](resampling_methods)
+
