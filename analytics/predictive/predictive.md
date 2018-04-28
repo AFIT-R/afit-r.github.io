@@ -22,6 +22,7 @@ Predictive methodologies use knowledge, usually extracted from historical data, 
 - [Exponential Smoothing](ts_exp_smoothing)
 
 ## Supervised Learning
+- [Naîve Bayes](naive_bayes)
 - [Logistic Regression](logistic_regression)
 - [Linear & Quadratic Discriminant Analysis](discriminant_analysis)
 - [Support Vector Machines](svm)
