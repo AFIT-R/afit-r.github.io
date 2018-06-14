@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Collaborating on R Projects 
-permalink: /r_projects_git/
+permalink: /workflow/r_projects_git
 ---
 
 > *Git (noun) /git/ : A foolish, worthless person - Merriam-Webster Dictionary*
