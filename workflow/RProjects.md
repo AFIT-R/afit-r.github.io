@@ -53,5 +53,3 @@ There are additional project options you can choose from to customize the projec
 <center>
 <img src="/public/images/workflow/project_options.png"/>
 </center>
-
-Extra Stuff!
