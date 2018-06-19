@@ -181,6 +181,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Sidebar nav */
 .sidebar-nav {
   border-bottom: 1px solid rgba(255,255,255,.1);
+  background-color: darkblue;
+  font-size: 1.1em;
 }
 .sidebar-nav-item {
   display: block;
@@ -198,6 +200,7 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48em) {
   .sidebar-item {
     padding: 1.5rem;
+    background-color: #FFF;
   }
   .sidebar-nav-item {
     padding-left:  1.5rem;
