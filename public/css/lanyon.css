@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Sidebar nav */
 .sidebar-nav {
   border-bottom: 1px solid rgba(255,255,255,.1);
-  background-color: darkblue;
+  background-color: #000080;
   font-size: 1.1em;
 }
 .sidebar-nav-item {
